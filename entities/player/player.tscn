@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://cl4i83b1hgxyh" path="res://systems/state_machine/states/dash.gd" id="9_wvtmh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26q78"]
-friction = 0.05
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_abrql"]
 
@@ -62,9 +61,9 @@ model = NodePath("../Model")
 script = ExtResource("6_bectd")
 initial_state = NodePath("Move")
 
-[node name="Move" type="Node" parent="MovementStateMachine" unique_id=138870659 node_paths=PackedStringArray("body")]
+[node name="Move" type="Node" parent="MovementStateMachine" unique_id=138870659 node_paths=PackedStringArray("entity")]
 script = ExtResource("8_26q78")
-body = NodePath("../..")
+entity = NodePath("../..")
 metadata/_custom_type_script = "uid://b6ewwmjjcus5e"
 
 [node name="Dash" type="Node" parent="MovementStateMachine" unique_id=262001688 node_paths=PackedStringArray("body")]
