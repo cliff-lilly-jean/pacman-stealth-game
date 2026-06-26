@@ -1,8 +1,8 @@
 class_name Move extends State
 
-@export var speed : float = 15.0
-@export var acceleration: float = 30.0
-@export var friction: float = 10.0
+@export var speed : float = 1200.0
+@export var acceleration: float = 2.0
+@export var friction: float = 0.01
 @export var look_angle_speed : float = 10.0
 @export var entity: RigidBody3D
 
@@ -29,7 +29,7 @@ func physics_update(delta: float) -> void:
 	entity.linear_velocity.x = direction.x 
 	entity.linear_velocity.z = direction.y  
 		
-	if entity.linear_velocity.length() > 0:
+	if direction.length() > 0.1:
 		
 		entity.linear_velocity.move_toward(Vector3(direction.x, 0, direction.y * speed) , acceleration)
 	else:

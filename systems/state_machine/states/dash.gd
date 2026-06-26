@@ -15,7 +15,7 @@ func enter() -> void:
 	## Set dash timer to the dash time when the state is entered. 
 	dash_timer = dash_time
 	
-	direction = body.input_system.move_direction.rotated(-body.camera_system.spring_arm.global_rotation.y)
+	direction = body.input_system.move_direction.rotated(-body.camera_controller.spring_arm.global_rotation.y)
 	
 	body.linear_velocity.x = direction.x * force
 	body.linear_velocity.z = direction.y * force

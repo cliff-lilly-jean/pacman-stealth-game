@@ -8,7 +8,8 @@
 [ext_resource type="Script" uid="uid://b6ewwmjjcus5e" path="res://systems/state_machine/states/move.gd" id="8_26q78"]
 [ext_resource type="Script" uid="uid://cl4i83b1hgxyh" path="res://systems/state_machine/states/dash.gd" id="9_wvtmh"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26q78"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qiwj3"]
+friction = 0.1
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_abrql"]
 
@@ -27,7 +28,7 @@ albedo_color = Color(0.022215422, 0.2576948, 0.9999998, 1)
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-physics_material_override = SubResource("PhysicsMaterial_26q78")
+physics_material_override = SubResource("PhysicsMaterial_qiwj3")
 script = ExtResource("1_symyc")
 input_controller = NodePath("InputController")
 ground_detection = NodePath("GroundDetection")
