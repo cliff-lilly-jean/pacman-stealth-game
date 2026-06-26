@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d0d37yi525hjc"]
+
+[ext_resource type="Script" uid="uid://cabes1o1futc7" path="res://systems/ground_detection/ground_detection.gd" id="1_fu85n"]
+
+[node name="GroundDetection" type="Node3D" unique_id=1831079515]
+script = ExtResource("1_fu85n")
+
+[node name="RightCheck" type="RayCast3D" parent="." unique_id=1110327710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="LeftCheck" type="RayCast3D" parent="." unique_id=1309126083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+
+[node name="FrontCheck" type="RayCast3D" parent="." unique_id=244629354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+
+[node name="RearCheck" type="RayCast3D" parent="." unique_id=1050126407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)

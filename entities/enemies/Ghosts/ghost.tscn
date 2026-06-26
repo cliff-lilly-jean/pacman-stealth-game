@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cqe6kbo1ud1hp"]
+
+[ext_resource type="PackedScene" uid="uid://b5spxevb1r711" path="res://entities/enemies/enemy.tscn" id="1_jncq4"]
+[ext_resource type="Script" uid="uid://cwojotdm2n1kj" path="res://entities/enemies/Ghosts/ghost.gd" id="2_70727"]
+[ext_resource type="Script" uid="uid://8cq3hoeul0ad" path="res://systems/state_machine/state_machine.gd" id="3_wleg1"]
+[ext_resource type="Script" uid="uid://ctm6nbc3mynfi" path="res://components/ai_move_component.gd" id="4_lgvqs"]
+[ext_resource type="Script" uid="uid://chryyxoyx5pxa" path="res://systems/state_machine/states/ai/patrol.gd" id="5_pmeap"]
+[ext_resource type="Script" uid="uid://ctcrf6xtty25s" path="res://systems/state_machine/states/ai/search.gd" id="8_akcvm"]
+[ext_resource type="Script" uid="uid://codox4v5i4ain" path="res://systems/state_machine/states/ai/investigate.gd" id="8_qp8ka"]
+[ext_resource type="Script" uid="uid://dca2fxlvbnrmd" path="res://systems/state_machine/states/ai/chase.gd" id="9_o1hp5"]
+[ext_resource type="PackedScene" uid="uid://d0gvm26xyjtgd" path="res://systems/fov/fov.tscn" id="11_fykcr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70727"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wleg1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5onaq"]
+albedo_color = Color(0.11172285, 0.68420684, 0.6525473, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pmeap"]
+size = Vector3(0.5, 0.2, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihfrk"]
+albedo_color = Color(0.7176471, 0, 1, 1)
+
+[node name="Ghost" unique_id=2026697312 node_paths=PackedStringArray("ai_move_component", "nav_agent", "fov", "model", "entity") instance=ExtResource("1_jncq4")]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("2_70727")
+ai_move_component = NodePath("AIMoveComponent")
+nav_agent = NodePath("NavAgent")
+fov = NodePath("FOV")
+model = NodePath("Model")
+entity = NodePath(".")
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=1865731312]
+shape = SubResource("CapsuleShape3D_70727")
+
+[node name="Model" parent="." index="1" unique_id=675869306]
+mesh = SubResource("CapsuleMesh_wleg1")
+surface_material_override/0 = SubResource("StandardMaterial3D_5onaq")
+
+[node name="Eyes" type="MeshInstance3D" parent="Model" index="0" unique_id=1899596507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.3)
+mesh = SubResource("BoxMesh_pmeap")
+surface_material_override/0 = SubResource("StandardMaterial3D_ihfrk")
+
+[node name="NavAgent" parent="." index="2" unique_id=44913967]
+height = 2.0
+radius = 10.0
+
+[node name="FOV" parent="." index="3" unique_id=1653368927 node_paths=PackedStringArray("entity") instance=ExtResource("11_fykcr")]
+entity = NodePath("..")
+
+[node name="AIMoveComponent" type="Node" parent="." index="4" unique_id=720471427 node_paths=PackedStringArray("entity")]
+script = ExtResource("4_lgvqs")
+entity = NodePath("..")
+
+[node name="GhostStateMachine" type="Node" parent="." index="5" unique_id=834696032 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_wleg1")
+initial_state = NodePath("Patrol")
+
+[node name="Patrol" type="Node" parent="GhostStateMachine" index="0" unique_id=572068378 node_paths=PackedStringArray("entity")]
+script = ExtResource("5_pmeap")
+entity = NodePath("../..")
+
+[node name="Investigate" type="Node" parent="GhostStateMachine" index="1" unique_id=1414490248 node_paths=PackedStringArray("entity")]
+script = ExtResource("8_qp8ka")
+entity = NodePath("../..")
+metadata/_custom_type_script = "uid://codox4v5i4ain"
+
+[node name="Chase" type="Node" parent="GhostStateMachine" index="2" unique_id=592265231 node_paths=PackedStringArray("entity")]
+script = ExtResource("9_o1hp5")
+entity = NodePath("../..")
+
+[node name="Search" type="Node" parent="GhostStateMachine" index="3" unique_id=1106471437 node_paths=PackedStringArray("entity")]
+script = ExtResource("8_akcvm")
+entity = NodePath("../..")

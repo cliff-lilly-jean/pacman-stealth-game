@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0gvm26xyjtgd"]
+
+[ext_resource type="Script" uid="uid://btyka5m0iobyr" path="res://systems/fov/fov.gd" id="1_bxu5r"]
+
+[node name="FOV" type="Area3D" unique_id=1653368927]
+script = ExtResource("1_bxu5r")
+
+[node name="Shape" type="CollisionShape3D" parent="." unique_id=1837027484]
+
+[node name="Ray" type="RayCast3D" parent="." unique_id=297393482]

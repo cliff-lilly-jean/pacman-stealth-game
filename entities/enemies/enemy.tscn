@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b5spxevb1r711"]
+
+[ext_resource type="Script" uid="uid://df4uxvsihbvfg" path="res://entities/enemies/enemy.gd" id="1_owq46"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_owq46"]
+friction = 0.05
+
+[node name="Enemy" type="RigidBody3D" unique_id=2026697312]
+physics_material_override = SubResource("PhysicsMaterial_owq46")
+script = ExtResource("1_owq46")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1865731312]
+
+[node name="Model" type="MeshInstance3D" parent="." unique_id=675869306]
+
+[node name="NavAgent" type="NavigationAgent3D" parent="." unique_id=44913967]
+avoidance_enabled = true

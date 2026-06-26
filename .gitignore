@@ -1,0 +1,18 @@
+# Godot 4.2+ specific ignores
+~*.dll
+
+# Godot 4+ specific ignores
+.godot/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+
+# Visual Studio Code local settings
+.vscode/
+
+# Build artifacts and temporary files
+*.tmp
+*.translation

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c5oa0gxsg8fo6"]
+
+[ext_resource type="Script" uid="uid://bx4ef36wsm4nw" path="res://entities/player/player.gd" id="1_symyc"]
+[ext_resource type="PackedScene" uid="uid://utoqr1ejkior" path="res://systems/camera/camera_controller.tscn" id="2_abrql"]
+[ext_resource type="PackedScene" uid="uid://dxi1buur63r5i" path="res://systems/input/input_controller.tscn" id="4_bls4j"]
+[ext_resource type="PackedScene" uid="uid://d0d37yi525hjc" path="res://systems/ground_detection/ground_detection.tscn" id="6_8fjmc"]
+[ext_resource type="Script" uid="uid://8cq3hoeul0ad" path="res://systems/state_machine/state_machine.gd" id="6_bectd"]
+[ext_resource type="Script" uid="uid://b6ewwmjjcus5e" path="res://systems/state_machine/states/move.gd" id="8_26q78"]
+[ext_resource type="Script" uid="uid://cl4i83b1hgxyh" path="res://systems/state_machine/states/dash.gd" id="9_wvtmh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26q78"]
+friction = 0.05
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_abrql"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_abrql"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26q78"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_abrql"]
+size = Vector3(0.5, 0.2, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bectd"]
+albedo_color = Color(0.022215422, 0.2576948, 0.9999998, 1)
+
+[node name="Player" type="RigidBody3D" unique_id=619586531 node_paths=PackedStringArray("input_controller", "ground_detection", "camera_controller", "model")]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_26q78")
+script = ExtResource("1_symyc")
+input_controller = NodePath("InputController")
+ground_detection = NodePath("GroundDetection")
+camera_controller = NodePath("CameraController")
+model = NodePath("Model")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1694969865]
+shape = SubResource("SphereShape3D_abrql")
+
+[node name="Model" type="Node3D" parent="." unique_id=59291106]
+
+[node name="Body" type="MeshInstance3D" parent="Model" unique_id=351099443]
+mesh = SubResource("SphereMesh_abrql")
+surface_material_override/0 = SubResource("StandardMaterial3D_26q78")
+
+[node name="Eyes" type="MeshInstance3D" parent="Model" unique_id=2096477205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+mesh = SubResource("BoxMesh_abrql")
+surface_material_override/0 = SubResource("StandardMaterial3D_bectd")
+
+[node name="InputController" parent="." unique_id=827433303 instance=ExtResource("4_bls4j")]
+
+[node name="GroundDetection" parent="." unique_id=1831079515 node_paths=PackedStringArray("body") instance=ExtResource("6_8fjmc")]
+body = NodePath("..")
+
+[node name="CameraController" parent="." unique_id=793331741 node_paths=PackedStringArray("model") instance=ExtResource("2_abrql")]
+spring_arm_length = 25.0
+model = NodePath("../Model")
+
+[node name="MovementStateMachine" type="Node" parent="." unique_id=1024695601 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("6_bectd")
+initial_state = NodePath("Move")
+
+[node name="Move" type="Node" parent="MovementStateMachine" unique_id=138870659 node_paths=PackedStringArray("body")]
+script = ExtResource("8_26q78")
+body = NodePath("../..")
+metadata/_custom_type_script = "uid://b6ewwmjjcus5e"
+
+[node name="Dash" type="Node" parent="MovementStateMachine" unique_id=262001688 node_paths=PackedStringArray("body")]
+script = ExtResource("9_wvtmh")
+body = NodePath("../..")
+metadata/_custom_type_script = "uid://cl4i83b1hgxyh"
