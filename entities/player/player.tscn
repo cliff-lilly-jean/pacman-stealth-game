@@ -67,7 +67,7 @@ script = ExtResource("8_26q78")
 entity = NodePath("../..")
 metadata/_custom_type_script = "uid://b6ewwmjjcus5e"
 
-[node name="Dash" type="Node" parent="MovementStateMachine" unique_id=262001688 node_paths=PackedStringArray("body")]
+[node name="Dash" type="Node" parent="MovementStateMachine" unique_id=262001688 node_paths=PackedStringArray("entity")]
 script = ExtResource("9_wvtmh")
-body = NodePath("../..")
+entity = NodePath("../..")
 metadata/_custom_type_script = "uid://cl4i83b1hgxyh"
