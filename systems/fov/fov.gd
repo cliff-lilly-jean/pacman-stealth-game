@@ -54,7 +54,8 @@ func track_target() -> void:
 		ray.force_raycast_update()
 		
 		if ray.is_colliding() and ray.get_collider() == entity.target:
-			print(entity.target.name, " In view and about to follow")
+			print(entity.target.name, " in view")
+
 
 ### VISION CONE ##
 #func create_collider_shape(length: float, width: float) -> void:
