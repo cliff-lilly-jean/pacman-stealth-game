@@ -32,6 +32,7 @@ func physics_update(delta: float) -> void:
 	if direction.length() > 0.1:
 		
 		entity.linear_velocity.move_toward(Vector3(direction.x, 0, direction.y * speed) , acceleration)
+		
 	else:
 		
 		entity.linear_velocity.move_toward(Vector3.ZERO, friction)
