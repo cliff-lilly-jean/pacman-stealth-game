@@ -2,9 +2,12 @@ class_name FOV extends Area3D
 
 @export var entity: Ghost
 @export var view_distance: float = 10
+@export var cone_color: Color
 
 @onready var shape: CollisionShape3D = $Shape
 @onready var ray: RayCast3D = $Ray
+@onready var cone = $Cone
+@onready var cone_material: StandardMaterial3D
 
 var in_area: bool = false
 
@@ -23,6 +26,8 @@ func _ready() -> void:
 	## The length target position of the ray initial direction
 	ray.target_position = Vector3.ZERO
 	ray.target_position.z = view_distance
+	
+	create_cone(view_distance, view_distance)
 
 
 func _physics_process(_delta: float) -> void:
@@ -75,34 +80,34 @@ func track_target() -> void:
 	### Add the created points to the polygon shape
 	#collider.polygon = shape_points
 #
-#func create_collider(length: float, width: float) -> void:
-	#
-	#var vertices : PackedVector3Array = PackedVector3Array() ## Used to create the angles of the shape
-	#var indicies :  PackedInt32Array = PackedInt32Array() ## Used to create the angles of the shape
-	#
+func create_cone(length: float, width: float) -> void:
+	
+	var vertices : PackedVector3Array = PackedVector3Array() ## Used to create the angles of the shape
+	var indicies :  PackedInt32Array = PackedInt32Array() ## Used to create the angles of the shape
+	
 	### Use the vertices to map out the points of the cone
-	#vertices.append(Vector3.ZERO)
-	#vertices.append(Vector3(-width, 0.03, length))
-	#vertices.append(Vector3(width, 0.03, length))
-	#
-	#indicies.append(0)
-	#indicies.append(1)
-	#indicies.append(2)
-	#
-	#var arrays : Array = []
-	#arrays.resize(Mesh.ARRAY_MAX)
-	#
-	#arrays[Mesh.ARRAY_INDEX] = indicies
-	#arrays[Mesh.ARRAY_VERTEX] = vertices
-	#
-	#var cone_mesh : ArrayMesh = ArrayMesh.new()
-	#cone_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
-	#
-	#shape.mesh = cone_mesh
-	#shape.material_override = data.collider_color
-	#
-	### Set the default values for the cone color and transparency
-	#data.collider_color.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA ## Disable the transparency
-	#data.collider_color.cull_mode = BaseMaterial3D.CULL_DISABLED ## Disable the cull mode
-	#data.collider_color.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED ## Unshade the material so that shadows aren't shown in dark areas
-	#data.collider_color.albedo_color = data.base_collider_color ## Change the visible color
+	vertices.append(Vector3.ZERO)
+	vertices.append(Vector3(-width, 0.03, length))
+	vertices.append(Vector3(width, 0.03, length))
+	
+	indicies.append(0)
+	indicies.append(1)
+	indicies.append(2)
+	
+	var arrays : Array = []
+	arrays.resize(Mesh.ARRAY_MAX)
+	
+	arrays[Mesh.ARRAY_INDEX] = indicies
+	arrays[Mesh.ARRAY_VERTEX] = vertices
+	
+	var cone_mesh : ArrayMesh = ArrayMesh.new()
+	cone_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+	
+	cone.mesh = cone_mesh
+	cone.material_override = cone_material
+	
+	## Set the default values for the cone color and transparency
+	cone_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA ## Disable the transparency
+	cone_material.cull_mode = BaseMaterial3D.CULL_DISABLED ## Disable the cull mode
+	cone_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED ## Unshade the material so that shadows aren't shown in dark areas
+	cone_material.albedo_color = cone_color ## Change the visible color

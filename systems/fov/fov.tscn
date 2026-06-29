@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://btyka5m0iobyr" path="res://systems/fov/fov.gd" id="1_bxu5r"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_bxu5r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4i65"]
+
 [node name="FOV" type="Area3D" unique_id=1653368927]
 script = ExtResource("1_bxu5r")
 
@@ -9,3 +13,7 @@ script = ExtResource("1_bxu5r")
 debug_color = Color(0.8039216, 0.41568628, 0, 0.7490196)
 
 [node name="Ray" type="RayCast3D" parent="." unique_id=297393482]
+
+[node name="Cone" type="MeshInstance3D" parent="." unique_id=1735186738]
+mesh = SubResource("BoxMesh_bxu5r")
+surface_material_override/0 = SubResource("StandardMaterial3D_f4i65")
