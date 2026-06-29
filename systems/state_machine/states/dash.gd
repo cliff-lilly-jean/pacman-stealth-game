@@ -17,8 +17,9 @@ func enter() -> void:
 	
 	direction = entity.input_controller.move_direction.rotated(-entity.camera_controller.spring_arm.global_rotation.y)
 	
-	entity.linear_velocity.x = direction.x * force
-	entity.linear_velocity.z = direction.y * force
+	## Squish then spring back
+	squish_and_stretch(0.2)
+	
 	
 func physics_update(delta: float) -> void:
 	
@@ -32,3 +33,20 @@ func physics_update(delta: float) -> void:
 	if dash_timer <= 0.0:
 		change_state.emit(self, "move")
 		return
+
+
+func squish_and_stretch(amount: float) -> void:
+	entity.model.scale = Vector3(1,1,0.7)
+	var t = create_tween()
+	t.tween_property(entity.model, "scale",
+	Vector3.ONE, amount).set_trans(Tween.TRANS_ELASTIC)
+	
+	entity.linear_velocity.x = direction.x * force
+	entity.linear_velocity.z = direction.y * force
+	
+
+func hit_stop(duration) -> void:
+	## Freeze for a few frames
+	Engine.time_scale = 0.05
+	await get_tree().create_timer(duration, true, false, true).timeout
+	Engine.time_scale = 1.0
