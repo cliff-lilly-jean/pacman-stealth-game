@@ -7,7 +7,7 @@ class_name FOV extends Area3D
 @onready var shape: CollisionShape3D = $Shape
 @onready var ray: RayCast3D = $Ray
 @onready var cone = $Cone
-@onready var cone_material: StandardMaterial3D
+@onready var cone_material: StandardMaterial3D = StandardMaterial3D.new()
 
 var in_area: bool = false
 
@@ -19,6 +19,9 @@ func _ready() -> void:
 	## Change the shapes' radius
 	shape.shape.radius = view_distance
 	
+	## Create the viewable cone shape
+	create_cone(view_distance, view_distance)
+	
 	## Connect the Body enterd signal and exited signals
 	body_entered.connect(on_body_entered)
 	body_exited.connect(on_body_exited)
@@ -26,8 +29,6 @@ func _ready() -> void:
 	## The length target position of the ray initial direction
 	ray.target_position = Vector3.ZERO
 	ray.target_position.z = view_distance
-	
-	create_cone(view_distance, view_distance)
 
 
 func _physics_process(_delta: float) -> void:

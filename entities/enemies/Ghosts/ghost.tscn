@@ -52,6 +52,7 @@ radius = 10.0
 
 [node name="FOV" parent="." index="3" unique_id=1653368927 node_paths=PackedStringArray("entity") instance=ExtResource("11_fykcr")]
 entity = NodePath("..")
+cone_color = Color(0.79607844, 0.72156864, 0, 0.29803923)
 
 [node name="AIMoveComponent" type="Node" parent="." index="4" unique_id=720471427 node_paths=PackedStringArray("entity")]
 script = ExtResource("4_lgvqs")
