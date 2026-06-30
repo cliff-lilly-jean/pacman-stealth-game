@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dpyjbym8heqvo"]
+
+[ext_resource type="Script" uid="uid://cdybcl3c61n62" path="res://entities/collectables/collectable.gd" id="1_30l0v"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_30l0v"]
+radius = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_30l0v"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30l0v"]
+albedo_color = Color(0.19607843, 1, 0.101960786, 1)
+
+[node name="Coin" type="Area3D" unique_id=966508042]
+script = ExtResource("1_30l0v")
+metadata/_custom_type_script = "uid://cdybcl3c61n62"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=893927870]
+shape = SubResource("SphereShape3D_30l0v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2117476971]
+mesh = SubResource("SphereMesh_30l0v")
+surface_material_override/0 = SubResource("StandardMaterial3D_30l0v")
