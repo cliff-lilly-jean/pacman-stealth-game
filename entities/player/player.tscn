@@ -55,7 +55,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bectd")
 body = NodePath("..")
 
 [node name="CameraController" parent="." unique_id=793331741 node_paths=PackedStringArray("model") instance=ExtResource("2_abrql")]
-spring_arm_length = 25.0
 model = NodePath("../Model")
 
 [node name="MovementStateMachine" type="Node" parent="." unique_id=1024695601 node_paths=PackedStringArray("initial_state")]
