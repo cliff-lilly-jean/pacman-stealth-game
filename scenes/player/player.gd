@@ -1,7 +1,7 @@
 class_name Player extends CharacterBody3D
 
-const max_look_down: float = deg_to_rad(10)
-const max_look_up: float = deg_to_rad(-45)
+const max_look_down_angle: float = deg_to_rad(-1)
+const max_look_up_angle: float = deg_to_rad(-65)
 
 @export_group("Movement")
 @export var roll_speed: float
@@ -29,7 +29,7 @@ func _input(event: InputEvent) -> void:
 		rotate_y(-event.relative.x * mouse_sensitivity) 
 		
 		spring_arm.rotate_x(-event.relative.y * mouse_sensitivity)
-		spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up, max_look_down)
+		spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up_angle, max_look_down_angle)
 
 func _process(delta: float) -> void:
 	joystick_rotation(delta)
@@ -57,4 +57,4 @@ func joystick_rotation(delta: float) -> void:
 	rotate_y(-joystick_direction.x * joystick_sensitivity * delta)
 		
 	spring_arm.rotation.x -= -joystick_direction.y * joystick_sensitivity * delta
-	spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up, max_look_down)
+	spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up_angle, max_look_down_angle)
