@@ -1,5 +1,8 @@
 class_name Player extends CharacterBody3D
 
+const max_look_down: float = deg_to_rad(10)
+const max_look_up: float = deg_to_rad(-45)
+
 @export_group("Movement")
 @export var roll_speed: float
 @export var boost_speed: float
@@ -9,8 +12,6 @@ class_name Player extends CharacterBody3D
 @export_group("Camera")
 @export var mouse_sensitivity: float
 @export var joystick_sensitivity: float
-@export var min_vertical_clamp: float
-@export var max_vertical_clamp: float
 @export var spring_length: float
 
 @onready var spring_arm: SpringArm3D = $SpringArm3D
@@ -25,33 +26,35 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		rotate_y(-event.relative.x * 0.001) 
+		rotate_y(-event.relative.x * mouse_sensitivity) 
 		
 		spring_arm.rotate_x(-event.relative.y * mouse_sensitivity)
-		spring_arm.rotation.x = clampf(spring_arm.rotation.x, min_vertical_clamp, max_vertical_clamp)
-	
+		spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up, max_look_down)
+
+func _process(delta: float) -> void:
+	joystick_rotation(delta)
 
 func _physics_process(delta: float) -> void:
 	roll(delta)
-	joystick_rotation()
+	
 	move_and_slide()
 
 func roll(delta: float) -> void:
 	var input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	var speed :  float = boost_speed if Input.is_action_pressed("dash") else roll_speed
-	var desired_velocity: Vector3 = Vector3(input_direction.x, 0, input_direction.y)
+	var desired_velocity: Vector3 = Vector3(input_direction.x, 0, input_direction.y) * speed
 	
 	if input_direction.length() >= 0.1:
-		velocity.x = move_toward(velocity.x, desired_velocity.x * speed,  acceleration * delta)
-		velocity.z = move_toward(velocity.z, desired_velocity.z * speed, acceleration * delta)
+		velocity.x = move_toward(velocity.x, desired_velocity.x,  acceleration * delta)
+		velocity.z = move_toward(velocity.z, desired_velocity.z, acceleration * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
 		velocity.z = move_toward(velocity.z, 0, acceleration * delta)
 
-func joystick_rotation() -> void:
+func joystick_rotation(delta: float) -> void:
 	var joystick_direction = Input.get_vector("pan_left","pan_right","pan_up","pan_down")
 	
-	spring_arm.rotation.y -= joystick_direction.x * joystick_sensitivity
+	rotate_y(-joystick_direction.x * joystick_sensitivity * delta)
 		
-	spring_arm.rotation.x -= joystick_direction.y * joystick_sensitivity
-	spring_arm.rotation.x = clampf(spring_arm.rotation.x, min_vertical_clamp, max_vertical_clamp)
+	spring_arm.rotation.x -= -joystick_direction.y * joystick_sensitivity * delta
+	spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up, max_look_down)

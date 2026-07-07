@@ -39,8 +39,4 @@ shape = SubResource("BoxShape3D_4rhad")
 mesh = SubResource("BoxMesh_dphjl")
 
 [node name="Player" parent="." unique_id=573448500 instance=ExtResource("1_dphjl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, 0)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1095882720]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3178711, 2.6122081)
-size = Vector3(1, 0.3642578, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

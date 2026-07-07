@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
+margin = 0.3
 
 [sub_resource type="SphereMesh" id="SphereMesh_8afob"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8afob"]
 
 [node name="Player" type="CharacterBody3D" unique_id=573448500]
 script = ExtResource("1_8afob")
@@ -12,17 +15,19 @@ roll_speed = 5.0
 boost_speed = 10.0
 acceleration = 20.0
 mouse_sensitivity = 0.001
-joystick_sensitivity = 0.02
-min_vertical_clamp = -1.0
-max_vertical_clamp = 30.0
+joystick_sensitivity = 2.0
 spring_length = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1748136380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("SphereShape3D_x7p2l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1172493928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("SphereMesh_8afob")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=528876432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_8afob")
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=442280413]
