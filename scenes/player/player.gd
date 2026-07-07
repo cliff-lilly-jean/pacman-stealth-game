@@ -8,11 +8,16 @@ const max_look_up_angle: float = deg_to_rad(-65)
 @export var boost_speed: float
 @export var acceleration: float
 
+@export_group("Jump")
+@export var jump_force: float
 
 @export_group("Camera")
 @export var mouse_sensitivity: float
 @export var joystick_sensitivity: float
 @export var spring_length: float
+
+@export_group("Gravity")
+@export var gravity: float
 
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
@@ -20,7 +25,6 @@ const max_look_up_angle: float = deg_to_rad(-65)
 func _ready() -> void:
 	spring_arm.spring_length = spring_length
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -34,7 +38,8 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	roll(delta)
-	
+	jump(delta)
+	apply_gravity(delta)
 	move_and_slide()
 
 func roll(delta: float) -> void:
@@ -56,3 +61,10 @@ func joystick_rotation(delta: float) -> void:
 		
 	spring_arm.rotation.x -= -joystick_direction.y * joystick_sensitivity * delta
 	spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up_angle, max_look_down_angle)
+
+func jump(delta: float) -> void:
+	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		velocity.y = jump_force
+
+func apply_gravity(delta: float) -> void:
+	velocity.y -= gravity
