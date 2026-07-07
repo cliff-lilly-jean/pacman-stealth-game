@@ -4,8 +4,9 @@ const max_look_down_angle: float = deg_to_rad(-1)
 const max_look_up_angle: float = deg_to_rad(-65)
 
 @export_group("Movement")
-@export var roll_speed: float
-@export var boost_speed: float
+@export var move_speed: float
+@export var sprint_speed: float
+@export var dash_speed: float
 @export var acceleration: float
 
 @export_group("Jump")
@@ -22,6 +23,9 @@ const max_look_up_angle: float = deg_to_rad(-65)
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 
+var input_direction: Vector2
+var direction: Vector3
+
 func _ready() -> void:
 	spring_arm.spring_length = spring_length
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -37,14 +41,16 @@ func _process(delta: float) -> void:
 	joystick_rotation(delta)
 
 func _physics_process(delta: float) -> void:
-	roll(delta)
+	move(delta)
 	jump(delta)
+	dash(delta)
 	apply_gravity(delta)
 	move_and_slide()
 
-func roll(delta: float) -> void:
-	var input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
-	var speed :  float = boost_speed if Input.is_action_pressed("dash") else roll_speed
+func move(delta: float) -> void:
+	input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
+	
+	var speed :  float = sprint_speed if Input.is_action_pressed("sprint") else move_speed
 	var desired_velocity: Vector3 = Vector3(input_direction.x, 0, input_direction.y) * speed
 	
 	if input_direction.length() >= 0.1:
@@ -65,6 +71,11 @@ func joystick_rotation(delta: float) -> void:
 func jump(delta: float) -> void:
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_force
+
+func dash(delta: float) -> void:
+	if is_on_floor() and Input.is_action_just_pressed("dash"):
+	
+		print("Dash: , ", velocity)
 
 func apply_gravity(delta: float) -> void:
 	velocity.y -= gravity
