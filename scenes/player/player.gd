@@ -32,8 +32,8 @@ func roll(delta: float) -> void:
 	var desired_velocity: Vector3 = Vector3(input_direction.x, 0, input_direction.y)
 	
 	if input_direction.length() >= 0.1:
-		velocity.x = move_toward(velocity.x, desired_velocity.x * speed * acceleration, delta)
-		velocity.z = move_toward(velocity.z, desired_velocity.z * speed * acceleration, delta)
+		velocity.x = move_toward(velocity.x, desired_velocity.x * speed, delta * acceleration)
+		velocity.z = move_toward(velocity.z, desired_velocity.z * speed, delta * acceleration)
 	else:
-		velocity.x = move_toward(0, desired_velocity.x * speed * acceleration, delta)
-		velocity.z = move_toward(0, desired_velocity.z * speed * acceleration, delta)
+		velocity.x = move_toward(0, desired_velocity.x * speed, delta * acceleration)
+		velocity.z = move_toward(0, desired_velocity.z * speed, delta * acceleration)
