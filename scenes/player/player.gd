@@ -17,8 +17,6 @@ const max_look_up_angle: float = deg_to_rad(-65)
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 
-var direction: Vector3
-
 func _ready() -> void:
 	spring_arm.spring_length = spring_length
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
