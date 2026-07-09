@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina.gd" id="2_dovo2"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.3
@@ -34,3 +35,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("SphereShape3D_8afob")
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=442280413]
+
+[node name="Components" type="Node" parent="." unique_id=1724317557]
+
+[node name="Stamina" type="Node" parent="Components" unique_id=847729689]
+unique_name_in_owner = true
+script = ExtResource("2_dovo2")
+max_stamina = 10.0
+recovery_amount = 0.5
+metadata/_custom_type_script = "uid://c7kj5fndyb6dx"

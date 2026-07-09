@@ -22,6 +22,7 @@ const max_look_up_angle: float = deg_to_rad(-65)
 
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var stamina: Stamina = %Stamina
 
 var input_direction: Vector2
 var direction: Vector3
@@ -39,6 +40,7 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	joystick_rotation(delta)
+	print(stamina.stamina)
 
 func _physics_process(delta: float) -> void:
 	move(delta)
@@ -50,8 +52,11 @@ func _physics_process(delta: float) -> void:
 func move(delta: float) -> void:
 	input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	
-	var speed :  float = sprint_speed if Input.is_action_pressed("sprint") else move_speed
+	var speed : float = sprint_speed if Input.is_action_pressed("sprint") else move_speed
 	var desired_velocity: Vector3 = Vector3(input_direction.x, 0, input_direction.y) * speed
+	
+	if Input.is_action_pressed("sprint"):
+		stamina.use(2.5)
 	
 	if input_direction.length() >= 0.1:
 		velocity.x = move_toward(velocity.x, desired_velocity.x,  acceleration * delta)
@@ -71,11 +76,13 @@ func joystick_rotation(delta: float) -> void:
 func jump(delta: float) -> void:
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_force
+		stamina.use(0.5)
 
 func dash(delta: float) -> void:
 	if is_on_floor() and Input.is_action_just_pressed("dash"):
 	
 		print("Dash: , ", velocity)
+		stamina.use(5)
 
 func apply_gravity(delta: float) -> void:
 	velocity.y -= gravity
