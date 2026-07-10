@@ -1,4 +1,4 @@
-class_name Stamina extends Component
+class_name StaminaComponent extends Component
 
 @export var max_stamina: float
 @export var recovery_amount: float

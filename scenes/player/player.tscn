@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
-[ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://bitc0etwcdpsv" path="res://components/input/input_component.gd" id="3_75vfm"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
 [ext_resource type="Script" uid="uid://diffe220jlwde" path="res://state_machine/state.gd" id="4_lvxji"]
+[ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player_move.gd" id="4_p47bc"]
+[ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/player_jump.gd" id="6_0owmy"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.3
@@ -14,11 +17,6 @@ margin = 0.3
 
 [node name="Player" type="CharacterBody3D" unique_id=573448500]
 script = ExtResource("1_8afob")
-move_speed = 5.0
-sprint_speed = 10.0
-dash_speed = 40.0
-acceleration = 20.0
-jump_force = 20.0
 mouse_sensitivity = 0.001
 joystick_sensitivity = 2.0
 spring_length = 5.0
@@ -40,29 +38,37 @@ shape = SubResource("SphereShape3D_8afob")
 
 [node name="Components" type="Node" parent="." unique_id=1724317557]
 
-[node name="Stamina" type="Node" parent="Components" unique_id=847729689]
+[node name="StaminaComponent" type="Node" parent="Components" unique_id=847729689]
 unique_name_in_owner = true
 script = ExtResource("2_dovo2")
 max_stamina = 10.0
 recovery_amount = 0.5
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
-[node name="Movement" type="Node" parent="." unique_id=276659856]
+[node name="InputComponent" type="Node" parent="Components" unique_id=449551840]
+unique_name_in_owner = true
+script = ExtResource("3_75vfm")
+metadata/_custom_type_script = "uid://bitc0etwcdpsv"
+
+[node name="Movement" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_gmlin")
-metadata/_custom_type_script = "uid://ceyckjoc20ikq"
+initial_state = NodePath("Move")
 
-[node name="Move" type="Node" parent="Movement" unique_id=107244780]
-script = ExtResource("4_lvxji")
-metadata/_custom_type_script = "uid://diffe220jlwde"
+[node name="Move" type="Node" parent="Movement" unique_id=107244780 node_paths=PackedStringArray("entity")]
+script = ExtResource("4_p47bc")
+move_speed = 5.0
+sprint_speed = 15.0
+dash_speed = 10.0
+acceleration = 2.0
+entity = NodePath("../..")
 
-[node name="Jump" type="Node" parent="Movement" unique_id=1927382449]
-script = ExtResource("4_lvxji")
-metadata/_custom_type_script = "uid://diffe220jlwde"
+[node name="Jump" type="Node" parent="Movement" unique_id=1927382449 node_paths=PackedStringArray("entity")]
+script = ExtResource("6_0owmy")
+jump_force = 10.0
+entity = NodePath("../..")
 
 [node name="Sprint" type="Node" parent="Movement" unique_id=1505621523]
 script = ExtResource("4_lvxji")
-metadata/_custom_type_script = "uid://diffe220jlwde"
 
 [node name="Dash" type="Node" parent="Movement" unique_id=681605741]
 script = ExtResource("4_lvxji")
-metadata/_custom_type_script = "uid://diffe220jlwde"

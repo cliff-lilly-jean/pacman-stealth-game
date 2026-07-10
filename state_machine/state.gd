@@ -1,6 +1,8 @@
 class_name State extends Node
 
-signal change_state(state: State)
+@export var entity: Node
+
+signal change_state(state: State, new_state_name: String)
 
 func enter() -> void:
 	pass
