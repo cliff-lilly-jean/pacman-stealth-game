@@ -1,14 +1,15 @@
+class_name Move
 extends State
 
 @export var move_speed: float
-@export var sprint_speed: float
-@export var dash_speed: float
 @export var acceleration: float
+
+func enter() -> void:
+	print("Entered Move:" )
 
 func apply_move(input: Vector2, delta: float) -> void:
 	
-	var speed : float = sprint_speed if Input.is_action_pressed("sprint") else move_speed
-	var desired_velocity: Vector3 = Vector3(input.x, 0, input.y) * speed
+	var desired_velocity: Vector3 = Vector3(input.x, 0, input.y) * move_speed
 	
 	#if Input.is_action_pressed("sprint"):
 		#stamina.use(2.5)
@@ -23,6 +24,15 @@ func apply_move(input: Vector2, delta: float) -> void:
 func update(delta: float) -> void:
 	if entity.is_on_floor() and Input.is_action_just_pressed("jump"):
 		change_state.emit(self, 'jump')
-
+		print("Left Move:" )
+		
+	if entity.is_on_floor() and Input.is_action_just_pressed("dash"):
+		change_state.emit(self, "dash")
+		print("Left Move:" )
+		
+	if entity.is_on_floor() and Input.is_action_pressed("sprint"):
+		change_state.emit(self, "sprint")
+		print("Left Move:" )
+	
 func physics_update(delta: float) -> void:
 	apply_move(entity.input_component.input_direction, delta)

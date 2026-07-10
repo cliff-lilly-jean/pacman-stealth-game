@@ -35,8 +35,6 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	input_component.update(delta)
 	
-	
-	dash(delta)
 	apply_gravity(delta)
 	move_and_slide()
 
@@ -48,12 +46,6 @@ func joystick_rotation(delta: float) -> void:
 		
 	spring_arm.rotation.x -= -joystick_direction.y * joystick_sensitivity * delta
 	spring_arm.rotation.x = clampf(spring_arm.rotation.x, max_look_up_angle, max_look_down_angle)
-
-func dash(delta: float) -> void:
-	if is_on_floor() and Input.is_action_just_pressed("dash"):
-	
-		print("Dash: , ", velocity)
-		stamina.use(5)
 
 func apply_gravity(delta: float) -> void:
 	velocity.y -= gravity

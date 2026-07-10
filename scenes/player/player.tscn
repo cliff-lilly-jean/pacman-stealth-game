@@ -4,9 +4,10 @@
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://bitc0etwcdpsv" path="res://components/input/input_component.gd" id="3_75vfm"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
-[ext_resource type="Script" uid="uid://diffe220jlwde" path="res://state_machine/state.gd" id="4_lvxji"]
-[ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player_move.gd" id="4_p47bc"]
-[ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/player_jump.gd" id="6_0owmy"]
+[ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/move.gd" id="4_p47bc"]
+[ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/jump.gd" id="6_0owmy"]
+[ext_resource type="Script" uid="uid://hk7cm0mnekv6" path="res://state_machine/states/sprint.gd" id="7_qek5x"]
+[ext_resource type="Script" uid="uid://cx30wreue7b3w" path="res://state_machine/states/dash.gd" id="8_qek5x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.3
@@ -57,8 +58,6 @@ initial_state = NodePath("Move")
 [node name="Move" type="Node" parent="Movement" unique_id=107244780 node_paths=PackedStringArray("entity")]
 script = ExtResource("4_p47bc")
 move_speed = 5.0
-sprint_speed = 15.0
-dash_speed = 10.0
 acceleration = 20.0
 entity = NodePath("../..")
 
@@ -67,8 +66,13 @@ script = ExtResource("6_0owmy")
 jump_force = 20.0
 entity = NodePath("../..")
 
-[node name="Sprint" type="Node" parent="Movement" unique_id=1505621523]
-script = ExtResource("4_lvxji")
+[node name="Sprint" type="Node" parent="Movement" unique_id=1505621523 node_paths=PackedStringArray("entity")]
+script = ExtResource("7_qek5x")
+sprint_speed = 15.0
+sprint_acceleration = 30.0
+entity = NodePath("../..")
 
-[node name="Dash" type="Node" parent="Movement" unique_id=681605741]
-script = ExtResource("4_lvxji")
+[node name="Dash" type="Node" parent="Movement" unique_id=681605741 node_paths=PackedStringArray("entity")]
+script = ExtResource("8_qek5x")
+dash_speed = 40.0
+entity = NodePath("../..")
