@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina.gd" id="2_dovo2"]
-[ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machines/state_machine.gd" id="3_gmlin"]
-[ext_resource type="Script" uid="uid://diffe220jlwde" path="res://state_machines/States/state.gd" id="4_lvxji"]
+[ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
+[ext_resource type="Script" uid="uid://diffe220jlwde" path="res://state_machine/state.gd" id="4_lvxji"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.3
