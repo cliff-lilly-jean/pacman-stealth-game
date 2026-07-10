@@ -22,17 +22,18 @@ func apply_move(input: Vector2, delta: float) -> void:
 		entity.velocity.z = move_toward(entity.velocity.z, 0, acceleration * delta)
 
 func update(delta: float) -> void:
-	if entity.is_on_floor() and Input.is_action_just_pressed("jump"):
-		change_state.emit(self, 'jump')
-		print("Left Move:" )
-		
-	if entity.is_on_floor() and Input.is_action_just_pressed("dash"):
-		change_state.emit(self, "dash")
-		print("Left Move:" )
-		
-	if entity.is_on_floor() and Input.is_action_pressed("sprint"):
-		change_state.emit(self, "sprint")
-		print("Left Move:" )
+	if entity is Player:
+		if entity.is_on_floor() and entity.input_component.jump_input:
+			change_state.emit(self, 'jump')
+			print("Left Move:" )
+			
+		if entity.is_on_floor() and entity.input_component.dash_input:
+			change_state.emit(self, "dash")
+			print("Left Move:" )
+			
+		if entity.is_on_floor() and entity.input_component.sprint_input:
+			change_state.emit(self, "sprint")
+			print("Left Move:" )
 	
 func physics_update(delta: float) -> void:
 	apply_move(entity.input_component.input_direction, delta)

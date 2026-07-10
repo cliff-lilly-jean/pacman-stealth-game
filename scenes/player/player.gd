@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	joystick_rotation(delta)
 
 func _physics_process(delta: float) -> void:
-	input_component.update(delta)
+	input_component.update()
 	
 	apply_gravity(delta)
 	move_and_slide()

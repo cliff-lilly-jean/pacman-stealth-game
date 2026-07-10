@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://bitc0etwcdpsv" path="res://components/input/input_component.gd" id="3_75vfm"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
-[ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/move.gd" id="4_p47bc"]
-[ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/jump.gd" id="6_0owmy"]
-[ext_resource type="Script" uid="uid://hk7cm0mnekv6" path="res://state_machine/states/sprint.gd" id="7_qek5x"]
-[ext_resource type="Script" uid="uid://cx30wreue7b3w" path="res://state_machine/states/dash.gd" id="8_qek5x"]
+[ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player/move.gd" id="4_p47bc"]
+[ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/player/jump.gd" id="6_0owmy"]
+[ext_resource type="Script" uid="uid://hk7cm0mnekv6" path="res://state_machine/states/player/sprint.gd" id="7_qek5x"]
+[ext_resource type="Script" uid="uid://cx30wreue7b3w" path="res://state_machine/states/player/dash.gd" id="8_qek5x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.3

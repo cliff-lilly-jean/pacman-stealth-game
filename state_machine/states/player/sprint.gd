@@ -9,10 +9,18 @@ func enter() -> void:
 	
 
 func update(delta: float) -> void:
-	
-	if !Input.is_action_pressed("sprint"):
-		change_state.emit(self, 'move')
-		print("Left Sprint:" )
+	if entity is Player:
+		if entity.is_on_floor() and entity.input_component.jump_input:
+			change_state.emit(self, 'jump')
+			print("Left Sprint:" )
+			
+		if entity.is_on_floor() and entity.input_component.dash_input:
+			change_state.emit(self, "dash")
+			print("Left Sprint:" )
+		
+		if !entity.input_component.sprint_input:
+			change_state.emit(self, 'move')
+			print("Left Sprint:" )
 
 func physics_update(delta: float) -> void:
 	apply_sprint(entity.input_component.input_direction ,delta)

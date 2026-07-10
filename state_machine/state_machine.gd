@@ -13,8 +13,9 @@ func _ready() -> void:
 		states[child_state.name.to_lower()] = child_state
 	
 	if initial_state:
-		initial_state.enter()
 		current_state = initial_state
+		current_state.enter()
+		
 	
 func _process(delta: float) -> void:
 	if current_state:
