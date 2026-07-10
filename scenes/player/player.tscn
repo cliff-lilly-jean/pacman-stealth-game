@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machines/state_machine.gd" id="3_gmlin"]
+[ext_resource type="Script" uid="uid://diffe220jlwde" path="res://state_machines/States/state.gd" id="4_lvxji"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.3
@@ -44,3 +46,23 @@ script = ExtResource("2_dovo2")
 max_stamina = 10.0
 recovery_amount = 0.5
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
+
+[node name="Movement" type="Node" parent="." unique_id=276659856]
+script = ExtResource("3_gmlin")
+metadata/_custom_type_script = "uid://ceyckjoc20ikq"
+
+[node name="Move" type="Node" parent="Movement" unique_id=107244780]
+script = ExtResource("4_lvxji")
+metadata/_custom_type_script = "uid://diffe220jlwde"
+
+[node name="Jump" type="Node" parent="Movement" unique_id=1927382449]
+script = ExtResource("4_lvxji")
+metadata/_custom_type_script = "uid://diffe220jlwde"
+
+[node name="Sprint" type="Node" parent="Movement" unique_id=1505621523]
+script = ExtResource("4_lvxji")
+metadata/_custom_type_script = "uid://diffe220jlwde"
+
+[node name="Dash" type="Node" parent="Movement" unique_id=681605741]
+script = ExtResource("4_lvxji")
+metadata/_custom_type_script = "uid://diffe220jlwde"
