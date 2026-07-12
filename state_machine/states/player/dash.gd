@@ -15,13 +15,14 @@ func update(delta) -> void:
 	
 	if entity is Player:
 		if entity.is_on_floor() and entity.input_component.jump_input:
-			change_state.emit(self, 'jump')
 			print("Left Dash:" )
+			change_state.emit(self, 'jump')
+			
 			
 		if entity.is_on_floor() and entity.input_component.sprint_input:
-			change_state.emit(self, "sprint")
 			print("Left Dash:" )
+			change_state.emit(self, "sprint")
 		
 		if !entity.input_component.dash_input:
-			change_state.emit(self, 'move')
 			print("Left Dash:" )
+			change_state.emit(self, 'move')
