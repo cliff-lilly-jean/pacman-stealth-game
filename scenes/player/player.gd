@@ -34,10 +34,9 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	input_component.update()
-	
+
 	apply_gravity(delta)
 	move_and_slide()
-
 
 func joystick_rotation(delta: float) -> void:
 	var joystick_direction = Input.get_vector("pan_left","pan_right","pan_up","pan_down")
@@ -49,3 +48,6 @@ func joystick_rotation(delta: float) -> void:
 
 func apply_gravity(delta: float) -> void:
 	velocity.y -= gravity
+
+	
+	
