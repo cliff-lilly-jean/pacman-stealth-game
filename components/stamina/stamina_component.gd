@@ -1,4 +1,4 @@
-class_name StaminaComponent extends Component
+class_name StaminaComponent extends Node3D
 
 @export var max_stamina: float
 @export var recovery_amount: float
@@ -14,7 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	recover(delta)
 
-func use(amount: float) -> void:
+func drain(amount: float) -> void:
 	if stamina < amount:
 		return
 	

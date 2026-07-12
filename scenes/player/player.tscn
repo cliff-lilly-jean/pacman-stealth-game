@@ -37,42 +37,40 @@ shape = SubResource("SphereShape3D_8afob")
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=442280413]
 
-[node name="Components" type="Node" parent="." unique_id=1724317557]
+[node name="Components" type="Node3D" parent="." unique_id=1552593458]
 
-[node name="StaminaComponent" type="Node" parent="Components" unique_id=847729689]
-unique_name_in_owner = true
+[node name="StaminaComponent" type="Node3D" parent="Components" unique_id=705627486]
 script = ExtResource("2_dovo2")
 max_stamina = 10.0
 recovery_amount = 0.5
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
-[node name="InputComponent" type="Node" parent="Components" unique_id=449551840]
-unique_name_in_owner = true
+[node name="InputComponent" type="Node3D" parent="Components" unique_id=1659763330]
 script = ExtResource("3_75vfm")
 metadata/_custom_type_script = "uid://bitc0etwcdpsv"
 
-[node name="Movement" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
+[node name="MovementStateMachine" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_gmlin")
 initial_state = NodePath("Move")
 
-[node name="Move" type="Node" parent="Movement" unique_id=107244780 node_paths=PackedStringArray("entity")]
+[node name="Move" type="Node" parent="MovementStateMachine" unique_id=107244780 node_paths=PackedStringArray("entity")]
 script = ExtResource("4_p47bc")
 move_speed = 5.0
 acceleration = 20.0
 entity = NodePath("../..")
 
-[node name="Jump" type="Node" parent="Movement" unique_id=1927382449 node_paths=PackedStringArray("entity")]
+[node name="Jump" type="Node" parent="MovementStateMachine" unique_id=1927382449 node_paths=PackedStringArray("entity")]
 script = ExtResource("6_0owmy")
 jump_force = 20.0
 entity = NodePath("../..")
 
-[node name="Sprint" type="Node" parent="Movement" unique_id=1505621523 node_paths=PackedStringArray("entity")]
+[node name="Sprint" type="Node" parent="MovementStateMachine" unique_id=1505621523 node_paths=PackedStringArray("entity")]
 script = ExtResource("7_qek5x")
 sprint_speed = 15.0
 sprint_acceleration = 30.0
 entity = NodePath("../..")
 
-[node name="Dash" type="Node" parent="Movement" unique_id=681605741 node_paths=PackedStringArray("entity")]
+[node name="Dash" type="Node" parent="MovementStateMachine" unique_id=681605741 node_paths=PackedStringArray("entity")]
 script = ExtResource("8_qek5x")
 dash_speed = 40.0
 entity = NodePath("../..")

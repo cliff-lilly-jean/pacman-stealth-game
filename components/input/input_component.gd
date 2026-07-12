@@ -1,4 +1,4 @@
-class_name InputComponent extends Component
+class_name InputComponent extends Node3D
 
 var input_direction: Vector2
 var jump_input: bool
