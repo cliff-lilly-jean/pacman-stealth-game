@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://scenes/camera_controller/camera_controller.tscn" id="2_5gtgg"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
 [ext_resource type="PackedScene" uid="uid://cxffwwmbik3qy" path="res://components/stamina/stamina_component.tscn" id="3_qek5x"]
 [ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player/move.gd" id="4_p47bc"]
@@ -23,13 +24,8 @@ size = Vector3(0.5, 0.2, 0.5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gtgg"]
 albedo_color = Color(1, 1, 0, 1)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_8afob"]
-
 [node name="Player" type="CharacterBody3D" unique_id=573448500]
 script = ExtResource("1_8afob")
-mouse_sensitivity = 0.001
-joystick_sensitivity = 2.0
-spring_length = 5.0
 gravity = 0.98
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1748136380]
@@ -46,46 +42,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27422678)
 mesh = SubResource("BoxMesh_qek5x")
 surface_material_override/0 = SubResource("StandardMaterial3D_5gtgg")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=528876432]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("SphereShape3D_8afob")
+[node name="CameraController" parent="." unique_id=1568162990 instance=ExtResource("2_5gtgg")]
 
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=442280413]
-
-[node name="Components" type="Node3D" parent="." unique_id=1552593458]
-
-[node name="StaminaComponent" parent="Components" unique_id=1921419501 instance=ExtResource("3_qek5x")]
+[node name="StaminaComponent" parent="." unique_id=1921419501 instance=ExtResource("3_qek5x")]
 max_stamina = 10.0
 recovery_amount = 0.5
 
-[node name="MovementStateMachine" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
+[node name="InputManager" type="Node" parent="." unique_id=8083350]
+script = ExtResource("9_5gtgg")
+metadata/_custom_type_script = "uid://bq62ec65ah123"
+
+[node name="StateMachine" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_gmlin")
 initial_state = NodePath("Move")
 
-[node name="Move" type="Node" parent="MovementStateMachine" unique_id=107244780 node_paths=PackedStringArray("entity")]
+[node name="Move" type="Node" parent="StateMachine" unique_id=107244780 node_paths=PackedStringArray("entity")]
 script = ExtResource("4_p47bc")
 move_speed = 5.0
 acceleration = 20.0
 entity = NodePath("../..")
 
-[node name="Jump" type="Node" parent="MovementStateMachine" unique_id=1927382449 node_paths=PackedStringArray("entity")]
+[node name="Jump" type="Node" parent="StateMachine" unique_id=1927382449 node_paths=PackedStringArray("entity")]
 script = ExtResource("6_0owmy")
 jump_force = 20.0
 entity = NodePath("../..")
 
-[node name="Sprint" type="Node" parent="MovementStateMachine" unique_id=1505621523 node_paths=PackedStringArray("entity")]
+[node name="Sprint" type="Node" parent="StateMachine" unique_id=1505621523 node_paths=PackedStringArray("entity")]
 script = ExtResource("7_qek5x")
 sprint_speed = 15.0
 sprint_acceleration = 30.0
 entity = NodePath("../..")
 
-[node name="Dash" type="Node" parent="MovementStateMachine" unique_id=681605741 node_paths=PackedStringArray("entity")]
+[node name="Dash" type="Node" parent="StateMachine" unique_id=681605741 node_paths=PackedStringArray("entity")]
 script = ExtResource("8_qek5x")
 dash_speed = 40.0
 entity = NodePath("../..")
-
-[node name="Managers" type="Node" parent="." unique_id=515773864]
-
-[node name="InputManager" type="Node" parent="Managers" unique_id=8083350]
-script = ExtResource("9_5gtgg")
-metadata/_custom_type_script = "uid://bq62ec65ah123"

@@ -19,7 +19,7 @@ func update(delta: float) -> void:
 			change_state.emit(self, "sprint")
 	
 func physics_update(delta: float) -> void:
-	apply_move(entity.input_manager.input_direction, entity.spring_arm, delta)
+	apply_move(entity.input_manager.input_direction, entity.camera_controller, delta)
 	pass
 
 
