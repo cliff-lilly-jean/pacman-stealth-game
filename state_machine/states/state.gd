@@ -1,6 +1,6 @@
 class_name State extends Node
 
-@export var entity: Node
+@export var entity: Entity
 
 signal change_state(state: State, new_state_name: String)
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
-[ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/entities/player/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://scenes/camera_controller/camera_controller.tscn" id="2_5gtgg"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
 [ext_resource type="PackedScene" uid="uid://cxffwwmbik3qy" path="res://components/stamina/stamina_component.tscn" id="3_qek5x"]
@@ -24,9 +24,12 @@ size = Vector3(0.5, 0.2, 0.5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gtgg"]
 albedo_color = Color(1, 1, 0, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=573448500]
+[node name="Player" type="CharacterBody3D" unique_id=573448500 node_paths=PackedStringArray("camera_controller", "input_manager", "mesh")]
 script = ExtResource("1_8afob")
 gravity = 0.98
+camera_controller = NodePath("CameraController")
+input_manager = NodePath("InputManager")
+mesh = NodePath("MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1748136380]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
