@@ -14,10 +14,7 @@ const max_look_up_angle: float = deg_to_rad(-65)
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var stamina_component: StaminaComponent = $Components/StaminaComponent
-#@onready var input_component: InputComponent = $Components/InputComponent
 @onready var input_manager: InputManager = $Managers/InputManager
-
-
 
 var direction: Vector3
 

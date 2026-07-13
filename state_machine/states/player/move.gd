@@ -9,13 +9,13 @@ func enter() -> void:
 
 func update(delta: float) -> void:
 	if entity is Player:
-		if entity.is_on_floor() and entity.input_manager.jump():
+		if entity.is_on_floor() and entity.input_manager.jump_input:
 			change_state.emit(self, 'jump')
 			
-		if entity.is_on_floor() and entity.input_manager.dash():
+		if entity.is_on_floor() and entity.input_manager.dash_input:
 			change_state.emit(self, "dash")
 			
-		if entity.is_on_floor() and entity.input_manager.sprint():
+		if entity.is_on_floor() and entity.input_manager.sprint_input:
 			change_state.emit(self, "sprint")
 	
 func physics_update(delta: float) -> void:

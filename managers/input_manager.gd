@@ -11,28 +11,19 @@ signal dash_pressed
 signal sprint_pressed
 
 func update() -> void:
-	update_direction()
-	jump()
-	dash()
-	sprint()
-
-func update_direction() -> void:
 	input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
-	print("Move")
+	jump_input = Input.is_action_just_pressed("jump")
+	dash_input = Input.is_action_just_pressed("dash")
+	sprint_input = Input.is_action_pressed("sprint")
+	
 	changed_direction.emit(input_direction)
 	
-func jump() -> void:
-	if Input.is_action_just_pressed("jump"):
-		print("Jump")
+	if jump_input:
 		jump_pressed.emit()
-
-func dash() -> void:
-	if Input.is_action_just_pressed("dash"):
-		print("Dash")
-		dash_pressed.emit()
-
-func sprint() -> void:
-	if Input.is_action_pressed("sprint"):
-		print("Sprint")
-		sprint_pressed.emit()
 		
+	if dash_input:
+		dash_pressed.emit()
+		
+	if sprint_input:	
+		sprint_pressed.emit()
+	
