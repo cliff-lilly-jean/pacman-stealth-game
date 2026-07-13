@@ -13,8 +13,11 @@ const max_look_up_angle: float = deg_to_rad(-65)
 
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var mesh: MeshInstance3D = $MeshInstance3D
-@onready var input_component: InputComponent = $Components/InputComponent
-@onready var stamina_component = $Components/StaminaComponent
+@onready var stamina_component: StaminaComponent = $Components/StaminaComponent
+#@onready var input_component: InputComponent = $Components/InputComponent
+@onready var input_manager: InputManager = $Managers/InputManager
+
+
 
 var direction: Vector3
 
@@ -33,7 +36,7 @@ func _process(delta: float) -> void:
 	joystick_rotation(delta)
 
 func _physics_process(delta: float) -> void:
-	input_component.update()
+	input_manager.update()
 
 	apply_gravity(delta)
 	move_and_slide()

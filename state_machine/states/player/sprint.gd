@@ -5,25 +5,24 @@ extends State
 @export var sprint_acceleration: float
 
 func enter() -> void:
-	print("Entered Sprint:" )
+	pass
 	
 
 func update(delta: float) -> void:
 	if entity is Player:
-		if entity.is_on_floor() and entity.input_component.jump_input:
-			print("Left Sprint:" )
+		if entity.is_on_floor() and entity.input_manager.jump_input:
 			change_state.emit(self, 'jump')
 			
-		if entity.is_on_floor() and entity.input_component.dash_input:
-			print("Left Sprint:" )
+		if entity.is_on_floor() and entity.input_manager.dash_input:
 			change_state.emit(self, "dash")
 		
-		if !entity.input_component.sprint_input:
-			print("Left Sprint:" )
+		if !entity.input_manager.sprint_input:
 			change_state.emit(self, 'move')
 
 func physics_update(delta: float) -> void:
-	apply_sprint(entity.input_component.input_direction ,delta)
+	apply_sprint(entity.input_manager.input_direction ,delta)
+	if entity is Player:
+		print("Sprint: ", entity.input_manager.sprint_input)
 
 
 func apply_sprint(input: Vector2, delta: float):

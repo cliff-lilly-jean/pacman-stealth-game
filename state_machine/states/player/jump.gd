@@ -5,11 +5,9 @@ extends State
 
 func enter() -> void:
 	entity.velocity.y = jump_force
-	print("Entered Jump:" )
 
 func update(delta: float) -> void:
 	if entity is Player:
-		if entity.is_on_floor() and !entity.input_component.jump_input:
-			print("Left Jump:" )
+		if entity.is_on_floor() and !entity.input_manager.jump_input:
 			change_state.emit(self, "move")
 			

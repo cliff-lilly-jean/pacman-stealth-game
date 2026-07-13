@@ -1,25 +1,27 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
-[ext_resource type="Script" uid="uid://n17h1fcmgfs6" path="res://components/stamina/stamina.gd" id="2_dovo2"]
-[ext_resource type="Script" uid="uid://bitc0etwcdpsv" path="res://components/input/input_component.gd" id="3_75vfm"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
+[ext_resource type="PackedScene" uid="uid://cxffwwmbik3qy" path="res://components/stamina/stamina_component.tscn" id="3_qek5x"]
 [ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player/move.gd" id="4_p47bc"]
 [ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/player/jump.gd" id="6_0owmy"]
 [ext_resource type="Script" uid="uid://hk7cm0mnekv6" path="res://state_machine/states/player/sprint.gd" id="7_qek5x"]
 [ext_resource type="Script" uid="uid://cx30wreue7b3w" path="res://state_machine/states/player/dash.gd" id="8_qek5x"]
+[ext_resource type="Script" uid="uid://bq62ec65ah123" path="res://managers/input_manager.gd" id="9_5gtgg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
-margin = 0.3
-radius = 0.5289131
+margin = 0.5
 
 [sub_resource type="SphereMesh" id="SphereMesh_8afob"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qek5x"]
+albedo_color = Color(1, 0.0627451, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qek5x"]
 size = Vector3(0.5, 0.2, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gtgg"]
-albedo_color = Color(0.11372549, 1, 0, 1)
+albedo_color = Color(1, 1, 0, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8afob"]
 
@@ -37,6 +39,7 @@ shape = SubResource("SphereShape3D_x7p2l")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1172493928]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("SphereMesh_8afob")
+surface_material_override/0 = SubResource("StandardMaterial3D_qek5x")
 
 [node name="Eyes" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1528680826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27422678)
@@ -51,15 +54,9 @@ shape = SubResource("SphereShape3D_8afob")
 
 [node name="Components" type="Node3D" parent="." unique_id=1552593458]
 
-[node name="StaminaComponent" type="Node3D" parent="Components" unique_id=705627486]
-script = ExtResource("2_dovo2")
+[node name="StaminaComponent" parent="Components" unique_id=1921419501 instance=ExtResource("3_qek5x")]
 max_stamina = 10.0
 recovery_amount = 0.5
-metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
-
-[node name="InputComponent" type="Node3D" parent="Components" unique_id=1659763330]
-script = ExtResource("3_75vfm")
-metadata/_custom_type_script = "uid://bitc0etwcdpsv"
 
 [node name="MovementStateMachine" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_gmlin")
@@ -86,3 +83,9 @@ entity = NodePath("../..")
 script = ExtResource("8_qek5x")
 dash_speed = 40.0
 entity = NodePath("../..")
+
+[node name="Managers" type="Node" parent="." unique_id=515773864]
+
+[node name="InputManager" type="Node" parent="Managers" unique_id=8083350]
+script = ExtResource("9_5gtgg")
+metadata/_custom_type_script = "uid://bq62ec65ah123"

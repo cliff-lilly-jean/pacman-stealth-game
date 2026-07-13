@@ -5,25 +5,22 @@ extends State
 @export var acceleration: float
 
 func enter() -> void:
-	print("Entered Move:" )
+	pass
 
 func update(delta: float) -> void:
 	if entity is Player:
-		if entity.is_on_floor() and entity.input_component.jump_input:
-			print("Left Move:" )
+		if entity.is_on_floor() and entity.input_manager.jump():
 			change_state.emit(self, 'jump')
 			
-			
-		if entity.is_on_floor() and entity.input_component.dash_input:
-			print("Left Move:" )
+		if entity.is_on_floor() and entity.input_manager.dash():
 			change_state.emit(self, "dash")
 			
-		if entity.is_on_floor() and entity.input_component.sprint_input:
-			print("Left Move:" )
+		if entity.is_on_floor() and entity.input_manager.sprint():
 			change_state.emit(self, "sprint")
 	
 func physics_update(delta: float) -> void:
-	apply_move(entity.input_component.input_direction, entity.spring_arm, delta)
+	apply_move(entity.input_manager.input_direction, entity.spring_arm, delta)
+	pass
 
 
 func apply_move(input: Vector2, camera: Node3D, delta: float) -> void:
