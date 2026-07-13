@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/player/player.gd" id="1_8afob"]
-[ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://n17h1fcmgfs6" path="res://components/stamina/stamina.gd" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://bitc0etwcdpsv" path="res://components/input/input_component.gd" id="3_75vfm"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
 [ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player/move.gd" id="4_p47bc"]
