@@ -10,6 +10,9 @@ signal jump_pressed
 signal dash_pressed
 signal sprint_pressed
 
+func _ready() -> void:
+	Input.mouse_mode =Input.MOUSE_MODE_CAPTURED
+
 func update() -> void:
 	input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	jump_input = Input.is_action_just_pressed("jump")
@@ -27,3 +30,9 @@ func update() -> void:
 	if sprint_input:	
 		sprint_pressed.emit()
 	
+func _input(event) -> void:
+	if Input.is_action_just_pressed("pause"):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/entities/player/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://scenes/camera_controller/camera_controller.tscn" id="2_5gtgg"]
+[ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="3_5sj0x"]
 [ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="3_gmlin"]
-[ext_resource type="PackedScene" uid="uid://cxffwwmbik3qy" path="res://components/stamina/stamina_component.tscn" id="3_qek5x"]
 [ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player/move.gd" id="4_p47bc"]
 [ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/player/jump.gd" id="6_0owmy"]
 [ext_resource type="Script" uid="uid://hk7cm0mnekv6" path="res://state_machine/states/player/sprint.gd" id="7_qek5x"]
@@ -47,9 +47,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5gtgg")
 
 [node name="CameraController" parent="." unique_id=1568162990 instance=ExtResource("2_5gtgg")]
 
-[node name="StaminaComponent" parent="." unique_id=1921419501 instance=ExtResource("3_qek5x")]
+[node name="StaminaComponent" type="Node3D" parent="." unique_id=719859266]
+script = ExtResource("3_5sj0x")
 max_stamina = 10.0
-recovery_amount = 0.5
+recovery_amount = 0.2
+metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
 [node name="InputManager" type="Node" parent="." unique_id=8083350]
 script = ExtResource("9_5gtgg")

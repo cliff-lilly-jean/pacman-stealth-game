@@ -7,7 +7,8 @@ class_name Player extends Entity
 @onready var stamina_component: StaminaComponent = $StaminaComponent
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass
 
 func _physics_process(delta: float) -> void:
 	movement_input = input_manager.input_direction
