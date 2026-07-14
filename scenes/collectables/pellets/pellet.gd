@@ -10,6 +10,5 @@ func _process(delta: float) -> void:
 
 func on_body_entered(body: Node3D) -> void:
 	if body is Player:
-		print(body.name, " took ", self.name)
 		collected.emit()
 		queue_free()

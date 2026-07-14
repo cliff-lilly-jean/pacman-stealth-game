@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bngug3e0d04yb"]
 
-[ext_resource type="Script" path="res://scenes/world/world.gd" id="1_6m72w"]
 [ext_resource type="PackedScene" uid="uid://kotak32xuqdy" path="res://scenes/entities/player/player.tscn" id="1_dphjl"]
 [ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/collectables/pellets/pellet.tscn" id="2_sl2e5"]
 [ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://scenes/world/game_manager.gd" id="2_v5dby"]
@@ -26,7 +25,6 @@ size = Vector3(50, 1, 50)
 size = Vector3(50, 1, 50)
 
 [node name="World" type="Node3D" unique_id=129840621]
-script = ExtResource("1_6m72w")
 
 [node name="GameManager" type="Node" parent="." unique_id=1099293572]
 script = ExtResource("2_v5dby")
@@ -47,11 +45,13 @@ shape = SubResource("BoxShape3D_4rhad")
 mesh = SubResource("BoxMesh_dphjl")
 
 [node name="Player" parent="." unique_id=573448500 instance=ExtResource("1_dphjl")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Environment" type="Node3D" parent="." unique_id=2079499997]
 
 [node name="Pellets" type="Node3D" parent="." unique_id=847069946]
+unique_name_in_owner = true
 
 [node name="Pellet" parent="Pellets" unique_id=1459063820 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, -6.053056)
@@ -83,4 +83,5 @@ theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
 [node name="Score" parent="UI/Control/MarginContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
+unique_name_in_owner = true
 layout_mode = 2

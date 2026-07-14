@@ -1,11 +1,16 @@
 extends Node
 
-var pellet = Pellet.new()
-var score: int = 0
+@onready var player = %Player
+@onready var pellets = %Pellets
+@onready var score = %Score
+
+var current_score: int = 0
 
 func _ready() -> void:
-	pellet.collected.connect(on_collected)
+	for pellet in pellets.get_children():
+		pellet.collected.connect(on_collected)
 
 
 func on_collected() -> void:
-	print("Collected")
+	current_score += 1
+	score.text = str(current_score)
