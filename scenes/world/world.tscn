@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bngug3e0d04yb"]
 
+[ext_resource type="Script" uid="uid://bwfej4ywweuw3" path="res://scenes/world/world.gd" id="1_6m72w"]
 [ext_resource type="PackedScene" uid="uid://kotak32xuqdy" path="res://scenes/entities/player/player.tscn" id="1_dphjl"]
 [ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/collectables/pellets/pellet.tscn" id="2_sl2e5"]
+[ext_resource type="PackedScene" uid="uid://bhdcorrn5o618" path="res://scenes/ui/score/score.tscn" id="3_1fp7r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dphjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,6 +25,7 @@ size = Vector3(50, 1, 50)
 size = Vector3(50, 1, 50)
 
 [node name="World" type="Node3D" unique_id=129840621]
+script = ExtResource("1_6m72w")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=558220109]
 environment = SubResource("Environment_1fp7r")
@@ -57,3 +60,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.9999999, -10.053056)
 
 [node name="Pellet4" parent="Pellets" unique_id=1851477144 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, 7.946944)
+
+[node name="UI" type="Node" parent="." unique_id=1512463135]
+
+[node name="Control" type="Control" parent="UI" unique_id=1762151138]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control" unique_id=2034659914]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Score" parent="UI/Control/MarginContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
+layout_mode = 2
