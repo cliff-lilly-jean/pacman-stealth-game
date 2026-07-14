@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bngug3e0d04yb"]
 
 [ext_resource type="PackedScene" uid="uid://kotak32xuqdy" path="res://scenes/entities/player/player.tscn" id="1_dphjl"]
+[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/collectables/pellets/pellet.tscn" id="2_sl2e5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dphjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,3 +43,17 @@ mesh = SubResource("BoxMesh_dphjl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Environment" type="Node3D" parent="." unique_id=2079499997]
+
+[node name="Pellets" type="Node3D" parent="." unique_id=847069946]
+
+[node name="Pellet" parent="Pellets" unique_id=1459063820 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, -6.053056)
+
+[node name="Pellet2" parent="Pellets" unique_id=1194776434 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.9999999, -1.0530558)
+
+[node name="Pellet3" parent="Pellets" unique_id=917457215 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.9999999, -10.053056)
+
+[node name="Pellet4" parent="Pellets" unique_id=1851477144 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, 7.946944)

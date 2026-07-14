@@ -28,11 +28,7 @@ func apply_move(input: Vector2, camera: SpringArm3D, delta: float) -> void:
 	if input.length() > 0.1:
 		var target_angle: float = atan2(desired_velocity.x, desired_velocity.z)
 	
-		entity.mesh.global_rotation.y = lerp_angle(
-			entity.mesh.global_rotation.y,
-			target_angle,
-			10 * delta
-		)
+		entity.mesh.global_rotation.y = lerp_angle(entity.mesh.global_rotation.y, target_angle, 10 * delta)
 	
 	if input.length() >= 0.1:
 		entity.velocity.x = move_toward(entity.velocity.x, desired_velocity.x,  acceleration * delta)
