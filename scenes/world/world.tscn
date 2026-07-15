@@ -210,21 +210,14 @@ material = SubResource("StandardMaterial3D_7capw")
 
 [node name="UI" type="Node" parent="." unique_id=1512463135]
 
-[node name="Control" type="Control" parent="UI" unique_id=1762151138]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="MarginContainer" type="MarginContainer" parent="UI/Control" unique_id=2034659914]
-layout_mode = 0
-offset_right = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=2034659914]
+offset_right = 53.0
 offset_bottom = 40.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Score" parent="UI/Control/MarginContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
+[node name="Score" parent="UI/MarginContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
 unique_name_in_owner = true
 layout_mode = 2
