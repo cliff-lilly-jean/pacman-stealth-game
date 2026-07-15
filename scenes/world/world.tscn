@@ -24,6 +24,9 @@ size = Vector3(50, 1, 50)
 [sub_resource type="BoxMesh" id="BoxMesh_dphjl"]
 size = Vector3(50, 1, 50)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7capw"]
+albedo_color = Color(0.22241455, 0.8893968, 4.6205523e-06, 1)
+
 [node name="World" type="Node3D" unique_id=129840621]
 
 [node name="GameManager" type="Node" parent="." unique_id=1099293572]
@@ -54,16 +57,79 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 unique_name_in_owner = true
 
 [node name="Pellet" parent="Pellets" unique_id=1459063820 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, -6.053056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.999999, 4)
 
-[node name="Pellet2" parent="Pellets" unique_id=1194776434 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.9999999, -1.0530558)
+[node name="Pellet2" parent="Pellets" unique_id=704711584 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5.999999, -12)
 
-[node name="Pellet3" parent="Pellets" unique_id=917457215 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.9999999, -10.053056)
+[node name="Pellet3" parent="Pellets" unique_id=931955006 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7.999999, -12)
 
-[node name="Pellet4" parent="Pellets" unique_id=1851477144 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9999999, 7.946944)
+[node name="Pellet4" parent="Pellets" unique_id=571837819 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.999999, -5)
+
+[node name="Pellet5" parent="Pellets" unique_id=921330060 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.999999, 3)
+
+[node name="Pellet6" parent="Pellets" unique_id=783370247 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9.999999, 7)
+
+[node name="Pellet7" parent="Pellets" unique_id=1928216749 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 9.999999, 7)
+
+[node name="Pellet8" parent="Pellets" unique_id=923059060 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10.999999, 11)
+
+[node name="Pellet9" parent="Pellets" unique_id=178446252 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 14.999999, 10)
+
+[node name="Pellet10" parent="Pellets" unique_id=692839847 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 19, 17)
+
+[node name="Pellet11" parent="Pellets" unique_id=1110507125 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 21, 17)
+
+[node name="Pellet12" parent="Pellets" unique_id=197481356 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 21, 14)
+
+[node name="Pellet13" parent="Pellets" unique_id=1049485834 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 21, 14)
+
+[node name="Pellet14" parent="Pellets" unique_id=1062444503 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 21, 17)
+
+[node name="Pellet15" parent="Pellets" unique_id=1426172372 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 16)
+
+[node name="Pellet16" parent="Pellets" unique_id=1556679070 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -4)
+
+[node name="Pellet17" parent="Pellets" unique_id=1865444668 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 6)
+
+[node name="Pellet18" parent="Pellets" unique_id=358142750 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 6)
+
+[node name="Pellet19" parent="Pellets" unique_id=1049394370 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -19)
+
+[node name="Pellet20" parent="Pellets" unique_id=1493788677 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -8)
+
+[node name="Pellet21" parent="Pellets" unique_id=406863472 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -8)
+
+[node name="Pellet22" parent="Pellets" unique_id=1993755724 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -20)
+
+[node name="Pellet23" parent="Pellets" unique_id=1254788952 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -20)
+
+[node name="Pellet24" parent="Pellets" unique_id=966007176 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 20)
+
+[node name="Pellet25" parent="Pellets" unique_id=2127464229 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, 20)
 
 [node name="UI" type="Node" parent="." unique_id=1512463135]
 
@@ -85,3 +151,80 @@ theme_override_constants/margin_bottom = 5
 [node name="Score" parent="UI/Control/MarginContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="Structures" type="Node3D" parent="." unique_id=1230133120]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Structures" unique_id=1554184099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, 15.506893)
+size = Vector3(5, 20, 5)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Structures" unique_id=469941719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -12.493107)
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Structures" unique_id=1557901978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 5, -12.493107)
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Structures" unique_id=185745414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7, -5.493107)
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Structures" unique_id=1608435492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7, 4.506893)
+size = Vector3(10, 5, 10)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Structures" unique_id=935037163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.9999995, 4.506893)
+size = Vector3(10, 5, 10)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Structures" unique_id=316163177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, 16.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Structures" unique_id=42083014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3.5, 16.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Structures" unique_id=95834021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.5, 13.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Structures" unique_id=1063052697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 7.5, 10.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Structures" unique_id=70050743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 9.5, 10.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Structures" unique_id=1365720337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 11.5, 10.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Structures" unique_id=1100789308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 13.5, 10.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Structures" unique_id=945561744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 15.5, 13.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Structures" unique_id=556001340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 17.5, 16.506893)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_7capw")
