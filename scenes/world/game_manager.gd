@@ -6,8 +6,6 @@ extends Node
 @onready var game_timer: Timer = %GameTimer
 @onready var game_time: Label = %GameTime
 
-
-
 var time_in_seconds: int = 0
 
 func _ready() -> void:
