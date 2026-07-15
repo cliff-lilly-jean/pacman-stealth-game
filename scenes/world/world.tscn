@@ -225,14 +225,30 @@ material = SubResource("StandardMaterial3D_7capw")
 
 [node name="UI" type="Node" parent="." unique_id=1512463135]
 
-[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=2034659914]
-offset_right = 53.0
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=236924982]
+offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/separation = 8
+
+[node name="ScoreContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=2034659914]
+layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Score" parent="UI/MarginContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
+[node name="Score" parent="UI/HBoxContainer/ScoreContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="TimeCointainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=397318071]
+layout_mode = 2
+
+[node name="GameTime" type="Label" parent="UI/HBoxContainer/TimeCointainer" unique_id=417904005]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00:00"
+
+[node name="GameTimer" type="Timer" parent="." unique_id=198363160]
+unique_name_in_owner = true
+autostart = true
