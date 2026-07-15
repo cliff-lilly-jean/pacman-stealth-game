@@ -6,6 +6,7 @@ extends Node
 
 func _ready() -> void:
 	for pellet in pellets.get_children():
+		score.total = pellets.get_child_count()
 		pellet.collected.connect(on_collected)
 	
 	
