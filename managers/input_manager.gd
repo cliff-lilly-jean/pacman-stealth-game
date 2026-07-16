@@ -2,11 +2,13 @@ class_name InputManager extends Node
 
 var input_direction: Vector2
 var jump_input: bool
+var jump_release_input: bool
 var dash_input: bool
 var sprint_input: bool
 
 signal changed_direction(direction: Vector2)
 signal jump_pressed
+signal jump_released
 signal dash_pressed
 signal sprint_pressed
 
@@ -16,6 +18,7 @@ func _ready() -> void:
 func update() -> void:
 	input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	jump_input = Input.is_action_just_pressed("jump")
+	jump_release_input = Input.is_action_just_released("jump")
 	dash_input = Input.is_action_just_pressed("dash")
 	sprint_input = Input.is_action_pressed("sprint")
 	
@@ -23,6 +26,9 @@ func update() -> void:
 	
 	if jump_input:
 		jump_pressed.emit()
+	
+	if jump_release_input:
+		jump_released.emit()
 		
 	if dash_input:
 		dash_pressed.emit()

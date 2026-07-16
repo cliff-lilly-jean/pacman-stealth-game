@@ -4,7 +4,11 @@ extends State
 @export var jump_force: float
 
 func enter() -> void:
-	entity.velocity.y = jump_force
+	if entity is Player:
+		if entity.input_manager.jump_release_input and entity.velocity.y > 0.0:
+			entity.velocity.y *= -0.45
+	
+			entity.velocity.y = jump_force
 
 func update(delta: float) -> void:
 	if entity is Player:

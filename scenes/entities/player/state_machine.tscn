@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://7yxylsl2paic"]
+
+[ext_resource type="Script" uid="uid://ceyckjoc20ikq" path="res://state_machine/state_machine.gd" id="1_larmu"]
+[ext_resource type="Script" uid="uid://c7km1mc6b3dso" path="res://state_machine/states/player/move.gd" id="2_q3ocf"]
+[ext_resource type="Script" uid="uid://e5qsktiyusul" path="res://state_machine/states/player/jump.gd" id="3_mu60e"]
+[ext_resource type="Script" uid="uid://hk7cm0mnekv6" path="res://state_machine/states/player/sprint.gd" id="4_ladp7"]
+[ext_resource type="Script" uid="uid://cx30wreue7b3w" path="res://state_machine/states/player/dash.gd" id="5_dj8sn"]
+
+[node name="StateMachine" type="Node" unique_id=2053697117 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_larmu")
+initial_state = NodePath("Move")
+
+[node name="Move" type="Node" parent="." unique_id=1257442734 node_paths=PackedStringArray("entity")]
+script = ExtResource("2_q3ocf")
+move_speed = 5.0
+acceleration = 20.0
+entity = NodePath("")
+
+[node name="Jump" type="Node" parent="." unique_id=115923998 node_paths=PackedStringArray("entity")]
+script = ExtResource("3_mu60e")
+jump_force = 25.0
+entity = NodePath("")
+
+[node name="Sprint" type="Node" parent="." unique_id=767605315 node_paths=PackedStringArray("entity")]
+script = ExtResource("4_ladp7")
+sprint_speed = 15.0
+sprint_acceleration = 30.0
+entity = NodePath("")
+
+[node name="Dash" type="Node" parent="." unique_id=1380786404 node_paths=PackedStringArray("entity")]
+script = ExtResource("5_dj8sn")
+dash_speed = 40.0
+entity = NodePath("")
