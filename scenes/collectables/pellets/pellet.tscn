@@ -16,6 +16,8 @@ emission = Color(0.21230483, 0.21230483, 0.21230483, 1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_7capw"]
 
 [node name="Pellet" type="Area3D" unique_id=1459063820]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_vmixq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1386647666]

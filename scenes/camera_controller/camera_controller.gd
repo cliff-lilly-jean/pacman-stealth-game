@@ -13,9 +13,10 @@ const max_look_up_angle: float = deg_to_rad(-45)
 
 func _ready() -> void:
 	spring_length = length
-	
-func _process(delta: float) -> void:
-	joystick_rotation(delta)	
+
+func _physics_process(delta: float) -> void:
+	joystick_rotation(delta)
+		
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:

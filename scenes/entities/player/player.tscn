@@ -19,16 +19,17 @@ size = Vector3(0.5, 0.2, 0.5)
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=573448500 node_paths=PackedStringArray("mesh")]
+collision_mask = 6
 script = ExtResource("1_8afob")
 move_speed = 5.0
 acceleration = 25.0
-sprint_speed = 15.0
-sprint_acceleration = 20.0
-dash_speed = 30.0
-dash_acceleration = 15.0
-jump_force = 25.0
-jump_gravity = 40.0
-fall_gravity = 65.0
+sprint_speed = 30.0
+sprint_acceleration = 35.0
+dash_speed = 100.0
+dash_acceleration = 800.0
+jump_force = 40.0
+jump_gravity = 80.0
+fall_gravity = 140.0
 mesh = NodePath("MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1748136380]
@@ -47,6 +48,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5gtgg")
 
 [node name="CameraController" parent="." unique_id=1568162990 node_paths=PackedStringArray("entity") instance=ExtResource("2_5gtgg")]
 mouse_sensitivity = 0.002
+length = 15.0
 entity = NodePath("..")
 
 [node name="StaminaComponent" type="Node3D" parent="." unique_id=719859266]
