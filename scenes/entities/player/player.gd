@@ -20,6 +20,5 @@ func _physics_process(delta: float) -> void:
 
 func apply_gravity(delta: float) -> void:
 	velocity.y -= gravity
-
 	
 	

@@ -22,12 +22,11 @@ func physics_update(delta: float) -> void:
 
 
 func apply_move(input: Vector2, camera: SpringArm3D, delta: float) -> void:
-	var direction = input.rotated(-camera.global_rotation.y).normalized()
-	var desired_velocity: Vector3 = Vector3(direction.x, 0, direction.y) * move_speed
+	var direction: Vector3 = Vector3(input.x, 0, input.y).normalized()
+	var desired_velocity = entity.transform.basis * direction * move_speed
 	
 	if input.length() > 0.1:
 		var target_angle: float = atan2(desired_velocity.x, desired_velocity.z)
-	
 		entity.mesh.global_rotation.y = lerp_angle(entity.mesh.global_rotation.y, target_angle, 10 * delta)
 	
 	if input.length() >= 0.1:
