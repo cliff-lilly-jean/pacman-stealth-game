@@ -28,8 +28,12 @@ albedo_color = Color(0, 0, 0, 1)
 script = ExtResource("1_8afob")
 gravity = 0.98
 camera_controller = NodePath("CameraController")
-input_manager = NodePath("InputManager")
+input_manager = NodePath("")
 mesh = NodePath("MeshInstance3D")
+
+[node name="InputManager" type="Node" parent="." unique_id=968866649]
+script = ExtResource("9_5gtgg")
+metadata/_custom_type_script = "uid://bq62ec65ah123"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1748136380]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -53,10 +57,6 @@ script = ExtResource("3_5sj0x")
 max_stamina = 10.0
 recovery_amount = 0.2
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
-
-[node name="InputManager" type="Node" parent="." unique_id=8083350]
-script = ExtResource("9_5gtgg")
-metadata/_custom_type_script = "uid://bq62ec65ah123"
 
 [node name="StateMachine" type="Node" parent="." unique_id=276659856 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_gmlin")
