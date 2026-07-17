@@ -21,10 +21,10 @@ albedo_color = Color(0, 0, 0, 1)
 [node name="Player" type="CharacterBody3D" unique_id=573448500 node_paths=PackedStringArray("mesh")]
 collision_mask = 6
 script = ExtResource("1_8afob")
-move_speed = 5.0
-acceleration = 25.0
+move_speed = 8.0
+acceleration = 40.0
 sprint_speed = 30.0
-sprint_acceleration = 35.0
+sprint_acceleration = 300.0
 dash_speed = 100.0
 dash_acceleration = 800.0
 jump_force = 40.0

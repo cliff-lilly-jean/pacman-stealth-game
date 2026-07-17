@@ -69,6 +69,10 @@ func sprint(input: Vector2, delta: float) -> void:
 		
 		velocity.x = move_toward(velocity.x, sprint_velocity.x,  sprint_acceleration * delta)
 		velocity.z = move_toward(velocity.z, sprint_velocity.z , sprint_acceleration * delta)
+		
+	if Input.is_action_just_released("sprint"):
+		velocity.x = move_toward(velocity.x, 0, sprint_acceleration * delta)
+		velocity.z = move_toward(velocity.z, 0, sprint_acceleration * delta)
 
 func dash(input: Vector2, delta: float) -> void:
 	if Input.is_action_just_pressed("dash"):

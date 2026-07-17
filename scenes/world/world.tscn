@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bngug3e0d04yb"]
 
 [ext_resource type="PackedScene" uid="uid://kotak32xuqdy" path="res://scenes/entities/player/player.tscn" id="1_dphjl"]
-[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/collectables/pellets/pellet.tscn" id="2_sl2e5"]
+[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/entities/collectables/coins/bronze_coin.tscn" id="2_sl2e5"]
 [ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://scenes/world/game_manager.gd" id="2_v5dby"]
 [ext_resource type="PackedScene" uid="uid://bhdcorrn5o618" path="res://scenes/ui/score/score.tscn" id="3_1fp7r"]
+[ext_resource type="MeshLibrary" uid="uid://cgpaitvhhtjrf" path="res://assets/mesh_libraries/kenny_platformer_kit.meshlib" id="5_v5dby"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dphjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -54,82 +55,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Environment" type="Node3D" parent="." unique_id=2079499997]
 
-[node name="Pellets" type="Node3D" parent="." unique_id=847069946]
+[node name="Coins" type="Node3D" parent="." unique_id=847069946]
 unique_name_in_owner = true
 
-[node name="Pellet" parent="Pellets" unique_id=1459063820 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin" parent="Coins" unique_id=1459063820 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.999999, 4)
 
-[node name="Pellet2" parent="Pellets" unique_id=704711584 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin2" parent="Coins" unique_id=704711584 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5.999999, -12)
 
-[node name="Pellet3" parent="Pellets" unique_id=931955006 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin3" parent="Coins" unique_id=931955006 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7.999999, -12)
 
-[node name="Pellet4" parent="Pellets" unique_id=571837819 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin4" parent="Coins" unique_id=571837819 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.999999, -5)
 
-[node name="Pellet5" parent="Pellets" unique_id=921330060 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin5" parent="Coins" unique_id=921330060 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.999999, 3)
 
-[node name="Pellet6" parent="Pellets" unique_id=783370247 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin6" parent="Coins" unique_id=783370247 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9.999999, 7)
 
-[node name="Pellet7" parent="Pellets" unique_id=1928216749 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin7" parent="Coins" unique_id=1928216749 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 9.999999, 7)
 
-[node name="Pellet8" parent="Pellets" unique_id=923059060 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin8" parent="Coins" unique_id=923059060 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10.999999, 11)
 
-[node name="Pellet9" parent="Pellets" unique_id=178446252 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin9" parent="Coins" unique_id=178446252 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 14.999999, 10)
 
-[node name="Pellet10" parent="Pellets" unique_id=692839847 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin10" parent="Coins" unique_id=692839847 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 19, 17)
 
-[node name="Pellet11" parent="Pellets" unique_id=1110507125 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin11" parent="Coins" unique_id=1110507125 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 21, 17)
 
-[node name="Pellet12" parent="Pellets" unique_id=197481356 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin12" parent="Coins" unique_id=197481356 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 21, 14)
 
-[node name="Pellet13" parent="Pellets" unique_id=1049485834 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin13" parent="Coins" unique_id=1049485834 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 21, 14)
 
-[node name="Pellet14" parent="Pellets" unique_id=1062444503 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin14" parent="Coins" unique_id=1062444503 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 21, 17)
 
-[node name="Pellet15" parent="Pellets" unique_id=1426172372 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin15" parent="Coins" unique_id=1426172372 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 16)
 
-[node name="Pellet16" parent="Pellets" unique_id=1556679070 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin16" parent="Coins" unique_id=1556679070 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -4)
 
-[node name="Pellet17" parent="Pellets" unique_id=1865444668 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin17" parent="Coins" unique_id=1865444668 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 6)
 
-[node name="Pellet18" parent="Pellets" unique_id=358142750 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin18" parent="Coins" unique_id=358142750 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 6)
 
-[node name="Pellet19" parent="Pellets" unique_id=1049394370 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin19" parent="Coins" unique_id=1049394370 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -19)
 
-[node name="Pellet20" parent="Pellets" unique_id=1493788677 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin20" parent="Coins" unique_id=1493788677 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -8)
 
-[node name="Pellet21" parent="Pellets" unique_id=406863472 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin21" parent="Coins" unique_id=406863472 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -8)
 
-[node name="Pellet22" parent="Pellets" unique_id=1993755724 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin22" parent="Coins" unique_id=1993755724 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -20)
 
-[node name="Pellet23" parent="Pellets" unique_id=1254788952 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin23" parent="Coins" unique_id=1254788952 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -20)
 
-[node name="Pellet24" parent="Pellets" unique_id=966007176 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin24" parent="Coins" unique_id=966007176 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 20)
 
-[node name="Pellet25" parent="Pellets" unique_id=2127464229 instance=ExtResource("2_sl2e5")]
+[node name="BronzeCoin25" parent="Coins" unique_id=2127464229 instance=ExtResource("2_sl2e5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, 20)
 
 [node name="Structures" type="Node3D" parent="." unique_id=1230133120]
@@ -268,3 +269,6 @@ text = "00:00"
 [node name="GameTimer" type="Timer" parent="." unique_id=198363160]
 unique_name_in_owner = true
 autostart = true
+
+[node name="GridMap" type="GridMap" parent="." unique_id=632038076]
+mesh_library = ExtResource("5_v5dby")
