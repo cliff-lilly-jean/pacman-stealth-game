@@ -34,6 +34,7 @@ func _physics_process(delta: float) -> void:
 	dash(input_direction, delta)
 	jump()
 	apply_gravity(delta)
+	
 	move_and_slide()
 
 func apply_gravity(delta: float) -> void:

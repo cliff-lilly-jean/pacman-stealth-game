@@ -3,10 +3,12 @@ extends Area3D
 
 @onready var audio_stream: AudioStreamPlayer = $AudioStreamPlayer
 @onready var destroy_wait_timer: Timer = $DestroyWaitTimer
-@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var coin_bronze: Node3D = $"coin-bronze"
 
-signal collected
+signal collected(value: int)
+
+var value: int = 1
 
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
@@ -22,7 +24,7 @@ func on_body_entered(body: Node3D) -> void:
 		destroy_wait_timer.start()
 		
 		## hide the collision shappe and the mesh
-		collision_shape_3d.hide()
+		collision_shape.hide()
 		coin_bronze.hide()
 
 func on_timeout() -> void:

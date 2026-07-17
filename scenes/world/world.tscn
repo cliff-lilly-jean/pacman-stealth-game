@@ -254,14 +254,14 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Score" parent="UI/HBoxContainer/ScoreContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
+[node name="ScoreLabel" parent="UI/HBoxContainer/ScoreContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TimeCointainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=397318071]
 layout_mode = 2
 
-[node name="GameTime" type="Label" parent="UI/HBoxContainer/TimeCointainer" unique_id=417904005]
+[node name="GameTimeLabel" type="Label" parent="UI/HBoxContainer/TimeCointainer" unique_id=417904005]
 unique_name_in_owner = true
 layout_mode = 2
 text = "00:00"
