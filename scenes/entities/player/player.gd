@@ -3,10 +3,12 @@ class_name Player extends Entity
 @export_group("Move")
 @export var move_speed: float
 @export var acceleration: float
+@export var deceleration: float
 
 @export_group("Sprint")
 @export var sprint_speed: float
 @export var sprint_acceleration: float
+@export var sprint_deceleration: float
 
 @export_group("Dash")
 @export var dash_speed: float
@@ -53,8 +55,8 @@ func move(input: Vector2, delta: float) -> void:
 		velocity.x = move_toward(velocity.x, move_velocity.x,  acceleration * delta)
 		velocity.z = move_toward(velocity.z, move_velocity.z, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
-		velocity.z = move_toward(velocity.z, 0, acceleration * delta)
+		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
+		velocity.z = move_toward(velocity.z, 0, deceleration * delta)
 
 func jump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -62,7 +64,7 @@ func jump() -> void:
 		jump_sfx.play()
 	
 	if Input.is_action_just_released("jump") and velocity.y > 0.0:
-		velocity.y *= -0.45
+		velocity.y *= -0.25
 
 func sprint(input: Vector2, delta: float) -> void:
 	if Input.is_action_pressed("sprint"):
@@ -74,8 +76,8 @@ func sprint(input: Vector2, delta: float) -> void:
 		velocity.z = move_toward(velocity.z, sprint_velocity.z , sprint_acceleration * delta)
 		
 	if Input.is_action_just_released("sprint"):
-		velocity.x = move_toward(velocity.x, 0, sprint_acceleration * delta)
-		velocity.z = move_toward(velocity.z, 0, sprint_acceleration * delta)
+		velocity.x = move_toward(velocity.x, 0, sprint_deceleration * delta)
+		velocity.z = move_toward(velocity.z, 0, sprint_deceleration * delta)
 
 func dash(input: Vector2, delta: float) -> void:
 	if Input.is_action_just_pressed("dash"):
