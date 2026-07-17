@@ -22,6 +22,8 @@ var desired_velocity: Vector3
 
 @onready var stamina_component: StaminaComponent = $StaminaComponent
 
+@onready var jump_sfx: AudioStreamPlayer = $SFX/JumpSFX
+
 func _physics_process(delta: float) -> void:
 	input_direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	
@@ -57,6 +59,7 @@ func move(input: Vector2, delta: float) -> void:
 func jump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_force
+		jump_sfx.play()
 	
 	if Input.is_action_just_released("jump") and velocity.y > 0.0:
 		velocity.y *= -0.45

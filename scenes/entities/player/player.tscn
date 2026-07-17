@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/entities/player/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://scenes/camera_controller/camera_controller.tscn" id="2_5gtgg"]
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="3_5sj0x"]
+[ext_resource type="AudioStream" uid="uid://dkg0tw4denyfs" path="res://assets/audio/sfx/jumping.mp3" id="4_nh4ur"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.5
@@ -56,3 +57,9 @@ script = ExtResource("3_5sj0x")
 max_stamina = 10.0
 recovery_amount = 0.2
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
+
+[node name="SFX" type="Node3D" parent="." unique_id=1779154771]
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="SFX" unique_id=822254158]
+stream = ExtResource("4_nh4ur")
+volume_db = -15.509
