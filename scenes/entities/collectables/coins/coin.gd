@@ -1,14 +1,15 @@
 class_name Coin
 extends Area3D
 
+@export var coin_resource: CoinResource
+@export var mesh: Node
+
 @onready var audio_stream: AudioStreamPlayer = $AudioStreamPlayer
 @onready var destroy_wait_timer: Timer = $DestroyWaitTimer
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
-@onready var coin_bronze: Node3D = $"coin-bronze"
+
 
 signal collected(value: int)
-
-var value: int = 1
 
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
@@ -25,7 +26,7 @@ func on_body_entered(body: Node3D) -> void:
 		
 		## hide the collision shappe and the mesh
 		collision_shape.hide()
-		coin_bronze.hide()
+		mesh.hide()
 
 func on_timeout() -> void:
 	## delete the game object after the timer is done

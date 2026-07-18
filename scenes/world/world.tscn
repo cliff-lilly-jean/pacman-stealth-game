@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bngug3e0d04yb"]
 
 [ext_resource type="PackedScene" uid="uid://kotak32xuqdy" path="res://scenes/entities/player/player.tscn" id="1_dphjl"]
-[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/entities/collectables/coins/bronze_coin.tscn" id="2_sl2e5"]
+[ext_resource type="PackedScene" uid="uid://bh46y4ix7q4kk" path="res://scenes/entities/collectables/coins/bronze_coin.tscn" id="2_sl2e5"]
 [ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://scenes/world/game_manager.gd" id="2_v5dby"]
-[ext_resource type="PackedScene" uid="uid://bhdcorrn5o618" path="res://scenes/ui/score/score.tscn" id="3_1fp7r"]
+[ext_resource type="PackedScene" uid="uid://df8noeoqm8tib" path="res://scenes/entities/collectables/coins/gold_coin.tscn" id="4_bq33v"]
 [ext_resource type="MeshLibrary" uid="uid://cgpaitvhhtjrf" path="res://assets/mesh_libraries/kenny_platformer_kit.meshlib" id="5_v5dby"]
+[ext_resource type="PackedScene" uid="uid://baky56ktw1271" path="res://scenes/entities/game_time/game_time.tscn" id="6_t5ptc"]
+[ext_resource type="PackedScene" uid="uid://dm0gixr6biiv1" path="res://scenes/entities/score/score.tscn" id="7_bq33v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dphjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,79 +61,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 unique_name_in_owner = true
 
 [node name="BronzeCoin" parent="Coins" unique_id=1459063820 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.999999, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 6, 4)
 
-[node name="BronzeCoin2" parent="Coins" unique_id=704711584 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5.999999, -12)
+[node name="BronzeCoin2" parent="Coins" unique_id=658494516 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -13)
 
-[node name="BronzeCoin3" parent="Coins" unique_id=931955006 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7.999999, -12)
+[node name="BronzeCoin3" parent="Coins" unique_id=1264403543 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.5880194, -13)
 
-[node name="BronzeCoin4" parent="Coins" unique_id=571837819 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.999999, -5)
+[node name="BronzeCoin4" parent="Coins" unique_id=150565857 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7.5880194, -12)
 
-[node name="BronzeCoin5" parent="Coins" unique_id=921330060 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.999999, 3)
+[node name="BronzeCoin5" parent="Coins" unique_id=676344634 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.588019, -5)
 
-[node name="BronzeCoin6" parent="Coins" unique_id=783370247 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9.999999, 7)
+[node name="BronzeCoin6" parent="Coins" unique_id=514306739 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9.588019, 7)
 
-[node name="BronzeCoin7" parent="Coins" unique_id=1928216749 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 9.999999, 7)
+[node name="BronzeCoin7" parent="Coins" unique_id=1111907186 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 9.588019, 1)
 
-[node name="BronzeCoin8" parent="Coins" unique_id=923059060 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10.999999, 11)
+[node name="BronzeCoin8" parent="Coins" unique_id=1052842076 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 16.58802, 13)
 
-[node name="BronzeCoin9" parent="Coins" unique_id=178446252 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 14.999999, 10)
+[node name="BronzeCoin9" parent="Coins" unique_id=1773222707 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 18.58802, 17)
 
-[node name="BronzeCoin10" parent="Coins" unique_id=692839847 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 19, 17)
+[node name="BronzeCoin10" parent="Coins" unique_id=1989209004 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 20.58802, 17)
 
-[node name="BronzeCoin11" parent="Coins" unique_id=1110507125 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 21, 17)
+[node name="BronzeCoin11" parent="Coins" unique_id=1852987932 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 20.58802, 14)
 
-[node name="BronzeCoin12" parent="Coins" unique_id=197481356 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 21, 14)
+[node name="BronzeCoin12" parent="Coins" unique_id=143437926 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 20.58802, 17)
 
-[node name="BronzeCoin13" parent="Coins" unique_id=1049485834 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 21, 14)
+[node name="BronzeCoin13" parent="Coins" unique_id=1803788882 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2.5880184, 17)
 
-[node name="BronzeCoin14" parent="Coins" unique_id=1062444503 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 21, 17)
+[node name="BronzeCoin14" parent="Coins" unique_id=1949141855 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.58801913, 17)
 
-[node name="BronzeCoin15" parent="Coins" unique_id=1426172372 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 16)
+[node name="BronzeCoin15" parent="Coins" unique_id=1010116176 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.58801913, 12)
 
-[node name="BronzeCoin16" parent="Coins" unique_id=1556679070 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -4)
+[node name="BronzeCoin16" parent="Coins" unique_id=205261588 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0.58801913, 17)
 
-[node name="BronzeCoin17" parent="Coins" unique_id=1865444668 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 6)
+[node name="BronzeCoin17" parent="Coins" unique_id=1924446529 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0.58801913, -4)
 
-[node name="BronzeCoin18" parent="Coins" unique_id=358142750 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 6)
+[node name="BronzeCoin18" parent="Coins" unique_id=1611534253 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 8.588019, 10)
 
-[node name="BronzeCoin19" parent="Coins" unique_id=1049394370 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -19)
+[node name="BronzeCoin19" parent="Coins" unique_id=1512597493 instance=ExtResource("2_sl2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.5880184, -7)
 
-[node name="BronzeCoin20" parent="Coins" unique_id=1493788677 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -8)
-
-[node name="BronzeCoin21" parent="Coins" unique_id=406863472 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -8)
-
-[node name="BronzeCoin22" parent="Coins" unique_id=1993755724 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -20)
-
-[node name="BronzeCoin23" parent="Coins" unique_id=1254788952 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -20)
-
-[node name="BronzeCoin24" parent="Coins" unique_id=966007176 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 20)
-
-[node name="BronzeCoin25" parent="Coins" unique_id=2127464229 instance=ExtResource("2_sl2e5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, 20)
+[node name="GoldCoin" parent="Coins" unique_id=1855274933 instance=ExtResource("4_bq33v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5880194, -19)
 
 [node name="Structures" type="Node3D" parent="." unique_id=1230133120]
 
@@ -240,35 +227,10 @@ collision_layer = 2
 size = Vector3(2, 2, 2)
 material = SubResource("StandardMaterial3D_7capw")
 
-[node name="UI" type="Node" parent="." unique_id=1512463135]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=236924982]
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 8
-
-[node name="ScoreContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=2034659914]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="ScoreLabel" parent="UI/HBoxContainer/ScoreContainer" unique_id=647885442 instance=ExtResource("3_1fp7r")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="TimeCointainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=397318071]
-layout_mode = 2
-
-[node name="GameTimeLabel" type="Label" parent="UI/HBoxContainer/TimeCointainer" unique_id=417904005]
-unique_name_in_owner = true
-layout_mode = 2
-text = "00:00"
-
-[node name="GameTimer" type="Timer" parent="." unique_id=198363160]
-unique_name_in_owner = true
-autostart = true
-
 [node name="GridMap" type="GridMap" parent="." unique_id=632038076]
 mesh_library = ExtResource("5_v5dby")
+
+[node name="GameTime" parent="." unique_id=1654691100 instance=ExtResource("6_t5ptc")]
+
+[node name="Score" parent="." unique_id=79453040 instance=ExtResource("7_bq33v")]
+unique_name_in_owner = true

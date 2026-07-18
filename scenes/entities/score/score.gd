@@ -1,4 +1,6 @@
-class_name ScoreLabel extends Label
+class_name Score extends Node3D
+
+@onready var label: Label = %Label
 
 var score: int
 var total: int
@@ -10,7 +12,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	text = "Score: " + str(score) + " / " + str(total)
+	label.text = "Score: " + str(score) + " / " + str(total)
 
 func on_update_score(score_amount) -> void:
 	score += score_amount

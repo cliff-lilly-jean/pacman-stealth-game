@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dm0gixr6biiv1"]
+
+[ext_resource type="Script" uid="uid://wst0ix6256al" path="res://scenes/entities/score/score.gd" id="1_x3ebs"]
+
+[node name="Score" type="Node3D" unique_id=79453040]
+script = ExtResource("1_x3ebs")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1545201358]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1595449565]
+unique_name_in_owner = true
+layout_mode = 2
