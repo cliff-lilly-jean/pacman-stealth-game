@@ -1,7 +1,8 @@
 class_name GameTime extends Node3D
 
+@export var label: Label
+
 @onready var timer: Timer = $Timer
-@onready var label: Label = %Label
 
 var time_in_seconds: int = 0
 

@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bhdcorrn5o618"]
-
-[ext_resource type="Script" uid="uid://drtkckgubog1b" path="res://scenes/ui/score/score.gd" id="1_jpu2v"]
-
-[node name="Score" type="Label" unique_id=647885442]
-text = "Score"
-script = ExtResource("1_jpu2v")

@@ -7,6 +7,7 @@
 [ext_resource type="MeshLibrary" uid="uid://cgpaitvhhtjrf" path="res://assets/mesh_libraries/kenny_platformer_kit.meshlib" id="5_v5dby"]
 [ext_resource type="PackedScene" uid="uid://baky56ktw1271" path="res://scenes/entities/game_time/game_time.tscn" id="6_t5ptc"]
 [ext_resource type="PackedScene" uid="uid://dm0gixr6biiv1" path="res://scenes/entities/score/score.tscn" id="7_bq33v"]
+[ext_resource type="LabelSettings" uid="uid://cuygg8c4yi45g" path="res://label_settings.tres" id="8_j2gmx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dphjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -230,7 +231,39 @@ material = SubResource("StandardMaterial3D_7capw")
 [node name="GridMap" type="GridMap" parent="." unique_id=632038076]
 mesh_library = ExtResource("5_v5dby")
 
-[node name="GameTime" parent="." unique_id=1654691100 instance=ExtResource("6_t5ptc")]
+[node name="GameTime" parent="." unique_id=1654691100 node_paths=PackedStringArray("label") instance=ExtResource("6_t5ptc")]
+label = NodePath("../UI/HBoxContainer/MarginContainer2/GameTimeLabel")
 
-[node name="Score" parent="." unique_id=79453040 instance=ExtResource("7_bq33v")]
+[node name="Score" parent="." unique_id=79453040 node_paths=PackedStringArray("label") instance=ExtResource("7_bq33v")]
 unique_name_in_owner = true
+label = NodePath("../UI/HBoxContainer/MarginContainer/ScoreLabel")
+
+[node name="UI" type="Node" parent="." unique_id=1292583648]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=1654080041]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=1437128066]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ScoreLabel" type="Label" parent="UI/HBoxContainer/MarginContainer" unique_id=1737523049]
+layout_mode = 2
+label_settings = ExtResource("8_j2gmx")
+
+[node name="MarginContainer2" type="MarginContainer" parent="UI/HBoxContainer" unique_id=444811087]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GameTimeLabel" type="Label" parent="UI/HBoxContainer/MarginContainer2" unique_id=478877495]
+layout_mode = 2
+text = "00:00"
+label_settings = ExtResource("8_j2gmx")
