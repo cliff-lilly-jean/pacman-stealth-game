@@ -60,7 +60,7 @@ max_stamina = 10.0
 recovery_amount = 0.2
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
-[node name="SFX" type="Node3D" parent="." unique_id=1779154771]
+[node name="SFX" type="Node" parent="." unique_id=1088043327]
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="SFX" unique_id=822254158]
 stream = ExtResource("4_nh4ur")

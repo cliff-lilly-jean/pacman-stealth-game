@@ -1,7 +1,7 @@
 class_name CameraController extends SpringArm3D
 
-const max_look_down_angle: float = deg_to_rad(-1)
-const max_look_up_angle: float = deg_to_rad(-45)
+const max_look_down_angle: float = deg_to_rad(-10)
+const max_look_up_angle: float = deg_to_rad(-65)
 
 @export var mouse_sensitivity: float
 @export var joystick_sensitivity: float
