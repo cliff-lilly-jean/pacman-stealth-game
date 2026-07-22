@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://d1w46wxgbjokf" path="res://scenes/world/ground.tscn" id="1_bq33v"]
 [ext_resource type="PackedScene" uid="uid://kotak32xuqdy" path="res://scenes/entities/player/player.tscn" id="1_dphjl"]
-[ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://scenes/world/game_manager.gd" id="2_v5dby"]
+[ext_resource type="Script" uid="uid://bfelp8pqnqxx6" path="res://managers/input_manager.gd" id="2_j2gmx"]
+[ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://managers/game_manager.gd" id="2_v5dby"]
+[ext_resource type="Script" uid="uid://bti04ut4yohbc" path="res://managers/coin_manager.gd" id="3_1yooq"]
 [ext_resource type="MeshLibrary" uid="uid://cgpaitvhhtjrf" path="res://assets/mesh_libraries/kenny_platformer_kit.meshlib" id="5_v5dby"]
 [ext_resource type="PackedScene" uid="uid://baky56ktw1271" path="res://scenes/entities/game_time/game_time.tscn" id="6_t5ptc"]
 [ext_resource type="PackedScene" uid="uid://dm0gixr6biiv1" path="res://scenes/entities/score/score.tscn" id="7_bq33v"]
@@ -22,12 +24,23 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bq33v"]
-albedo_color = Color(1, 0.21176471, 0, 1)
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="World" type="Node3D" unique_id=129840621]
 
 [node name="GameManager" type="Node" parent="." unique_id=1099293572]
 script = ExtResource("2_v5dby")
+
+[node name="InputManager" type="Node" parent="." unique_id=1332829646]
+script = ExtResource("2_j2gmx")
+metadata/_custom_type_script = "uid://bfelp8pqnqxx6"
+
+[node name="CoinManager" type="Node" parent="." unique_id=592632535 node_paths=PackedStringArray("ground")]
+unique_name_in_owner = true
+script = ExtResource("3_1yooq")
+ground = NodePath("../Ground")
+coin_count = 10
+metadata/_custom_type_script = "uid://bti04ut4yohbc"
 
 [node name="Ground" parent="." unique_id=1364028782 instance=ExtResource("1_bq33v")]
 unique_name_in_owner = true
@@ -47,9 +60,6 @@ shadow_enabled = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 gravity = 250.0
-
-[node name="Coins" type="Node3D" parent="." unique_id=847069946]
-unique_name_in_owner = true
 
 [node name="Structures" type="Node3D" parent="." unique_id=1230133120]
 

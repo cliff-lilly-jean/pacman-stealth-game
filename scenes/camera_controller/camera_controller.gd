@@ -10,7 +10,6 @@ const max_look_up_angle: float = deg_to_rad(-65)
 
 @onready var camera: Camera3D = $Camera3D
 
-
 func _ready() -> void:
 	spring_length = length
 
