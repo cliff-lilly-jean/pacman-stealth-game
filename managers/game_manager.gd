@@ -15,7 +15,6 @@ func _ready() -> void:
 	ground.length = 100
 	ground.width = 100
 	
-	print(coin_manager.total_coins)
 
 func on_collected(collectable_value: int) -> void:
 	score.update_score.emit(collectable_value)

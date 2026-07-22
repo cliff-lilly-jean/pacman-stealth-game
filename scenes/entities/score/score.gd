@@ -6,7 +6,6 @@ var score: int
 var points: int
 var total: int
 
-
 signal update_score(score_amount)
 
 func _ready() -> void:

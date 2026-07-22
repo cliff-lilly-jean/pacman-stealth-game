@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://bfelp8pqnqxx6" path="res://managers/input_manager.gd" id="2_j2gmx"]
 [ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://managers/game_manager.gd" id="2_v5dby"]
 [ext_resource type="Script" uid="uid://bti04ut4yohbc" path="res://managers/coin_manager.gd" id="3_1yooq"]
+[ext_resource type="PackedScene" uid="uid://bh46y4ix7q4kk" path="res://scenes/entities/coins/bronze_coin/bronze_coin.tscn" id="4_5qq27"]
+[ext_resource type="PackedScene" uid="uid://df8noeoqm8tib" path="res://scenes/entities/coins/gold_coin/gold_coin.tscn" id="5_dlabj"]
 [ext_resource type="MeshLibrary" uid="uid://cgpaitvhhtjrf" path="res://assets/mesh_libraries/kenny_platformer_kit.meshlib" id="5_v5dby"]
 [ext_resource type="PackedScene" uid="uid://baky56ktw1271" path="res://scenes/entities/game_time/game_time.tscn" id="6_t5ptc"]
 [ext_resource type="PackedScene" uid="uid://dm0gixr6biiv1" path="res://scenes/entities/score/score.tscn" id="7_bq33v"]
@@ -39,7 +41,8 @@ metadata/_custom_type_script = "uid://bfelp8pqnqxx6"
 unique_name_in_owner = true
 script = ExtResource("3_1yooq")
 ground = NodePath("../Ground")
-coin_count = 10
+coin_count = 15
+coins = Array[PackedScene]([ExtResource("5_dlabj"), ExtResource("4_5qq27")])
 metadata/_custom_type_script = "uid://bti04ut4yohbc"
 
 [node name="Ground" parent="." unique_id=1364028782 instance=ExtResource("1_bq33v")]
