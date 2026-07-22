@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bh46y4ix7q4kk"]
+
+[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/entities/coins/coin.tscn" id="1_iom3c"]
+[ext_resource type="Script" uid="uid://qtk14aydsx63" path="res://scenes/entities/coins/bronze_coin/bronze_coin.gd" id="2_i0khj"]
+[ext_resource type="Resource" uid="uid://b7dnvui44if5c" path="res://scenes/entities/coins/bronze_coin/bronze_coin_value.tres" id="3_xwcpn"]
+[ext_resource type="PackedScene" uid="uid://cjsueqnf7ondv" path="res://assets/kenny-platformer-kit/coin-bronze.glb" id="4_45s2y"]
+
+[node name="BronzeCoin" unique_id=1459063820 node_paths=PackedStringArray("mesh") instance=ExtResource("1_iom3c")]
+script = ExtResource("2_i0khj")
+coin_resource = ExtResource("3_xwcpn")
+mesh = NodePath("coin-bronze2")
+
+[node name="coin-bronze2" parent="." index="0" unique_id=2018037960 instance=ExtResource("4_45s2y")]

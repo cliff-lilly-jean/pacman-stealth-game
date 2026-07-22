@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://df8noeoqm8tib"]
+
+[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://scenes/entities/coins/coin.tscn" id="1_endsn"]
+[ext_resource type="Script" uid="uid://ddi7voke5hkxm" path="res://scenes/entities/coins/gold_coin/gold_coin.gd" id="2_87lms"]
+[ext_resource type="Resource" uid="uid://dpr6j07bwhqh8" path="res://scenes/entities/coins/gold_coin/gold_coint_value.tres" id="3_xbvk4"]
+[ext_resource type="PackedScene" uid="uid://cmb1fuh7umlyh" path="res://assets/kenny-platformer-kit/coin-gold.glb" id="4_pa1qv"]
+
+[node name="GoldCoin" unique_id=1459063820 node_paths=PackedStringArray("mesh") instance=ExtResource("1_endsn")]
+script = ExtResource("2_87lms")
+coin_resource = ExtResource("3_xbvk4")
+mesh = NodePath("coin-gold2")
+
+[node name="coin-gold2" parent="." index="1" unique_id=1489991932 instance=ExtResource("4_pa1qv")]
