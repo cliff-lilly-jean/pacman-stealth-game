@@ -52,13 +52,13 @@ max_stamina = 10.0
 recovery_amount = 0.2
 metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
+[node name="CameraController" parent="." unique_id=1568162990 node_paths=PackedStringArray("entity") instance=ExtResource("2_5gtgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+length = 4.0
+entity = NodePath("..")
+
 [node name="SFX" type="Node" parent="." unique_id=1088043327]
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="SFX" unique_id=822254158]
 stream = ExtResource("4_nh4ur")
 volume_db = -15.509
-
-[node name="CameraController" parent="." unique_id=1568162990 node_paths=PackedStringArray("entity") instance=ExtResource("2_5gtgg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-length = 4.0
-entity = NodePath("..")

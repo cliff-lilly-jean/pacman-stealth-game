@@ -37,12 +37,12 @@ script = ExtResource("2_v5dby")
 script = ExtResource("2_j2gmx")
 metadata/_custom_type_script = "uid://bfelp8pqnqxx6"
 
-[node name="CoinManager" type="Node" parent="." unique_id=592632535 node_paths=PackedStringArray("ground")]
+[node name="CoinManager" type="Node3D" parent="." unique_id=117975069 node_paths=PackedStringArray("ground")]
 unique_name_in_owner = true
 script = ExtResource("3_1yooq")
 ground = NodePath("../Ground")
-coin_count = 15
-coins = Array[PackedScene]([ExtResource("5_dlabj"), ExtResource("4_5qq27")])
+coin_count = 10
+coins = Array[PackedScene]([ExtResource("4_5qq27"), ExtResource("5_dlabj")])
 metadata/_custom_type_script = "uid://bti04ut4yohbc"
 
 [node name="Ground" parent="." unique_id=1364028782 instance=ExtResource("1_bq33v")]
@@ -262,11 +262,11 @@ material = SubResource("StandardMaterial3D_bq33v")
 mesh_library = ExtResource("5_v5dby")
 
 [node name="GameTime" parent="." unique_id=1654691100 node_paths=PackedStringArray("label") instance=ExtResource("6_t5ptc")]
-label = NodePath("../UI/HBoxContainer/MarginContainer2/GameTimeLabel")
+label = NodePath("../UI/HBoxContainer/GameTimerContainer/GameTimeLabel")
 
 [node name="Score" parent="." unique_id=79453040 node_paths=PackedStringArray("label") instance=ExtResource("7_bq33v")]
 unique_name_in_owner = true
-label = NodePath("../UI/HBoxContainer/MarginContainer/ScoreLabel")
+label = NodePath("../UI/HBoxContainer/ScoreContainer/ScoreLabel")
 
 [node name="UI" type="Node" parent="." unique_id=1292583648]
 
@@ -275,25 +275,24 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=1437128066]
+[node name="ScoreContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=1437128066]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="ScoreLabel" type="Label" parent="UI/HBoxContainer/MarginContainer" unique_id=1737523049]
+[node name="ScoreLabel" type="Label" parent="UI/HBoxContainer/ScoreContainer" unique_id=1737523049]
 layout_mode = 2
 label_settings = ExtResource("8_j2gmx")
 
-[node name="MarginContainer2" type="MarginContainer" parent="UI/HBoxContainer" unique_id=444811087]
+[node name="GameTimerContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=444811087]
 layout_mode = 2
 theme_override_constants/margin_left = 600
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="GameTimeLabel" type="Label" parent="UI/HBoxContainer/MarginContainer2" unique_id=478877495]
+[node name="GameTimeLabel" type="Label" parent="UI/HBoxContainer/GameTimerContainer" unique_id=478877495]
 layout_mode = 2
-text = "00:00"
 label_settings = ExtResource("8_j2gmx")

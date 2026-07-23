@@ -4,6 +4,7 @@
 
 [node name="GameTime" type="Node3D" unique_id=1654691100]
 script = ExtResource("1_va30n")
+time_in_seconds = 150.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1744237921]
 autostart = true
