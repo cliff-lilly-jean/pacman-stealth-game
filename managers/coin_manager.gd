@@ -10,6 +10,7 @@ var spawn_area_length: int
 var spawn_area_width : int
 var total_coins: Array = []
 var new_coin
+var coin_placement_point: Vector3
 
 func _ready() -> void:
 	spawn_area_length = ground.length
@@ -21,11 +22,10 @@ func spawn_random_coin() -> void:
 		new_coin = coin
 		total_coins.append(coin)
 		
-	var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
-	var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
-	var coin_placement_point = Vector3(random_x_point, 1, random_z_point)
+		get_new_spawn_point()
 	
-	is_spawn_position_clear(coin_placement_point)
+		if not is_spawn_position_clear(coin_placement_point):
+			get_new_spawn_point()
 	
 	new_coin.global_position = coin_placement_point
 	
@@ -46,5 +46,10 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	
 	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 1)
 	
-	print("Not Empty")
+	print(collisions.is_empty())
 	return collisions.is_empty()
+
+func get_new_spawn_point() -> void:
+	var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
+	var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
+	coin_placement_point = Vector3(random_x_point, 1, random_z_point)
