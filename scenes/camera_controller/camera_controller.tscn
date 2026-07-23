@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://cul7xgqd0d0ey" path="res://scenes/camera_controller/camera_controller.gd" id="1_7mrbv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7mrbv"]
+radius = 1.0
 
 [node name="CameraController" type="SpringArm3D" unique_id=1568162990]
 collision_mask = 6
 shape = SubResource("SphereShape3D_7mrbv")
 script = ExtResource("1_7mrbv")
-mouse_sensitivity = 0.01
+mouse_sensitivity = 0.002
 joystick_sensitivity = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=952556326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 0.5, 0)

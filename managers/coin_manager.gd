@@ -4,17 +4,22 @@ class_name CoinManager extends Node
 @export var coin_count: int
 @export var coins: Array[PackedScene]
 
-@onready var spawn_area_length = ground.length
-@onready var spawn_area_width = ground.width
+var spawn_area_length: int
+var spawn_area_width : int
+
+var total_coins: Array = []
+var new_coin
 
 func _ready() -> void:
+	spawn_area_length = ground.length
+	spawn_area_width = ground.width
 	
+func spawn_random_coin() -> void:
 	for item in range(coin_count):
 		var coin: Coin = coins.pick_random().instantiate() as Coin
-	
-		spawn_random_coin(coin)	
-
-func spawn_random_coin(new_coin) -> void:
+		new_coin = coin
+		total_coins.append(coin)
+		
 	var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
 	var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
 	var coin_placement_point = Vector3(random_x_point, 1, random_z_point)

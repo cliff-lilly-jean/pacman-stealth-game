@@ -9,3 +9,6 @@ coin_resource = ExtResource("3_xwcpn")
 mesh = NodePath("coin-bronze2")
 
 [node name="coin-bronze2" parent="." index="0" unique_id=2018037960 instance=ExtResource("4_45s2y")]
+
+[node name="DestroyWaitTimer" parent="." index="3" unique_id=1017051956]
+wait_time = 0.6
