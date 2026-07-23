@@ -15,11 +15,10 @@ func _ready() -> void:
 	ground.length = 100
 	ground.width = 100
 	
-	coin_manager.spawn_random_coin()
-	print(coin_manager.total_coins)
+	EventBus.coin_collected.connect(on_coin_collected)
 	
 
-func on_collected(collectable_value: int) -> void:
-	score.update_score.emit(collectable_value)
+func on_coin_collected(collectable_value: int) -> void:
+	EventBus.score_updated.emit(collectable_value)
 
 	

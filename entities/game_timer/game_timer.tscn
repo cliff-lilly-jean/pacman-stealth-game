@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://baky56ktw1271"]
+
+[ext_resource type="Script" uid="uid://c43eopfvswgo0" path="res://entities/game_timer/game_timer.gd" id="1_va30n"]
+
+[node name="GameTimer" type="Node3D" unique_id=1654691100]
+script = ExtResource("1_va30n")
+game_time_in_seconds = 120.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1744237921]
+autostart = true

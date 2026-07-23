@@ -6,8 +6,8 @@ class_name CoinManager extends Node3D
 
 @onready var coin_spawn_detector: Area3D
 
-var spawn_area_length: int
-var spawn_area_width : int
+var spawn_area_length: float
+var spawn_area_width : float
 var total_coins: Array = []
 var new_coin
 var coin_placement_point: Vector3
@@ -16,21 +16,24 @@ func _ready() -> void:
 	spawn_area_length = ground.length
 	spawn_area_width = ground.width
 	
+	spawn_random_coin()
+	
 func spawn_random_coin() -> void:
 	for item in range(coin_count):
 		var coin: Coin = coins.pick_random().instantiate() as Coin
-		new_coin = coin
-		total_coins.append(coin)
-		
-		get_new_spawn_point()
 	
-		if not is_spawn_position_clear(coin_placement_point):
+		if is_spawn_position_clear(coin_placement_point):
+			print("This spot is empty")
+			
+			new_coin = coin
+			total_coins.append(coin)
+			
 			get_new_spawn_point()
 	
-	new_coin.global_position = coin_placement_point
+			new_coin.global_position = coin_placement_point
 	
-	## Add the coin to the world
-	add_child(new_coin)
+			## Add the coin to the world
+			add_child(new_coin)
 
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
@@ -46,7 +49,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	
 	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 1)
 	
-	print(collisions.is_empty())
+	
 	return collisions.is_empty()
 
 func get_new_spawn_point() -> void:

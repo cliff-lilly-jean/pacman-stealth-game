@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kotak32xuqdy"]
 
-[ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://scenes/entities/player/player.gd" id="1_8afob"]
-[ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://scenes/camera_controller/camera_controller.tscn" id="2_5gtgg"]
+[ext_resource type="Script" uid="uid://bndh4ejeaws86" path="res://entities/player/player.gd" id="1_8afob"]
+[ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://entities/camera_controller/camera_controller.tscn" id="2_5gtgg"]
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="3_5sj0x"]
 [ext_resource type="AudioStream" uid="uid://dkg0tw4denyfs" path="res://assets/audio/sfx/jumping.mp3" id="4_nh4ur"]
 

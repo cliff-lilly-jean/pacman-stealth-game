@@ -14,7 +14,7 @@ class_name Player extends Entity
 @export var dash_speed: float
 @export var dash_acceleration: float
 
-@export_group("G ravity")
+@export_group("Gravity")
 @export var gravity: float
 
 @onready var stamina_component: StaminaComponent = $StaminaComponent

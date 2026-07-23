@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CoinResource" format=3 uid="uid://b7dnvui44if5c"]
 
-[ext_resource type="Script" uid="uid://cnjqrbekjcxv1" path="res://scenes/entities/coins/coin_resource.gd" id="1_h7u6m"]
+[ext_resource type="Script" uid="uid://cnjqrbekjcxv1" path="res://entities/coins/coin_resource.gd" id="1_h7u6m"]
 
 [resource]
 script = ExtResource("1_h7u6m")

@@ -1,155 +1,154 @@
 [gd_scene format=4 uid="uid://bouup2ljxyl67"]
 
-[ext_resource type="Script" uid="uid://bnb86w5elvbbq" path="res://mesh_library_collision_shape_adder.gd" id="1_00tup"]
-[ext_resource type="Texture2D" uid="uid://b7ti3cxhiu2g" path="res://assets/kenny-platformer-kit/Textures/colormap.png" id="2_ajhql"]
-[ext_resource type="PackedScene" uid="uid://v5joen7ooxr4" path="res://assets/kenny-platformer-kit/block-grass-corner-overhang-low.glb" id="3_q5sfb"]
-[ext_resource type="PackedScene" uid="uid://ccm4hdcogspqw" path="res://assets/kenny-platformer-kit/block-grass-corner-overhang.glb" id="4_5jgyb"]
-[ext_resource type="PackedScene" uid="uid://dk0afc8xuni0h" path="res://assets/kenny-platformer-kit/block-grass-corner.glb" id="5_ho65x"]
-[ext_resource type="PackedScene" uid="uid://cwjsablkx6db6" path="res://assets/kenny-platformer-kit/block-grass-curve-half.glb" id="6_87gpw"]
-[ext_resource type="PackedScene" uid="uid://beyo10xridako" path="res://assets/kenny-platformer-kit/block-grass-curve.glb" id="8_nbrgf"]
-[ext_resource type="PackedScene" uid="uid://c3e7ykxvd53fc" path="res://assets/kenny-platformer-kit/block-grass-edge.glb" id="9_gk31b"]
-[ext_resource type="PackedScene" uid="uid://bqxxbveylsx7g" path="res://assets/kenny-platformer-kit/block-grass-hexagon.glb" id="10_33x1j"]
-[ext_resource type="PackedScene" uid="uid://c4n15wpq1bl85" path="res://assets/kenny-platformer-kit/block-grass-large-slope-narrow.glb" id="11_yebyw"]
-[ext_resource type="PackedScene" uid="uid://bsq5xtdnq5d85" path="res://assets/kenny-platformer-kit/block-grass-large-slope-steep-narrow.glb" id="12_rdl85"]
-[ext_resource type="PackedScene" uid="uid://cjmqhpay76rft" path="res://assets/kenny-platformer-kit/block-grass-large-slope-steep.glb" id="13_xoiru"]
-[ext_resource type="PackedScene" uid="uid://b023k7coyf3r" path="res://assets/kenny-platformer-kit/block-grass-large-slope.glb" id="14_6pxrb"]
-[ext_resource type="PackedScene" uid="uid://d4ic3xdaxmsic" path="res://assets/kenny-platformer-kit/block-grass-large-tall.glb" id="15_5jahf"]
-[ext_resource type="PackedScene" uid="uid://b1pxo2v86m3qj" path="res://assets/kenny-platformer-kit/block-grass-large.glb" id="16_vncl7"]
-[ext_resource type="PackedScene" uid="uid://c8wfywahimktf" path="res://assets/kenny-platformer-kit/block-grass-long.glb" id="17_db03n"]
-[ext_resource type="PackedScene" uid="uid://dhgor8smstwuy" path="res://assets/kenny-platformer-kit/block-grass-low-hexagon.glb" id="18_klfbd"]
-[ext_resource type="PackedScene" uid="uid://bqoq0ccxqri4j" path="res://assets/kenny-platformer-kit/block-grass-low-large.glb" id="19_lw1yt"]
-[ext_resource type="PackedScene" uid="uid://clpuym7v6pmq" path="res://assets/kenny-platformer-kit/block-grass-low-long.glb" id="20_hta6y"]
-[ext_resource type="PackedScene" uid="uid://c1y53654bcstm" path="res://assets/kenny-platformer-kit/block-grass-low-narrow.glb" id="21_ugu5i"]
-[ext_resource type="PackedScene" uid="uid://db0fteseg1b0f" path="res://assets/kenny-platformer-kit/block-grass-low.glb" id="22_gw3tc"]
-[ext_resource type="PackedScene" uid="uid://c24qrjmtc4y7w" path="res://assets/kenny-platformer-kit/block-grass-narrow.glb" id="23_pcdim"]
-[ext_resource type="PackedScene" uid="uid://cgsee0qoa74u8" path="res://assets/kenny-platformer-kit/block-grass-overhang-corner.glb" id="24_2lmjc"]
-[ext_resource type="PackedScene" uid="uid://b6t2iyl16b42m" path="res://assets/kenny-platformer-kit/block-grass-overhang-edge.glb" id="25_7sajr"]
-[ext_resource type="PackedScene" uid="uid://bctmrdtrlp7jw" path="res://assets/kenny-platformer-kit/block-grass-overhang-hexagon.glb" id="26_7tpqc"]
-[ext_resource type="PackedScene" uid="uid://c4d6wnaiyvive" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope-narrow.glb" id="27_x35je"]
-[ext_resource type="PackedScene" uid="uid://bfhb8ke6qyhnr" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope-steep-narrow.glb" id="28_e318g"]
-[ext_resource type="PackedScene" uid="uid://c2nbkppba8at1" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope-steep.glb" id="29_nougi"]
-[ext_resource type="PackedScene" uid="uid://blnr5ajx1g6j6" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope.glb" id="30_g4x0g"]
-[ext_resource type="PackedScene" uid="uid://cfbt84f6r3yoc" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-tall.glb" id="31_kkne4"]
-[ext_resource type="PackedScene" uid="uid://cide0244pdnx0" path="res://assets/kenny-platformer-kit/block-grass-overhang-large.glb" id="32_f41k1"]
-[ext_resource type="PackedScene" uid="uid://dc6r1av8f7awn" path="res://assets/kenny-platformer-kit/block-grass-overhang-long.glb" id="33_wmgsg"]
-[ext_resource type="PackedScene" uid="uid://dxjjbbdgbhg5n" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-hexagon.glb" id="34_rkv0t"]
-[ext_resource type="PackedScene" uid="uid://dj1rodri4rxg3" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-large.glb" id="35_y4o3o"]
-[ext_resource type="PackedScene" uid="uid://65kihfhxlf76" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-long.glb" id="36_awaud"]
-[ext_resource type="PackedScene" uid="uid://bofm511xeotsg" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-narrow.glb" id="37_rx7ej"]
-[ext_resource type="PackedScene" uid="uid://b4brtjovqkaqr" path="res://assets/kenny-platformer-kit/block-grass-overhang-low.glb" id="38_jyuyg"]
-[ext_resource type="PackedScene" uid="uid://c01dr5my2iypb" path="res://assets/kenny-platformer-kit/block-grass-overhang-narrow.glb" id="39_p2pxm"]
-[ext_resource type="PackedScene" uid="uid://dp3fwaqql0nhb" path="res://assets/kenny-platformer-kit/block-grass.glb" id="40_fgc17"]
-[ext_resource type="PackedScene" uid="uid://tdvqa3ihgp2w" path="res://assets/kenny-platformer-kit/block-moving-blue.glb" id="41_nb2gc"]
-[ext_resource type="PackedScene" uid="uid://d0mf3pyalvbo4" path="res://assets/kenny-platformer-kit/block-moving-large.glb" id="42_2hsmi"]
-[ext_resource type="PackedScene" uid="uid://01emerw8ronw" path="res://assets/kenny-platformer-kit/block-moving.glb" id="43_00o18"]
-[ext_resource type="PackedScene" uid="uid://fd2i5lk12ehv" path="res://assets/kenny-platformer-kit/block-snow-corner-low.glb" id="44_enax3"]
-[ext_resource type="PackedScene" uid="uid://bahg20n8sob4c" path="res://assets/kenny-platformer-kit/block-snow-corner-overhang-low.glb" id="45_usi18"]
-[ext_resource type="PackedScene" uid="uid://dqfk1bhtwrn83" path="res://assets/kenny-platformer-kit/block-snow-corner-overhang.glb" id="46_gwcxi"]
-[ext_resource type="PackedScene" uid="uid://vwkla8rsapc8" path="res://assets/kenny-platformer-kit/block-snow-corner.glb" id="47_vpac7"]
-[ext_resource type="PackedScene" uid="uid://bvdkasntbfa3m" path="res://assets/kenny-platformer-kit/block-snow-curve-half.glb" id="48_co0eh"]
-[ext_resource type="PackedScene" uid="uid://5v0xxtev8lrj" path="res://assets/kenny-platformer-kit/block-snow-curve-low.glb" id="49_5yv3g"]
-[ext_resource type="PackedScene" uid="uid://danuq60djuigc" path="res://assets/kenny-platformer-kit/block-snow-curve.glb" id="50_r5bhr"]
-[ext_resource type="PackedScene" uid="uid://dl7iqtkarw1fk" path="res://assets/kenny-platformer-kit/block-snow-edge.glb" id="51_3xuk3"]
-[ext_resource type="PackedScene" uid="uid://ttyrtjw53d4c" path="res://assets/kenny-platformer-kit/block-snow-hexagon.glb" id="52_yvt4w"]
-[ext_resource type="PackedScene" uid="uid://d31avmbwk0rob" path="res://assets/kenny-platformer-kit/block-snow-large-slope-narrow.glb" id="53_gkpby"]
-[ext_resource type="PackedScene" uid="uid://bw8ufmnqy54d2" path="res://assets/kenny-platformer-kit/block-snow-large-slope-steep-narrow.glb" id="54_30yw3"]
-[ext_resource type="PackedScene" uid="uid://m427g2cdqmjt" path="res://assets/kenny-platformer-kit/block-snow-large-slope-steep.glb" id="55_qchwa"]
-[ext_resource type="PackedScene" uid="uid://b8xalp1tr8u8a" path="res://assets/kenny-platformer-kit/block-snow-large-slope.glb" id="56_bu4xp"]
-[ext_resource type="PackedScene" uid="uid://cm8vbunblpdgp" path="res://assets/kenny-platformer-kit/block-snow-large-tall.glb" id="57_hlavk"]
-[ext_resource type="PackedScene" uid="uid://c1gotbugkurfp" path="res://assets/kenny-platformer-kit/block-snow-large.glb" id="58_c7kcb"]
-[ext_resource type="PackedScene" uid="uid://cvvpr5fiuvwi7" path="res://assets/kenny-platformer-kit/block-snow-long.glb" id="59_twyjg"]
-[ext_resource type="PackedScene" uid="uid://b5er6y0tnlijk" path="res://assets/kenny-platformer-kit/block-snow-low-hexagon.glb" id="60_t5nej"]
-[ext_resource type="PackedScene" uid="uid://bov66pjwk4hc8" path="res://assets/kenny-platformer-kit/block-snow-low-large.glb" id="61_g6wf3"]
-[ext_resource type="PackedScene" uid="uid://dtayu0gyg5fvx" path="res://assets/kenny-platformer-kit/block-snow-low-long.glb" id="62_0w4j8"]
-[ext_resource type="PackedScene" uid="uid://bhrhh3e5ntiy5" path="res://assets/kenny-platformer-kit/block-snow-low-narrow.glb" id="63_n05h6"]
-[ext_resource type="PackedScene" uid="uid://dxmqp8jg54hpr" path="res://assets/kenny-platformer-kit/block-snow-low.glb" id="64_buvah"]
-[ext_resource type="PackedScene" uid="uid://d3nuxhe8mmjfe" path="res://assets/kenny-platformer-kit/block-snow-narrow.glb" id="65_tcac0"]
-[ext_resource type="PackedScene" uid="uid://b7j8jrl122epm" path="res://assets/kenny-platformer-kit/block-snow-overhang-corner.glb" id="66_a3p21"]
-[ext_resource type="PackedScene" uid="uid://drudyvihhaom8" path="res://assets/kenny-platformer-kit/block-snow-overhang-edge.glb" id="67_excg4"]
-[ext_resource type="PackedScene" uid="uid://07x23mwhfw0r" path="res://assets/kenny-platformer-kit/block-snow-overhang-hexagon.glb" id="68_ipod6"]
-[ext_resource type="PackedScene" uid="uid://uovm78ny623u" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope-narrow.glb" id="69_h2hl3"]
-[ext_resource type="PackedScene" uid="uid://b2pk17rdlqm6c" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope-steep-narrow.glb" id="70_wacgu"]
-[ext_resource type="PackedScene" uid="uid://ba4kk11sft062" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope-steep.glb" id="71_nn87d"]
-[ext_resource type="PackedScene" uid="uid://d06ghdkiob4pf" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope.glb" id="72_wo7lm"]
-[ext_resource type="PackedScene" uid="uid://o8ftxgoegdry" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-tall.glb" id="73_okmq8"]
-[ext_resource type="PackedScene" uid="uid://bmgxabshw0vkv" path="res://assets/kenny-platformer-kit/block-snow-overhang-large.glb" id="74_23kfk"]
-[ext_resource type="PackedScene" uid="uid://cae466kmkptru" path="res://assets/kenny-platformer-kit/block-snow-overhang-long.glb" id="75_uqffp"]
-[ext_resource type="PackedScene" uid="uid://4scyd0l7w1fx" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-hexagon.glb" id="76_llbmk"]
-[ext_resource type="PackedScene" uid="uid://b18guphvd7x2a" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-large.glb" id="77_d081h"]
-[ext_resource type="PackedScene" uid="uid://bv7gks3gvbyvq" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-long.glb" id="78_6i2w7"]
-[ext_resource type="PackedScene" uid="uid://usmeo14n73yf" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-narrow.glb" id="79_exnbh"]
-[ext_resource type="PackedScene" uid="uid://lunmxae7ybpr" path="res://assets/kenny-platformer-kit/block-snow-overhang-low.glb" id="80_bggom"]
-[ext_resource type="PackedScene" uid="uid://c56x88dh0qdaa" path="res://assets/kenny-platformer-kit/block-snow-overhang-narrow.glb" id="81_ojwbk"]
-[ext_resource type="PackedScene" uid="uid://cq2ha2ecfvkek" path="res://assets/kenny-platformer-kit/block-snow.glb" id="82_5cqfe"]
-[ext_resource type="PackedScene" uid="uid://b1nglmm3sqo6n" path="res://assets/kenny-platformer-kit/bomb.glb" id="83_x2dd5"]
-[ext_resource type="PackedScene" uid="uid://digmvlyjihye8" path="res://assets/kenny-platformer-kit/brick.glb" id="84_snp3f"]
-[ext_resource type="PackedScene" uid="uid://bfaxbjxs34rob" path="res://assets/kenny-platformer-kit/button-round.glb" id="85_iluxh"]
-[ext_resource type="PackedScene" uid="uid://b7k5ufc6xhjew" path="res://assets/kenny-platformer-kit/button-square.glb" id="86_72p2f"]
-[ext_resource type="PackedScene" uid="uid://c5c404oiml7ja" path="res://assets/kenny-platformer-kit/chest.glb" id="87_i76tu"]
-[ext_resource type="PackedScene" uid="uid://cjsueqnf7ondv" path="res://assets/kenny-platformer-kit/coin-bronze.glb" id="88_2lmwm"]
-[ext_resource type="PackedScene" uid="uid://cmb1fuh7umlyh" path="res://assets/kenny-platformer-kit/coin-gold.glb" id="89_nlqjg"]
-[ext_resource type="PackedScene" uid="uid://dn0qfxhtx3yux" path="res://assets/kenny-platformer-kit/coin-silver.glb" id="90_clgtu"]
-[ext_resource type="PackedScene" uid="uid://dobqlmvfwvrr0" path="res://assets/kenny-platformer-kit/conveyor-belt.glb" id="91_yo8av"]
-[ext_resource type="PackedScene" uid="uid://bstn6hfrxuns7" path="res://assets/kenny-platformer-kit/crate-item-strong.glb" id="92_8jknl"]
-[ext_resource type="PackedScene" uid="uid://7g4ah3qpskwi" path="res://assets/kenny-platformer-kit/crate-item.glb" id="93_53ecq"]
-[ext_resource type="PackedScene" uid="uid://bt68jjogdxg56" path="res://assets/kenny-platformer-kit/crate-strong.glb" id="94_7tm34"]
-[ext_resource type="PackedScene" uid="uid://cfwn0a5ekdpa" path="res://assets/kenny-platformer-kit/crate.glb" id="95_yfn6x"]
-[ext_resource type="PackedScene" uid="uid://dgd22ekap8wdi" path="res://assets/kenny-platformer-kit/door-large-open.glb" id="96_weae1"]
-[ext_resource type="PackedScene" uid="uid://ytn64pqkt4c2" path="res://assets/kenny-platformer-kit/door-open.glb" id="97_eatok"]
-[ext_resource type="PackedScene" uid="uid://cciaw4uoerht7" path="res://assets/kenny-platformer-kit/door-rotate-large.glb" id="98_alcse"]
-[ext_resource type="PackedScene" uid="uid://ty1psws7klx8" path="res://assets/kenny-platformer-kit/door-rotate.glb" id="99_v81gf"]
-[ext_resource type="PackedScene" uid="uid://bt543gdjrsnms" path="res://assets/kenny-platformer-kit/fence-broken.glb" id="100_oyhjv"]
-[ext_resource type="PackedScene" uid="uid://q3a12hdkdw1j" path="res://assets/kenny-platformer-kit/fence-corner-curved.glb" id="101_i5bfa"]
-[ext_resource type="PackedScene" uid="uid://bgxbgf2l1ogut" path="res://assets/kenny-platformer-kit/fence-corner.glb" id="102_nic8g"]
-[ext_resource type="PackedScene" uid="uid://c0lcoqumctt7k" path="res://assets/kenny-platformer-kit/fence-low-broken.glb" id="103_6oq7w"]
-[ext_resource type="PackedScene" uid="uid://dagwm6l2keny7" path="res://assets/kenny-platformer-kit/fence-low-corner-curved.glb" id="104_tr27u"]
-[ext_resource type="PackedScene" uid="uid://u6dxtw3vuvcb" path="res://assets/kenny-platformer-kit/fence-low-corner.glb" id="105_rqi7n"]
-[ext_resource type="PackedScene" uid="uid://dy5smihqna6w3" path="res://assets/kenny-platformer-kit/fence-low-straight.glb" id="106_acn1n"]
-[ext_resource type="PackedScene" uid="uid://2m08ksmvv67u" path="res://assets/kenny-platformer-kit/fence-rope.glb" id="107_7keq2"]
-[ext_resource type="PackedScene" uid="uid://ymlk1d7dgq0t" path="res://assets/kenny-platformer-kit/fence-straight.glb" id="108_ydjmw"]
-[ext_resource type="PackedScene" uid="uid://btdnf7asakewi" path="res://assets/kenny-platformer-kit/flag.glb" id="109_7cl60"]
-[ext_resource type="PackedScene" uid="uid://jnrgm1nlxt32" path="res://assets/kenny-platformer-kit/flowers-tall.glb" id="110_jdefv"]
-[ext_resource type="PackedScene" uid="uid://bhdo7k52bylws" path="res://assets/kenny-platformer-kit/flowers.glb" id="111_nsjxm"]
-[ext_resource type="PackedScene" uid="uid://dy726g5mlguny" path="res://assets/kenny-platformer-kit/grass.glb" id="112_nlfal"]
-[ext_resource type="PackedScene" uid="uid://jh8ouk1rb2t2" path="res://assets/kenny-platformer-kit/heart.glb" id="113_oxlr2"]
-[ext_resource type="PackedScene" uid="uid://d4e3ty60hs7tj" path="res://assets/kenny-platformer-kit/hedge-corner.glb" id="114_6hewx"]
-[ext_resource type="PackedScene" uid="uid://dw5rveq3dd0pm" path="res://assets/kenny-platformer-kit/hedge.glb" id="115_2fwr8"]
-[ext_resource type="PackedScene" uid="uid://bh33qgm6pwkuh" path="res://assets/kenny-platformer-kit/jewel.glb" id="116_io87r"]
-[ext_resource type="PackedScene" uid="uid://cj2q37ic1sb85" path="res://assets/kenny-platformer-kit/key.glb" id="117_ullyd"]
-[ext_resource type="PackedScene" uid="uid://cbtm7exsf1fu4" path="res://assets/kenny-platformer-kit/ladder-broken.glb" id="118_rx2yl"]
-[ext_resource type="PackedScene" uid="uid://bewyteburplmu" path="res://assets/kenny-platformer-kit/ladder-long.glb" id="119_rvkun"]
-[ext_resource type="PackedScene" uid="uid://bynlmtg8o0k6c" path="res://assets/kenny-platformer-kit/ladder.glb" id="120_6mrkp"]
-[ext_resource type="PackedScene" uid="uid://b5r3qf3pupw12" path="res://assets/kenny-platformer-kit/lever.glb" id="121_oothe"]
-[ext_resource type="PackedScene" uid="uid://d20y46x5kmuvf" path="res://assets/kenny-platformer-kit/lock.glb" id="122_mhdgw"]
-[ext_resource type="PackedScene" uid="uid://br5v218q8utv4" path="res://assets/kenny-platformer-kit/mushrooms.glb" id="123_3xwkt"]
-[ext_resource type="PackedScene" uid="uid://cgs16ge0nf16j" path="res://assets/kenny-platformer-kit/pipe.glb" id="124_ubvmq"]
-[ext_resource type="PackedScene" uid="uid://c23g4r04w0483" path="res://assets/kenny-platformer-kit/plant.glb" id="125_7ovrg"]
-[ext_resource type="PackedScene" uid="uid://uqk3gv7jrp56" path="res://assets/kenny-platformer-kit/platform-fortified.glb" id="126_s72et"]
-[ext_resource type="PackedScene" uid="uid://chwqhkwss0n04" path="res://assets/kenny-platformer-kit/platform-overhang.glb" id="127_xymo6"]
-[ext_resource type="PackedScene" uid="uid://b7o3rpebak67o" path="res://assets/kenny-platformer-kit/platform-ramp.glb" id="128_ck7yb"]
-[ext_resource type="PackedScene" uid="uid://fti04b68i03f" path="res://assets/kenny-platformer-kit/platform.glb" id="129_glxj5"]
-[ext_resource type="PackedScene" uid="uid://b1jn3q7lcrkhs" path="res://assets/kenny-platformer-kit/poles.glb" id="130_4uxtr"]
-[ext_resource type="PackedScene" uid="uid://iuqkqu7u4oc8" path="res://assets/kenny-platformer-kit/rocks.glb" id="131_xvqdt"]
-[ext_resource type="PackedScene" uid="uid://bckwa7todr05w" path="res://assets/kenny-platformer-kit/saw.glb" id="132_3ii8c"]
-[ext_resource type="PackedScene" uid="uid://d20sd3kjj76dt" path="res://assets/kenny-platformer-kit/sign.glb" id="133_w8m3f"]
-[ext_resource type="PackedScene" uid="uid://osiupubwwp8e" path="res://assets/kenny-platformer-kit/spike-block-wide.glb" id="134_ygv5q"]
-[ext_resource type="PackedScene" uid="uid://bg81nbsk3po7c" path="res://assets/kenny-platformer-kit/spike-block.glb" id="135_01ym6"]
-[ext_resource type="PackedScene" uid="uid://cbj6o24gkiydc" path="res://assets/kenny-platformer-kit/spring.glb" id="136_2chv0"]
-[ext_resource type="PackedScene" uid="uid://khw2tbayacms" path="res://assets/kenny-platformer-kit/star.glb" id="137_6utx7"]
-[ext_resource type="PackedScene" uid="uid://dx62delxvxle5" path="res://assets/kenny-platformer-kit/stones.glb" id="138_1352u"]
-[ext_resource type="PackedScene" uid="uid://xul8y2iy1md2" path="res://assets/kenny-platformer-kit/trap-spikes-large.glb" id="139_wn4je"]
-[ext_resource type="PackedScene" uid="uid://c0718ru8w20mi" path="res://assets/kenny-platformer-kit/trap-spikes.glb" id="140_khjak"]
-[ext_resource type="PackedScene" uid="uid://bgulu8aak7chh" path="res://assets/kenny-platformer-kit/tree-pine-small.glb" id="141_idbou"]
-[ext_resource type="PackedScene" uid="uid://t8lspd6o5e76" path="res://assets/kenny-platformer-kit/tree-pine-snow-small.glb" id="142_fxlf3"]
-[ext_resource type="PackedScene" uid="uid://qfun1iwykgco" path="res://assets/kenny-platformer-kit/tree-pine-snow.glb" id="143_muinb"]
-[ext_resource type="PackedScene" uid="uid://bhv2llo4uy50c" path="res://assets/kenny-platformer-kit/tree-pine.glb" id="144_a0jhp"]
-[ext_resource type="PackedScene" uid="uid://d17qb2myd8dqs" path="res://assets/kenny-platformer-kit/tree-snow.glb" id="145_j0un2"]
-[ext_resource type="PackedScene" uid="uid://xk8c7la4wbe2" path="res://assets/kenny-platformer-kit/tree.glb" id="146_jo4mp"]
+[ext_resource type="Texture2D" uid="uid://b7ti3cxhiu2g" path="res://assets/kenny-platformer-kit/Textures/colormap.png" id="1_2iytn"]
+[ext_resource type="PackedScene" uid="uid://v5joen7ooxr4" path="res://assets/kenny-platformer-kit/block-grass-corner-overhang-low.glb" id="2_f5ecy"]
+[ext_resource type="PackedScene" uid="uid://ccm4hdcogspqw" path="res://assets/kenny-platformer-kit/block-grass-corner-overhang.glb" id="3_vrd2q"]
+[ext_resource type="PackedScene" uid="uid://dk0afc8xuni0h" path="res://assets/kenny-platformer-kit/block-grass-corner.glb" id="4_gb0dh"]
+[ext_resource type="PackedScene" uid="uid://cwjsablkx6db6" path="res://assets/kenny-platformer-kit/block-grass-curve-half.glb" id="5_33q6m"]
+[ext_resource type="PackedScene" uid="uid://beyo10xridako" path="res://assets/kenny-platformer-kit/block-grass-curve.glb" id="6_kx6aw"]
+[ext_resource type="PackedScene" uid="uid://c3e7ykxvd53fc" path="res://assets/kenny-platformer-kit/block-grass-edge.glb" id="7_qowg7"]
+[ext_resource type="PackedScene" uid="uid://bqxxbveylsx7g" path="res://assets/kenny-platformer-kit/block-grass-hexagon.glb" id="8_lx8ou"]
+[ext_resource type="PackedScene" uid="uid://c4n15wpq1bl85" path="res://assets/kenny-platformer-kit/block-grass-large-slope-narrow.glb" id="9_gnshb"]
+[ext_resource type="PackedScene" uid="uid://bsq5xtdnq5d85" path="res://assets/kenny-platformer-kit/block-grass-large-slope-steep-narrow.glb" id="10_wnspk"]
+[ext_resource type="PackedScene" uid="uid://cjmqhpay76rft" path="res://assets/kenny-platformer-kit/block-grass-large-slope-steep.glb" id="11_3d0xa"]
+[ext_resource type="PackedScene" uid="uid://b023k7coyf3r" path="res://assets/kenny-platformer-kit/block-grass-large-slope.glb" id="12_h2pbx"]
+[ext_resource type="PackedScene" uid="uid://d4ic3xdaxmsic" path="res://assets/kenny-platformer-kit/block-grass-large-tall.glb" id="13_y2v4f"]
+[ext_resource type="PackedScene" uid="uid://b1pxo2v86m3qj" path="res://assets/kenny-platformer-kit/block-grass-large.glb" id="14_xc0i2"]
+[ext_resource type="PackedScene" uid="uid://c8wfywahimktf" path="res://assets/kenny-platformer-kit/block-grass-long.glb" id="15_q5pol"]
+[ext_resource type="PackedScene" uid="uid://dhgor8smstwuy" path="res://assets/kenny-platformer-kit/block-grass-low-hexagon.glb" id="16_72ksm"]
+[ext_resource type="PackedScene" uid="uid://bqoq0ccxqri4j" path="res://assets/kenny-platformer-kit/block-grass-low-large.glb" id="17_2swot"]
+[ext_resource type="PackedScene" uid="uid://clpuym7v6pmq" path="res://assets/kenny-platformer-kit/block-grass-low-long.glb" id="18_ikwdm"]
+[ext_resource type="PackedScene" uid="uid://c1y53654bcstm" path="res://assets/kenny-platformer-kit/block-grass-low-narrow.glb" id="19_pvg83"]
+[ext_resource type="PackedScene" uid="uid://db0fteseg1b0f" path="res://assets/kenny-platformer-kit/block-grass-low.glb" id="20_5fj5x"]
+[ext_resource type="PackedScene" uid="uid://c24qrjmtc4y7w" path="res://assets/kenny-platformer-kit/block-grass-narrow.glb" id="21_4db3s"]
+[ext_resource type="PackedScene" uid="uid://cgsee0qoa74u8" path="res://assets/kenny-platformer-kit/block-grass-overhang-corner.glb" id="22_k6ruy"]
+[ext_resource type="PackedScene" uid="uid://b6t2iyl16b42m" path="res://assets/kenny-platformer-kit/block-grass-overhang-edge.glb" id="23_78w0o"]
+[ext_resource type="PackedScene" uid="uid://bctmrdtrlp7jw" path="res://assets/kenny-platformer-kit/block-grass-overhang-hexagon.glb" id="24_fa4np"]
+[ext_resource type="PackedScene" uid="uid://c4d6wnaiyvive" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope-narrow.glb" id="25_16y5y"]
+[ext_resource type="PackedScene" uid="uid://bfhb8ke6qyhnr" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope-steep-narrow.glb" id="26_rjxxv"]
+[ext_resource type="PackedScene" uid="uid://c2nbkppba8at1" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope-steep.glb" id="27_qnljq"]
+[ext_resource type="PackedScene" uid="uid://blnr5ajx1g6j6" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-slope.glb" id="28_8bxbo"]
+[ext_resource type="PackedScene" uid="uid://cfbt84f6r3yoc" path="res://assets/kenny-platformer-kit/block-grass-overhang-large-tall.glb" id="29_fo7ya"]
+[ext_resource type="PackedScene" uid="uid://cide0244pdnx0" path="res://assets/kenny-platformer-kit/block-grass-overhang-large.glb" id="30_ibyba"]
+[ext_resource type="PackedScene" uid="uid://dc6r1av8f7awn" path="res://assets/kenny-platformer-kit/block-grass-overhang-long.glb" id="31_dnyr4"]
+[ext_resource type="PackedScene" uid="uid://dxjjbbdgbhg5n" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-hexagon.glb" id="32_lux0h"]
+[ext_resource type="PackedScene" uid="uid://dj1rodri4rxg3" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-large.glb" id="33_xrmy6"]
+[ext_resource type="PackedScene" uid="uid://65kihfhxlf76" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-long.glb" id="34_b18ab"]
+[ext_resource type="PackedScene" uid="uid://bofm511xeotsg" path="res://assets/kenny-platformer-kit/block-grass-overhang-low-narrow.glb" id="35_7ax5u"]
+[ext_resource type="PackedScene" uid="uid://b4brtjovqkaqr" path="res://assets/kenny-platformer-kit/block-grass-overhang-low.glb" id="36_whl74"]
+[ext_resource type="PackedScene" uid="uid://c01dr5my2iypb" path="res://assets/kenny-platformer-kit/block-grass-overhang-narrow.glb" id="37_iwvnw"]
+[ext_resource type="PackedScene" uid="uid://dp3fwaqql0nhb" path="res://assets/kenny-platformer-kit/block-grass.glb" id="38_25eby"]
+[ext_resource type="PackedScene" uid="uid://tdvqa3ihgp2w" path="res://assets/kenny-platformer-kit/block-moving-blue.glb" id="39_5kl4a"]
+[ext_resource type="PackedScene" uid="uid://d0mf3pyalvbo4" path="res://assets/kenny-platformer-kit/block-moving-large.glb" id="40_ujdcv"]
+[ext_resource type="PackedScene" uid="uid://01emerw8ronw" path="res://assets/kenny-platformer-kit/block-moving.glb" id="41_negp7"]
+[ext_resource type="PackedScene" uid="uid://fd2i5lk12ehv" path="res://assets/kenny-platformer-kit/block-snow-corner-low.glb" id="42_061q3"]
+[ext_resource type="PackedScene" uid="uid://bahg20n8sob4c" path="res://assets/kenny-platformer-kit/block-snow-corner-overhang-low.glb" id="43_43i5d"]
+[ext_resource type="PackedScene" uid="uid://dqfk1bhtwrn83" path="res://assets/kenny-platformer-kit/block-snow-corner-overhang.glb" id="44_6yxcb"]
+[ext_resource type="PackedScene" uid="uid://vwkla8rsapc8" path="res://assets/kenny-platformer-kit/block-snow-corner.glb" id="45_spivr"]
+[ext_resource type="PackedScene" uid="uid://bvdkasntbfa3m" path="res://assets/kenny-platformer-kit/block-snow-curve-half.glb" id="46_fb1gj"]
+[ext_resource type="PackedScene" uid="uid://5v0xxtev8lrj" path="res://assets/kenny-platformer-kit/block-snow-curve-low.glb" id="47_pgkxo"]
+[ext_resource type="PackedScene" uid="uid://danuq60djuigc" path="res://assets/kenny-platformer-kit/block-snow-curve.glb" id="48_8w7re"]
+[ext_resource type="PackedScene" uid="uid://dl7iqtkarw1fk" path="res://assets/kenny-platformer-kit/block-snow-edge.glb" id="49_axwnr"]
+[ext_resource type="PackedScene" uid="uid://ttyrtjw53d4c" path="res://assets/kenny-platformer-kit/block-snow-hexagon.glb" id="50_hfc0i"]
+[ext_resource type="PackedScene" uid="uid://d31avmbwk0rob" path="res://assets/kenny-platformer-kit/block-snow-large-slope-narrow.glb" id="51_6la1t"]
+[ext_resource type="PackedScene" uid="uid://bw8ufmnqy54d2" path="res://assets/kenny-platformer-kit/block-snow-large-slope-steep-narrow.glb" id="52_rua0r"]
+[ext_resource type="PackedScene" uid="uid://m427g2cdqmjt" path="res://assets/kenny-platformer-kit/block-snow-large-slope-steep.glb" id="53_u4ndx"]
+[ext_resource type="PackedScene" uid="uid://b8xalp1tr8u8a" path="res://assets/kenny-platformer-kit/block-snow-large-slope.glb" id="54_3fdtf"]
+[ext_resource type="PackedScene" uid="uid://cm8vbunblpdgp" path="res://assets/kenny-platformer-kit/block-snow-large-tall.glb" id="55_3daff"]
+[ext_resource type="PackedScene" uid="uid://c1gotbugkurfp" path="res://assets/kenny-platformer-kit/block-snow-large.glb" id="56_sigpc"]
+[ext_resource type="PackedScene" uid="uid://cvvpr5fiuvwi7" path="res://assets/kenny-platformer-kit/block-snow-long.glb" id="57_i5w6j"]
+[ext_resource type="PackedScene" uid="uid://b5er6y0tnlijk" path="res://assets/kenny-platformer-kit/block-snow-low-hexagon.glb" id="58_pvvhj"]
+[ext_resource type="PackedScene" uid="uid://bov66pjwk4hc8" path="res://assets/kenny-platformer-kit/block-snow-low-large.glb" id="59_iggmg"]
+[ext_resource type="PackedScene" uid="uid://dtayu0gyg5fvx" path="res://assets/kenny-platformer-kit/block-snow-low-long.glb" id="60_nhnum"]
+[ext_resource type="PackedScene" uid="uid://bhrhh3e5ntiy5" path="res://assets/kenny-platformer-kit/block-snow-low-narrow.glb" id="61_cknjp"]
+[ext_resource type="PackedScene" uid="uid://dxmqp8jg54hpr" path="res://assets/kenny-platformer-kit/block-snow-low.glb" id="62_hcaio"]
+[ext_resource type="PackedScene" uid="uid://d3nuxhe8mmjfe" path="res://assets/kenny-platformer-kit/block-snow-narrow.glb" id="63_anvvk"]
+[ext_resource type="PackedScene" uid="uid://b7j8jrl122epm" path="res://assets/kenny-platformer-kit/block-snow-overhang-corner.glb" id="64_vfoye"]
+[ext_resource type="PackedScene" uid="uid://drudyvihhaom8" path="res://assets/kenny-platformer-kit/block-snow-overhang-edge.glb" id="65_kgwnq"]
+[ext_resource type="PackedScene" uid="uid://07x23mwhfw0r" path="res://assets/kenny-platformer-kit/block-snow-overhang-hexagon.glb" id="66_on8an"]
+[ext_resource type="PackedScene" uid="uid://uovm78ny623u" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope-narrow.glb" id="67_116hn"]
+[ext_resource type="PackedScene" uid="uid://b2pk17rdlqm6c" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope-steep-narrow.glb" id="68_jgox7"]
+[ext_resource type="PackedScene" uid="uid://ba4kk11sft062" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope-steep.glb" id="69_ygtry"]
+[ext_resource type="PackedScene" uid="uid://d06ghdkiob4pf" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-slope.glb" id="70_qldk5"]
+[ext_resource type="PackedScene" uid="uid://o8ftxgoegdry" path="res://assets/kenny-platformer-kit/block-snow-overhang-large-tall.glb" id="71_marel"]
+[ext_resource type="PackedScene" uid="uid://bmgxabshw0vkv" path="res://assets/kenny-platformer-kit/block-snow-overhang-large.glb" id="72_2jfwq"]
+[ext_resource type="PackedScene" uid="uid://cae466kmkptru" path="res://assets/kenny-platformer-kit/block-snow-overhang-long.glb" id="73_mryum"]
+[ext_resource type="PackedScene" uid="uid://4scyd0l7w1fx" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-hexagon.glb" id="74_watn3"]
+[ext_resource type="PackedScene" uid="uid://b18guphvd7x2a" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-large.glb" id="75_fs6t8"]
+[ext_resource type="PackedScene" uid="uid://bv7gks3gvbyvq" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-long.glb" id="76_g7it1"]
+[ext_resource type="PackedScene" uid="uid://usmeo14n73yf" path="res://assets/kenny-platformer-kit/block-snow-overhang-low-narrow.glb" id="77_a7xn2"]
+[ext_resource type="PackedScene" uid="uid://lunmxae7ybpr" path="res://assets/kenny-platformer-kit/block-snow-overhang-low.glb" id="78_ktqmf"]
+[ext_resource type="PackedScene" uid="uid://c56x88dh0qdaa" path="res://assets/kenny-platformer-kit/block-snow-overhang-narrow.glb" id="79_itrqg"]
+[ext_resource type="PackedScene" uid="uid://cq2ha2ecfvkek" path="res://assets/kenny-platformer-kit/block-snow.glb" id="80_vxle6"]
+[ext_resource type="PackedScene" uid="uid://b1nglmm3sqo6n" path="res://assets/kenny-platformer-kit/bomb.glb" id="81_q7nib"]
+[ext_resource type="PackedScene" uid="uid://digmvlyjihye8" path="res://assets/kenny-platformer-kit/brick.glb" id="82_j8o7t"]
+[ext_resource type="PackedScene" uid="uid://bfaxbjxs34rob" path="res://assets/kenny-platformer-kit/button-round.glb" id="83_yldj8"]
+[ext_resource type="PackedScene" uid="uid://b7k5ufc6xhjew" path="res://assets/kenny-platformer-kit/button-square.glb" id="84_y5j8x"]
+[ext_resource type="PackedScene" uid="uid://c5c404oiml7ja" path="res://assets/kenny-platformer-kit/chest.glb" id="85_cayyn"]
+[ext_resource type="PackedScene" uid="uid://cjsueqnf7ondv" path="res://assets/kenny-platformer-kit/coin-bronze.glb" id="86_jdqya"]
+[ext_resource type="PackedScene" uid="uid://cmb1fuh7umlyh" path="res://assets/kenny-platformer-kit/coin-gold.glb" id="87_7idu6"]
+[ext_resource type="PackedScene" uid="uid://dn0qfxhtx3yux" path="res://assets/kenny-platformer-kit/coin-silver.glb" id="88_55hor"]
+[ext_resource type="PackedScene" uid="uid://dobqlmvfwvrr0" path="res://assets/kenny-platformer-kit/conveyor-belt.glb" id="89_mk8pw"]
+[ext_resource type="PackedScene" uid="uid://bstn6hfrxuns7" path="res://assets/kenny-platformer-kit/crate-item-strong.glb" id="90_n7meq"]
+[ext_resource type="PackedScene" uid="uid://7g4ah3qpskwi" path="res://assets/kenny-platformer-kit/crate-item.glb" id="91_6sij4"]
+[ext_resource type="PackedScene" uid="uid://bt68jjogdxg56" path="res://assets/kenny-platformer-kit/crate-strong.glb" id="92_kkti3"]
+[ext_resource type="PackedScene" uid="uid://cfwn0a5ekdpa" path="res://assets/kenny-platformer-kit/crate.glb" id="93_jdl01"]
+[ext_resource type="PackedScene" uid="uid://dgd22ekap8wdi" path="res://assets/kenny-platformer-kit/door-large-open.glb" id="94_xmixf"]
+[ext_resource type="PackedScene" uid="uid://ytn64pqkt4c2" path="res://assets/kenny-platformer-kit/door-open.glb" id="95_8rdf3"]
+[ext_resource type="PackedScene" uid="uid://cciaw4uoerht7" path="res://assets/kenny-platformer-kit/door-rotate-large.glb" id="96_fglre"]
+[ext_resource type="PackedScene" uid="uid://ty1psws7klx8" path="res://assets/kenny-platformer-kit/door-rotate.glb" id="97_mfasr"]
+[ext_resource type="PackedScene" uid="uid://bt543gdjrsnms" path="res://assets/kenny-platformer-kit/fence-broken.glb" id="98_q12m6"]
+[ext_resource type="PackedScene" uid="uid://q3a12hdkdw1j" path="res://assets/kenny-platformer-kit/fence-corner-curved.glb" id="99_312pb"]
+[ext_resource type="PackedScene" uid="uid://bgxbgf2l1ogut" path="res://assets/kenny-platformer-kit/fence-corner.glb" id="100_7fy2t"]
+[ext_resource type="PackedScene" uid="uid://c0lcoqumctt7k" path="res://assets/kenny-platformer-kit/fence-low-broken.glb" id="101_diovc"]
+[ext_resource type="PackedScene" uid="uid://dagwm6l2keny7" path="res://assets/kenny-platformer-kit/fence-low-corner-curved.glb" id="102_sa12p"]
+[ext_resource type="PackedScene" uid="uid://u6dxtw3vuvcb" path="res://assets/kenny-platformer-kit/fence-low-corner.glb" id="103_li2ry"]
+[ext_resource type="PackedScene" uid="uid://dy5smihqna6w3" path="res://assets/kenny-platformer-kit/fence-low-straight.glb" id="104_yuimf"]
+[ext_resource type="PackedScene" uid="uid://2m08ksmvv67u" path="res://assets/kenny-platformer-kit/fence-rope.glb" id="105_cn4a3"]
+[ext_resource type="PackedScene" uid="uid://ymlk1d7dgq0t" path="res://assets/kenny-platformer-kit/fence-straight.glb" id="106_rai7e"]
+[ext_resource type="PackedScene" uid="uid://btdnf7asakewi" path="res://assets/kenny-platformer-kit/flag.glb" id="107_e5g7x"]
+[ext_resource type="PackedScene" uid="uid://jnrgm1nlxt32" path="res://assets/kenny-platformer-kit/flowers-tall.glb" id="108_rjhrh"]
+[ext_resource type="PackedScene" uid="uid://bhdo7k52bylws" path="res://assets/kenny-platformer-kit/flowers.glb" id="109_mrdud"]
+[ext_resource type="PackedScene" uid="uid://dy726g5mlguny" path="res://assets/kenny-platformer-kit/grass.glb" id="110_cmtgi"]
+[ext_resource type="PackedScene" uid="uid://jh8ouk1rb2t2" path="res://assets/kenny-platformer-kit/heart.glb" id="111_5m1jj"]
+[ext_resource type="PackedScene" uid="uid://d4e3ty60hs7tj" path="res://assets/kenny-platformer-kit/hedge-corner.glb" id="112_1pg73"]
+[ext_resource type="PackedScene" uid="uid://dw5rveq3dd0pm" path="res://assets/kenny-platformer-kit/hedge.glb" id="113_3fijs"]
+[ext_resource type="PackedScene" uid="uid://bh33qgm6pwkuh" path="res://assets/kenny-platformer-kit/jewel.glb" id="114_hivkp"]
+[ext_resource type="PackedScene" uid="uid://cj2q37ic1sb85" path="res://assets/kenny-platformer-kit/key.glb" id="115_ebdml"]
+[ext_resource type="PackedScene" uid="uid://cbtm7exsf1fu4" path="res://assets/kenny-platformer-kit/ladder-broken.glb" id="116_wes3p"]
+[ext_resource type="PackedScene" uid="uid://bewyteburplmu" path="res://assets/kenny-platformer-kit/ladder-long.glb" id="117_vjc8j"]
+[ext_resource type="PackedScene" uid="uid://bynlmtg8o0k6c" path="res://assets/kenny-platformer-kit/ladder.glb" id="118_xi1wd"]
+[ext_resource type="PackedScene" uid="uid://b5r3qf3pupw12" path="res://assets/kenny-platformer-kit/lever.glb" id="119_k7qqp"]
+[ext_resource type="PackedScene" uid="uid://d20y46x5kmuvf" path="res://assets/kenny-platformer-kit/lock.glb" id="120_8c4si"]
+[ext_resource type="PackedScene" uid="uid://br5v218q8utv4" path="res://assets/kenny-platformer-kit/mushrooms.glb" id="121_i8xjd"]
+[ext_resource type="PackedScene" uid="uid://cgs16ge0nf16j" path="res://assets/kenny-platformer-kit/pipe.glb" id="122_l57ag"]
+[ext_resource type="PackedScene" uid="uid://c23g4r04w0483" path="res://assets/kenny-platformer-kit/plant.glb" id="123_quy13"]
+[ext_resource type="PackedScene" uid="uid://uqk3gv7jrp56" path="res://assets/kenny-platformer-kit/platform-fortified.glb" id="124_u4suc"]
+[ext_resource type="PackedScene" uid="uid://chwqhkwss0n04" path="res://assets/kenny-platformer-kit/platform-overhang.glb" id="125_q5apb"]
+[ext_resource type="PackedScene" uid="uid://b7o3rpebak67o" path="res://assets/kenny-platformer-kit/platform-ramp.glb" id="126_6miww"]
+[ext_resource type="PackedScene" uid="uid://fti04b68i03f" path="res://assets/kenny-platformer-kit/platform.glb" id="127_tidnc"]
+[ext_resource type="PackedScene" uid="uid://b1jn3q7lcrkhs" path="res://assets/kenny-platformer-kit/poles.glb" id="128_boxm5"]
+[ext_resource type="PackedScene" uid="uid://iuqkqu7u4oc8" path="res://assets/kenny-platformer-kit/rocks.glb" id="129_ddu5b"]
+[ext_resource type="PackedScene" uid="uid://bckwa7todr05w" path="res://assets/kenny-platformer-kit/saw.glb" id="130_nnnqw"]
+[ext_resource type="PackedScene" uid="uid://d20sd3kjj76dt" path="res://assets/kenny-platformer-kit/sign.glb" id="131_b2i00"]
+[ext_resource type="PackedScene" uid="uid://osiupubwwp8e" path="res://assets/kenny-platformer-kit/spike-block-wide.glb" id="132_vlang"]
+[ext_resource type="PackedScene" uid="uid://bg81nbsk3po7c" path="res://assets/kenny-platformer-kit/spike-block.glb" id="133_mntkh"]
+[ext_resource type="PackedScene" uid="uid://cbj6o24gkiydc" path="res://assets/kenny-platformer-kit/spring.glb" id="134_bmayk"]
+[ext_resource type="PackedScene" uid="uid://khw2tbayacms" path="res://assets/kenny-platformer-kit/star.glb" id="135_pa305"]
+[ext_resource type="PackedScene" uid="uid://dx62delxvxle5" path="res://assets/kenny-platformer-kit/stones.glb" id="136_44rwm"]
+[ext_resource type="PackedScene" uid="uid://xul8y2iy1md2" path="res://assets/kenny-platformer-kit/trap-spikes-large.glb" id="137_ldjmd"]
+[ext_resource type="PackedScene" uid="uid://c0718ru8w20mi" path="res://assets/kenny-platformer-kit/trap-spikes.glb" id="138_j6gqr"]
+[ext_resource type="PackedScene" uid="uid://bgulu8aak7chh" path="res://assets/kenny-platformer-kit/tree-pine-small.glb" id="139_gnjpv"]
+[ext_resource type="PackedScene" uid="uid://t8lspd6o5e76" path="res://assets/kenny-platformer-kit/tree-pine-snow-small.glb" id="140_fufnp"]
+[ext_resource type="PackedScene" uid="uid://qfun1iwykgco" path="res://assets/kenny-platformer-kit/tree-pine-snow.glb" id="141_y4pfq"]
+[ext_resource type="PackedScene" uid="uid://bhv2llo4uy50c" path="res://assets/kenny-platformer-kit/tree-pine.glb" id="142_edt7v"]
+[ext_resource type="PackedScene" uid="uid://d17qb2myd8dqs" path="res://assets/kenny-platformer-kit/tree-snow.glb" id="143_ba6l8"]
+[ext_resource type="PackedScene" uid="uid://xk8c7la4wbe2" path="res://assets/kenny-platformer-kit/tree.glb" id="144_1mrxo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xqpb"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_ajhql")
+albedo_texture = ExtResource("1_2iytn")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xroga"]
@@ -192,7 +191,7 @@ size = Vector3(0.38250732, 0.5443115, 0.15368652)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgce1"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_ajhql")
+albedo_texture = ExtResource("1_2iytn")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vvc1w"]
@@ -235,7 +234,7 @@ size = Vector3(0.46289063, 0.8449402, 0.1508789)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltul8"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_ajhql")
+albedo_texture = ExtResource("1_2iytn")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mx7c6"]
@@ -279,7 +278,7 @@ height = 0.5878906
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpvds"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_ajhql")
+albedo_texture = ExtResource("1_2iytn")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1hssu"]
@@ -334,7 +333,7 @@ data = PackedVector3Array(0, 1, 0.099999994, 0, 0.8991, 0, 0, 0.79829997, 0, 0, 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o20x3"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_ajhql")
+albedo_texture = ExtResource("1_2iytn")
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a1xot"]
@@ -792,7 +791,6 @@ data = PackedVector3Array(-0.3552, 0.86109996, 0.3552, -0.26639998, 0.86109996, 
 data = PackedVector3Array(-0.3552, 0.86109996, 0.3552, -0.26639998, 0.86109996, 0.392, -0.26639998, 0.8091, 0.26639998, 0.26639998, 1.9309, -0.26639998, 0.3552, 1.8787999, -0.3552, 0.392, 1.8787999, -0.26639998, -0.3552, 1.8787999, 0.3552, -0.26639998, 1.9309, 0.26639998, -0.26639998, 1.8787999, 0.392, 0.26639998, 1.8787999, 0.392, 0.26639998, 1.9309, 0.26639998, 0.3552, 1.8787999, 0.3552, 0.26639998, 0.8091, -0.26639998, 0.392, 0.86109996, -0.26639998, 0.3552, 0.86109996, -0.3552, -0.392, 1.8787999, -0.26639998, -0.3552, 1.8787999, -0.3552, -0.26639998, 1.9309, -0.26639998, -0.3552, 1.8787999, -0.3552, -0.26639998, 1.8787999, -0.392, -0.26639998, 1.9309, -0.26639998, 0.26639998, 0.86109996, -0.392, 0.26639998, 0.8091, -0.26639998, 0.3552, 0.86109996, -0.3552, -0.392, 0.86109996, 0.26639998, -0.3552, 0.86109996, 0.3552, -0.26639998, 0.8091, 0.26639998, 0.26639998, 0.8091, 0.26639998, 0.3552, 0.86109996, 0.3552, 0.392, 0.86109996, 0.26639998, -0.3552, 0.86109996, -0.3552, -0.26639998, 0.8091, -0.26639998, -0.26639998, 0.86109996, -0.392, 0.26639998, 0.8091, 0.26639998, 0.26639998, 0.86109996, 0.392, 0.3552, 0.86109996, 0.3552, 0.26639998, 1.9309, -0.26639998, 0.26639998, 1.8787999, -0.392, 0.3552, 1.8787999, -0.3552, 0.26639998, 1.9309, 0.26639998, 0.392, 1.8787999, 0.26639998, 0.3552, 1.8787999, 0.3552, -0.392, 1.8787999, 0.26639998, -0.26639998, 1.9309, 0.26639998, -0.3552, 1.8787999, 0.3552, -0.392, 0.86109996, -0.26639998, -0.26639998, 0.8091, -0.26639998, -0.3552, 0.86109996, -0.3552, 0.392, 1.7531999, 0.392, 0.44399998, 1.7531999, 0.26639998, 0.48839998, 1.37, 0.29299998, 0.48839998, 1.37, 0.29299998, 0.4312, 1.37, 0.4312, 0.392, 1.7531999, 0.392, -0.26639998, 1.7531999, 0.44399998, -0.2931, 1.37, 0.48839998, -0.4312, 1.37, 0.4312, -0.4312, 1.37, 0.4312, -0.392, 1.7531999, 0.392, -0.26639998, 1.7531999, 0.44399998, -0.392, 1.7531999, -0.392, -0.4312, 1.37, -0.4312, -0.2931, 1.37, -0.48839998, -0.2931, 1.37, -0.48839998, -0.26639998, 1.7531999, -0.44399998, -0.392, 1.7531999, -0.392, -0.48839998, 1.37, -0.2931, -0.4312, 1.37, -0.4312, -0.392, 1.7531999, -0.392, -0.392, 1.7531999, -0.392, -0.44399998, 1.7531999, -0.26639998, -0.48839998, 1.37, -0.2931, 0.392, 0.9867, 0.392, 0.44399998, 0.9867, 0.26639998, 0.392, 0.86109996, 0.26639998, 0.392, 0.86109996, 0.26639998, 0.3552, 0.86109996, 0.3552, 0.392, 0.9867, 0.392, 0.26639998, 0.8091, 0.26639998, 0.392, 0.86109996, 0.26639998, 0.392, 0.86109996, -0.26639998, 0.392, 0.86109996, -0.26639998, 0.26639998, 0.8091, -0.26639998, 0.26639998, 0.8091, 0.26639998, -0.26639998, 0.86109996, 0.392, 0.26639998, 0.86109996, 0.392, 0.26639998, 0.8091, 0.26639998, 0.26639998, 0.8091, 0.26639998, -0.26639998, 0.8091, 0.26639998, -0.26639998, 0.86109996, 0.392, -0.44399998, 0.9867, -0.26639998, -0.48839998, 1.37, -0.2931, -0.48839998, 1.37, 0.29299998, -0.48839998, 1.37, 0.29299998, -0.44399998, 0.9867, 0.26639998, -0.44399998, 0.9867, -0.26639998, 0.3552, 1.8787999, -0.3552, 0.392, 1.7531999, -0.392, 0.44399998, 1.7531999, -0.26639998, 0.44399998, 1.7531999, -0.26639998, 0.392, 1.8787999, -0.26639998, 0.3552, 1.8787999, -0.3552, 0.26639998, 1.7531999, 0.44399998, 0.2931, 1.37, 0.48839998, -0.2931, 1.37, 0.48839998, -0.2931, 1.37, 0.48839998, -0.26639998, 1.7531999, 0.44399998, 0.26639998, 1.7531999, 0.44399998, 0.26639998, 1.7531999, -0.44399998, 0.2931, 1.37, -0.48839998, 0.4312, 1.37, -0.4312, 0.4312, 1.37, -0.4312, 0.392, 1.7531999, -0.392, 0.26639998, 1.7531999, -0.44399998, 0.392, 1.7531999, 0.392, 0.4312, 1.37, 0.4312, 0.2931, 1.37, 0.48839998, 0.2931, 1.37, 0.48839998, 0.26639998, 1.7531999, 0.44399998, 0.392, 1.7531999, 0.392, -0.3552, 0.86109996, -0.3552, -0.392, 0.9867, -0.392, -0.44399998, 0.9867, -0.26639998, -0.44399998, 0.9867, -0.26639998, -0.392, 0.86109996, -0.26639998, -0.3552, 0.86109996, -0.3552, -0.3552, 1.8787999, -0.3552, -0.392, 1.7531999, -0.392, -0.26639998, 1.7531999, -0.44399998, -0.26639998, 1.7531999, -0.44399998, -0.26639998, 1.8787999, -0.392, -0.3552, 1.8787999, -0.3552, 0.26639998, 0.9867, -0.44399998, 0.26639998, 0.86109996, -0.392, 0.3552, 0.86109996, -0.3552, 0.3552, 0.86109996, -0.3552, 0.392, 0.9867, -0.392, 0.26639998, 0.9867, -0.44399998, -0.26639998, 0.8091, 0.26639998, 0.26639998, 0.8091, 0.26639998, 0.26639998, 0.8091, -0.26639998, 0.26639998, 0.8091, -0.26639998, -0.26639998, 0.8091, -0.26639998, -0.26639998, 0.8091, 0.26639998, -0.26639998, 1.7531999, -0.44399998, -0.2931, 1.37, -0.48839998, 0.2931, 1.37, -0.48839998, 0.2931, 1.37, -0.48839998, 0.26639998, 1.7531999, -0.44399998, -0.26639998, 1.7531999, -0.44399998, -0.26639998, 1.8787999, -0.392, 0.26639998, 1.8787999, -0.392, 0.26639998, 1.9309, -0.26639998, 0.26639998, 1.9309, -0.26639998, -0.26639998, 1.9309, -0.26639998, -0.26639998, 1.8787999, -0.392, -0.392, 1.8787999, -0.26639998, -0.26639998, 1.9309, -0.26639998, -0.26639998, 1.9309, 0.26639998, -0.26639998, 1.9309, 0.26639998, -0.392, 1.8787999, 0.26639998, -0.392, 1.8787999, -0.26639998, -0.392, 0.9867, -0.392, -0.4312, 1.37, -0.4312, -0.48839998, 1.37, -0.2931, -0.48839998, 1.37, -0.2931, -0.44399998, 0.9867, -0.26639998, -0.392, 0.9867, -0.392, -0.44399998, 1.7531999, -0.26639998, -0.392, 1.7531999, -0.392, -0.3552, 1.8787999, -0.3552, -0.3552, 1.8787999, -0.3552, -0.392, 1.8787999, -0.26639998, -0.44399998, 1.7531999, -0.26639998, 0.392, 0.9867, 0.392, 0.3552, 0.86109996, 0.3552, 0.26639998, 0.86109996, 0.392, 0.26639998, 0.86109996, 0.392, 0.26639998, 0.9867, 0.44399998, 0.392, 0.9867, 0.392, 0.26639998, 1.8787999, 0.392, 0.26639998, 1.7531999, 0.44399998, -0.26639998, 1.7531999, 0.44399998, -0.26639998, 1.7531999, 0.44399998, -0.26639998, 1.8787999, 0.392, 0.26639998, 1.8787999, 0.392, -0.26639998, 0.9867, -0.44399998, -0.26639998, 0.86109996, -0.392, 0.26639998, 0.86109996, -0.392, 0.26639998, 0.86109996, -0.392, 0.26639998, 0.9867, -0.44399998, -0.26639998, 0.9867, -0.44399998, -0.392, 0.9867, -0.392, -0.3552, 0.86109996, -0.3552, -0.26639998, 0.86109996, -0.392, -0.26639998, 0.86109996, -0.392, -0.26639998, 0.9867, -0.44399998, -0.392, 0.9867, -0.392, 0.2931, 1.37, 0.48839998, 0.26639998, 0.9867, 0.44399998, -0.26639998, 0.9867, 0.44399998, -0.26639998, 0.9867, 0.44399998, -0.2931, 1.37, 0.48839998, 0.2931, 1.37, 0.48839998, 0.26639998, 0.9867, 0.44399998, 0.26639998, 0.86109996, 0.392, -0.26639998, 0.86109996, 0.392, -0.26639998, 0.86109996, 0.392, -0.26639998, 0.9867, 0.44399998, 0.26639998, 0.9867, 0.44399998, 0.48839998, 1.37, 0.29299998, 0.44399998, 0.9867, 0.26639998, 0.392, 0.9867, 0.392, 0.392, 0.9867, 0.392, 0.4312, 1.37, 0.4312, 0.48839998, 1.37, 0.29299998, -0.392, 0.86109996, -0.26639998, -0.44399998, 0.9867, -0.26639998, -0.44399998, 0.9867, 0.26639998, -0.44399998, 0.9867, 0.26639998, -0.392, 0.86109996, 0.26639998, -0.392, 0.86109996, -0.26639998, -0.26639998, 0.8091, -0.26639998, 0.26639998, 0.8091, -0.26639998, 0.26639998, 0.86109996, -0.392, 0.26639998, 0.86109996, -0.392, -0.26639998, 0.86109996, -0.392, -0.26639998, 0.8091, -0.26639998, 0.48839998, 1.37, 0.29299998, 0.48839998, 1.37, -0.2931, 0.44399998, 0.9867, -0.26639998, 0.44399998, 0.9867, -0.26639998, 0.44399998, 0.9867, 0.26639998, 0.48839998, 1.37, 0.29299998, 0.4312, 1.37, 0.4312, 0.392, 0.9867, 0.392, 0.26639998, 0.9867, 0.44399998, 0.26639998, 0.9867, 0.44399998, 0.2931, 1.37, 0.48839998, 0.4312, 1.37, 0.4312, -0.2931, 1.37, 0.48839998, -0.26639998, 0.9867, 0.44399998, -0.392, 0.9867, 0.392, -0.392, 0.9867, 0.392, -0.4312, 1.37, 0.4312, -0.2931, 1.37, 0.48839998, -0.392, 0.86109996, 0.26639998, -0.44399998, 0.9867, 0.26639998, -0.392, 0.9867, 0.392, -0.392, 0.9867, 0.392, -0.3552, 0.86109996, 0.3552, -0.392, 0.86109996, 0.26639998, -0.26639998, 0.9867, 0.44399998, -0.26639998, 0.86109996, 0.392, -0.3552, 0.86109996, 0.3552, -0.3552, 0.86109996, 0.3552, -0.392, 0.9867, 0.392, -0.26639998, 0.9867, 0.44399998, -0.26639998, 1.8787999, -0.392, -0.26639998, 1.7531999, -0.44399998, 0.26639998, 1.7531999, -0.44399998, 0.26639998, 1.7531999, -0.44399998, 0.26639998, 1.8787999, -0.392, -0.26639998, 1.8787999, -0.392, 0.26639998, 1.9309, -0.26639998, 0.26639998, 1.9309, 0.26639998, -0.26639998, 1.9309, 0.26639998, -0.26639998, 1.9309, 0.26639998, -0.26639998, 1.9309, -0.26639998, 0.26639998, 1.9309, -0.26639998, 0.26639998, 1.8787999, -0.392, 0.26639998, 1.7531999, -0.44399998, 0.392, 1.7531999, -0.392, 0.392, 1.7531999, -0.392, 0.3552, 1.8787999, -0.3552, 0.26639998, 1.8787999, -0.392, -0.2931, 1.37, -0.48839998, -0.26639998, 0.9867, -0.44399998, 0.26639998, 0.9867, -0.44399998, 0.26639998, 0.9867, -0.44399998, 0.2931, 1.37, -0.48839998, -0.2931, 1.37, -0.48839998, -0.4312, 1.37, -0.4312, -0.392, 0.9867, -0.392, -0.26639998, 0.9867, -0.44399998, -0.26639998, 0.9867, -0.44399998, -0.2931, 1.37, -0.48839998, -0.4312, 1.37, -0.4312, 0.48839998, 1.37, -0.2931, 0.4312, 1.37, -0.4312, 0.392, 0.9867, -0.392, 0.392, 0.9867, -0.392, 0.44399998, 0.9867, -0.26639998, 0.48839998, 1.37, -0.2931, 0.26639998, 1.9309, -0.26639998, 0.392, 1.8787999, -0.26639998, 0.392, 1.8787999, 0.26639998, 0.392, 1.8787999, 0.26639998, 0.26639998, 1.9309, 0.26639998, 0.26639998, 1.9309, -0.26639998, -0.48839998, 1.37, 0.29299998, -0.48839998, 1.37, -0.2931, -0.44399998, 1.7531999, -0.26639998, -0.44399998, 1.7531999, -0.26639998, -0.44399998, 1.7531999, 0.26639998, -0.48839998, 1.37, 0.29299998, 0.392, 1.7531999, -0.392, 0.4312, 1.37, -0.4312, 0.48839998, 1.37, -0.2931, 0.48839998, 1.37, -0.2931, 0.44399998, 1.7531999, -0.26639998, 0.392, 1.7531999, -0.392, 0.2931, 1.37, -0.48839998, 0.26639998, 0.9867, -0.44399998, 0.392, 0.9867, -0.392, 0.392, 0.9867, -0.392, 0.4312, 1.37, -0.4312, 0.2931, 1.37, -0.48839998, 0.392, 1.8787999, 0.26639998, 0.44399998, 1.7531999, 0.26639998, 0.392, 1.7531999, 0.392, 0.392, 1.7531999, 0.392, 0.3552, 1.8787999, 0.3552, 0.392, 1.8787999, 0.26639998, -0.26639998, 1.8787999, 0.392, -0.26639998, 1.7531999, 0.44399998, -0.392, 1.7531999, 0.392, -0.392, 1.7531999, 0.392, -0.3552, 1.8787999, 0.3552, -0.26639998, 1.8787999, 0.392, 0.44399998, 1.7531999, -0.26639998, 0.48839998, 1.37, -0.2931, 0.48839998, 1.37, 0.29299998, 0.48839998, 1.37, 0.29299998, 0.44399998, 1.7531999, 0.26639998, 0.44399998, 1.7531999, -0.26639998, -0.392, 1.7531999, 0.392, -0.44399998, 1.7531999, 0.26639998, -0.392, 1.8787999, 0.26639998, -0.392, 1.8787999, 0.26639998, -0.3552, 1.8787999, 0.3552, -0.392, 1.7531999, 0.392, -0.26639998, 1.9309, 0.26639998, 0.26639998, 1.9309, 0.26639998, 0.26639998, 1.8787999, 0.392, 0.26639998, 1.8787999, 0.392, -0.26639998, 1.8787999, 0.392, -0.26639998, 1.9309, 0.26639998, -0.44399998, 1.7531999, 0.26639998, -0.44399998, 1.7531999, -0.26639998, -0.392, 1.8787999, -0.26639998, -0.392, 1.8787999, -0.26639998, -0.392, 1.8787999, 0.26639998, -0.44399998, 1.7531999, 0.26639998, -0.392, 0.9867, 0.392, -0.44399998, 0.9867, 0.26639998, -0.48839998, 1.37, 0.29299998, -0.48839998, 1.37, 0.29299998, -0.4312, 1.37, 0.4312, -0.392, 0.9867, 0.392, 0.392, 1.8787999, 0.26639998, 0.392, 1.8787999, -0.26639998, 0.44399998, 1.7531999, -0.26639998, 0.44399998, 1.7531999, -0.26639998, 0.44399998, 1.7531999, 0.26639998, 0.392, 1.8787999, 0.26639998, 0.44399998, 0.9867, -0.26639998, 0.392, 0.86109996, -0.26639998, 0.392, 0.86109996, 0.26639998, 0.392, 0.86109996, 0.26639998, 0.44399998, 0.9867, 0.26639998, 0.44399998, 0.9867, -0.26639998, -0.48839998, 1.37, 0.29299998, -0.44399998, 1.7531999, 0.26639998, -0.392, 1.7531999, 0.392, -0.392, 1.7531999, 0.392, -0.4312, 1.37, 0.4312, -0.48839998, 1.37, 0.29299998, 0.3552, 1.8787999, 0.3552, 0.392, 1.7531999, 0.392, 0.26639998, 1.7531999, 0.44399998, 0.26639998, 1.7531999, 0.44399998, 0.26639998, 1.8787999, 0.392, 0.3552, 1.8787999, 0.3552, 0.44399998, 0.9867, -0.26639998, 0.392, 0.9867, -0.392, 0.3552, 0.86109996, -0.3552, 0.3552, 0.86109996, -0.3552, 0.392, 0.86109996, -0.26639998, 0.44399998, 0.9867, -0.26639998, -0.392, 0.86109996, 0.26639998, -0.26639998, 0.8091, 0.26639998, -0.26639998, 0.8091, -0.26639998, -0.26639998, 0.8091, -0.26639998, -0.392, 0.86109996, -0.26639998, -0.392, 0.86109996, 0.26639998, 0.4788, 1.222, 0.0543, 0.54679996, 1.1747, 0.0863, 0.5502, 1.1899999, 0.17379999, 0.5502, 1.1899999, 0.17379999, 0.4244, 1.2797999, 0.1269, 0.4788, 1.222, 0.0543, 0.5502, 1.1899999, 0.17379999, 0.4752, 1.2571, 0.2119, 0.4244, 1.2797999, 0.1269, 0.39029998, 1.2366999, 0.1357, 0.4447, 1.1789, 0.063099995, 0.4788, 1.222, 0.0543, 0.4788, 1.222, 0.0543, 0.4244, 1.2797999, 0.1269, 0.39029998, 1.2366999, 0.1357, 0.54679996, 1.1747, 0.0863, 0.51269996, 1.1316, 0.095199995, 0.5161, 1.1467999, 0.18259999, 0.5161, 1.1467999, 0.18259999, 0.5502, 1.1899999, 0.17379999, 0.54679996, 1.1747, 0.0863, 0.4447, 1.1789, 0.063099995, 0.51269996, 1.1316, 0.095199995, 0.54679996, 1.1747, 0.0863, 0.54679996, 1.1747, 0.0863, 0.4788, 1.222, 0.0543, 0.4447, 1.1789, 0.063099995, 0.4411, 1.2139, 0.2208, 0.39029998, 1.2366999, 0.1357, 0.4244, 1.2797999, 0.1269, 0.4244, 1.2797999, 0.1269, 0.4752, 1.2571, 0.2119, 0.4411, 1.2139, 0.2208, 0.5161, 1.1467999, 0.18259999, 0.51269996, 1.1316, 0.095199995, 0.4447, 1.1789, 0.063099995, 0.4447, 1.1789, 0.063099995, 0.39029998, 1.2366999, 0.1357, 0.5161, 1.1467999, 0.18259999, 0.39029998, 1.2366999, 0.1357, 0.4411, 1.2139, 0.2208, 0.5161, 1.1467999, 0.18259999, 0.5502, 1.1899999, 0.17379999, 0.5161, 1.1467999, 0.18259999, 0.4411, 1.2139, 0.2208, 0.4411, 1.2139, 0.2208, 0.4752, 1.2571, 0.2119, 0.5502, 1.1899999, 0.17379999, 0.5502, 1.173, 0.23699999, 0.54679996, 1.1161, 0.3051, 0.4788, 1.1409999, 0.3566, 0.4788, 1.1409999, 0.3566, 0.4752, 1.2501999, 0.2375, 0.5502, 1.173, 0.23699999, 0.4788, 1.1409999, 0.3566, 0.4244, 1.2274, 0.3225, 0.4752, 1.2501999, 0.2375, 0.4411, 1.2171999, 0.2083, 0.5161, 1.1401, 0.2078, 0.5502, 1.173, 0.23699999, 0.5502, 1.173, 0.23699999, 0.4752, 1.2501999, 0.2375, 0.4411, 1.2171999, 0.2083, 0.54679996, 1.1161, 0.3051, 0.51269996, 1.0832, 0.2759, 0.4447, 1.1080999, 0.32729998, 0.4447, 1.1080999, 0.32729998, 0.4788, 1.1409999, 0.3566, 0.54679996, 1.1161, 0.3051, 0.5161, 1.1401, 0.2078, 0.51269996, 1.0832, 0.2759, 0.54679996, 1.1161, 0.3051, 0.54679996, 1.1161, 0.3051, 0.5502, 1.173, 0.23699999, 0.5161, 1.1401, 0.2078, 0.39029998, 1.1945, 0.2934, 0.4411, 1.2171999, 0.2083, 0.4752, 1.2501999, 0.2375, 0.4752, 1.2501999, 0.2375, 0.4244, 1.2274, 0.3225, 0.39029998, 1.1945, 0.2934, 0.4447, 1.1080999, 0.32729998, 0.51269996, 1.0832, 0.2759, 0.5161, 1.1401, 0.2078, 0.5161, 1.1401, 0.2078, 0.4411, 1.2171999, 0.2083, 0.4447, 1.1080999, 0.32729998, 0.4411, 1.2171999, 0.2083, 0.39029998, 1.1945, 0.2934, 0.4447, 1.1080999, 0.32729998, 0.4788, 1.1409999, 0.3566, 0.4447, 1.1080999, 0.32729998, 0.39029998, 1.1945, 0.2934, 0.39029998, 1.1945, 0.2934, 0.4244, 1.2274, 0.3225, 0.4788, 1.1409999, 0.3566, 0.4569, 1.6197, -0.282, 0.525, 1.5948, -0.2306, 0.5284, 1.6516999, -0.16239999, 0.5284, 1.6516999, -0.16239999, 0.4026, 1.7061, -0.248, 0.4569, 1.6197, -0.282, 0.5284, 1.6516999, -0.16239999, 0.4534, 1.7287999, -0.163, 0.4026, 1.7061, -0.248, 0.3685, 1.6731, -0.2188, 0.4229, 1.5867, -0.2528, 0.4569, 1.6197, -0.282, 0.4569, 1.6197, -0.282, 0.4026, 1.7061, -0.248, 0.3685, 1.6731, -0.2188, 0.525, 1.5948, -0.2306, 0.49089998, 1.5618, -0.2014, 0.49429998, 1.6186999, -0.13319999, 0.49429998, 1.6186999, -0.13319999, 0.5284, 1.6516999, -0.16239999, 0.525, 1.5948, -0.2306, 0.4229, 1.5867, -0.2528, 0.49089998, 1.5618, -0.2014, 0.525, 1.5948, -0.2306, 0.525, 1.5948, -0.2306, 0.4569, 1.6197, -0.282, 0.4229, 1.5867, -0.2528, 0.4193, 1.6959, -0.1338, 0.3685, 1.6731, -0.2188, 0.4026, 1.7061, -0.248, 0.4026, 1.7061, -0.248, 0.4534, 1.7287999, -0.163, 0.4193, 1.6959, -0.1338, 0.49429998, 1.6186999, -0.13319999, 0.49089998, 1.5618, -0.2014, 0.4229, 1.5867, -0.2528, 0.4229, 1.5867, -0.2528, 0.3685, 1.6731, -0.2188, 0.49429998, 1.6186999, -0.13319999, 0.3685, 1.6731, -0.2188, 0.4193, 1.6959, -0.1338, 0.49429998, 1.6186999, -0.13319999, 0.5284, 1.6516999, -0.16239999, 0.49429998, 1.6186999, -0.13319999, 0.4193, 1.6959, -0.1338, 0.4193, 1.6959, -0.1338, 0.4534, 1.7287999, -0.163, 0.5284, 1.6516999, -0.16239999, 0.5284, 1.6686, -0.0993, 0.525, 1.6534, -0.0117999995, 0.4569, 1.7006999, 0.020299999, 0.4569, 1.7006999, 0.020299999, 0.4534, 1.7357, -0.1374, 0.5284, 1.6686, -0.0993, 0.4569, 1.7006999, 0.020299999, 0.4026, 1.7585, -0.0524, 0.4534, 1.7357, -0.1374, 0.4193, 1.6926, -0.1462, 0.49429998, 1.6255, -0.1081, 0.5284, 1.6686, -0.0993, 0.5284, 1.6686, -0.0993, 0.4534, 1.7357, -0.1374, 0.4193, 1.6926, -0.1462, 0.525, 1.6534, -0.0117999995, 0.49089998, 1.6103, -0.0206, 0.4229, 1.6574999, 0.0115, 0.4229, 1.6574999, 0.0115, 0.4569, 1.7006999, 0.020299999, 0.525, 1.6534, -0.0117999995, 0.49429998, 1.6255, -0.1081, 0.49089998, 1.6103, -0.0206, 0.525, 1.6534, -0.0117999995, 0.525, 1.6534, -0.0117999995, 0.5284, 1.6686, -0.0993, 0.49429998, 1.6255, -0.1081, 0.3685, 1.7154, -0.061199997, 0.4193, 1.6926, -0.1462, 0.4534, 1.7357, -0.1374, 0.4534, 1.7357, -0.1374, 0.4026, 1.7585, -0.0524, 0.3685, 1.7154, -0.061199997, 0.4229, 1.6574999, 0.0115, 0.49089998, 1.6103, -0.0206, 0.49429998, 1.6255, -0.1081, 0.49429998, 1.6255, -0.1081, 0.4193, 1.6926, -0.1462, 0.4229, 1.6574999, 0.0115, 0.4193, 1.6926, -0.1462, 0.3685, 1.7154, -0.061199997, 0.4229, 1.6574999, 0.0115, 0.4569, 1.7006999, 0.020299999, 0.4229, 1.6574999, 0.0115, 0.3685, 1.7154, -0.061199997, 0.3685, 1.7154, -0.061199997, 0.4026, 1.7585, -0.0524, 0.4569, 1.7006999, 0.020299999, 0.2092, 1.0637, -0.5376, 0.2773, 1.0067999, -0.5342, 0.3287, 1.0317, -0.46609998, 0.3287, 1.0317, -0.46609998, 0.20969999, 1.1409, -0.4626, 0.2092, 1.0637, -0.5376, 0.3287, 1.0317, -0.46609998, 0.2947, 1.1180999, -0.4118, 0.20969999, 1.1409, -0.4626, 0.1805, 1.1079, -0.4285, 0.17999999, 1.0307, -0.5035, 0.2092, 1.0637, -0.5376, 0.2092, 1.0637, -0.5376, 0.20969999, 1.1409, -0.4626, 0.1805, 1.1079, -0.4285, 0.2773, 1.0067999, -0.5342, 0.2481, 0.97389996, -0.5001, 0.2995, 0.99869996, -0.43199998, 0.2995, 0.99869996, -0.43199998, 0.3287, 1.0317, -0.46609998, 0.2773, 1.0067999, -0.5342, 0.17999999, 1.0307, -0.5035, 0.2481, 0.97389996, -0.5001, 0.2773, 1.0067999, -0.5342, 0.2773, 1.0067999, -0.5342, 0.2092, 1.0637, -0.5376, 0.17999999, 1.0307, -0.5035, 0.26549998, 1.0850999, -0.3777, 0.1805, 1.1079, -0.4285, 0.20969999, 1.1409, -0.4626, 0.20969999, 1.1409, -0.4626, 0.2947, 1.1180999, -0.4118, 0.26549998, 1.0850999, -0.3777, 0.2995, 0.99869996, -0.43199998, 0.2481, 0.97389996, -0.5001, 0.17999999, 1.0307, -0.5035, 0.17999999, 1.0307, -0.5035, 0.1805, 1.1079, -0.4285, 0.2995, 0.99869996, -0.43199998, 0.1805, 1.1079, -0.4285, 0.26549998, 1.0850999, -0.3777, 0.2995, 0.99869996, -0.43199998, 0.3287, 1.0317, -0.46609998, 0.2995, 0.99869996, -0.43199998, 0.26549998, 1.0850999, -0.3777, 0.26549998, 1.0850999, -0.3777, 0.2947, 1.1180999, -0.4118, 0.3287, 1.0317, -0.46609998, 0.0265, 1.1127, -0.46609998, 0.0585, 1.0654, -0.5342, 0.146, 1.0806, -0.5376, 0.146, 1.0806, -0.5376, 0.0991, 1.1704999, -0.4118, 0.0265, 1.1127, -0.46609998, 0.146, 1.0806, -0.5376, 0.1841, 1.1477, -0.4626, 0.0991, 1.1704999, -0.4118, 0.10789999, 1.1273999, -0.3777, 0.035299998, 1.0695, -0.43199998, 0.0265, 1.1127, -0.46609998, 0.0265, 1.1127, -0.46609998, 0.0991, 1.1704999, -0.4118, 0.10789999, 1.1273999, -0.3777, 0.0585, 1.0654, -0.5342, 0.0673, 1.0223, -0.5001, 0.1548, 1.0375, -0.5035, 0.1548, 1.0375, -0.5035, 0.146, 1.0806, -0.5376, 0.0585, 1.0654, -0.5342, 0.035299998, 1.0695, -0.43199998, 0.0673, 1.0223, -0.5001, 0.0585, 1.0654, -0.5342, 0.0585, 1.0654, -0.5342, 0.0265, 1.1127, -0.46609998, 0.035299998, 1.0695, -0.43199998, 0.1929, 1.1046, -0.4285, 0.10789999, 1.1273999, -0.3777, 0.0991, 1.1704999, -0.4118, 0.0991, 1.1704999, -0.4118, 0.1841, 1.1477, -0.4626, 0.1929, 1.1046, -0.4285, 0.1548, 1.0375, -0.5035, 0.0673, 1.0223, -0.5001, 0.035299998, 1.0695, -0.43199998, 0.035299998, 1.0695, -0.43199998, 0.10789999, 1.1273999, -0.3777, 0.1548, 1.0375, -0.5035, 0.10789999, 1.1273999, -0.3777, 0.1929, 1.1046, -0.4285, 0.1548, 1.0375, -0.5035, 0.146, 1.0806, -0.5376, 0.1548, 1.0375, -0.5035, 0.1929, 1.1046, -0.4285, 0.1929, 1.1046, -0.4285, 0.1841, 1.1477, -0.4626, 0.146, 1.0806, -0.5376, -0.083, 1.5112, -0.551, 0.0044, 1.4959999, -0.5476, 0.0365, 1.5432, -0.4795, 0.0365, 1.5432, -0.4795, -0.121199995, 1.5783, -0.47599998, -0.083, 1.5112, -0.551, 0.0365, 1.5432, -0.4795, -0.036199998, 1.601, -0.4252, -0.121199995, 1.5783, -0.47599998, -0.13, 1.5351, -0.44189999, -0.0919, 1.4679999, -0.5169, -0.083, 1.5112, -0.551, -0.083, 1.5112, -0.551, -0.121199995, 1.5783, -0.47599998, -0.13, 1.5351, -0.44189999, 0.0044, 1.4959999, -0.5476, -0.0044, 1.4527999, -0.5135, 0.0277, 1.5001, -0.4454, 0.0277, 1.5001, -0.4454, 0.0365, 1.5432, -0.4795, 0.0044, 1.4959999, -0.5476, -0.0919, 1.4679999, -0.5169, -0.0044, 1.4527999, -0.5135, 0.0044, 1.4959999, -0.5476, 0.0044, 1.4959999, -0.5476, -0.083, 1.5112, -0.551, -0.0919, 1.4679999, -0.5169, -0.044999998, 1.5579, -0.3911, -0.13, 1.5351, -0.44189999, -0.121199995, 1.5783, -0.47599998, -0.121199995, 1.5783, -0.47599998, -0.036199998, 1.601, -0.4252, -0.044999998, 1.5579, -0.3911, 0.0277, 1.5001, -0.4454, -0.0044, 1.4527999, -0.5135, -0.0919, 1.4679999, -0.5169, -0.0919, 1.4679999, -0.5169, -0.13, 1.5351, -0.44189999, 0.0277, 1.5001, -0.4454, -0.13, 1.5351, -0.44189999, -0.044999998, 1.5579, -0.3911, 0.0277, 1.5001, -0.4454, 0.0365, 1.5432, -0.4795, 0.0277, 1.5001, -0.4454, -0.044999998, 1.5579, -0.3911, -0.044999998, 1.5579, -0.3911, -0.036199998, 1.601, -0.4252, 0.0365, 1.5432, -0.4795, -0.2658, 1.4621999, -0.4795, -0.2144, 1.4373, -0.5476, -0.1462, 1.4943, -0.551, -0.1462, 1.4943, -0.551, -0.23179999, 1.5486, -0.4252, -0.2658, 1.4621999, -0.4795, -0.1462, 1.4943, -0.551, -0.1468, 1.5713999, -0.47599998, -0.23179999, 1.5486, -0.4252, -0.2026, 1.5157, -0.3911, -0.2366, 1.4293, -0.4454, -0.2658, 1.4621999, -0.4795, -0.2658, 1.4621999, -0.4795, -0.23179999, 1.5486, -0.4252, -0.2026, 1.5157, -0.3911, -0.2144, 1.4373, -0.5476, -0.18519999, 1.4044, -0.5135, -0.117, 1.4613, -0.5169, -0.117, 1.4613, -0.5169, -0.1462, 1.4943, -0.551, -0.2144, 1.4373, -0.5476, -0.2366, 1.4293, -0.4454, -0.18519999, 1.4044, -0.5135, -0.2144, 1.4373, -0.5476, -0.2144, 1.4373, -0.5476, -0.2658, 1.4621999, -0.4795, -0.2366, 1.4293, -0.4454, -0.117599994, 1.5385, -0.44189999, -0.2026, 1.5157, -0.3911, -0.23179999, 1.5486, -0.4252, -0.23179999, 1.5486, -0.4252, -0.1468, 1.5713999, -0.47599998, -0.117599994, 1.5385, -0.44189999, -0.117, 1.4613, -0.5169, -0.18519999, 1.4044, -0.5135, -0.2366, 1.4293, -0.4454, -0.2366, 1.4293, -0.4454, -0.2026, 1.5157, -0.3911, -0.117, 1.4613, -0.5169, -0.2026, 1.5157, -0.3911, -0.117599994, 1.5385, -0.44189999, -0.117, 1.4613, -0.5169, -0.1462, 1.4943, -0.551, -0.117, 1.4613, -0.5169, -0.117599994, 1.5385, -0.44189999, -0.117599994, 1.5385, -0.44189999, -0.1468, 1.5713999, -0.47599998, -0.1462, 1.4943, -0.551, -0.46719998, 1.1222, 0.0668, -0.53529996, 1.0749999, 0.0348, -0.5387, 1.0902, -0.052699998, -0.5387, 1.0902, -0.052699998, -0.4129, 1.1801, -0.0058, -0.46719998, 1.1222, 0.0668, -0.5387, 1.0902, -0.052699998, -0.4637, 1.1573, -0.090799995, -0.4129, 1.1801, -0.0058, -0.3788, 1.137, -0.014599999, -0.4331, 1.0791, 0.058, -0.46719998, 1.1222, 0.0668, -0.46719998, 1.1222, 0.0668, -0.4129, 1.1801, -0.0058, -0.3788, 1.137, -0.014599999, -0.53529996, 1.0749999, 0.0348, -0.50119996, 1.0318999, 0.025899999, -0.5046, 1.0471, -0.061499998, -0.5046, 1.0471, -0.061499998, -0.5387, 1.0902, -0.052699998, -0.53529996, 1.0749999, 0.0348, -0.4331, 1.0791, 0.058, -0.50119996, 1.0318999, 0.025899999, -0.53529996, 1.0749999, 0.0348, -0.53529996, 1.0749999, 0.0348, -0.46719998, 1.1222, 0.0668, -0.4331, 1.0791, 0.058, -0.4296, 1.1142, -0.0997, -0.3788, 1.137, -0.014599999, -0.4129, 1.1801, -0.0058, -0.4129, 1.1801, -0.0058, -0.4637, 1.1573, -0.090799995, -0.4296, 1.1142, -0.0997, -0.5046, 1.0471, -0.061499998, -0.50119996, 1.0318999, 0.025899999, -0.4331, 1.0791, 0.058, -0.4331, 1.0791, 0.058, -0.3788, 1.137, -0.014599999, -0.5046, 1.0471, -0.061499998, -0.3788, 1.137, -0.014599999, -0.4296, 1.1142, -0.0997, -0.5046, 1.0471, -0.061499998, -0.5387, 1.0902, -0.052699998, -0.5046, 1.0471, -0.061499998, -0.4296, 1.1142, -0.0997, -0.4296, 1.1142, -0.0997, -0.4637, 1.1573, -0.090799995, -0.5387, 1.0902, -0.052699998, -0.5387, 1.0733, -0.115899995, -0.53529996, 1.0164, -0.184, -0.46719998, 1.0411999, -0.23539999, -0.46719998, 1.0411999, -0.23539999, -0.4637, 1.1504999, -0.116399996, -0.5387, 1.0733, -0.115899995, -0.46719998, 1.0411999, -0.23539999, -0.4129, 1.1277, -0.2014, -0.4637, 1.1504999, -0.116399996, -0.4296, 1.1175, -0.0872, -0.5046, 1.0404, -0.0867, -0.5387, 1.0733, -0.115899995, -0.5387, 1.0733, -0.115899995, -0.4637, 1.1504999, -0.116399996, -0.4296, 1.1175, -0.0872, -0.53529996, 1.0164, -0.184, -0.50119996, 0.9834, -0.1548, -0.4331, 1.0083, -0.20619999, -0.4331, 1.0083, -0.20619999, -0.46719998, 1.0411999, -0.23539999, -0.53529996, 1.0164, -0.184, -0.5046, 1.0404, -0.0867, -0.50119996, 0.9834, -0.1548, -0.53529996, 1.0164, -0.184, -0.53529996, 1.0164, -0.184, -0.5387, 1.0733, -0.115899995, -0.5046, 1.0404, -0.0867, -0.3788, 1.0947, -0.1722, -0.4296, 1.1175, -0.0872, -0.4637, 1.1504999, -0.116399996, -0.4637, 1.1504999, -0.116399996, -0.4129, 1.1277, -0.2014, -0.3788, 1.0947, -0.1722, -0.4331, 1.0083, -0.20619999, -0.50119996, 0.9834, -0.1548, -0.5046, 1.0404, -0.0867, -0.5046, 1.0404, -0.0867, -0.4296, 1.1175, -0.0872, -0.4331, 1.0083, -0.20619999, -0.4296, 1.1175, -0.0872, -0.3788, 1.0947, -0.1722, -0.4331, 1.0083, -0.20619999, -0.46719998, 1.0411999, -0.23539999, -0.4331, 1.0083, -0.20619999, -0.3788, 1.0947, -0.1722, -0.3788, 1.0947, -0.1722, -0.4129, 1.1277, -0.2014, -0.46719998, 1.0411999, -0.23539999, -0.4648, 1.6261, 0.3401, -0.5329, 1.6013, 0.28869998, -0.5363, 1.6581999, 0.2206, -0.5363, 1.6581999, 0.2206, -0.4105, 1.7126, 0.30609998, -0.4648, 1.6261, 0.3401, -0.5363, 1.6581999, 0.2206, -0.4613, 1.7354, 0.22109999, -0.4105, 1.7126, 0.30609998, -0.3764, 1.6796, 0.2769, -0.43069997, 1.5932, 0.3109, -0.4648, 1.6261, 0.3401, -0.4648, 1.6261, 0.3401, -0.4105, 1.7126, 0.30609998, -0.3764, 1.6796, 0.2769, -0.5329, 1.6013, 0.28869998, -0.49879998, 1.5683, 0.2595, -0.5022, 1.6252999, 0.19129999, -0.5022, 1.6252999, 0.19129999, -0.5363, 1.6581999, 0.2206, -0.5329, 1.6013, 0.28869998, -0.43069997, 1.5932, 0.3109, -0.49879998, 1.5683, 0.2595, -0.5329, 1.6013, 0.28869998, -0.5329, 1.6013, 0.28869998, -0.4648, 1.6261, 0.3401, -0.43069997, 1.5932, 0.3109, -0.4272, 1.7024, 0.1919, -0.3764, 1.6796, 0.2769, -0.4105, 1.7126, 0.30609998, -0.4105, 1.7126, 0.30609998, -0.4613, 1.7354, 0.22109999, -0.4272, 1.7024, 0.1919, -0.5022, 1.6252999, 0.19129999, -0.49879998, 1.5683, 0.2595, -0.43069997, 1.5932, 0.3109, -0.43069997, 1.5932, 0.3109, -0.3764, 1.6796, 0.2769, -0.5022, 1.6252999, 0.19129999, -0.3764, 1.6796, 0.2769, -0.4272, 1.7024, 0.1919, -0.5022, 1.6252999, 0.19129999, -0.5363, 1.6581999, 0.2206, -0.5022, 1.6252999, 0.19129999, -0.4272, 1.7024, 0.1919, -0.4272, 1.7024, 0.1919, -0.4613, 1.7354, 0.22109999, -0.5363, 1.6581999, 0.2206, -0.5363, 1.6751, 0.1574, -0.5329, 1.6599, 0.0699, -0.4648, 1.7070999, 0.0378, -0.4648, 1.7070999, 0.0378, -0.4613, 1.7421999, 0.1955, -0.5363, 1.6751, 0.1574, -0.4648, 1.7070999, 0.0378, -0.4105, 1.765, 0.1105, -0.4613, 1.7421999, 0.1955, -0.4272, 1.6990999, 0.2043, -0.5022, 1.632, 0.1662, -0.5363, 1.6751, 0.1574, -0.5363, 1.6751, 0.1574, -0.4613, 1.7421999, 0.1955, -0.4272, 1.6990999, 0.2043, -0.5329, 1.6599, 0.0699, -0.49879998, 1.6168, 0.0787, -0.43069997, 1.6639999, 0.046699997, -0.43069997, 1.6639999, 0.046699997, -0.4648, 1.7070999, 0.0378, -0.5329, 1.6599, 0.0699, -0.5022, 1.632, 0.1662, -0.49879998, 1.6168, 0.0787, -0.5329, 1.6599, 0.0699, -0.5329, 1.6599, 0.0699, -0.5363, 1.6751, 0.1574, -0.5022, 1.632, 0.1662, -0.3764, 1.7219, 0.1193, -0.4272, 1.6990999, 0.2043, -0.4613, 1.7421999, 0.1955, -0.4613, 1.7421999, 0.1955, -0.4105, 1.765, 0.1105, -0.3764, 1.7219, 0.1193, -0.43069997, 1.6639999, 0.046699997, -0.49879998, 1.6168, 0.0787, -0.5022, 1.632, 0.1662, -0.5022, 1.632, 0.1662, -0.4272, 1.6990999, 0.2043, -0.43069997, 1.6639999, 0.046699997, -0.4272, 1.6990999, 0.2043, -0.3764, 1.7219, 0.1193, -0.43069997, 1.6639999, 0.046699997, -0.4648, 1.7070999, 0.0378, -0.43069997, 1.6639999, 0.046699997, -0.3764, 1.7219, 0.1193, -0.3764, 1.7219, 0.1193, -0.4105, 1.765, 0.1105, -0.4648, 1.7070999, 0.0378, -0.1463, 1.3364999, 0.5577, -0.2145, 1.2796, 0.5543, -0.2659, 1.3045, 0.48619998, -0.2659, 1.3045, 0.48619998, -0.1468, 1.4137, 0.4827, -0.1463, 1.3364999, 0.5577, -0.2659, 1.3045, 0.48619998, -0.23189999, 1.3909, 0.43179998, -0.1468, 1.4137, 0.4827, -0.117599994, 1.3807, 0.4486, -0.1171, 1.3036, 0.52349997, -0.1463, 1.3364999, 0.5577, -0.1463, 1.3364999, 0.5577, -0.1468, 1.4137, 0.4827, -0.117599994, 1.3807, 0.4486, -0.2145, 1.2796, 0.5543, -0.18519999, 1.2466999, 0.5201, -0.2367, 1.2715, 0.45209998, -0.2367, 1.2715, 0.45209998, -0.2659, 1.3045, 0.48619998, -0.2145, 1.2796, 0.5543, -0.1171, 1.3036, 0.52349997, -0.18519999, 1.2466999, 0.5201, -0.2145, 1.2796, 0.5543, -0.2145, 1.2796, 0.5543, -0.1463, 1.3364999, 0.5577, -0.1171, 1.3036, 0.52349997, -0.20269999, 1.3579999, 0.39769998, -0.117599994, 1.3807, 0.4486, -0.1468, 1.4137, 0.4827, -0.1468, 1.4137, 0.4827, -0.23189999, 1.3909, 0.43179998, -0.20269999, 1.3579999, 0.39769998, -0.2367, 1.2715, 0.45209998, -0.18519999, 1.2466999, 0.5201, -0.1171, 1.3036, 0.52349997, -0.1171, 1.3036, 0.52349997, -0.117599994, 1.3807, 0.4486, -0.2367, 1.2715, 0.45209998, -0.117599994, 1.3807, 0.4486, -0.20269999, 1.3579999, 0.39769998, -0.2367, 1.2715, 0.45209998, -0.2659, 1.3045, 0.48619998, -0.2367, 1.2715, 0.45209998, -0.20269999, 1.3579999, 0.39769998, -0.20269999, 1.3579999, 0.39769998, -0.23189999, 1.3909, 0.43179998, -0.2659, 1.3045, 0.48619998, 0.036399998, 1.3855, 0.48619998, 0.0042999997, 1.3382, 0.5543, -0.0831, 1.3535, 0.5577, -0.0831, 1.3535, 0.5577, -0.036199998, 1.4433, 0.43179998, 0.036399998, 1.3855, 0.48619998, -0.0831, 1.3535, 0.5577, -0.1213, 1.4204999, 0.4827, -0.036199998, 1.4433, 0.43179998, -0.0451, 1.4002, 0.39769998, 0.0276, 1.3422999, 0.45209998, 0.036399998, 1.3855, 0.48619998, 0.036399998, 1.3855, 0.48619998, -0.036199998, 1.4433, 0.43179998, -0.0451, 1.4002, 0.39769998, 0.0042999997, 1.3382, 0.5543, -0.0045, 1.2951, 0.5201, -0.0919, 1.3103, 0.52349997, -0.0919, 1.3103, 0.52349997, -0.0831, 1.3535, 0.5577, 0.0042999997, 1.3382, 0.5543, 0.0276, 1.3422999, 0.45209998, -0.0045, 1.2951, 0.5201, 0.0042999997, 1.3382, 0.5543, 0.0042999997, 1.3382, 0.5543, 0.036399998, 1.3855, 0.48619998, 0.0276, 1.3422999, 0.45209998, -0.1301, 1.3773999, 0.4486, -0.0451, 1.4002, 0.39769998, -0.036199998, 1.4433, 0.43179998, -0.036199998, 1.4433, 0.43179998, -0.1213, 1.4204999, 0.4827, -0.1301, 1.3773999, 0.4486, -0.0919, 1.3103, 0.52349997, -0.0045, 1.2951, 0.5201, 0.0276, 1.3422999, 0.45209998, 0.0276, 1.3422999, 0.45209998, -0.0451, 1.4002, 0.39769998, -0.0919, 1.3103, 0.52349997, -0.0451, 1.4002, 0.39769998, -0.1301, 1.3773999, 0.4486, -0.0919, 1.3103, 0.52349997, -0.0831, 1.3535, 0.5577, -0.0919, 1.3103, 0.52349997, -0.1301, 1.3773999, 0.4486, -0.1301, 1.3773999, 0.4486, -0.1213, 1.4204999, 0.4827, -0.0831, 1.3535, 0.5577, 0.051, 0.8091, 0.0883, 0.0896, 0.2312, 0.15519999, -0.0897, 0.2312, 0.15519999, -0.0897, 0.2312, 0.15519999, -0.051, 0.8091, 0.0883, 0.051, 0.8091, 0.0883, -0.0897, 0.2312, -0.15529999, -0.14999999, 0, -0.2598, 0.14999999, 0, -0.2598, 0.14999999, 0, -0.2598, 0.0896, 0.2312, -0.15529999, -0.0897, 0.2312, -0.15529999, -0.29999998, 0, 0, -0.1793, 0.2312, 0, -0.0897, 0.2312, 0.15519999, -0.0897, 0.2312, 0.15519999, -0.14999999, 0, 0.2598, -0.29999998, 0, 0, -0.0897, 0.2312, 0.15519999, -0.1793, 0.2312, 0, -0.102, 0.8091, 0, -0.102, 0.8091, 0, -0.051, 0.8091, 0.0883, -0.0897, 0.2312, 0.15519999, 0.051, 0.8091, -0.0883, 0.102, 0.8091, 0, 0.051, 0.8091, 0.0883, 0.051, 0.8091, 0.0883, -0.051, 0.8091, -0.0883, 0.051, 0.8091, -0.0883, 0.051, 0.8091, 0.0883, -0.051, 0.8091, 0.0883, -0.051, 0.8091, -0.0883, -0.051, 0.8091, 0.0883, -0.102, 0.8091, 0, -0.051, 0.8091, -0.0883, -0.29999998, 0, 0, -0.14999999, 0, -0.2598, -0.0897, 0.2312, -0.15529999, -0.0897, 0.2312, -0.15529999, -0.1793, 0.2312, 0, -0.29999998, 0, 0, 0.102, 0.8091, 0, 0.1793, 0.2312, 0, 0.0896, 0.2312, 0.15519999, 0.0896, 0.2312, 0.15519999, 0.051, 0.8091, 0.0883, 0.102, 0.8091, 0, 0.0896, 0.2312, -0.15529999, 0.14999999, 0, -0.2598, 0.29999998, 0, 0, 0.29999998, 0, 0, 0.1793, 0.2312, 0, 0.0896, 0.2312, -0.15529999, 0.0896, 0.2312, 0.15519999, 0.1793, 0.2312, 0, 0.29999998, 0, 0, 0.29999998, 0, 0, 0.14999999, 0, 0.2598, 0.0896, 0.2312, 0.15519999, 0.0896, 0.2312, 0.15519999, 0.14999999, 0, 0.2598, -0.14999999, 0, 0.2598, -0.14999999, 0, 0.2598, -0.0897, 0.2312, 0.15519999, 0.0896, 0.2312, 0.15519999, -0.1793, 0.2312, 0, -0.0897, 0.2312, -0.15529999, -0.051, 0.8091, -0.0883, -0.051, 0.8091, -0.0883, -0.102, 0.8091, 0, -0.1793, 0.2312, 0, -0.051, 0.8091, -0.0883, -0.0897, 0.2312, -0.15529999, 0.0896, 0.2312, -0.15529999, 0.0896, 0.2312, -0.15529999, 0.051, 0.8091, -0.0883, -0.051, 0.8091, -0.0883, 0.14999999, 0, 0.2598, 0.29999998, 0, 0, 0.14999999, 0, -0.2598, 0.14999999, 0, -0.2598, -0.14999999, 0, -0.2598, 0.14999999, 0, 0.2598, -0.14999999, 0, -0.2598, -0.14999999, 0, 0.2598, 0.14999999, 0, 0.2598, -0.14999999, 0, -0.2598, -0.29999998, 0, 0, -0.14999999, 0, 0.2598, 0.051, 0.8091, -0.0883, 0.0896, 0.2312, -0.15529999, 0.1793, 0.2312, 0, 0.1793, 0.2312, 0, 0.102, 0.8091, 0, 0.051, 0.8091, -0.0883, 0.234, 0.2922, 0.103099994, 0.24919999, 0.2922, -0.020399999, 0.086899996, 0.2714, -0.0613, 0.086899996, 0.2714, -0.0613, 0.0667, 0.2714, 0.10349999, 0.234, 0.2922, 0.103099994, 0.234, 0.2922, 0.103099994, 0.0667, 0.2714, 0.10349999, 0.0667, 0.43739998, 0.10349999, 0.0667, 0.43739998, 0.10349999, 0.234, 0.41669998, 0.103099994, 0.234, 0.2922, 0.103099994, 0.086899996, 0.43739998, -0.0613, 0.086899996, 0.2714, -0.0613, 0.24919999, 0.2922, -0.020399999, 0.24919999, 0.2922, -0.020399999, 0.24919999, 0.41669998, -0.020399999, 0.086899996, 0.43739998, -0.0613, 0.086899996, 0.43739998, -0.0613, 0.24919999, 0.41669998, -0.020399999, 0.234, 0.41669998, 0.103099994, 0.234, 0.41669998, 0.103099994, 0.0667, 0.43739998, 0.10349999, 0.086899996, 0.43739998, -0.0613, 0.234, 0.41669998, 0.103099994, 0.24919999, 0.41669998, -0.020399999, 0.24919999, 0.2922, -0.020399999, 0.24919999, 0.2922, -0.020399999, 0.234, 0.2922, 0.103099994, 0.234, 0.41669998, 0.103099994, -0.2022, 0.53569996, -0.0818, -0.0349, 0.51489997, -0.0845, -0.0349, 0.6809, -0.0845, -0.0349, 0.6809, -0.0845, -0.2022, 0.6602, -0.0818, -0.2022, 0.53569996, -0.0818, -0.0528, 0.51489997, 0.0805, -0.0349, 0.51489997, -0.0845, -0.2022, 0.53569996, -0.0818, -0.2022, 0.53569996, -0.0818, -0.2156, 0.53569996, 0.042, -0.0528, 0.51489997, 0.0805, -0.0528, 0.6809, 0.0805, -0.0528, 0.51489997, 0.0805, -0.2156, 0.53569996, 0.042, -0.2156, 0.53569996, 0.042, -0.2156, 0.6602, 0.042, -0.0528, 0.6809, 0.0805, -0.2022, 0.6602, -0.0818, -0.0349, 0.6809, -0.0845, -0.0528, 0.6809, 0.0805, -0.0528, 0.6809, 0.0805, -0.2156, 0.6602, 0.042, -0.2022, 0.6602, -0.0818, -0.2156, 0.53569996, 0.042, -0.2022, 0.53569996, -0.0818, -0.2022, 0.6602, -0.0818, -0.2022, 0.6602, -0.0818, -0.2156, 0.6602, 0.042, -0.2156, 0.53569996, 0.042)
 
 [node name="KennyPlatformerLibrary" type="Node3D" unique_id=460460673]
-script = ExtResource("1_00tup")
 
 [node name="arrow2" type="Node3D" parent="." unique_id=1828351991]
 
@@ -837,28 +835,28 @@ mesh = SubResource("ArrayMesh_jf281")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-corner-low2/StaticBody3D" unique_id=1507640293]
 shape = SubResource("ConcavePolygonShape3D_n2frw")
 
-[node name="block-grass-corner-overhang-low2" parent="." unique_id=117942498 instance=ExtResource("3_q5sfb")]
+[node name="block-grass-corner-overhang-low2" parent="." unique_id=117942498 instance=ExtResource("2_f5ecy")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-corner-overhang-low2" unique_id=2079771518]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-corner-overhang-low2/StaticBody3D" unique_id=1236809864]
 shape = SubResource("ConcavePolygonShape3D_00tup")
 
-[node name="block-grass-corner-overhang2" parent="." unique_id=174380206 instance=ExtResource("4_5jgyb")]
+[node name="block-grass-corner-overhang2" parent="." unique_id=174380206 instance=ExtResource("3_vrd2q")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-corner-overhang2" unique_id=1933919724]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-corner-overhang2/StaticBody3D" unique_id=1879260951]
 shape = SubResource("ConcavePolygonShape3D_ajhql")
 
-[node name="block-grass-corner2" parent="." unique_id=1558792318 instance=ExtResource("5_ho65x")]
+[node name="block-grass-corner2" parent="." unique_id=1558792318 instance=ExtResource("4_gb0dh")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-corner2" unique_id=1571314923]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-corner2/StaticBody3D" unique_id=1629317679]
 shape = SubResource("ConcavePolygonShape3D_q5sfb")
 
-[node name="block-grass-curve-half2" parent="." unique_id=1491023530 instance=ExtResource("6_87gpw")]
+[node name="block-grass-curve-half2" parent="." unique_id=1491023530 instance=ExtResource("5_33q6m")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-curve-half2" unique_id=1129993832]
 
@@ -875,973 +873,973 @@ mesh = SubResource("ArrayMesh_hfwo8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-curve-low2/StaticBody3D" unique_id=1901882903]
 shape = SubResource("ConcavePolygonShape3D_ho65x")
 
-[node name="block-grass-curve2" parent="." unique_id=944762837 instance=ExtResource("8_nbrgf")]
+[node name="block-grass-curve2" parent="." unique_id=944762837 instance=ExtResource("6_kx6aw")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-curve2" unique_id=903619138]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-curve2/StaticBody3D" unique_id=1917526803]
 shape = SubResource("ConcavePolygonShape3D_87gpw")
 
-[node name="block-grass-edge2" parent="." unique_id=1050692440 instance=ExtResource("9_gk31b")]
+[node name="block-grass-edge2" parent="." unique_id=1050692440 instance=ExtResource("7_qowg7")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-edge2" unique_id=1248489514]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-edge2/StaticBody3D" unique_id=995839740]
 shape = SubResource("ConcavePolygonShape3D_l8nir")
 
-[node name="block-grass-hexagon2" parent="." unique_id=987405869 instance=ExtResource("10_33x1j")]
+[node name="block-grass-hexagon2" parent="." unique_id=987405869 instance=ExtResource("8_lx8ou")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-hexagon2" unique_id=220692432]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-hexagon2/StaticBody3D" unique_id=1687843996]
 shape = SubResource("ConcavePolygonShape3D_nbrgf")
 
-[node name="block-grass-large-slope-narrow2" parent="." unique_id=940409106 instance=ExtResource("11_yebyw")]
+[node name="block-grass-large-slope-narrow2" parent="." unique_id=940409106 instance=ExtResource("9_gnshb")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-large-slope-narrow2" unique_id=1002031838]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-large-slope-narrow2/StaticBody3D" unique_id=801787819]
 shape = SubResource("ConcavePolygonShape3D_gk31b")
 
-[node name="block-grass-large-slope-steep-narrow2" parent="." unique_id=933501485 instance=ExtResource("12_rdl85")]
+[node name="block-grass-large-slope-steep-narrow2" parent="." unique_id=933501485 instance=ExtResource("10_wnspk")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-large-slope-steep-narrow2" unique_id=431718203]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-large-slope-steep-narrow2/StaticBody3D" unique_id=1748167484]
 shape = SubResource("ConcavePolygonShape3D_33x1j")
 
-[node name="block-grass-large-slope-steep2" parent="." unique_id=1290400867 instance=ExtResource("13_xoiru")]
+[node name="block-grass-large-slope-steep2" parent="." unique_id=1290400867 instance=ExtResource("11_3d0xa")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-large-slope-steep2" unique_id=1944236994]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-large-slope-steep2/StaticBody3D" unique_id=30317127]
 shape = SubResource("ConcavePolygonShape3D_yebyw")
 
-[node name="block-grass-large-slope2" parent="." unique_id=960537998 instance=ExtResource("14_6pxrb")]
+[node name="block-grass-large-slope2" parent="." unique_id=960537998 instance=ExtResource("12_h2pbx")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-large-slope2" unique_id=1485443468]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-large-slope2/StaticBody3D" unique_id=239212704]
 shape = SubResource("ConcavePolygonShape3D_rdl85")
 
-[node name="block-grass-large-tall2" parent="." unique_id=732602382 instance=ExtResource("15_5jahf")]
+[node name="block-grass-large-tall2" parent="." unique_id=732602382 instance=ExtResource("13_y2v4f")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-large-tall2" unique_id=1023433560]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-large-tall2/StaticBody3D" unique_id=1486117027]
 shape = SubResource("ConcavePolygonShape3D_xoiru")
 
-[node name="block-grass-large2" parent="." unique_id=518586880 instance=ExtResource("16_vncl7")]
+[node name="block-grass-large2" parent="." unique_id=518586880 instance=ExtResource("14_xc0i2")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-large2" unique_id=1286353924]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-large2/StaticBody3D" unique_id=677503802]
 shape = SubResource("ConcavePolygonShape3D_6pxrb")
 
-[node name="block-grass-long2" parent="." unique_id=2064275129 instance=ExtResource("17_db03n")]
+[node name="block-grass-long2" parent="." unique_id=2064275129 instance=ExtResource("15_q5pol")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-long2" unique_id=1499495903]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-long2/StaticBody3D" unique_id=1053850494]
 shape = SubResource("ConcavePolygonShape3D_5jahf")
 
-[node name="block-grass-low-hexagon2" parent="." unique_id=1537779786 instance=ExtResource("18_klfbd")]
+[node name="block-grass-low-hexagon2" parent="." unique_id=1537779786 instance=ExtResource("16_72ksm")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-low-hexagon2" unique_id=876114144]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-low-hexagon2/StaticBody3D" unique_id=1185655571]
 shape = SubResource("ConcavePolygonShape3D_vncl7")
 
-[node name="block-grass-low-large2" parent="." unique_id=1483478191 instance=ExtResource("19_lw1yt")]
+[node name="block-grass-low-large2" parent="." unique_id=1483478191 instance=ExtResource("17_2swot")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-low-large2" unique_id=1067284468]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-low-large2/StaticBody3D" unique_id=1836968628]
 shape = SubResource("ConcavePolygonShape3D_db03n")
 
-[node name="block-grass-low-long2" parent="." unique_id=2001364359 instance=ExtResource("20_hta6y")]
+[node name="block-grass-low-long2" parent="." unique_id=2001364359 instance=ExtResource("18_ikwdm")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-low-long2" unique_id=340279297]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-low-long2/StaticBody3D" unique_id=1402617536]
 shape = SubResource("ConcavePolygonShape3D_klfbd")
 
-[node name="block-grass-low-narrow2" parent="." unique_id=96135428 instance=ExtResource("21_ugu5i")]
+[node name="block-grass-low-narrow2" parent="." unique_id=96135428 instance=ExtResource("19_pvg83")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-low-narrow2" unique_id=668894852]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-low-narrow2/StaticBody3D" unique_id=660229758]
 shape = SubResource("ConcavePolygonShape3D_lw1yt")
 
-[node name="block-grass-low2" parent="." unique_id=811982346 instance=ExtResource("22_gw3tc")]
+[node name="block-grass-low2" parent="." unique_id=811982346 instance=ExtResource("20_5fj5x")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-low2" unique_id=1690719645]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-low2/StaticBody3D" unique_id=2106274909]
 shape = SubResource("ConcavePolygonShape3D_hta6y")
 
-[node name="block-grass-narrow2" parent="." unique_id=1574778878 instance=ExtResource("23_pcdim")]
+[node name="block-grass-narrow2" parent="." unique_id=1574778878 instance=ExtResource("21_4db3s")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-narrow2" unique_id=31432521]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-narrow2/StaticBody3D" unique_id=634984429]
 shape = SubResource("ConcavePolygonShape3D_ugu5i")
 
-[node name="block-grass-overhang-corner2" parent="." unique_id=908526596 instance=ExtResource("24_2lmjc")]
+[node name="block-grass-overhang-corner2" parent="." unique_id=908526596 instance=ExtResource("22_k6ruy")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-corner2" unique_id=1738966386]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-corner2/StaticBody3D" unique_id=918903892]
 shape = SubResource("ConcavePolygonShape3D_gw3tc")
 
-[node name="block-grass-overhang-edge2" parent="." unique_id=237752176 instance=ExtResource("25_7sajr")]
+[node name="block-grass-overhang-edge2" parent="." unique_id=237752176 instance=ExtResource("23_78w0o")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-edge2" unique_id=1157249493]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-edge2/StaticBody3D" unique_id=1454987150]
 shape = SubResource("ConcavePolygonShape3D_pcdim")
 
-[node name="block-grass-overhang-hexagon2" parent="." unique_id=1985502870 instance=ExtResource("26_7tpqc")]
+[node name="block-grass-overhang-hexagon2" parent="." unique_id=1985502870 instance=ExtResource("24_fa4np")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-hexagon2" unique_id=428235245]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-hexagon2/StaticBody3D" unique_id=496155109]
 shape = SubResource("ConcavePolygonShape3D_2lmjc")
 
-[node name="block-grass-overhang-large-slope-narrow2" parent="." unique_id=1839298573 instance=ExtResource("27_x35je")]
+[node name="block-grass-overhang-large-slope-narrow2" parent="." unique_id=1839298573 instance=ExtResource("25_16y5y")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-large-slope-narrow2" unique_id=58285193]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-large-slope-narrow2/StaticBody3D" unique_id=1748541531]
 shape = SubResource("ConcavePolygonShape3D_7sajr")
 
-[node name="block-grass-overhang-large-slope-steep-narrow2" parent="." unique_id=1160852138 instance=ExtResource("28_e318g")]
+[node name="block-grass-overhang-large-slope-steep-narrow2" parent="." unique_id=1160852138 instance=ExtResource("26_rjxxv")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-large-slope-steep-narrow2" unique_id=588954310]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-large-slope-steep-narrow2/StaticBody3D" unique_id=774512157]
 shape = SubResource("ConcavePolygonShape3D_7tpqc")
 
-[node name="block-grass-overhang-large-slope-steep2" parent="." unique_id=979281613 instance=ExtResource("29_nougi")]
+[node name="block-grass-overhang-large-slope-steep2" parent="." unique_id=979281613 instance=ExtResource("27_qnljq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-large-slope-steep2" unique_id=850244429]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-large-slope-steep2/StaticBody3D" unique_id=924747853]
 shape = SubResource("ConcavePolygonShape3D_x35je")
 
-[node name="block-grass-overhang-large-slope2" parent="." unique_id=851403851 instance=ExtResource("30_g4x0g")]
+[node name="block-grass-overhang-large-slope2" parent="." unique_id=851403851 instance=ExtResource("28_8bxbo")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-large-slope2" unique_id=1490221893]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-large-slope2/StaticBody3D" unique_id=790080044]
 shape = SubResource("ConcavePolygonShape3D_e318g")
 
-[node name="block-grass-overhang-large-tall2" parent="." unique_id=438820799 instance=ExtResource("31_kkne4")]
+[node name="block-grass-overhang-large-tall2" parent="." unique_id=438820799 instance=ExtResource("29_fo7ya")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-large-tall2" unique_id=2010690020]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-large-tall2/StaticBody3D" unique_id=1954122110]
 shape = SubResource("ConcavePolygonShape3D_nougi")
 
-[node name="block-grass-overhang-large2" parent="." unique_id=607767728 instance=ExtResource("32_f41k1")]
+[node name="block-grass-overhang-large2" parent="." unique_id=607767728 instance=ExtResource("30_ibyba")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-large2" unique_id=1283842095]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-large2/StaticBody3D" unique_id=979523191]
 shape = SubResource("ConcavePolygonShape3D_g4x0g")
 
-[node name="block-grass-overhang-long2" parent="." unique_id=1022208166 instance=ExtResource("33_wmgsg")]
+[node name="block-grass-overhang-long2" parent="." unique_id=1022208166 instance=ExtResource("31_dnyr4")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-long2" unique_id=165563854]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-long2/StaticBody3D" unique_id=486493117]
 shape = SubResource("ConcavePolygonShape3D_kkne4")
 
-[node name="block-grass-overhang-low-hexagon2" parent="." unique_id=963690071 instance=ExtResource("34_rkv0t")]
+[node name="block-grass-overhang-low-hexagon2" parent="." unique_id=963690071 instance=ExtResource("32_lux0h")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-low-hexagon2" unique_id=764825512]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-low-hexagon2/StaticBody3D" unique_id=1351180492]
 shape = SubResource("ConcavePolygonShape3D_f41k1")
 
-[node name="block-grass-overhang-low-large2" parent="." unique_id=1937053431 instance=ExtResource("35_y4o3o")]
+[node name="block-grass-overhang-low-large2" parent="." unique_id=1937053431 instance=ExtResource("33_xrmy6")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-low-large2" unique_id=2045190190]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-low-large2/StaticBody3D" unique_id=2105691750]
 shape = SubResource("ConcavePolygonShape3D_wmgsg")
 
-[node name="block-grass-overhang-low-long2" parent="." unique_id=1398198239 instance=ExtResource("36_awaud")]
+[node name="block-grass-overhang-low-long2" parent="." unique_id=1398198239 instance=ExtResource("34_b18ab")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-low-long2" unique_id=2071963261]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-low-long2/StaticBody3D" unique_id=1822577857]
 shape = SubResource("ConcavePolygonShape3D_rkv0t")
 
-[node name="block-grass-overhang-low-narrow2" parent="." unique_id=1436422735 instance=ExtResource("37_rx7ej")]
+[node name="block-grass-overhang-low-narrow2" parent="." unique_id=1436422735 instance=ExtResource("35_7ax5u")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-low-narrow2" unique_id=1741325785]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-low-narrow2/StaticBody3D" unique_id=1442748486]
 shape = SubResource("ConcavePolygonShape3D_y4o3o")
 
-[node name="block-grass-overhang-low2" parent="." unique_id=1627963358 instance=ExtResource("38_jyuyg")]
+[node name="block-grass-overhang-low2" parent="." unique_id=1627963358 instance=ExtResource("36_whl74")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-low2" unique_id=1708685273]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-low2/StaticBody3D" unique_id=322152263]
 shape = SubResource("ConcavePolygonShape3D_awaud")
 
-[node name="block-grass-overhang-narrow2" parent="." unique_id=972403922 instance=ExtResource("39_p2pxm")]
+[node name="block-grass-overhang-narrow2" parent="." unique_id=972403922 instance=ExtResource("37_iwvnw")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass-overhang-narrow2" unique_id=1308984776]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-overhang-narrow2/StaticBody3D" unique_id=368107672]
 shape = SubResource("ConcavePolygonShape3D_rx7ej")
 
-[node name="block-grass2" parent="." unique_id=238556718 instance=ExtResource("40_fgc17")]
+[node name="block-grass2" parent="." unique_id=238556718 instance=ExtResource("38_25eby")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-grass2" unique_id=493213135]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass2/StaticBody3D" unique_id=1576462374]
 shape = SubResource("ConcavePolygonShape3D_jyuyg")
 
-[node name="block-moving-blue2" parent="." unique_id=1251330026 instance=ExtResource("41_nb2gc")]
+[node name="block-moving-blue2" parent="." unique_id=1251330026 instance=ExtResource("39_5kl4a")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-moving-blue2" unique_id=936624362]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-moving-blue2/StaticBody3D" unique_id=587336501]
 shape = SubResource("ConcavePolygonShape3D_p2pxm")
 
-[node name="block-moving-large2" parent="." unique_id=1141402171 instance=ExtResource("42_2hsmi")]
+[node name="block-moving-large2" parent="." unique_id=1141402171 instance=ExtResource("40_ujdcv")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-moving-large2" unique_id=749967266]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-moving-large2/StaticBody3D" unique_id=808916269]
 shape = SubResource("ConcavePolygonShape3D_fgc17")
 
-[node name="block-moving2" parent="." unique_id=1516206963 instance=ExtResource("43_00o18")]
+[node name="block-moving2" parent="." unique_id=1516206963 instance=ExtResource("41_negp7")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-moving2" unique_id=441632414]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-moving2/StaticBody3D" unique_id=1140612117]
 shape = SubResource("ConcavePolygonShape3D_nb2gc")
 
-[node name="block-snow-corner-low2" parent="." unique_id=1885756208 instance=ExtResource("44_enax3")]
+[node name="block-snow-corner-low2" parent="." unique_id=1885756208 instance=ExtResource("42_061q3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-corner-low2" unique_id=1297732967]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-corner-low2/StaticBody3D" unique_id=956294211]
 shape = SubResource("ConcavePolygonShape3D_2hsmi")
 
-[node name="block-snow-corner-overhang-low2" parent="." unique_id=563787109 instance=ExtResource("45_usi18")]
+[node name="block-snow-corner-overhang-low2" parent="." unique_id=563787109 instance=ExtResource("43_43i5d")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-corner-overhang-low2" unique_id=1260521962]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-corner-overhang-low2/StaticBody3D" unique_id=468654726]
 shape = SubResource("ConcavePolygonShape3D_00o18")
 
-[node name="block-snow-corner-overhang2" parent="." unique_id=1910763621 instance=ExtResource("46_gwcxi")]
+[node name="block-snow-corner-overhang2" parent="." unique_id=1910763621 instance=ExtResource("44_6yxcb")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-corner-overhang2" unique_id=2097954598]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-corner-overhang2/StaticBody3D" unique_id=1090946951]
 shape = SubResource("ConcavePolygonShape3D_enax3")
 
-[node name="block-snow-corner2" parent="." unique_id=100086445 instance=ExtResource("47_vpac7")]
+[node name="block-snow-corner2" parent="." unique_id=100086445 instance=ExtResource("45_spivr")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-corner2" unique_id=806669323]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-corner2/StaticBody3D" unique_id=266839158]
 shape = SubResource("ConcavePolygonShape3D_usi18")
 
-[node name="block-snow-curve-half2" parent="." unique_id=974590217 instance=ExtResource("48_co0eh")]
+[node name="block-snow-curve-half2" parent="." unique_id=974590217 instance=ExtResource("46_fb1gj")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-curve-half2" unique_id=906321442]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-curve-half2/StaticBody3D" unique_id=1060255604]
 shape = SubResource("ConcavePolygonShape3D_gwcxi")
 
-[node name="block-snow-curve-low2" parent="." unique_id=1313370796 instance=ExtResource("49_5yv3g")]
+[node name="block-snow-curve-low2" parent="." unique_id=1313370796 instance=ExtResource("47_pgkxo")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-curve-low2" unique_id=279311617]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-curve-low2/StaticBody3D" unique_id=655474851]
 shape = SubResource("ConcavePolygonShape3D_vpac7")
 
-[node name="block-snow-curve2" parent="." unique_id=1147466114 instance=ExtResource("50_r5bhr")]
+[node name="block-snow-curve2" parent="." unique_id=1147466114 instance=ExtResource("48_8w7re")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-curve2" unique_id=227359194]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-curve2/StaticBody3D" unique_id=388488717]
 shape = SubResource("ConcavePolygonShape3D_co0eh")
 
-[node name="block-snow-edge2" parent="." unique_id=448821999 instance=ExtResource("51_3xuk3")]
+[node name="block-snow-edge2" parent="." unique_id=448821999 instance=ExtResource("49_axwnr")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-edge2" unique_id=1236263995]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-edge2/StaticBody3D" unique_id=1337953855]
 shape = SubResource("ConcavePolygonShape3D_5yv3g")
 
-[node name="block-snow-hexagon2" parent="." unique_id=1033859942 instance=ExtResource("52_yvt4w")]
+[node name="block-snow-hexagon2" parent="." unique_id=1033859942 instance=ExtResource("50_hfc0i")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-hexagon2" unique_id=926134122]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-hexagon2/StaticBody3D" unique_id=182544039]
 shape = SubResource("ConcavePolygonShape3D_r5bhr")
 
-[node name="block-snow-large-slope-narrow2" parent="." unique_id=2078534764 instance=ExtResource("53_gkpby")]
+[node name="block-snow-large-slope-narrow2" parent="." unique_id=2078534764 instance=ExtResource("51_6la1t")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large-slope-narrow2" unique_id=1315023857]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large-slope-narrow2/StaticBody3D" unique_id=450872664]
 shape = SubResource("ConcavePolygonShape3D_3xuk3")
 
-[node name="block-snow-large-slope-steep-narrow2" parent="." unique_id=982837626 instance=ExtResource("54_30yw3")]
+[node name="block-snow-large-slope-steep-narrow2" parent="." unique_id=982837626 instance=ExtResource("52_rua0r")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large-slope-steep-narrow2" unique_id=374619672]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large-slope-steep-narrow2/StaticBody3D" unique_id=961761228]
 shape = SubResource("ConcavePolygonShape3D_yvt4w")
 
-[node name="block-snow-large-slope-steep2" parent="." unique_id=1093878019 instance=ExtResource("55_qchwa")]
+[node name="block-snow-large-slope-steep2" parent="." unique_id=1093878019 instance=ExtResource("53_u4ndx")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large-slope-steep2" unique_id=1569210496]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large-slope-steep2/StaticBody3D" unique_id=2014266528]
 shape = SubResource("ConcavePolygonShape3D_gkpby")
 
-[node name="block-snow-large-slope2" parent="." unique_id=1542848539 instance=ExtResource("56_bu4xp")]
+[node name="block-snow-large-slope2" parent="." unique_id=1542848539 instance=ExtResource("54_3fdtf")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large-slope2" unique_id=1186939270]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large-slope2/StaticBody3D" unique_id=1958499002]
 shape = SubResource("ConcavePolygonShape3D_30yw3")
 
-[node name="block-snow-large-tall2" parent="." unique_id=1354563791 instance=ExtResource("57_hlavk")]
+[node name="block-snow-large-tall2" parent="." unique_id=1354563791 instance=ExtResource("55_3daff")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large-tall2" unique_id=798770978]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large-tall2/StaticBody3D" unique_id=1889033333]
 shape = SubResource("ConcavePolygonShape3D_qchwa")
 
-[node name="block-snow-large2" parent="." unique_id=238034834 instance=ExtResource("58_c7kcb")]
+[node name="block-snow-large2" parent="." unique_id=238034834 instance=ExtResource("56_sigpc")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large2" unique_id=13843026]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large2/StaticBody3D" unique_id=1837242461]
 shape = SubResource("ConcavePolygonShape3D_bu4xp")
 
-[node name="block-snow-long2" parent="." unique_id=1917308803 instance=ExtResource("59_twyjg")]
+[node name="block-snow-long2" parent="." unique_id=1917308803 instance=ExtResource("57_i5w6j")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-long2" unique_id=441846428]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-long2/StaticBody3D" unique_id=997796562]
 shape = SubResource("ConcavePolygonShape3D_hlavk")
 
-[node name="block-snow-low-hexagon2" parent="." unique_id=2144881383 instance=ExtResource("60_t5nej")]
+[node name="block-snow-low-hexagon2" parent="." unique_id=2144881383 instance=ExtResource("58_pvvhj")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-low-hexagon2" unique_id=1251646387]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-low-hexagon2/StaticBody3D" unique_id=1732674817]
 shape = SubResource("ConcavePolygonShape3D_c7kcb")
 
-[node name="block-snow-low-large2" parent="." unique_id=1012149127 instance=ExtResource("61_g6wf3")]
+[node name="block-snow-low-large2" parent="." unique_id=1012149127 instance=ExtResource("59_iggmg")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-low-large2" unique_id=1061342387]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-low-large2/StaticBody3D" unique_id=730550046]
 shape = SubResource("ConcavePolygonShape3D_twyjg")
 
-[node name="block-snow-low-long2" parent="." unique_id=2143963060 instance=ExtResource("62_0w4j8")]
+[node name="block-snow-low-long2" parent="." unique_id=2143963060 instance=ExtResource("60_nhnum")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-low-long2" unique_id=2005240422]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-low-long2/StaticBody3D" unique_id=1711932067]
 shape = SubResource("ConcavePolygonShape3D_t5nej")
 
-[node name="block-snow-low-narrow2" parent="." unique_id=1653010342 instance=ExtResource("63_n05h6")]
+[node name="block-snow-low-narrow2" parent="." unique_id=1653010342 instance=ExtResource("61_cknjp")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-low-narrow2" unique_id=1235041251]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-low-narrow2/StaticBody3D" unique_id=1553913114]
 shape = SubResource("ConcavePolygonShape3D_g6wf3")
 
-[node name="block-snow-low2" parent="." unique_id=1978478698 instance=ExtResource("64_buvah")]
+[node name="block-snow-low2" parent="." unique_id=1978478698 instance=ExtResource("62_hcaio")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-low2" unique_id=1806114181]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-low2/StaticBody3D" unique_id=843669708]
 shape = SubResource("ConcavePolygonShape3D_0w4j8")
 
-[node name="block-snow-narrow2" parent="." unique_id=1762777787 instance=ExtResource("65_tcac0")]
+[node name="block-snow-narrow2" parent="." unique_id=1762777787 instance=ExtResource("63_anvvk")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-narrow2" unique_id=33973124]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-narrow2/StaticBody3D" unique_id=408997907]
 shape = SubResource("ConcavePolygonShape3D_n05h6")
 
-[node name="block-snow-overhang-corner2" parent="." unique_id=849892079 instance=ExtResource("66_a3p21")]
+[node name="block-snow-overhang-corner2" parent="." unique_id=849892079 instance=ExtResource("64_vfoye")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-corner2" unique_id=838333687]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-corner2/StaticBody3D" unique_id=1073454346]
 shape = SubResource("ConcavePolygonShape3D_buvah")
 
-[node name="block-snow-overhang-edge2" parent="." unique_id=193599834 instance=ExtResource("67_excg4")]
+[node name="block-snow-overhang-edge2" parent="." unique_id=193599834 instance=ExtResource("65_kgwnq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-edge2" unique_id=2058297029]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-edge2/StaticBody3D" unique_id=1755895588]
 shape = SubResource("ConcavePolygonShape3D_tcac0")
 
-[node name="block-snow-overhang-hexagon2" parent="." unique_id=12740674 instance=ExtResource("68_ipod6")]
+[node name="block-snow-overhang-hexagon2" parent="." unique_id=12740674 instance=ExtResource("66_on8an")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-hexagon2" unique_id=2045045872]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-hexagon2/StaticBody3D" unique_id=505116615]
 shape = SubResource("ConcavePolygonShape3D_a3p21")
 
-[node name="block-snow-overhang-large-slope-narrow2" parent="." unique_id=372181348 instance=ExtResource("69_h2hl3")]
+[node name="block-snow-overhang-large-slope-narrow2" parent="." unique_id=372181348 instance=ExtResource("67_116hn")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-large-slope-narrow2" unique_id=463031743]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-large-slope-narrow2/StaticBody3D" unique_id=891846265]
 shape = SubResource("ConcavePolygonShape3D_excg4")
 
-[node name="block-snow-overhang-large-slope-steep-narrow2" parent="." unique_id=1534470843 instance=ExtResource("70_wacgu")]
+[node name="block-snow-overhang-large-slope-steep-narrow2" parent="." unique_id=1534470843 instance=ExtResource("68_jgox7")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-large-slope-steep-narrow2" unique_id=1235590124]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-large-slope-steep-narrow2/StaticBody3D" unique_id=724014554]
 shape = SubResource("ConcavePolygonShape3D_ipod6")
 
-[node name="block-snow-overhang-large-slope-steep2" parent="." unique_id=290574399 instance=ExtResource("71_nn87d")]
+[node name="block-snow-overhang-large-slope-steep2" parent="." unique_id=290574399 instance=ExtResource("69_ygtry")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-large-slope-steep2" unique_id=2110406362]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-large-slope-steep2/StaticBody3D" unique_id=1578955789]
 shape = SubResource("ConcavePolygonShape3D_h2hl3")
 
-[node name="block-snow-overhang-large-slope2" parent="." unique_id=1450146405 instance=ExtResource("72_wo7lm")]
+[node name="block-snow-overhang-large-slope2" parent="." unique_id=1450146405 instance=ExtResource("70_qldk5")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-large-slope2" unique_id=384364426]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-large-slope2/StaticBody3D" unique_id=181118615]
 shape = SubResource("ConcavePolygonShape3D_wacgu")
 
-[node name="block-snow-overhang-large-tall2" parent="." unique_id=696530681 instance=ExtResource("73_okmq8")]
+[node name="block-snow-overhang-large-tall2" parent="." unique_id=696530681 instance=ExtResource("71_marel")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-large-tall2" unique_id=1322638046]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-large-tall2/StaticBody3D" unique_id=1148531500]
 shape = SubResource("ConcavePolygonShape3D_nn87d")
 
-[node name="block-snow-overhang-large2" parent="." unique_id=2017450553 instance=ExtResource("74_23kfk")]
+[node name="block-snow-overhang-large2" parent="." unique_id=2017450553 instance=ExtResource("72_2jfwq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-large2" unique_id=2027058011]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-large2/StaticBody3D" unique_id=1484667556]
 shape = SubResource("ConcavePolygonShape3D_wo7lm")
 
-[node name="block-snow-overhang-long2" parent="." unique_id=1550394066 instance=ExtResource("75_uqffp")]
+[node name="block-snow-overhang-long2" parent="." unique_id=1550394066 instance=ExtResource("73_mryum")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-long2" unique_id=1735208502]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-long2/StaticBody3D" unique_id=875374995]
 shape = SubResource("ConcavePolygonShape3D_okmq8")
 
-[node name="block-snow-overhang-low-hexagon2" parent="." unique_id=870713448 instance=ExtResource("76_llbmk")]
+[node name="block-snow-overhang-low-hexagon2" parent="." unique_id=870713448 instance=ExtResource("74_watn3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-low-hexagon2" unique_id=833705347]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-low-hexagon2/StaticBody3D" unique_id=17295178]
 shape = SubResource("ConcavePolygonShape3D_23kfk")
 
-[node name="block-snow-overhang-low-large2" parent="." unique_id=1427510311 instance=ExtResource("77_d081h")]
+[node name="block-snow-overhang-low-large2" parent="." unique_id=1427510311 instance=ExtResource("75_fs6t8")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-low-large2" unique_id=1815861616]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-low-large2/StaticBody3D" unique_id=2015213722]
 shape = SubResource("ConcavePolygonShape3D_uqffp")
 
-[node name="block-snow-overhang-low-long2" parent="." unique_id=1178530746 instance=ExtResource("78_6i2w7")]
+[node name="block-snow-overhang-low-long2" parent="." unique_id=1178530746 instance=ExtResource("76_g7it1")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-low-long2" unique_id=1507194389]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-low-long2/StaticBody3D" unique_id=593248744]
 shape = SubResource("ConcavePolygonShape3D_llbmk")
 
-[node name="block-snow-overhang-low-narrow2" parent="." unique_id=1368426768 instance=ExtResource("79_exnbh")]
+[node name="block-snow-overhang-low-narrow2" parent="." unique_id=1368426768 instance=ExtResource("77_a7xn2")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-low-narrow2" unique_id=1991278745]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-low-narrow2/StaticBody3D" unique_id=1736057827]
 shape = SubResource("ConcavePolygonShape3D_d081h")
 
-[node name="block-snow-overhang-low2" parent="." unique_id=834547073 instance=ExtResource("80_bggom")]
+[node name="block-snow-overhang-low2" parent="." unique_id=834547073 instance=ExtResource("78_ktqmf")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-low2" unique_id=1943922116]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-low2/StaticBody3D" unique_id=1692966053]
 shape = SubResource("ConcavePolygonShape3D_6i2w7")
 
-[node name="block-snow-overhang-narrow2" parent="." unique_id=1586130489 instance=ExtResource("81_ojwbk")]
+[node name="block-snow-overhang-narrow2" parent="." unique_id=1586130489 instance=ExtResource("79_itrqg")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-narrow2" unique_id=2037235947]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-narrow2/StaticBody3D" unique_id=712083305]
 shape = SubResource("ConcavePolygonShape3D_exnbh")
 
-[node name="block-snow2" parent="." unique_id=1815479611 instance=ExtResource("82_5cqfe")]
+[node name="block-snow2" parent="." unique_id=1815479611 instance=ExtResource("80_vxle6")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow2" unique_id=234827282]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow2/StaticBody3D" unique_id=1966421586]
 shape = SubResource("ConcavePolygonShape3D_bggom")
 
-[node name="bomb2" parent="." unique_id=43069943 instance=ExtResource("83_x2dd5")]
+[node name="bomb2" parent="." unique_id=43069943 instance=ExtResource("81_q7nib")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="bomb2" unique_id=1398568707]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bomb2/StaticBody3D" unique_id=723563720]
 shape = SubResource("ConcavePolygonShape3D_ojwbk")
 
-[node name="brick2" parent="." unique_id=120106390 instance=ExtResource("84_snp3f")]
+[node name="brick2" parent="." unique_id=120106390 instance=ExtResource("82_j8o7t")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="brick2" unique_id=549268399]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="brick2/StaticBody3D" unique_id=974487907]
 shape = SubResource("ConcavePolygonShape3D_5cqfe")
 
-[node name="button-round2" parent="." unique_id=1772052709 instance=ExtResource("85_iluxh")]
+[node name="button-round2" parent="." unique_id=1772052709 instance=ExtResource("83_yldj8")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="button-round2" unique_id=1995583539]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="button-round2/StaticBody3D" unique_id=1246202037]
 shape = SubResource("ConcavePolygonShape3D_x2dd5")
 
-[node name="button-square2" parent="." unique_id=1643577024 instance=ExtResource("86_72p2f")]
+[node name="button-square2" parent="." unique_id=1643577024 instance=ExtResource("84_y5j8x")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="button-square2" unique_id=744393125]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="button-square2/StaticBody3D" unique_id=2120869248]
 shape = SubResource("ConcavePolygonShape3D_snp3f")
 
-[node name="chest2" parent="." unique_id=2078397162 instance=ExtResource("87_i76tu")]
+[node name="chest2" parent="." unique_id=2078397162 instance=ExtResource("85_cayyn")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest2" unique_id=915672810]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest2/StaticBody3D" unique_id=1446639643]
 shape = SubResource("ConcavePolygonShape3D_iluxh")
 
-[node name="coin-bronze2" parent="." unique_id=2018037960 instance=ExtResource("88_2lmwm")]
+[node name="coin-bronze2" parent="." unique_id=2018037960 instance=ExtResource("86_jdqya")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="coin-bronze2" unique_id=2020462112]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="coin-bronze2/StaticBody3D" unique_id=1105156996]
 shape = SubResource("ConcavePolygonShape3D_72p2f")
 
-[node name="coin-gold2" parent="." unique_id=1489991932 instance=ExtResource("89_nlqjg")]
+[node name="coin-gold2" parent="." unique_id=1489991932 instance=ExtResource("87_7idu6")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="coin-gold2" unique_id=554891846]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="coin-gold2/StaticBody3D" unique_id=293519586]
 shape = SubResource("ConcavePolygonShape3D_i76tu")
 
-[node name="coin-silver2" parent="." unique_id=517450336 instance=ExtResource("90_clgtu")]
+[node name="coin-silver2" parent="." unique_id=517450336 instance=ExtResource("88_55hor")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="coin-silver2" unique_id=233954741]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="coin-silver2/StaticBody3D" unique_id=1848797777]
 shape = SubResource("ConcavePolygonShape3D_2lmwm")
 
-[node name="conveyor-belt2" parent="." unique_id=144086405 instance=ExtResource("91_yo8av")]
+[node name="conveyor-belt2" parent="." unique_id=144086405 instance=ExtResource("89_mk8pw")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="conveyor-belt2" unique_id=2018374917]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="conveyor-belt2/StaticBody3D" unique_id=1324033244]
 shape = SubResource("ConcavePolygonShape3D_nlqjg")
 
-[node name="crate-item-strong2" parent="." unique_id=877174630 instance=ExtResource("92_8jknl")]
+[node name="crate-item-strong2" parent="." unique_id=877174630 instance=ExtResource("90_n7meq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="crate-item-strong2" unique_id=1965999980]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="crate-item-strong2/StaticBody3D" unique_id=1317312085]
 shape = SubResource("ConcavePolygonShape3D_clgtu")
 
-[node name="crate-item2" parent="." unique_id=174316186 instance=ExtResource("93_53ecq")]
+[node name="crate-item2" parent="." unique_id=174316186 instance=ExtResource("91_6sij4")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="crate-item2" unique_id=699430529]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="crate-item2/StaticBody3D" unique_id=992488287]
 shape = SubResource("ConcavePolygonShape3D_yo8av")
 
-[node name="crate-strong2" parent="." unique_id=1658218245 instance=ExtResource("94_7tm34")]
+[node name="crate-strong2" parent="." unique_id=1658218245 instance=ExtResource("92_kkti3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="crate-strong2" unique_id=1476544471]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="crate-strong2/StaticBody3D" unique_id=979509711]
 shape = SubResource("ConcavePolygonShape3D_8jknl")
 
-[node name="crate2" parent="." unique_id=507448315 instance=ExtResource("95_yfn6x")]
+[node name="crate2" parent="." unique_id=507448315 instance=ExtResource("93_jdl01")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="crate2" unique_id=466867294]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="crate2/StaticBody3D" unique_id=108939454]
 shape = SubResource("ConcavePolygonShape3D_53ecq")
 
-[node name="door-large-open2" parent="." unique_id=1930881746 instance=ExtResource("96_weae1")]
+[node name="door-large-open2" parent="." unique_id=1930881746 instance=ExtResource("94_xmixf")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="door-large-open2" unique_id=1585068338]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door-large-open2/StaticBody3D" unique_id=1811711576]
 shape = SubResource("ConcavePolygonShape3D_7tm34")
 
-[node name="door-open2" parent="." unique_id=1614512079 instance=ExtResource("97_eatok")]
+[node name="door-open2" parent="." unique_id=1614512079 instance=ExtResource("95_8rdf3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="door-open2" unique_id=1007356353]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door-open2/StaticBody3D" unique_id=251453451]
 shape = SubResource("ConcavePolygonShape3D_yfn6x")
 
-[node name="door-rotate-large2" parent="." unique_id=2132975762 instance=ExtResource("98_alcse")]
+[node name="door-rotate-large2" parent="." unique_id=2132975762 instance=ExtResource("96_fglre")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="door-rotate-large2" unique_id=781812823]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door-rotate-large2/StaticBody3D" unique_id=1733885953]
 shape = SubResource("ConcavePolygonShape3D_weae1")
 
-[node name="door-rotate2" parent="." unique_id=7027186 instance=ExtResource("99_v81gf")]
+[node name="door-rotate2" parent="." unique_id=7027186 instance=ExtResource("97_mfasr")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="door-rotate2" unique_id=1604184357]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door-rotate2/StaticBody3D" unique_id=1121661146]
 shape = SubResource("ConcavePolygonShape3D_eatok")
 
-[node name="fence-broken2" parent="." unique_id=801445065 instance=ExtResource("100_oyhjv")]
+[node name="fence-broken2" parent="." unique_id=801445065 instance=ExtResource("98_q12m6")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-broken2" unique_id=1884921840]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-broken2/StaticBody3D" unique_id=445023844]
 shape = SubResource("ConcavePolygonShape3D_alcse")
 
-[node name="fence-corner-curved2" parent="." unique_id=957599195 instance=ExtResource("101_i5bfa")]
+[node name="fence-corner-curved2" parent="." unique_id=957599195 instance=ExtResource("99_312pb")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-corner-curved2" unique_id=800396727]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-corner-curved2/StaticBody3D" unique_id=1782548714]
 shape = SubResource("ConcavePolygonShape3D_v81gf")
 
-[node name="fence-corner2" parent="." unique_id=302254641 instance=ExtResource("102_nic8g")]
+[node name="fence-corner2" parent="." unique_id=302254641 instance=ExtResource("100_7fy2t")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-corner2" unique_id=1972746562]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-corner2/StaticBody3D" unique_id=1445630983]
 shape = SubResource("ConcavePolygonShape3D_oyhjv")
 
-[node name="fence-low-broken2" parent="." unique_id=684736139 instance=ExtResource("103_6oq7w")]
+[node name="fence-low-broken2" parent="." unique_id=684736139 instance=ExtResource("101_diovc")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-low-broken2" unique_id=1345723715]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-low-broken2/StaticBody3D" unique_id=1722275204]
 shape = SubResource("ConcavePolygonShape3D_i5bfa")
 
-[node name="fence-low-corner-curved2" parent="." unique_id=845776324 instance=ExtResource("104_tr27u")]
+[node name="fence-low-corner-curved2" parent="." unique_id=845776324 instance=ExtResource("102_sa12p")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-low-corner-curved2" unique_id=1026344677]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-low-corner-curved2/StaticBody3D" unique_id=1930813944]
 shape = SubResource("ConcavePolygonShape3D_nic8g")
 
-[node name="fence-low-corner2" parent="." unique_id=785248980 instance=ExtResource("105_rqi7n")]
+[node name="fence-low-corner2" parent="." unique_id=785248980 instance=ExtResource("103_li2ry")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-low-corner2" unique_id=1054729089]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-low-corner2/StaticBody3D" unique_id=665194873]
 shape = SubResource("ConcavePolygonShape3D_6oq7w")
 
-[node name="fence-low-straight2" parent="." unique_id=1205457500 instance=ExtResource("106_acn1n")]
+[node name="fence-low-straight2" parent="." unique_id=1205457500 instance=ExtResource("104_yuimf")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-low-straight2" unique_id=1650773513]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-low-straight2/StaticBody3D" unique_id=410169778]
 shape = SubResource("ConcavePolygonShape3D_tr27u")
 
-[node name="fence-rope2" parent="." unique_id=707244085 instance=ExtResource("107_7keq2")]
+[node name="fence-rope2" parent="." unique_id=707244085 instance=ExtResource("105_cn4a3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-rope2" unique_id=56054329]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-rope2/StaticBody3D" unique_id=534434790]
 shape = SubResource("ConcavePolygonShape3D_rqi7n")
 
-[node name="fence-straight2" parent="." unique_id=252233527 instance=ExtResource("108_ydjmw")]
+[node name="fence-straight2" parent="." unique_id=252233527 instance=ExtResource("106_rai7e")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-straight2" unique_id=754279820]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-straight2/StaticBody3D" unique_id=1758361594]
 shape = SubResource("ConcavePolygonShape3D_acn1n")
 
-[node name="flag2" parent="." unique_id=1738548305 instance=ExtResource("109_7cl60")]
+[node name="flag2" parent="." unique_id=1738548305 instance=ExtResource("107_e5g7x")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="flag2" unique_id=2057857244]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="flag2/StaticBody3D" unique_id=831386356]
 shape = SubResource("ConcavePolygonShape3D_7keq2")
 
-[node name="flowers-tall2" parent="." unique_id=1577481220 instance=ExtResource("110_jdefv")]
+[node name="flowers-tall2" parent="." unique_id=1577481220 instance=ExtResource("108_rjhrh")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="flowers-tall2" unique_id=1108294361]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="flowers-tall2/StaticBody3D" unique_id=1563347618]
 shape = SubResource("ConcavePolygonShape3D_ydjmw")
 
-[node name="flowers2" parent="." unique_id=102708436 instance=ExtResource("111_nsjxm")]
+[node name="flowers2" parent="." unique_id=102708436 instance=ExtResource("109_mrdud")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="flowers2" unique_id=890951396]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="flowers2/StaticBody3D" unique_id=436328742]
 shape = SubResource("ConcavePolygonShape3D_7cl60")
 
-[node name="grass2" parent="." unique_id=1180461979 instance=ExtResource("112_nlfal")]
+[node name="grass2" parent="." unique_id=1180461979 instance=ExtResource("110_cmtgi")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="grass2" unique_id=708943204]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="grass2/StaticBody3D" unique_id=862457595]
 shape = SubResource("ConcavePolygonShape3D_jdefv")
 
-[node name="heart2" parent="." unique_id=1272373901 instance=ExtResource("113_oxlr2")]
+[node name="heart2" parent="." unique_id=1272373901 instance=ExtResource("111_5m1jj")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="heart2" unique_id=792686940]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="heart2/StaticBody3D" unique_id=1134059056]
 shape = SubResource("ConcavePolygonShape3D_nsjxm")
 
-[node name="hedge-corner2" parent="." unique_id=1526523807 instance=ExtResource("114_6hewx")]
+[node name="hedge-corner2" parent="." unique_id=1526523807 instance=ExtResource("112_1pg73")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hedge-corner2" unique_id=2101755509]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hedge-corner2/StaticBody3D" unique_id=1576534134]
 shape = SubResource("ConcavePolygonShape3D_nlfal")
 
-[node name="hedge2" parent="." unique_id=1687051875 instance=ExtResource("115_2fwr8")]
+[node name="hedge2" parent="." unique_id=1687051875 instance=ExtResource("113_3fijs")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hedge2" unique_id=356972040]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hedge2/StaticBody3D" unique_id=1066233365]
 shape = SubResource("ConcavePolygonShape3D_oxlr2")
 
-[node name="jewel2" parent="." unique_id=899618476 instance=ExtResource("116_io87r")]
+[node name="jewel2" parent="." unique_id=899618476 instance=ExtResource("114_hivkp")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="jewel2" unique_id=38814606]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="jewel2/StaticBody3D" unique_id=291047712]
 shape = SubResource("ConcavePolygonShape3D_6hewx")
 
-[node name="key2" parent="." unique_id=583885984 instance=ExtResource("117_ullyd")]
+[node name="key2" parent="." unique_id=583885984 instance=ExtResource("115_ebdml")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="key2" unique_id=459783590]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="key2/StaticBody3D" unique_id=1445644508]
 shape = SubResource("ConcavePolygonShape3D_2fwr8")
 
-[node name="ladder-broken2" parent="." unique_id=526380536 instance=ExtResource("118_rx2yl")]
+[node name="ladder-broken2" parent="." unique_id=526380536 instance=ExtResource("116_wes3p")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ladder-broken2" unique_id=1862672972]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ladder-broken2/StaticBody3D" unique_id=556380940]
 shape = SubResource("ConcavePolygonShape3D_io87r")
 
-[node name="ladder-long2" parent="." unique_id=1080158138 instance=ExtResource("119_rvkun")]
+[node name="ladder-long2" parent="." unique_id=1080158138 instance=ExtResource("117_vjc8j")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ladder-long2" unique_id=818890910]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ladder-long2/StaticBody3D" unique_id=673326721]
 shape = SubResource("ConcavePolygonShape3D_ullyd")
 
-[node name="ladder2" parent="." unique_id=1246539669 instance=ExtResource("120_6mrkp")]
+[node name="ladder2" parent="." unique_id=1246539669 instance=ExtResource("118_xi1wd")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ladder2" unique_id=222666883]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ladder2/StaticBody3D" unique_id=774528025]
 shape = SubResource("ConcavePolygonShape3D_rx2yl")
 
-[node name="lever2" parent="." unique_id=195573896 instance=ExtResource("121_oothe")]
+[node name="lever2" parent="." unique_id=195573896 instance=ExtResource("119_k7qqp")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="lever2" unique_id=94561360]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="lever2/StaticBody3D" unique_id=1567143713]
 shape = SubResource("ConcavePolygonShape3D_rvkun")
 
-[node name="lock2" parent="." unique_id=2090591486 instance=ExtResource("122_mhdgw")]
+[node name="lock2" parent="." unique_id=2090591486 instance=ExtResource("120_8c4si")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="lock2" unique_id=983430188]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="lock2/StaticBody3D" unique_id=1767881682]
 shape = SubResource("ConcavePolygonShape3D_6mrkp")
 
-[node name="mushrooms2" parent="." unique_id=530101283 instance=ExtResource("123_3xwkt")]
+[node name="mushrooms2" parent="." unique_id=530101283 instance=ExtResource("121_i8xjd")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="mushrooms2" unique_id=627850400]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mushrooms2/StaticBody3D" unique_id=123502194]
 shape = SubResource("ConcavePolygonShape3D_oothe")
 
-[node name="pipe2" parent="." unique_id=1611477638 instance=ExtResource("124_ubvmq")]
+[node name="pipe2" parent="." unique_id=1611477638 instance=ExtResource("122_l57ag")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="pipe2" unique_id=518073742]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pipe2/StaticBody3D" unique_id=498023366]
 shape = SubResource("ConcavePolygonShape3D_mhdgw")
 
-[node name="plant2" parent="." unique_id=533401396 instance=ExtResource("125_7ovrg")]
+[node name="plant2" parent="." unique_id=533401396 instance=ExtResource("123_quy13")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="plant2" unique_id=945500194]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plant2/StaticBody3D" unique_id=2006537801]
 shape = SubResource("ConcavePolygonShape3D_3xwkt")
 
-[node name="platform-fortified2" parent="." unique_id=33855410 instance=ExtResource("126_s72et")]
+[node name="platform-fortified2" parent="." unique_id=33855410 instance=ExtResource("124_u4suc")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="platform-fortified2" unique_id=100989139]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platform-fortified2/StaticBody3D" unique_id=1153468995]
 shape = SubResource("ConcavePolygonShape3D_ubvmq")
 
-[node name="platform-overhang2" parent="." unique_id=2050697442 instance=ExtResource("127_xymo6")]
+[node name="platform-overhang2" parent="." unique_id=2050697442 instance=ExtResource("125_q5apb")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="platform-overhang2" unique_id=100661201]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platform-overhang2/StaticBody3D" unique_id=1174413876]
 shape = SubResource("ConcavePolygonShape3D_7ovrg")
 
-[node name="platform-ramp2" parent="." unique_id=26799619 instance=ExtResource("128_ck7yb")]
+[node name="platform-ramp2" parent="." unique_id=26799619 instance=ExtResource("126_6miww")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="platform-ramp2" unique_id=1786361429]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platform-ramp2/StaticBody3D" unique_id=1270360977]
 shape = SubResource("ConcavePolygonShape3D_s72et")
 
-[node name="platform2" parent="." unique_id=1201385038 instance=ExtResource("129_glxj5")]
+[node name="platform2" parent="." unique_id=1201385038 instance=ExtResource("127_tidnc")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="platform2" unique_id=564453646]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platform2/StaticBody3D" unique_id=1560931131]
 shape = SubResource("ConcavePolygonShape3D_xymo6")
 
-[node name="poles2" parent="." unique_id=1875981909 instance=ExtResource("130_4uxtr")]
+[node name="poles2" parent="." unique_id=1875981909 instance=ExtResource("128_boxm5")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="poles2" unique_id=2013166199]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="poles2/StaticBody3D" unique_id=586657452]
 shape = SubResource("ConcavePolygonShape3D_ck7yb")
 
-[node name="rocks2" parent="." unique_id=1506600442 instance=ExtResource("131_xvqdt")]
+[node name="rocks2" parent="." unique_id=1506600442 instance=ExtResource("129_ddu5b")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="rocks2" unique_id=2062850877]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rocks2/StaticBody3D" unique_id=692808233]
 shape = SubResource("ConcavePolygonShape3D_glxj5")
 
-[node name="saw2" parent="." unique_id=1078981180 instance=ExtResource("132_3ii8c")]
+[node name="saw2" parent="." unique_id=1078981180 instance=ExtResource("130_nnnqw")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="saw2" unique_id=15863808]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="saw2/StaticBody3D" unique_id=922750692]
 shape = SubResource("ConcavePolygonShape3D_4uxtr")
 
-[node name="sign2" parent="." unique_id=2130523995 instance=ExtResource("133_w8m3f")]
+[node name="sign2" parent="." unique_id=2130523995 instance=ExtResource("131_b2i00")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="sign2" unique_id=2084701859]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="sign2/StaticBody3D" unique_id=1759556890]
 shape = SubResource("ConcavePolygonShape3D_xvqdt")
 
-[node name="spike-block-wide2" parent="." unique_id=1305333919 instance=ExtResource("134_ygv5q")]
+[node name="spike-block-wide2" parent="." unique_id=1305333919 instance=ExtResource("132_vlang")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="spike-block-wide2" unique_id=537876468]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="spike-block-wide2/StaticBody3D" unique_id=33117139]
 shape = SubResource("ConcavePolygonShape3D_3ii8c")
 
-[node name="spike-block2" parent="." unique_id=1408644429 instance=ExtResource("135_01ym6")]
+[node name="spike-block2" parent="." unique_id=1408644429 instance=ExtResource("133_mntkh")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="spike-block2" unique_id=1961472333]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="spike-block2/StaticBody3D" unique_id=1028249494]
 shape = SubResource("ConcavePolygonShape3D_w8m3f")
 
-[node name="spring3" parent="." unique_id=332204046 instance=ExtResource("136_2chv0")]
+[node name="spring3" parent="." unique_id=332204046 instance=ExtResource("134_bmayk")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="spring3" unique_id=1335149016]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="spring3/StaticBody3D" unique_id=72456133]
 shape = SubResource("ConcavePolygonShape3D_ygv5q")
 
-[node name="star2" parent="." unique_id=38925079 instance=ExtResource("137_6utx7")]
+[node name="star2" parent="." unique_id=38925079 instance=ExtResource("135_pa305")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="star2" unique_id=13107476]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="star2/StaticBody3D" unique_id=1937422107]
 shape = SubResource("ConcavePolygonShape3D_01ym6")
 
-[node name="stones2" parent="." unique_id=1120145724 instance=ExtResource("138_1352u")]
+[node name="stones2" parent="." unique_id=1120145724 instance=ExtResource("136_44rwm")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stones2" unique_id=768793928]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stones2/StaticBody3D" unique_id=532414009]
 shape = SubResource("ConcavePolygonShape3D_2chv0")
 
-[node name="trap-spikes-large2" parent="." unique_id=1534907166 instance=ExtResource("139_wn4je")]
+[node name="trap-spikes-large2" parent="." unique_id=1534907166 instance=ExtResource("137_ldjmd")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="trap-spikes-large2" unique_id=704815602]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="trap-spikes-large2/StaticBody3D" unique_id=67918469]
 shape = SubResource("ConcavePolygonShape3D_6utx7")
 
-[node name="trap-spikes2" parent="." unique_id=1761286509 instance=ExtResource("140_khjak")]
+[node name="trap-spikes2" parent="." unique_id=1761286509 instance=ExtResource("138_j6gqr")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="trap-spikes2" unique_id=1183764904]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="trap-spikes2/StaticBody3D" unique_id=884360552]
 shape = SubResource("ConcavePolygonShape3D_1352u")
 
-[node name="tree-pine-small2" parent="." unique_id=1369586037 instance=ExtResource("141_idbou")]
+[node name="tree-pine-small2" parent="." unique_id=1369586037 instance=ExtResource("139_gnjpv")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-small2" unique_id=7055490]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-small2/StaticBody3D" unique_id=325265668]
 shape = SubResource("ConcavePolygonShape3D_wn4je")
 
-[node name="tree-pine-snow-small2" parent="." unique_id=1829179223 instance=ExtResource("142_fxlf3")]
+[node name="tree-pine-snow-small2" parent="." unique_id=1829179223 instance=ExtResource("140_fufnp")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-snow-small2" unique_id=1943930383]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-snow-small2/StaticBody3D" unique_id=896619105]
 shape = SubResource("ConcavePolygonShape3D_khjak")
 
-[node name="tree-pine-snow2" parent="." unique_id=1715777896 instance=ExtResource("143_muinb")]
+[node name="tree-pine-snow2" parent="." unique_id=1715777896 instance=ExtResource("141_y4pfq")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-snow2" unique_id=1361122309]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-snow2/StaticBody3D" unique_id=28740285]
 shape = SubResource("ConcavePolygonShape3D_idbou")
 
-[node name="tree-pine2" parent="." unique_id=218315850 instance=ExtResource("144_a0jhp")]
+[node name="tree-pine2" parent="." unique_id=218315850 instance=ExtResource("142_edt7v")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine2" unique_id=369883169]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine2/StaticBody3D" unique_id=311595372]
 shape = SubResource("ConcavePolygonShape3D_fxlf3")
 
-[node name="tree-snow2" parent="." unique_id=45787665 instance=ExtResource("145_j0un2")]
+[node name="tree-snow2" parent="." unique_id=45787665 instance=ExtResource("143_ba6l8")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-snow2" unique_id=1809319372]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-snow2/StaticBody3D" unique_id=746374155]
 shape = SubResource("ConcavePolygonShape3D_muinb")
 
-[node name="tree2" parent="." unique_id=1386703187 instance=ExtResource("146_jo4mp")]
+[node name="tree2" parent="." unique_id=1386703187 instance=ExtResource("144_1mrxo")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree2" unique_id=1514946858]
 
