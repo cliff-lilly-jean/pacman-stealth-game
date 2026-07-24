@@ -8,7 +8,6 @@ extends Area3D
 @onready var destroy_wait_timer: Timer = $DestroyWaitTimer
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 
-signal collected(value: int)
 
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
@@ -20,7 +19,7 @@ func _process(delta: float) -> void:
 func on_body_entered(body: Node3D) -> void:
 	if body is Player:
 		audio_stream.play()
-		collected.emit(coin_resource.value)
+		EventBus.coin_collected.emit(coin_resource.value)
 		destroy_wait_timer.start()
 		
 		## hide the collision shappe and the mesh

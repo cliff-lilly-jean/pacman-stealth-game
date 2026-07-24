@@ -12,3 +12,6 @@ func on_timer_timeout() -> void:
 	var minutes = int(game_time_in_seconds / 60)
 	var seconds = game_time_in_seconds - minutes * 60
 	label.text = "%02d:%02d" % [minutes, seconds]
+	
+	if game_time_in_seconds == 0:
+		print("Times up")

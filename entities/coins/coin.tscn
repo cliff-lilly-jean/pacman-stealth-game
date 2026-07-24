@@ -8,7 +8,7 @@ radius = 0.33801916
 
 [node name="Coin" type="Area3D" unique_id=1459063820]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 11
 script = ExtResource("1_vmixq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1389986050]

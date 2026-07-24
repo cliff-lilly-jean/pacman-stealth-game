@@ -109,6 +109,7 @@ sprint={
 3d_physics/layer_1="Player"
 3d_physics/layer_2="World"
 3d_physics/layer_3="Collectables"
+3d_physics/layer_4="Ground"
 
 [physics]
 

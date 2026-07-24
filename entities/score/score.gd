@@ -10,7 +10,6 @@ func _ready() -> void:
 	EventBus.score_updated.connect(on_score_updated)
 	label.text = "Score: " + str(current_points) + " / " + str(total_points)
 
-
 func _process(_delta: float) -> void:
 	label.text = "Point Total: " + str(current_points) + " / " + str(total_points) + " Total Coins: " + str(total)
 

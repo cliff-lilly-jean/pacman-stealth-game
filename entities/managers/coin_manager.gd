@@ -4,42 +4,44 @@ class_name CoinManager extends Node3D
 @export var coin_count: int
 @export var coins: Array[PackedScene]
 
-@onready var coin_spawn_detector: Area3D
-
 var spawn_area_length: float
 var spawn_area_width : float
-var total_coins: Array = []
-var new_coin
+var total_coins: Array[Coin] = []
 var coin_placement_point: Vector3
 
 func _ready() -> void:
 	spawn_area_length = ground.length
 	spawn_area_width = ground.width
 	
-	spawn_random_coin()
+	#spawn_random_coin()
 	
 func spawn_random_coin() -> void:
-	for item in range(coin_count):
-		var coin: Coin = coins.pick_random().instantiate() as Coin
 	
-		if is_spawn_position_clear(coin_placement_point):
-			print("This spot is empty")
+	while total_coins.size() < coin_count:
 			
-			new_coin = coin
-			total_coins.append(coin)
-			
+		get_new_spawn_point()
+	
+		if not is_spawn_position_clear(coin_placement_point):
 			get_new_spawn_point()
-	
-			new_coin.global_position = coin_placement_point
-	
-			## Add the coin to the world
-			add_child(new_coin)
+			#continue
+		
+		var coin: Coin = coins.pick_random().instantiate() as Coin
+		if coin == null:
+			continue
+			
+		## Add the coin to the world
+		add_child(coin)
+		coin.global_position = coin_placement_point
+		
+		total_coins.append(coin)
+		
+		await get_tree().physics_frame
 
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
 	var check_shape: SphereShape3D = SphereShape3D.new()
-	check_shape.radius = 0.5
+	check_shape.radius = 1.0
 	
 	var query: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 	query.shape = check_shape
@@ -47,8 +49,19 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	query.collide_with_bodies = true
 	query.collide_with_areas = true
 	
-	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 1)
+	## Check layers 1,2.
+	## Ignore on layers 4.
+	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2)
 	
+	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 32)
+	
+	if not collisions.is_empty():
+		print(
+			"Rejected ",
+			spawn_position,
+			" because it hit ",
+			collisions[0]["collider"].name
+		)
 	
 	return collisions.is_empty()
 
