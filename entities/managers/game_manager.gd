@@ -3,7 +3,8 @@ extends Node
 @onready var player = %Player
 @onready var ground: Ground = %Ground
 @onready var coin_manager: CoinManager = %CoinManager
-@onready var next_coin_label: NextCoinLabel = $"../UI/HBoxContainer/NextCoinLabel"
+@onready var next_coin_label: NextCoinLabel = %NextCoinLabel
+
 
 func _ready() -> void:
 	

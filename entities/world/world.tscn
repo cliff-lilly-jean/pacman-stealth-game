@@ -281,4 +281,5 @@ layout_mode = 2
 game_time_in_seconds = 120.0
 
 [node name="NextCoinLabel" parent="UI/HBoxContainer" unique_id=1047503440 instance=ExtResource("9_rxgam")]
+unique_name_in_owner = true
 layout_mode = 2
