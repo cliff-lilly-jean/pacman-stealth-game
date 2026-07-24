@@ -33,9 +33,14 @@ func spawn_random_coin() -> void:
 		add_child(coin)
 		coin.global_position = coin_placement_point
 		
+		
 		total_coins.append(coin)
+		print(coin.label.text)
 		
 		await get_tree().physics_frame
+		
+		for i in total_coins.size():
+			total_coins[i].label.text = str(i + 1)
 
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state

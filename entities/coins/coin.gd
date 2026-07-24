@@ -7,6 +7,7 @@ extends Area3D
 @onready var audio_stream: AudioStreamPlayer = $AudioStreamPlayer
 @onready var destroy_wait_timer: Timer = $DestroyWaitTimer
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
+@onready var label: Label = %Label
 
 
 func _ready() -> void:
