@@ -5,12 +5,10 @@
 [ext_resource type="Script" uid="uid://bfelp8pqnqxx6" path="res://entities/managers/input_manager.gd" id="2_j2gmx"]
 [ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://entities/managers/game_manager.gd" id="2_v5dby"]
 [ext_resource type="Script" uid="uid://bti04ut4yohbc" path="res://entities/managers/coin_manager.gd" id="3_1yooq"]
-[ext_resource type="PackedScene" uid="uid://bh46y4ix7q4kk" path="res://entities/coins/bronze_coin/bronze_coin.tscn" id="4_5qq27"]
 [ext_resource type="PackedScene" uid="uid://df8noeoqm8tib" path="res://entities/coins/gold_coin/gold_coin.tscn" id="5_dlabj"]
 [ext_resource type="MeshLibrary" uid="uid://cgpaitvhhtjrf" path="res://assets/mesh_libraries/kenny_platformer_kit.meshlib" id="5_v5dby"]
-[ext_resource type="PackedScene" uid="uid://baky56ktw1271" path="res://entities/game_timer/game_timer.tscn" id="6_t5ptc"]
-[ext_resource type="PackedScene" uid="uid://dm0gixr6biiv1" path="res://entities/score/score.tscn" id="7_bq33v"]
-[ext_resource type="LabelSettings" uid="uid://cuygg8c4yi45g" path="res://utils/label_settings.tres" id="8_j2gmx"]
+[ext_resource type="PackedScene" uid="uid://iri16fwy50ax" path="res://ui/game_time_label.tscn" id="8_ftcbs"]
+[ext_resource type="PackedScene" uid="uid://bfehhlf36knpi" path="res://ui/next_coin_label.tscn" id="9_rxgam"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bq33v"]
 albedo_color = Color(1, 0, 0, 1)
@@ -42,7 +40,7 @@ unique_name_in_owner = true
 script = ExtResource("3_1yooq")
 ground = NodePath("../Ground")
 coin_count = 5
-coins = Array[PackedScene]([ExtResource("4_5qq27"), ExtResource("5_dlabj")])
+coins = Array[PackedScene]([ExtResource("5_dlabj")])
 metadata/_custom_type_script = "uid://bti04ut4yohbc"
 
 [node name="Ground" parent="." unique_id=1364028782 instance=ExtResource("1_bq33v")]
@@ -264,30 +262,12 @@ gravity = 250.0
 [node name="GridMap" type="GridMap" parent="." unique_id=632038076]
 mesh_library = ExtResource("5_v5dby")
 
-[node name="GameTimer" parent="." unique_id=1654691100 node_paths=PackedStringArray("label") instance=ExtResource("6_t5ptc")]
-label = NodePath("../UI/HBoxContainer/GameTimerContainer/GameTimeLabel")
-
-[node name="Score" parent="." unique_id=79453040 node_paths=PackedStringArray("label") instance=ExtResource("7_bq33v")]
-unique_name_in_owner = true
-label = NodePath("../UI/HBoxContainer/ScoreContainer/ScoreLabel")
-
 [node name="UI" type="Node" parent="." unique_id=1292583648]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=1654080041]
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 8
-
-[node name="ScoreContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=1437128066]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="ScoreLabel" type="Label" parent="UI/HBoxContainer/ScoreContainer" unique_id=1737523049]
-layout_mode = 2
-label_settings = ExtResource("8_j2gmx")
 
 [node name="GameTimerContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=444811087]
 layout_mode = 2
@@ -296,6 +276,9 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="GameTimeLabel" type="Label" parent="UI/HBoxContainer/GameTimerContainer" unique_id=478877495]
+[node name="GameTimeLabel" parent="UI/HBoxContainer/GameTimerContainer" unique_id=1800577191 instance=ExtResource("8_ftcbs")]
 layout_mode = 2
-label_settings = ExtResource("8_j2gmx")
+game_time_in_seconds = 120.0
+
+[node name="NextCoinLabel" parent="UI/HBoxContainer" unique_id=1047503440 instance=ExtResource("9_rxgam")]
+layout_mode = 2

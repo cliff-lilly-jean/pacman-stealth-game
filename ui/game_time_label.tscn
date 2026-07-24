@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://iri16fwy50ax"]
+
+[ext_resource type="LabelSettings" uid="uid://cuygg8c4yi45g" path="res://utils/label_settings.tres" id="1_dekru"]
+[ext_resource type="Script" uid="uid://cr6l3kkea28fk" path="res://ui/game_time_label.gd" id="2_kur5q"]
+
+[node name="GameTimeLabel" type="Label" unique_id=1800577191]
+label_settings = ExtResource("1_dekru")
+script = ExtResource("2_kur5q")
+
+[node name="Timer" type="Timer" parent="." unique_id=1050709294]

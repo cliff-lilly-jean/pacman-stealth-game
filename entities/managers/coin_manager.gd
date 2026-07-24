@@ -35,12 +35,14 @@ func spawn_random_coin() -> void:
 		
 		
 		total_coins.append(coin)
-		print(coin.label.text)
 		
 		await get_tree().physics_frame
 		
 		for i in total_coins.size():
+			total_coins[i].number = i + 1
 			total_coins[i].label.text = str(i + 1)
+	
+		
 
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
@@ -59,14 +61,6 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2)
 	
 	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 32)
-	
-	if not collisions.is_empty():
-		print(
-			"Rejected ",
-			spawn_position,
-			" because it hit ",
-			collisions[0]["collider"].name
-		)
 	
 	return collisions.is_empty()
 

@@ -1,7 +1,5 @@
 class_name Coin
 extends Area3D
-
-@export var coin_resource: CoinResource
 @export var mesh: Node
 
 @onready var audio_stream: AudioStreamPlayer = $AudioStreamPlayer
@@ -9,6 +7,7 @@ extends Area3D
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var label: Label = %Label
 
+var number: int
 
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
@@ -20,7 +19,7 @@ func _process(delta: float) -> void:
 func on_body_entered(body: Node3D) -> void:
 	if body is Player:
 		audio_stream.play()
-		EventBus.coin_collected.emit(coin_resource.value)
+		EventBus.coin_collected.emit(number)
 		destroy_wait_timer.start()
 		
 		## hide the collision shappe and the mesh

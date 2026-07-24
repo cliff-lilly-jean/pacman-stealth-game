@@ -1,10 +1,8 @@
 extends Node
 
-## Score
-signal score_updated(amount: float)
-
 ## Coins
-signal coin_collected(value: int)
+signal coin_collected(coin_number: int)
+signal next_coin_changed()
 
 ## Stamina
 signal stamina_updated(amount: float)

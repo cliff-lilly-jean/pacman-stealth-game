@@ -1,11 +1,9 @@
 extends Node
 
 @onready var player = %Player
-@onready var score: Score = %Score
 @onready var ground: Ground = %Ground
 @onready var coin_manager: CoinManager = %CoinManager
-
-var value: int
+@onready var next_coin_label: NextCoinLabel = $"../UI/HBoxContainer/NextCoinLabel"
 
 func _ready() -> void:
 	
@@ -15,16 +13,21 @@ func _ready() -> void:
 	##Coins
 	await coin_manager.spawn_random_coin()
 	
-	score.total = coin_manager.total_coins.size()
-	for coin in coin_manager.total_coins:
-		score.total_points += coin.coin_resource.value
-		
+	next_coin_label.next_coin_number = coin_manager.total_coins[-1].number
+	next_coin_label.text = str("Find Coin: ", next_coin_label.next_coin_number)
 
 	EventBus.coin_collected.connect(on_coin_collected)
 	
 
-func on_coin_collected(collectable_value: int) -> void:
-	score.total -= 1 
-	EventBus.score_updated.emit(collectable_value)
+func on_coin_collected(number: int) -> void:
+	## Check if the coin that is collected is the correct number
+	## If it isnt, alert the nearest enemies
+	if number != next_coin_label.next_coin_number:
+		print("Wrong Number!!! ", number)
+		print("Alert, Alert!!!")
+	## Chase the player
+	## If it is, change the next number to e found to one lest than the previous one
+	next_coin_label.next_coin_number = coin_manager.total_coins[-1].number
+	print(next_coin_label.next_coin_number)
 
 	
