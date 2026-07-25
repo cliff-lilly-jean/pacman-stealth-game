@@ -31,8 +31,9 @@ func on_coin_collected(number: int) -> void:
 	if number != next_coin.next_coin_number:
 		print("Wrong Number!!! ", number)
 		print("Alert, Alert!!!")
-
-	next_coin.next_coin_number = coin_manager.total_coins[-1].number
+	
+	EventBus.next_coin_collected.emit()
+	#next_coin.next_coin_number = coin_manager.total_coins[-1].number
 	print(next_coin.next_coin_number)
 
 	

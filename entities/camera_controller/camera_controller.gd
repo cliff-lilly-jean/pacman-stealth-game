@@ -1,17 +1,22 @@
 class_name CameraController extends SpringArm3D
 
-const max_look_down_angle: float = deg_to_rad(65)
-const max_look_up_angle: float = deg_to_rad(-25)
+const max_look_down_angle: float = deg_to_rad(10)
+const max_look_up_angle: float = deg_to_rad(-45)
 
 @export var mouse_sensitivity: float
 @export var joystick_sensitivity: float
 @export var length: float
+@export var smoothing: float
 @export var entity: Player
 
-@onready var camera: Camera3D = $Camera3D
+@onready var camera_target: Node3D = $CameraTarget
+@onready var camera: Camera3D = $CameraTarget/Camera3D
 
 func _ready() -> void:
 	spring_length = length
+
+func _process(delta: float) -> void:
+	camera.position = lerp(camera.position, camera_target.position, delta * smoothing)
 
 func _physics_process(delta: float) -> void:
 	joystick_rotation(delta)
