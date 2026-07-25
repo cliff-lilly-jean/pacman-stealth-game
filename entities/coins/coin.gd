@@ -14,7 +14,7 @@ func _ready() -> void:
 	destroy_wait_timer.timeout.connect(on_timeout)
 
 func _process(delta: float) -> void:
-	rotation.y += 6 * delta
+	mesh.rotation.y += 6 * delta
 
 func on_body_entered(body: Node3D) -> void:
 	if body is Player:
