@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://cmlpokmyed144" path="res://ui/next_coin_label.gd" id="1_acav6"]
 
 [node name="NextCoinLabel" type="Label" unique_id=1047503440]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 1920.0
+offset_bottom = 42.0
 text = "Find Coin: "
 label_settings = ExtResource("1_23q7d")
 script = ExtResource("1_acav6")

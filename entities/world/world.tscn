@@ -265,21 +265,26 @@ mesh_library = ExtResource("5_v5dby")
 [node name="UI" type="Node" parent="." unique_id=1292583648]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=1654080041]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1925.0
+offset_bottom = 52.0
 theme_override_constants/separation = 8
+alignment = 1
 
 [node name="GameTimerContainer" type="MarginContainer" parent="UI/HBoxContainer" unique_id=444811087]
 layout_mode = 2
-theme_override_constants/margin_left = 600
+theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
 [node name="GameTimeLabel" parent="UI/HBoxContainer/GameTimerContainer" unique_id=1800577191 instance=ExtResource("8_ftcbs")]
 layout_mode = 2
+text = ""
 game_time_in_seconds = 120.0
 
-[node name="NextCoinLabel" parent="UI/HBoxContainer" unique_id=1047503440 instance=ExtResource("9_rxgam")]
+[node name="NextCoinLabel" parent="UI" unique_id=1047503440 instance=ExtResource("9_rxgam")]
 unique_name_in_owner = true
-layout_mode = 2
+offset_left = 1194.0
+offset_top = 5.0
+offset_right = 1345.0
+offset_bottom = 47.0
