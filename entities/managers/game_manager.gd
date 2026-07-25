@@ -21,19 +21,12 @@ func _ready() -> void:
 	
 
 func on_coin_collected(number: int) -> void:
-	## Check if numer is equal to the Next Coin number
+	## Check if number is equal to the Next Coin number
 	## Subtract x seconds from the Game Time if number is not equal to the Next Coin number
 	## Alert Enemies in x radius
 	## Chase the Player
 	## Change the Next Coin Label messsage
 	## Update the Next coin number
-	
-	if number != next_coin.next_coin_number:
-		print("Wrong Number!!! ", number)
-		print("Alert, Alert!!!")
-	
 	EventBus.next_coin_collected.emit()
-	#next_coin.next_coin_number = coin_manager.total_coins[-1].number
-	print(next_coin.next_coin_number)
 
 	
