@@ -7,8 +7,8 @@
 radius = 0.33801916
 
 [sub_resource type="LabelSettings" id="LabelSettings_gy3dp"]
-font_size = 75
-outline_size = 10
+font_size = 150
+outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7capw"]
@@ -33,11 +33,11 @@ one_shot = true
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=374090022]
 transparent_bg = true
-size = Vector2i(100, 100)
+size = Vector2i(200, 200)
 
 [node name="Label" type="Label" parent="SubViewport" unique_id=2011867531]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(200, 200)
 offset_right = 40.0
 offset_bottom = 42.0
 text = "1"
@@ -46,5 +46,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1284821196]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+billboard = 1
 texture = SubResource("ViewportTexture_7capw")
