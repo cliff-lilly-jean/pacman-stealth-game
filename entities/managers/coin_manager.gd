@@ -64,3 +64,18 @@ func get_new_spawn_point() -> void:
 	var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
 	var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
 	coin_placement_point = Vector3(random_x_point, 1, random_z_point)
+
+func remove_coin_by_number(number: int) -> void:
+	for coin in total_coins:
+		if coin.number == number:
+			total_coins.erase(coin)
+			return
+
+func get_highest_coin_number() -> int:
+	var highest_number: int = 0
+	
+	for coin in total_coins:
+		if coin.number > highest_number:
+			highest_number = coin.number
+	
+	return highest_number

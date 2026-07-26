@@ -15,31 +15,45 @@ func _ready() -> void:
 	##Coins
 	await coin_manager.spawn_random_coin()
 	
-	next_coin.next_coin_number = coin_manager.total_coins[-1].number
+	next_coin.next_coin_number = (
+		coin_manager.get_highest_coin_number()
+	)
 	next_coin.text = str("Find Coin: ", next_coin.next_coin_number)
 
 	EventBus.coin_collected.connect(on_coin_collected)
 	
 
 func on_coin_collected(number: int) -> void:
-	## Check if number is equal to the Next Coin number
-	if number != next_coin.next_coin_number:
+	var is_correct_coin: bool = (
+		number == next_coin.next_coin_number
+	)
+	
+	## Remove the collected coin from the array.
+	coin_manager.remove_coin_by_number(number)
+	
+	print("Collected coin: ", number)
+	print("Coins remaining: ", coin_manager.total_coins.size())
+	
+	if not is_correct_coin:
 		print("Incorrect number")
-		var incorrect_number_in_array = coin_manager.total_coins.find(number)
-		coin_manager.total_coins.remove_at(incorrect_number_in_array)
-		print(coin_manager.total_coins)
-		## Subtract x seconds from the Game Time if number is not equal to the Next Coin number
+		
 		game_time.game_time_in_seconds -= 30
-		## Alert Enemies in x radius
+		
 		print("Alerting closest enemies")
-		## Chase the Player
 		print("Chasing the Player")
-	else:
-		## Change the Next Coin Label messsage
-		## Update the Next coin number
-		var correct_number_in_array = coin_manager.total_coins.find(number)
-		coin_manager.total_coins.remove_at(correct_number_in_array)
-		var new_next_number = coin_manager.total_coins.max()
-		EventBus.next_coin_collected.emit(new_next_number)
+	
+	## No coins remain.
+	if coin_manager.total_coins.is_empty():
+		next_coin.next_coin_number = 0
+		next_coin.text = "All coins collected!"
+		return
+	
+	## Find the highest number still left in the array.
+	var new_next_number: int = (
+		coin_manager.get_highest_coin_number()
+	)
+	
+	EventBus.next_coin_collected.emit(new_next_number)
+		
 
 	
