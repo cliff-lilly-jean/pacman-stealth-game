@@ -1,4 +1,4 @@
-extends Label
+class_name GameTime extends Label
 
 @export var game_time_in_seconds: float
 @onready var timer: Timer = $Timer

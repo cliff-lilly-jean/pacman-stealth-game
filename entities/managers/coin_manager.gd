@@ -13,8 +13,6 @@ func _ready() -> void:
 	spawn_area_length = ground.length
 	spawn_area_width = ground.width
 	
-	#spawn_random_coin()
-	
 func spawn_random_coin() -> void:
 	
 	while total_coins.size() < coin_count:
@@ -42,8 +40,6 @@ func spawn_random_coin() -> void:
 			total_coins[i].number = i + 1
 			total_coins[i].label.text = str(i + 1)
 	
-		
-
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
