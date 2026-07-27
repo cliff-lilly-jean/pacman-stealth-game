@@ -3,6 +3,7 @@ class_name CoinManager extends Node3D
 @export var ground: Ground
 @export var coin_count: int
 @export var coins: Array[PackedScene]
+@export var navigation_area: NavigationRegion3D
 
 var spawn_area_length: float
 var spawn_area_width : float
@@ -61,9 +62,13 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	return collisions.is_empty()
 
 func get_new_spawn_point() -> void:
-	var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
-	var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
-	coin_placement_point = Vector3(random_x_point, 1, random_z_point)
+	#var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
+	#var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
+	#coin_placement_point = Vector3(random_x_point, 1, random_z_point)
+	var map_rid: RID = navigation_area.get_navigation_map()
+	
+	coin_placement_point = NavigationServer3D.map_get_random_point(map_rid, 1, true)
+	coin_placement_point.y += 1.0
 
 func remove_coin_by_number(number: int) -> void:
 	for coin in total_coins:

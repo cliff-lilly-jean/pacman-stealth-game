@@ -41,12 +41,13 @@ script = ExtResource("2_v5dby")
 script = ExtResource("2_j2gmx")
 metadata/_custom_type_script = "uid://bfelp8pqnqxx6"
 
-[node name="CoinManager" type="Node3D" parent="." unique_id=117975069 node_paths=PackedStringArray("ground")]
+[node name="CoinManager" type="Node3D" parent="." unique_id=117975069 node_paths=PackedStringArray("ground", "navigation_area")]
 unique_name_in_owner = true
 script = ExtResource("3_1yooq")
 ground = NodePath("../NavigationRegion3D/Ground")
 coin_count = 5
 coins = Array[PackedScene]([ExtResource("5_dlabj")])
+navigation_area = NodePath("../NavigationRegion3D")
 metadata/_custom_type_script = "uid://bti04ut4yohbc"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=555215087]
