@@ -1,7 +1,7 @@
 class_name CoinManager extends Node3D
 
 @export var ground: Ground
-@export var coin_count: int
+@export var coin_count: int ## Amount of coins to be spawned in a level
 @export var coins: Array[PackedScene]
 @export var navigation_area: NavigationRegion3D
 
@@ -18,7 +18,8 @@ func _ready() -> void:
 	await _wait_for_navigation_ready()
 	
 	spawn_random_coin()
-	
+
+## Spawns a coin in a random position, if the position is blocked it chooses another one
 func spawn_random_coin() -> void:
 	if _is_spawning:
 		push_warning("CoinManager: spawn_random_coin() called while already spawning — ignoring duplicate call.")
@@ -49,7 +50,7 @@ func spawn_random_coin() -> void:
 	print(total_coins[0].global_position)
 	_is_spawning = false
 
-	
+## CHecks if a spawn area isnt hindered by any obstacles preventing the coin from loading in
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
@@ -70,21 +71,23 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	
 	return collisions.is_empty()
 
+## Uses the navigation region to cdecide the available areas that a coin can spawn
 func get_new_spawn_point() -> Vector3:
 	var map_rid: RID = navigation_area.get_navigation_map()
 	
 	coin_placement_point = NavigationServer3D.map_get_random_point(map_rid, 1, true)
-	coin_placement_point.y += 0.5
+	coin_placement_point.y += 0
 	
-	print("Trying nav point: ", coin_placement_point)
 	return coin_placement_point
 
+## Removes the coin by its number instead of by its index in teh array
 func remove_coin_by_number(number: int) -> void:
 	for coin in total_coins:
 		if coin.number == number:
 			total_coins.erase(coin)
 			return
 
+## Determines which is the next highest number to search for
 func get_highest_coin_number() -> int:
 	var highest_number: int = 0
 	
@@ -94,6 +97,7 @@ func get_highest_coin_number() -> int:
 	
 	return highest_number
 
+## Gets a suitable point for the coin to spwan
 func get_clear_spawn_point() -> Vector3:
 	const MAX_ATTEMPTS: int = 300
 	var point: Vector3 = Vector3.ZERO
@@ -107,7 +111,7 @@ func get_clear_spawn_point() -> Vector3:
 	push_warning("CoinManager: couldn't find a clear spot after %d tries!" % MAX_ATTEMPTS)
 	return point
 		
-	
+## Waits for the navigation region to be ready 
 func _wait_for_navigation_ready() -> void:
 	var map_rid: RID = navigation_area.get_navigation_map()
 	
