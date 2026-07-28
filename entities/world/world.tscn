@@ -89,7 +89,7 @@ size = Vector3(3, 11, 10)
 material = SubResource("StandardMaterial3D_bq33v")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/Structures" unique_id=881062180]
-transform = Transform3D(0.89951897, -0.43301257, 0.058012582, 0.056035824, -0.01733756, -0.99827814, 0.43327275, 0.9012208, 0.00866884, -11.482051, 3.9544249, -2.2504282)
+transform = Transform3D(0.89951897, -0.43301257, 0.058012582, 0.056035824, -0.01733756, -0.99827814, 0.43327275, 0.9012208, 0.00866884, -11.482051, 2.9544249, -2.2504282)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
@@ -153,7 +153,7 @@ size = Vector3(4, 20, 7)
 material = SubResource("StandardMaterial3D_bq33v")
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="NavigationRegion3D/Structures" unique_id=1016626055]
-transform = Transform3D(0.56237006, -0.82561046, 0.045905955, 0.05603581, -0.017337563, -0.99827796, 0.8249849, 0.5639738, 0.036513735, 16.95415, 9.304804, -1.0647497)
+transform = Transform3D(0.56237006, -0.82561046, 0.045905955, 0.05603581, -0.017337563, -0.99827796, 0.8249849, 0.5639738, 0.036513735, 16.95415, 8.304804, -1.0647497)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
@@ -169,7 +169,7 @@ size = Vector3(4, 21, 7)
 material = SubResource("StandardMaterial3D_bq33v")
 
 [node name="CSGBox3D22" type="CSGBox3D" parent="NavigationRegion3D/Structures" unique_id=770684984]
-transform = Transform3D(-0.09232702, 0.71723545, 0.6906872, 0.013080438, -0.69271636, 0.7210911, 0.99564314, 0.07561041, 0.054574806, 26.646442, 9.881962, 30.379112)
+transform = Transform3D(-0.09232702, 0.71723545, 0.6906872, 0.013080438, -0.69271636, 0.7210911, 0.99564314, 0.07561041, 0.054574806, 26.646442, 8.881962, 30.379112)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
@@ -241,7 +241,7 @@ size = Vector3(14, 6, 10)
 material = SubResource("StandardMaterial3D_bq33v")
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="NavigationRegion3D/Structures" unique_id=2127440952]
-transform = Transform3D(0.89951926, -0.43301272, 0.058012597, 0.05603582, -0.01733757, -0.9982781, 0.4332728, 0.90122104, 0.008668855, 34.594357, 1.3307686, 32.687157)
+transform = Transform3D(0.89951926, -0.43301272, 0.058012597, 0.05603582, -0.01733757, -0.9982781, 0.4332728, 0.90122104, 0.008668855, 34.594357, 0.3307686, 32.687157)
 use_collision = true
 collision_layer = 2
 collision_mask = 15

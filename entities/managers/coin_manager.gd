@@ -9,43 +9,52 @@ var spawn_area_length: float
 var spawn_area_width : float
 var total_coins: Array[Coin] = []
 var coin_placement_point: Vector3
+var _is_spawning: bool = false
 
 func _ready() -> void:
+	randomize()
 	spawn_area_length = ground.length
 	spawn_area_width = ground.width
+	await _wait_for_navigation_ready()
+	
+	spawn_random_coin()
 	
 func spawn_random_coin() -> void:
+	if _is_spawning:
+		push_warning("CoinManager: spawn_random_coin() called while already spawning — ignoring duplicate call.")
+		return
+	_is_spawning = true
 	
 	while total_coins.size() < coin_count:
-			
-		get_new_spawn_point()
-	
-		if not is_spawn_position_clear(coin_placement_point):
-			get_new_spawn_point()
-			#continue
-		
-		var coin: Coin = coins.pick_random().instantiate() as Coin
+		var spawn_point: Vector3 = await get_clear_spawn_point()
+
+		var scene: PackedScene = coins.pick_random()
+		if scene == null:
+			continue
+
+		var coin: Coin = scene.instantiate() as Coin
 		if coin == null:
 			continue
-			
-		## Add the coin to the world
+
 		add_child(coin)
-		coin.global_position = coin_placement_point
-		
-		
+		coin.global_position = spawn_point
 		total_coins.append(coin)
-		
+
 		await get_tree().physics_frame
-		
+
 		for i in total_coins.size():
 			total_coins[i].number = i + 1
 			total_coins[i].label.text = str(i + 1)
+	
+	print(total_coins[0].global_position)
+	_is_spawning = false
+
 	
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
 	var check_shape: SphereShape3D = SphereShape3D.new()
-	check_shape.radius = 1.0
+	check_shape.radius = 5.0
 	
 	var query: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 	query.shape = check_shape
@@ -53,22 +62,22 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	query.collide_with_bodies = true
 	query.collide_with_areas = true
 	
-	## Check layers 1,2.
+	## Check layers 1,2,3.
 	## Ignore on layers 4.
 	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2)
 	
-	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 32)
+	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 8)
 	
 	return collisions.is_empty()
 
-func get_new_spawn_point() -> void:
-	#var random_x_point: float = randf_range(-spawn_area_length / 2.0, spawn_area_length / 2.0)
-	#var random_z_point: float = randf_range(-spawn_area_width / 2.0, spawn_area_width / 2.0)
-	#coin_placement_point = Vector3(random_x_point, 1, random_z_point)
+func get_new_spawn_point() -> Vector3:
 	var map_rid: RID = navigation_area.get_navigation_map()
 	
 	coin_placement_point = NavigationServer3D.map_get_random_point(map_rid, 1, true)
-	coin_placement_point.y += 1.0
+	coin_placement_point.y += 0.5
+	
+	print("Trying nav point: ", coin_placement_point)
+	return coin_placement_point
 
 func remove_coin_by_number(number: int) -> void:
 	for coin in total_coins:
@@ -84,3 +93,34 @@ func get_highest_coin_number() -> int:
 			highest_number = coin.number
 	
 	return highest_number
+
+func get_clear_spawn_point() -> Vector3:
+	const MAX_ATTEMPTS: int = 300
+	var point: Vector3 = Vector3.ZERO
+	
+	for attempt in MAX_ATTEMPTS:
+		point = get_new_spawn_point()
+		if is_spawn_position_clear(point):
+			return point
+		await get_tree().physics_frame
+	
+	push_warning("CoinManager: couldn't find a clear spot after %d tries!" % MAX_ATTEMPTS)
+	return point
+		
+	
+func _wait_for_navigation_ready() -> void:
+	var map_rid: RID = navigation_area.get_navigation_map()
+	
+	# The map's "iteration id" stays at 0 until it's synced once.
+	while NavigationServer3D.map_get_iteration_id(map_rid) == 0:
+		await get_tree().physics_frame
+		
+	# ...AND wait for the map to actually contain registered regions.
+	while NavigationServer3D.map_get_regions(map_rid).is_empty():
+		await get_tree().physics_frame
+	
+	# One more frame of breathing room, for good measure.
+	await get_tree().physics_frame
+
+	print("CoinManager: navigation map confirmed ready with ", 
+		NavigationServer3D.map_get_regions(map_rid).size(), " region(s).")

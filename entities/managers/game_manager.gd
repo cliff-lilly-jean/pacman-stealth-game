@@ -13,7 +13,7 @@ func _ready() -> void:
 	await get_tree().physics_frame
 	
 	##Coins
-	await coin_manager.spawn_random_coin()
+	#await coin_manager.spawn_random_coin()
 	
 	next_coin.next_coin_number = (
 		coin_manager.get_highest_coin_number()
