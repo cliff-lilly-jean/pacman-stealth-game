@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://lcltynesgeps"]
+
+[ext_resource type="PackedScene" uid="uid://bqxxbveylsx7g" path="res://assets/kenny-platformer-kit/block-grass-hexagon.glb" id="1_kkr8p"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pvri4"]
+points = PackedVector3Array(0.55, 0.8749021, 0.31741828, -0.00010764599, 0.8749021, 0.63508517, 0.4999315, 0, 0.28857338, 0.55, 0.8749021, -0.31766692, 0.4999315, 1, 0.28857338, -0.00010764599, 1, 0.57727104, -0.50003916, 1, 0.28857338, -0.55, 0.8749021, 0.31741828, -0.50003916, 0, 0.28857338, -0.00010764599, 0, 0.57727104, 0.4999315, 0, -0.28869766, 0.4999315, 1, -0.28869766, -0.00010764599, 0, -0.5773954, -0.00010764599, 0.8749021, -0.63508517, -0.00010764599, 1, -0.5773954, -0.50003916, 1, -0.28869766, -0.55, 0.8749021, -0.31766692, -0.50003916, 0, -0.28869766)
+
+[node name="block-grass-hexagon2" unique_id=987405869 instance=ExtResource("1_kkr8p")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-grass-hexagon" parent_id_path=PackedInt32Array(1481459199) index="0" unique_id=2018042983]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-hexagon/StaticBody3D" index="0" unique_id=1669549084]
+shape = SubResource("ConvexPolygonShape3D_pvri4")

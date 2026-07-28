@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://clxo5dt7dvirn"]
+
+[ext_resource type="PackedScene" uid="uid://c0718ru8w20mi" path="res://assets/kenny-platformer-kit/trap-spikes.glb" id="1_nia0b"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w33ox"]
+points = PackedVector3Array(-0.32045037, -9.002736e-18, -0.31875, -0.32045037, -9.002736e-18, -0.063775, -0.30136696, 0.085, -0.29965496, -0.06548351, -9.002736e-18, -0.31875, -0.31876102, -9.002736e-18, 0.31319615, -0.2996776, 0.085, 0.2941011, -0.30136696, 0.085, -0.08293244, -0.084629506, 0.085, -0.29965496, 0.316998, -9.002736e-18, -0.31332102, 0.063720524, -9.002736e-18, 0.31874993, 0.08286652, 0.085, 0.29959247, 0.29791462, 0.085, -0.29416355, 0.31874996, -9.002736e-18, 0.06371251, 0.31874996, -9.002736e-18, 0.31874993, 0.29960394, 0.085, 0.29959247, 0.29960394, 0.085, 0.08286995)
+
+[node name="trap-spikes2" unique_id=1761286509 instance=ExtResource("1_nia0b")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="trap-spikes" parent_id_path=PackedInt32Array(1800538386) index="1" unique_id=1569218066]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trap-spikes/StaticBody3D" index="0" unique_id=2091099392]
+shape = SubResource("ConvexPolygonShape3D_w33ox")

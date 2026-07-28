@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://jtc2iqb5yy5a"]
+
+[ext_resource type="PackedScene" uid="uid://01emerw8ronw" path="res://assets/kenny-platformer-kit/block-moving.glb" id="1_sf8n2"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_saf20"]
+points = PackedVector3Array(-0.40005875, 0, -0.5, -0.46838292, 0, -0.46838292, -0.40005875, 0.3, -0.5, 0.39996088, 0, -0.5, -0.5, 0, -0.40005875, -0.46838292, 0.3, -0.46838292, 0.39996088, 0.3, -0.5, 0.46828502, 0, -0.46838292, -0.5, 0.3, -0.40005875, -0.5, 0, 0.39996088, 0.46828502, 0.3, -0.46838292, 0.5, 0, -0.40005875, -0.5, 0.3, 0.39996088, -0.46838292, 0, 0.46828502, 0.5, 0.3, -0.40005875, 0.5, 0, 0.39996088, -0.46838292, 0.3, 0.46828502, -0.40005875, 0, 0.5, 0.5, 0.3, 0.39996088, 0.46828502, 0, 0.46828502, -0.40005875, 0.3, 0.5, 0.39996088, 0, 0.5, 0.46828502, 0.3, 0.46828502, 0.39996088, 0.3, 0.5)
+
+[node name="block-moving2" unique_id=1516206963 instance=ExtResource("1_sf8n2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-moving" parent_id_path=PackedInt32Array(886493647) index="0" unique_id=1447191339]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-moving/StaticBody3D" index="0" unique_id=1991734110]
+shape = SubResource("ConvexPolygonShape3D_saf20")
