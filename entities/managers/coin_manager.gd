@@ -5,16 +5,15 @@ class_name CoinManager extends Node3D
 @export var coins: Array[PackedScene]
 @export var navigation_area: NavigationRegion3D
 
-var spawn_area_length: float
-var spawn_area_width : float
+#var spawn_area_length: float
+#var spawn_area_width : float
 var total_coins: Array[Coin] = []
 var coin_placement_point: Vector3
 var _is_spawning: bool = false
 
 func _ready() -> void:
-	randomize()
-	spawn_area_length = ground.length
-	spawn_area_width = ground.width
+	#spawn_area_length = ground.length
+	#spawn_area_width = ground.width
 	await _wait_for_navigation_ready()
 	
 	spawn_random_coin()
@@ -55,7 +54,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
 	var check_shape: SphereShape3D = SphereShape3D.new()
-	check_shape.radius = 5.0
+	check_shape.radius = 30.0
 	
 	var query: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 	query.shape = check_shape
@@ -76,7 +75,6 @@ func get_new_spawn_point() -> Vector3:
 	var map_rid: RID = navigation_area.get_navigation_map()
 	
 	coin_placement_point = NavigationServer3D.map_get_random_point(map_rid, 1, true)
-	coin_placement_point.y += 0
 	
 	return coin_placement_point
 
