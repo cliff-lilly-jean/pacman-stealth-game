@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ljc58077ghtr"]
+
+[ext_resource type="PackedScene" uid="uid://vhhtw6ankejx" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Book/Book_01.glb" id="1_ranrb"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cb2pl"]
+points = PackedVector3Array(-0.0381, -0.10353057, -0.1253815, 0.018145602, 0.19796574, 0.14311273, 0.036926348, 0.19666295, 0.13246538, 0.018145602, -0.107765764, 0.14311273, 0.03795928, -0.1106264, -0.1317, 0.033098068, 0.20079589, -0.1317, -0.0381, 0.19373055, 0.12539846, -0.0381, 0.19373055, -0.1253815, -0.0381, -0.10353057, 0.12539846, 0.036920015, -0.106467314, 0.13246897, -0.019918557, -0.10663719, 0.14210759, 0.037959278, 0.20079589, -0.1317, -0.019918557, 0.19683716, 0.14210759, 0.0381, -0.08185275, 0.004514604, -0.029282022, 0.19620147, 0.13679917, -0.029282022, -0.10600149, 0.13679917, 0.033098068, -0.07648789, -0.1317)
+
+[node name="Book_012" unique_id=1561163002 instance=ExtResource("1_ranrb")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Book_01" parent_id_path=PackedInt32Array(1651300724) index="0" unique_id=1298221948]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Book_01/StaticBody3D" index="0" unique_id=1895740991]
+shape = SubResource("ConvexPolygonShape3D_cb2pl")

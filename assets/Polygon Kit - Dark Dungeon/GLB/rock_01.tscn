@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xvn88j271p2h"]
+
+[ext_resource type="PackedScene" uid="uid://bapa1julfi7q8" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Rock/Rock_01.glb" id="1_h78lh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bkaa6"]
+points = PackedVector3Array(0.07571691, 1.0380167, 0.0676676, 0.017604709, 0.95744234, -0.23992977, -0.12934202, 0.9948337, 0.31467617, 0.46281904, 0.9035907, 0.03224501, 0.43657482, 0.68178266, -0.1857987, 0.45896572, 0, -0.44553283, -0.3514805, 0.4012459, -0.43983483, -0.24212962, 0.65241826, -0.3541748, -0.3095106, 0.68432283, -0.21647298, 0.020833194, 0.42370102, 0.44535047, 0.51135, 0.29821643, 0.33148533, -0.48343056, 0.31752175, -0.27554232, -0.48645073, 0.18461984, 0.057031333, -0.40563524, 0.17090291, 0.34506553, -0.1957857, 0, 0.5224635, 0.5774812, 0.1986416, -0.20393737, -0.0015577078, 0.16165668, -0.44771707, 0.4732334, 0, 0.012871772, -0.29316002, 0, -0.393586, 0.4360541, 0, 0.4186648, -0.2760805, 0, 0.09872174)
+
+[node name="Rock_012" unique_id=1315586160 instance=ExtResource("1_h78lh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_01" parent_id_path=PackedInt32Array(1112653139) index="0" unique_id=1993380303]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_01/StaticBody3D" index="0" unique_id=103004744]
+shape = SubResource("ConvexPolygonShape3D_bkaa6")

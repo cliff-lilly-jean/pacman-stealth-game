@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://drxftaxhfggvc"]
+
+[ext_resource type="PackedScene" uid="uid://buc8f1nteecde" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Furniture/Furnitur_Chair_01.glb" id="1_djo5t"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lug6d"]
+points = PackedVector3Array(-0.30109432, 0.0076333275, -0.36292082, -0.32084906, 1.0071001, -0.33604828, 0.3951667, 0.98688865, -0.16712713, 0.33458003, 0.008468469, -0.34676728, -0.29673803, 0.52027714, 0.2832931, 0.33795565, 1.0053008, -0.33483922, 0.31469375, 0.52027714, 0.2832931, -0.36114603, 0.98688865, -0.16712713, -0.34575495, 0.010310424, 0.31814224, 0.34584934, 0.014824615, 0.3152513, -0.34716094, 0.008396049, -0.31580457, 0.30309087, 0.009423212, -0.36160624, 0.34725192, 0.012737046, -0.31302392, 0.33309323, 0.010789645, 0.3487702, -0.33439377, 0.0044491566, -0.34959328, -0.29790223, 0.012616754, 0.36289567, -0.33121264, 0.008973661, 0.35004702, 0.30010357, 0.014590252, 0.36144626, 0.3951667, 0.9547329, -0.16712713, 0.37912443, 0.966414, -0.22156604)
+
+[node name="Furnitur_Chair_012" unique_id=626549407 instance=ExtResource("1_djo5t")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitur_Chair_01" parent_id_path=PackedInt32Array(294518489) index="0" unique_id=279560431]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitur_Chair_01/StaticBody3D" index="0" unique_id=1395519917]
+shape = SubResource("ConvexPolygonShape3D_lug6d")

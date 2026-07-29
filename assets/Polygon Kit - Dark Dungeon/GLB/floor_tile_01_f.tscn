@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://0kl8sv4jd3fc"]
+
+[ext_resource type="PackedScene" uid="uid://cx81jykalit8t" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Floor Tile/Floor_Tile_01_F.glb" id="1_65ilm"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vov2b"]
+points = PackedVector3Array(1.9044636, -0.069621176, 2.0317461, -2.0317461, 0.057313234, -2.0317461, 2.0317461, 0.057313234, -2.0317461, -2.0317461, 0.057313234, 2.0317461, -2.0317461, -0.069621176, -1.9044636, 1.9044636, -0.069621176, -2.0317461, 2.0317461, 0.057313234, 2.0317461, -2.0317461, -0.069621176, 1.9044636, 2.0317461, -0.069621176, -1.9044636, -1.9044636, -0.069621176, -2.0317461, -1.9044636, -0.069621176, 2.0317461, 2.0317461, -0.069621176, 1.9044636)
+
+[node name="Floor_Tile_01_F2" unique_id=2055621031 instance=ExtResource("1_65ilm")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_Tile_01_F" parent_id_path=PackedInt32Array(1188682108) index="0" unique_id=1122926783]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_Tile_01_F/StaticBody3D" index="0" unique_id=709643716]
+shape = SubResource("ConvexPolygonShape3D_vov2b")

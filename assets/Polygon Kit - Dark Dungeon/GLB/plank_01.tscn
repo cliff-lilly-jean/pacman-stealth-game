@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://djglqirvhdc4n"]
+
+[ext_resource type="PackedScene" uid="uid://b6qv4cp8wcvta" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Plank/Plank_01.glb" id="1_58qyh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_his3y"]
+points = PackedVector3Array(-0.2346575, -0.0838878, -0.098115705, -0.2346575, -0.05362059, -0.098115705, 1.3343997, -0.0838878, -0.098115705, -0.24036092, -0.0838878, 0.074284814, -0.23619896, 0.0778328, -0.06147891, -0.18502232, 0.0778328, -0.098115705, 1.3343997, 0.0778328, -0.098115705, 1.3343997, -0.0838878, 0.074284814, -0.24036092, 0.0778328, 0.074284814, 1.3343997, 0.0778328, 0.074284814)
+
+[node name="Plank_012" unique_id=212838895 instance=ExtResource("1_58qyh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plank_01" parent_id_path=PackedInt32Array(1073894863) index="0" unique_id=769519349]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plank_01/StaticBody3D" index="0" unique_id=1359132458]
+shape = SubResource("ConvexPolygonShape3D_his3y")

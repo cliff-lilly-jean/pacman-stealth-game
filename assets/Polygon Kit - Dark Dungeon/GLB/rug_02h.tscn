@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://die7epikmiipq"]
+
+[ext_resource type="PackedScene" uid="uid://crpwc6lyqff6" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Rug/Rug_02H.glb" id="1_5g6vq"]
+
+[node name="Rug_02H2" unique_id=1976325674 instance=ExtResource("1_5g6vq")]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c8b34hgmhx3ey"]
+
+[ext_resource type="PackedScene" uid="uid://cl20lbaf8n18f" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Floor Tile/Floor_O_Sand_01A.glb" id="1_tfhrh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4vihe"]
+points = PackedVector3Array(-2.0317461, -0.031683907, -2.0317461, -2.0317461, -0.031683907, 2.0317461, 2.0317461, -0.031683907, -2.0317461, 2.0317461, -0.031683907, 2.0317461, -1.3965272, 0.22217873, -0.50793654, 0.31741062, 0.28565216, 0.50793654, 2.0317461, 0.03178951, -2.0317461, -2.0317461, 0.03178951, 2.0317461, 2.0317461, 0.03178951, 2.0317461, -2.0317461, 0.03178951, -2.0317461, 0.57118, 0.28565216, 0.19012816, -0.57118, 0.22217873, -0.76170594, 0.8885906, 0.095262945, -1.7139378, -1.3965272, 0.22217873, -0.19012816, -1.9044636, 0.095262945, 0.31741062, -1.0158731, 0.22217873, -0.76170594, 0, 0.22217873, -0.6980647, 0.19012816, 0.28565216, 0.4442953, -0.06324346, 0.095262945, -1.7139378, 0.50793654, 0.28565216, 0.1268847, -1.9044636, 0.095262945, -0.4442953, -1.2060012, 0.22217873, -0.6980647, 0.38065407, 0.28565216, 0.1268847)
+
+[node name="Floor_O_Sand_01A2" unique_id=1395445599 instance=ExtResource("1_tfhrh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_O_Sand_01A" parent_id_path=PackedInt32Array(2115514125) index="0" unique_id=1904555809]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_O_Sand_01A/StaticBody3D" index="0" unique_id=730800401]
+shape = SubResource("ConvexPolygonShape3D_4vihe")

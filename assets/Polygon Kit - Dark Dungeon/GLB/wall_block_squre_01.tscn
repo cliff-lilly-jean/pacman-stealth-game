@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d3rq10rxmkdr"]
+
+[ext_resource type="PackedScene" uid="uid://4a1255k8gxou" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Wall Extra/Wall_Block_Squre_01.glb" id="1_i81cg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_in8ok"]
+points = PackedVector3Array(2, 3.6850197, 2, -1.9973097, 2.220446e-16, -1.9973097, -1.9973097, 2.220446e-16, 1.9973097, -2, 3.6850197, -2, 1.9973097, 2.220446e-16, -1.9973097, -2, 3.6850197, 2, 2, 3.6850197, -2, 1.9973097, 2.220446e-16, 1.9973097)
+
+[node name="Wall_Block_Squre_012" unique_id=2128593460 instance=ExtResource("1_i81cg")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Block_Squre_01" parent_id_path=PackedInt32Array(661313578) index="0" unique_id=1355882244]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Block_Squre_01/StaticBody3D" index="0" unique_id=715934149]
+shape = SubResource("ConvexPolygonShape3D_in8ok")

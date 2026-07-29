@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://k066bwnrpb8b"]
+
+[ext_resource type="PackedScene" uid="uid://c8kcs6sjyutbr" path="res://assets/Polygon Kit - Dark Dungeon/GLTF/Dungeon Plank/Plank_02.glb" id="1_l65n3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iha0j"]
+points = PackedVector3Array(1.2451229, -0.046878602, -0.1040567, 1.2457403, 0.0060188435, -0.10354419, 1.2483644, 0.0041185655, 0.079961464, 1.2485188, -0.037248496, 0.12670276, 1.2482102, -0.049263418, 0.12657462, -0.028999805, -0.029094703, -0.07886663, -0.3284665, -0.02481718, -0.081916094, -0.32784906, 0.02808027, -0.08137795, -0.05817467, 0.02423428, -0.07866163, 1.2019008, 0.00426998, 0.12972659, -0.31997648, 0.02553647, 0.15773548, -0.023442715, -0.031555228, 0.15601854, -0.32059392, -0.027360981, 0.15719734, -0.022670895, 0.021334648, 0.15655668)
+
+[node name="Plank_022" unique_id=1042470747 instance=ExtResource("1_l65n3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plank_02" parent_id_path=PackedInt32Array(868438740) index="0" unique_id=971482920]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plank_02/StaticBody3D" index="0" unique_id=438027287]
+shape = SubResource("ConvexPolygonShape3D_iha0j")
