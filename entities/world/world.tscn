@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bfelp8pqnqxx6" path="res://entities/managers/input_manager.gd" id="2_j2gmx"]
 [ext_resource type="Script" uid="uid://by8l4g4wegkcw" path="res://entities/managers/game_manager.gd" id="2_v5dby"]
 [ext_resource type="Script" uid="uid://bti04ut4yohbc" path="res://entities/managers/coin_manager.gd" id="3_1yooq"]
-[ext_resource type="PackedScene" uid="uid://df8noeoqm8tib" path="res://entities/coins/gold_coin/gold_coin.tscn" id="5_dlabj"]
+[ext_resource type="PackedScene" uid="uid://8wxyb66rltn4" path="res://entities/coins/gold_coin/gold_coin.tscn" id="5_dlabj"]
 [ext_resource type="PackedScene" uid="uid://iri16fwy50ax" path="res://ui/game_time_label.tscn" id="8_ftcbs"]
 [ext_resource type="PackedScene" uid="uid://bfehhlf36knpi" path="res://ui/next_coin_label.tscn" id="9_rxgam"]
 

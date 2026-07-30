@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://b5jw1ar0b4ue7"]
+
+[ext_resource type="PackedScene" uid="uid://bx47pmeau11pk" path="res://assets/Polygon Kit - Dark Dungeon/GLB/archway_big_01.tscn" id="1_s6pe7"]
+[ext_resource type="PackedScene" uid="uid://bsfnqyr7lasgc" path="res://assets/Polygon Kit - Dark Dungeon/GLB/banner_01.tscn" id="2_1bdae"]
+[ext_resource type="PackedScene" uid="uid://bxed01mw8jou0" path="res://assets/Polygon Kit - Dark Dungeon/GLB/barrel_01.tscn" id="3_ow1ei"]
+[ext_resource type="PackedScene" uid="uid://ljc58077ghtr" path="res://assets/Polygon Kit - Dark Dungeon/GLB/book_01.tscn" id="4_qm5kl"]
+[ext_resource type="PackedScene" uid="uid://cr612py7x4bfn" path="res://assets/Polygon Kit - Dark Dungeon/GLB/book_open_01.tscn" id="5_8y8hx"]
+[ext_resource type="PackedScene" uid="uid://b23hrgijxdycy" path="res://assets/Polygon Kit - Dark Dungeon/GLB/candle_01.tscn" id="6_5a7vu"]
+[ext_resource type="PackedScene" uid="uid://ts3e33pnhu82" path="res://assets/Polygon Kit - Dark Dungeon/GLB/cauldron_01.tscn" id="7_urw53"]
+[ext_resource type="PackedScene" uid="uid://byt2yom1m5v1j" path="res://assets/Polygon Kit - Dark Dungeon/GLB/chain_01.tscn" id="8_1rtmv"]
+[ext_resource type="PackedScene" uid="uid://q15e36xq4ga7" path="res://assets/Polygon Kit - Dark Dungeon/GLB/cheast_01.tscn" id="9_4p8bl"]
+[ext_resource type="PackedScene" uid="uid://clq4i7826dbh6" path="res://assets/Polygon Kit - Dark Dungeon/GLB/column_01.tscn" id="10_txcds"]
+[ext_resource type="PackedScene" uid="uid://v3cxomcrgtp7" path="res://assets/Polygon Kit - Dark Dungeon/GLB/crate_01.tscn" id="11_khyy6"]
+[ext_resource type="PackedScene" uid="uid://bq1s44crd4qh0" path="res://assets/Polygon Kit - Dark Dungeon/GLB/crystal_01a.tscn" id="12_g06kv"]
+[ext_resource type="PackedScene" uid="uid://dfywhdrlhsaye" path="res://assets/Polygon Kit - Dark Dungeon/GLB/crystal_02a.tscn" id="13_wih7g"]
+[ext_resource type="PackedScene" uid="uid://5qm1uk6jnq3p" path="res://assets/Polygon Kit - Dark Dungeon/GLB/floor_e_grate_01.tscn" id="14_3lg3a"]
+[ext_resource type="PackedScene" uid="uid://c8b34hgmhx3ey" path="res://assets/Polygon Kit - Dark Dungeon/GLB/floor_o_sand_01a.tscn" id="15_hgx6q"]
+[ext_resource type="PackedScene" uid="uid://0kl8sv4jd3fc" path="res://assets/Polygon Kit - Dark Dungeon/GLB/floor_tile_01_f.tscn" id="16_auwkf"]
+[ext_resource type="PackedScene" uid="uid://drxftaxhfggvc" path="res://assets/Polygon Kit - Dark Dungeon/GLB/furnitur_chair_01.tscn" id="17_wg7gq"]
+[ext_resource type="PackedScene" uid="uid://gfv55wxykon" path="res://assets/Polygon Kit - Dark Dungeon/GLB/furnitur_shelf_01.tscn" id="18_dphmv"]
+[ext_resource type="PackedScene" uid="uid://b6yhdh1ox4u81" path="res://assets/Polygon Kit - Dark Dungeon/GLB/furnitur_table_wooden_01.tscn" id="19_sgth3"]
+[ext_resource type="PackedScene" uid="uid://4ho6aaisp8ww" path="res://assets/Polygon Kit - Dark Dungeon/GLB/gate_wooden_01.tscn" id="20_yqb0n"]
+[ext_resource type="PackedScene" uid="uid://bteudjmwv8f75" path="res://assets/Polygon Kit - Dark Dungeon/GLB/graveyard_coffin_01.tscn" id="21_qihvj"]
+[ext_resource type="PackedScene" uid="uid://bd0wm2edfm14p" path="res://assets/Polygon Kit - Dark Dungeon/GLB/hand_torch_01.tscn" id="22_vebyr"]
+[ext_resource type="PackedScene" uid="uid://cygahfjn1ivdb" path="res://assets/Polygon Kit - Dark Dungeon/GLB/lever_01.tscn" id="23_ffsj6"]
+[ext_resource type="PackedScene" uid="uid://cv3ov3ohtt8nm" path="res://assets/Polygon Kit - Dark Dungeon/GLB/obstacle_gound_socket_01.tscn" id="24_0wasp"]
+[ext_resource type="PackedScene" uid="uid://djglqirvhdc4n" path="res://assets/Polygon Kit - Dark Dungeon/GLB/plank_01.tscn" id="25_0avrq"]
+[ext_resource type="PackedScene" uid="uid://k066bwnrpb8b" path="res://assets/Polygon Kit - Dark Dungeon/GLB/plank_02.tscn" id="26_xwiym"]
+[ext_resource type="PackedScene" uid="uid://c6g8yn86pgdi1" path="res://assets/Polygon Kit - Dark Dungeon/GLB/portcullis_01.tscn" id="27_gk670"]
+[ext_resource type="PackedScene" uid="uid://cmrhm813rxugi" path="res://assets/Polygon Kit - Dark Dungeon/GLB/potion_bottle_02.tscn" id="28_12mkd"]
+[ext_resource type="PackedScene" uid="uid://1ripwnuc0hh1" path="res://assets/Polygon Kit - Dark Dungeon/GLB/potion_bottle_03.tscn" id="29_kci58"]
+[ext_resource type="PackedScene" uid="uid://djyidekgm32it" path="res://assets/Polygon Kit - Dark Dungeon/GLB/pottery_02.tscn" id="30_g457j"]
+[ext_resource type="PackedScene" uid="uid://dshhxvfi14auv" path="res://assets/Polygon Kit - Dark Dungeon/GLB/pottery_03.tscn" id="31_dqy30"]
+[ext_resource type="PackedScene" uid="uid://xvn88j271p2h" path="res://assets/Polygon Kit - Dark Dungeon/GLB/rock_01.tscn" id="32_m481w"]
+[ext_resource type="PackedScene" uid="uid://b0a7i4xxs5l84" path="res://assets/Polygon Kit - Dark Dungeon/GLB/rock_01a.tscn" id="33_tg6lm"]
+[ext_resource type="PackedScene" uid="uid://b17sg2at7twrp" path="res://assets/Polygon Kit - Dark Dungeon/GLB/rock_01b.tscn" id="34_s4mq6"]
+[ext_resource type="PackedScene" uid="uid://bgis48nofldsf" path="res://assets/Polygon Kit - Dark Dungeon/GLB/rock_01c.tscn" id="35_a3cjh"]
+[ext_resource type="PackedScene" uid="uid://bh5r6vh7kh1da" path="res://assets/Polygon Kit - Dark Dungeon/GLB/rock_01d.tscn" id="36_utpwl"]
+[ext_resource type="PackedScene" uid="uid://die7epikmiipq" path="res://assets/Polygon Kit - Dark Dungeon/GLB/rug_02h.tscn" id="37_3yjje"]
+[ext_resource type="PackedScene" uid="uid://cqkvv0qwigvu1" path="res://assets/Polygon Kit - Dark Dungeon/GLB/skeleton_parts_01.tscn" id="38_44x38"]
+[ext_resource type="PackedScene" uid="uid://byqkvbvholl5d" path="res://assets/Polygon Kit - Dark Dungeon/GLB/skeleton_parts_02.tscn" id="39_4jofn"]
+[ext_resource type="PackedScene" uid="uid://1yq0c7ninou0" path="res://assets/Polygon Kit - Dark Dungeon/GLB/stair_full_01.tscn" id="40_dqt67"]
+[ext_resource type="PackedScene" uid="uid://dqr0s4vk8nhu1" path="res://assets/Polygon Kit - Dark Dungeon/GLB/tourch_01.tscn" id="41_07l12"]
+[ext_resource type="PackedScene" uid="uid://d3rq10rxmkdr" path="res://assets/Polygon Kit - Dark Dungeon/GLB/wall_block_squre_01.tscn" id="42_0t3sp"]
+[ext_resource type="PackedScene" uid="uid://bw4ilqt2m48f1" path="res://assets/Polygon Kit - Dark Dungeon/GLB/wall_cornice_01.tscn" id="43_h0cp4"]
+[ext_resource type="PackedScene" uid="uid://5e812rarf7lq" path="res://assets/Polygon Kit - Dark Dungeon/GLB/wall_lamp_01.tscn" id="44_c2bn0"]
+[ext_resource type="PackedScene" uid="uid://d4k8te4qh6tya" path="res://assets/Polygon Kit - Dark Dungeon/GLB/wall_tile_01.tscn" id="45_omr1b"]
+[ext_resource type="PackedScene" uid="uid://bhkwypyshaerw" path="res://assets/Polygon Kit - Dark Dungeon/GLB/wall_tile_archway_01.tscn" id="46_7b40x"]
+[ext_resource type="PackedScene" uid="uid://ba7c128dx0nby" path="res://assets/Polygon Kit - Dark Dungeon/GLB/weapon_axe_01.tscn" id="47_abt1b"]
+[ext_resource type="PackedScene" uid="uid://fcfb5innth0w" path="res://assets/Polygon Kit - Dark Dungeon/GLB/weapon_mace_01.tscn" id="48_4espt"]
+[ext_resource type="PackedScene" uid="uid://dxjkrvm4dqay0" path="res://assets/Polygon Kit - Dark Dungeon/GLB/weapon_rack_a_01.tscn" id="49_hmenl"]
+
+[node name="DarkDungeon" type="Node3D" unique_id=1041246504]
+
+[node name="Archway_Big_012" parent="." unique_id=775830256 instance=ExtResource("1_s6pe7")]
+
+[node name="Banner_012" parent="." unique_id=1941185126 instance=ExtResource("2_1bdae")]
+
+[node name="Barrel_012" parent="." unique_id=1045923884 instance=ExtResource("3_ow1ei")]
+
+[node name="Book_012" parent="." unique_id=1561163002 instance=ExtResource("4_qm5kl")]
+
+[node name="Book_Open_012" parent="." unique_id=1567843170 instance=ExtResource("5_8y8hx")]
+
+[node name="Candle_012" parent="." unique_id=1836499432 instance=ExtResource("6_5a7vu")]
+
+[node name="Cauldron_012" parent="." unique_id=2039375770 instance=ExtResource("7_urw53")]
+
+[node name="Chain_012" parent="." unique_id=519638828 instance=ExtResource("8_1rtmv")]
+
+[node name="Cheast_012" parent="." unique_id=1060712462 instance=ExtResource("9_4p8bl")]
+
+[node name="Column_012" parent="." unique_id=1928810216 instance=ExtResource("10_txcds")]
+
+[node name="Crate_012" parent="." unique_id=1733996258 instance=ExtResource("11_khyy6")]
+
+[node name="Crystal_01A2" parent="." unique_id=533805603 instance=ExtResource("12_g06kv")]
+
+[node name="Crystal_02A2" parent="." unique_id=453139694 instance=ExtResource("13_wih7g")]
+
+[node name="Floor_E_Grate_012" parent="." unique_id=1860188669 instance=ExtResource("14_3lg3a")]
+
+[node name="Floor_O_Sand_01A2" parent="." unique_id=1395445599 instance=ExtResource("15_hgx6q")]
+
+[node name="Floor_Tile_01_F2" parent="." unique_id=2055621031 instance=ExtResource("16_auwkf")]
+
+[node name="Furnitur_Chair_012" parent="." unique_id=626549407 instance=ExtResource("17_wg7gq")]
+
+[node name="Furnitur_Shelf_012" parent="." unique_id=771608483 instance=ExtResource("18_dphmv")]
+
+[node name="Furnitur_Table_Wooden_012" parent="." unique_id=1954005920 instance=ExtResource("19_sgth3")]
+
+[node name="Gate_Wooden_012" parent="." unique_id=976495342 instance=ExtResource("20_yqb0n")]
+
+[node name="Graveyard_Coffin_012" parent="." unique_id=556152359 instance=ExtResource("21_qihvj")]
+
+[node name="Hand_Torch_012" parent="." unique_id=1650483114 instance=ExtResource("22_vebyr")]
+
+[node name="Lever_012" parent="." unique_id=1068804371 instance=ExtResource("23_ffsj6")]
+
+[node name="Obstacle_Gound_Socket_012" parent="." unique_id=1954818799 instance=ExtResource("24_0wasp")]
+
+[node name="Plank_012" parent="." unique_id=212838895 instance=ExtResource("25_0avrq")]
+
+[node name="Plank_022" parent="." unique_id=1042470747 instance=ExtResource("26_xwiym")]
+
+[node name="Portcullis_012" parent="." unique_id=634099271 instance=ExtResource("27_gk670")]
+
+[node name="Potion_Bottle_022" parent="." unique_id=704212011 instance=ExtResource("28_12mkd")]
+
+[node name="Potion_Bottle_032" parent="." unique_id=1174826191 instance=ExtResource("29_kci58")]
+
+[node name="Pottery_022" parent="." unique_id=979855763 instance=ExtResource("30_g457j")]
+
+[node name="Pottery_032" parent="." unique_id=141997925 instance=ExtResource("31_dqy30")]
+
+[node name="Rock_012" parent="." unique_id=1315586160 instance=ExtResource("32_m481w")]
+
+[node name="Rock_01A2" parent="." unique_id=772248180 instance=ExtResource("33_tg6lm")]
+
+[node name="Rock_01B2" parent="." unique_id=1591973318 instance=ExtResource("34_s4mq6")]
+
+[node name="Rock_01C2" parent="." unique_id=1797221728 instance=ExtResource("35_a3cjh")]
+
+[node name="Rock_01D2" parent="." unique_id=1159011310 instance=ExtResource("36_utpwl")]
+
+[node name="Rug_02H2" parent="." unique_id=1976325674 instance=ExtResource("37_3yjje")]
+
+[node name="Skeleton_Parts_012" parent="." unique_id=401480044 instance=ExtResource("38_44x38")]
+
+[node name="Skeleton_Parts_022" parent="." unique_id=1666740743 instance=ExtResource("39_4jofn")]
+
+[node name="Stair_Full_012" parent="." unique_id=659672121 instance=ExtResource("40_dqt67")]
+
+[node name="Tourch_012" parent="." unique_id=1327140573 instance=ExtResource("41_07l12")]
+
+[node name="Wall_Block_Squre_012" parent="." unique_id=2128593460 instance=ExtResource("42_0t3sp")]
+
+[node name="Wall_Cornice_012" parent="." unique_id=747796415 instance=ExtResource("43_h0cp4")]
+
+[node name="Wall_Lamp_012" parent="." unique_id=882354607 instance=ExtResource("44_c2bn0")]
+
+[node name="Wall_Tile_012" parent="." unique_id=1703320526 instance=ExtResource("45_omr1b")]
+
+[node name="Wall_Tile_Archway_012" parent="." unique_id=722276306 instance=ExtResource("46_7b40x")]
+
+[node name="Weapon_Axe_012" parent="." unique_id=864044855 instance=ExtResource("47_abt1b")]
+
+[node name="Weapon_Mace_012" parent="." unique_id=233663118 instance=ExtResource("48_4espt")]
+
+[node name="Weapon_Rack_A012" parent="." unique_id=2144494310 instance=ExtResource("49_hmenl")]

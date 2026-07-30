@@ -5,8 +5,7 @@ class_name CoinManager extends Node3D
 @export var coins: Array[PackedScene]
 @export var navigation_area: NavigationRegion3D
 
-#var spawn_area_length: float
-#var spawn_area_width : float
+
 var total_coins: Array[Coin] = []
 var coin_placement_point: Vector3
 var _is_spawning: bool = false
@@ -54,7 +53,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
 	var check_shape: SphereShape3D = SphereShape3D.new()
-	check_shape.radius = 30.0
+	check_shape.radius = 5.0
 	
 	var query: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 	query.shape = check_shape
@@ -66,7 +65,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	## Ignore on layers 4.
 	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2)
 	
-	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 8)
+	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 1)
 	
 	return collisions.is_empty()
 

@@ -1,17 +1,16 @@
-[gd_scene format=3 uid="uid://df8noeoqm8tib"]
+[gd_scene format=3 uid="uid://8wxyb66rltn4"]
 
+[ext_resource type="ArrayMesh" uid="uid://d1ri7khqsvsfp" path="res://entities/coins/gold_coin/gold_coin_mesh.tres" id="1_2l7s7"]
 [ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://entities/coins/coin.tscn" id="1_endsn"]
-[ext_resource type="Resource" uid="uid://dpr6j07bwhqh8" path="res://entities/coins/gold_coin/gold_coint_value.tres" id="3_xbvk4"]
-[ext_resource type="PackedScene" uid="uid://cmb1fuh7umlyh" path="res://assets/kenny-platformer-kit/coin-gold.glb" id="4_pa1qv"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_83rl0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_unkcu"]
 viewport_path = NodePath("SubViewport")
 
 [node name="GoldCoin" unique_id=1459063820 node_paths=PackedStringArray("mesh") instance=ExtResource("1_endsn")]
-coin_resource = ExtResource("3_xbvk4")
-mesh = NodePath("coin-gold2")
+mesh = NodePath("MeshInstance3D")
 
-[node name="coin-gold2" parent="." index="1" unique_id=1489991932 instance=ExtResource("4_pa1qv")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1217363676]
+mesh = ExtResource("1_2l7s7")
 
 [node name="Sprite3D" parent="." index="5" unique_id=1284821196]
-texture = SubResource("ViewportTexture_83rl0")
+texture = SubResource("ViewportTexture_unkcu")
