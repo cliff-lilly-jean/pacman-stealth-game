@@ -9,8 +9,8 @@ extends Node
 
 func _ready() -> void:
 	
-	## Wait until the ground is spawned
-	await get_tree().physics_frame
+	## Wait until the coins are spawned
+	await EventBus.coins_spawned
 	
 	next_coin.next_coin_number = (
 		coin_manager.get_highest_coin_number()

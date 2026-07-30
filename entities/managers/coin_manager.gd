@@ -47,6 +47,8 @@ func spawn_random_coin() -> void:
 	
 	print(total_coins[0].global_position)
 	_is_spawning = false
+	
+	EventBus.coins_spawned.emit()
 
 ## CHecks if a spawn area isnt hindered by any obstacles preventing the coin from loading in
 func is_spawn_position_clear(spawn_position: Vector3) -> bool:
