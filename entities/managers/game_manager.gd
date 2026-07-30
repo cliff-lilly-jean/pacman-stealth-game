@@ -28,9 +28,6 @@ func on_coin_collected(number: int) -> void:
 	## Remove the collected coin from the array.
 	coin_manager.remove_coin_by_number(number)
 	
-	print("Collected coin: ", number)
-	print("Coins remaining: ", coin_manager.total_coins.size())
-	
 	if not is_correct_coin:
 		print("Incorrect number")
 		

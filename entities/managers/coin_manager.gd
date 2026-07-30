@@ -5,14 +5,11 @@ class_name CoinManager extends Node3D
 @export var coins: Array[PackedScene]
 @export var navigation_area: NavigationRegion3D
 
-
 var total_coins: Array[Coin] = []
 var coin_placement_point: Vector3
 var _is_spawning: bool = false
 
 func _ready() -> void:
-	#spawn_area_length = ground.length
-	#spawn_area_width = ground.width
 	await _wait_for_navigation_ready()
 	
 	spawn_random_coin()
@@ -55,7 +52,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	
 	var check_shape: SphereShape3D = SphereShape3D.new()
-	check_shape.radius = 5.0
+	check_shape.radius =  10.0
 	
 	var query: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 	query.shape = check_shape
@@ -65,7 +62,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	
 	## Check layers 1,2,3.
 	## Ignore on layers 4.
-	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2)
+	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2) 
 	
 	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 1)
 	
@@ -98,11 +95,17 @@ func get_highest_coin_number() -> int:
 
 ## Gets a suitable point for the coin to spwan
 func get_clear_spawn_point() -> Vector3:
-	const MAX_ATTEMPTS: int = 300
+	var MAX_ATTEMPTS: int = 300 * coin_count
 	var point: Vector3 = Vector3.ZERO
 	
 	for attempt in MAX_ATTEMPTS:
 		point = get_new_spawn_point()
+		
+		## If the point is the initial Vector3.zero location, that means that the ground isnt fully loaded in and wait a frame
+		if point.is_zero_approx():
+			await get_tree().physics_frame
+			continue
+
 		if is_spawn_position_clear(point):
 			return point
 		await get_tree().physics_frame
@@ -124,6 +127,3 @@ func _wait_for_navigation_ready() -> void:
 	
 	# One more frame of breathing room, for good measure.
 	await get_tree().physics_frame
-
-	print("CoinManager: navigation map confirmed ready with ", 
-		NavigationServer3D.map_get_regions(map_rid).size(), " region(s).")
