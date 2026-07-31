@@ -23,13 +23,13 @@ albedo_color = Color(0, 0, 0, 1)
 collision_mask = 6
 script = ExtResource("1_8afob")
 move_speed = 10.0
-acceleration = 15.0
-deceleration = 25.0
-sprint_speed = 15.0
-sprint_acceleration = 35.0
-sprint_deceleration = 45.0
-dash_speed = 45.0
-dash_acceleration = 65.0
+acceleration = 35.0
+deceleration = 40.0
+sprint_speed = 35.0
+sprint_acceleration = 65.0
+sprint_deceleration = 800.0
+dash_speed = 125.0
+dash_acceleration = 900.0
 gravity = 100.0
 mesh = NodePath("MeshInstance3D")
 
@@ -55,7 +55,7 @@ metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
 [node name="CameraController" parent="." unique_id=1568162990 node_paths=PackedStringArray("entity") instance=ExtResource("2_5gtgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-length = 4.0
+length = 8.0
 entity = NodePath("..")
 
 [node name="SFX" type="Node" parent="." unique_id=1088043327]

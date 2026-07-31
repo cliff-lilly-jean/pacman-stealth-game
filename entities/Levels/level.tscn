@@ -1,0 +1,477 @@
+[gd_scene format=3 uid="uid://dqbqarefstmrn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftcbs"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0lwt"]
+albedo_color = Color(1, 0.3254902, 0, 1)
+
+[node name="Level" type="Node3D" unique_id=279323224]
+
+[node name="Walls" type="Node3D" parent="." unique_id=1778589681]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls" unique_id=1135689521]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 50, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 8, 101)
+material = SubResource("StandardMaterial3D_ftcbs")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Walls" unique_id=1901046107]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, -50, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 8, 99)
+material = SubResource("StandardMaterial3D_ftcbs")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Walls" unique_id=412960933]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5, 0, -1, 0, -4.371139e-08, -0.5, 1.5, 50)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 8, 100)
+material = SubResource("StandardMaterial3D_ftcbs")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Walls" unique_id=1971583236]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5, 0, -1, 0, -4.371139e-08, -0.5, 1.5, -50)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 8, 100)
+material = SubResource("StandardMaterial3D_ftcbs")
+
+[node name="Maze" type="Node3D" parent="." unique_id=1442600117]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze" unique_id=2131133250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D" unique_id=1359888183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, -14)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D" unique_id=1126836498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 37)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Maze" unique_id=103927839]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D10" unique_id=1771775983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D10" unique_id=93071030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0470891e-06, 0.5, 26)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D10" unique_id=198158045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8776054e-06, 0.5, 45)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D10" unique_id=1204945412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0073461e-06, 0.5, -21)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D10" unique_id=1353475156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44446e-06, 0.5, -31)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Maze" unique_id=536375805]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.5, 27)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D11" unique_id=1738555119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -6)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D11" unique_id=136268574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 0.5, 46)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D11" unique_id=1215631592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 0.5, 23)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D11" unique_id=994680887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0.5, -30)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Maze" unique_id=1531914445]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.5, -24)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D12" unique_id=2034457415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -14)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D12" unique_id=799868827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 14)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D12" unique_id=1907674508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 0.5, 31.999998)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D12" unique_id=1672592076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0.5, -30.000002)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Maze" unique_id=1495636359]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.5, -38)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D13" unique_id=203467662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 6.5)
+operation = 2
+size = Vector3(5, 3, 12)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D13" unique_id=175915625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 33.5)
+operation = 2
+size = Vector3(5, 3, 12)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D13" unique_id=1927757577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -20)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D13" unique_id=1008645687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 31.999998)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D13" unique_id=1939329459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -26.000002)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Maze" unique_id=641616633]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.5, 14)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D14" unique_id=696338501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D14" unique_id=1957154223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0.5, 26)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D14" unique_id=1578767401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -10.499999)
+operation = 2
+size = Vector3(5, 3, 16)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D14" unique_id=893697105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 0.5, 36)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D14" unique_id=1277198029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0.5, -40)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze" unique_id=1465973257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D2" unique_id=379027168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D2" unique_id=1949902304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -28.5)
+operation = 2
+size = Vector3(5, 3, 8)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D2" unique_id=1834554330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 35.5)
+operation = 2
+size = Vector3(5, 3, 8)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze" unique_id=474017198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D3" unique_id=1186134563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D3" unique_id=1737643301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -42)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D3" unique_id=53920427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 24)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D3" unique_id=1642751399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 45)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze" unique_id=907251466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D4" unique_id=1167140784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D4" unique_id=1598074003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -13)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D4" unique_id=1547067909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 37)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D4" unique_id=1111872073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -32)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D4" unique_id=340514181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 20)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze" unique_id=626295417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D5" unique_id=1050432250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Maze/CSGBox3D5" unique_id=936299910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 22)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D5" unique_id=1485430676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -19)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D5" unique_id=1149629058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -35)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D5" unique_id=1710332947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -42)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D5" unique_id=343800146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 34)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Maze" unique_id=2140007144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D6" unique_id=1187211066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 4)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D6" unique_id=446706791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -36)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D6" unique_id=2721086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 47)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D6" unique_id=86463049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -21)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D6" unique_id=405561843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 25)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Maze" unique_id=89266623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D7" unique_id=670492656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D7" unique_id=1248248500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 20)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D7" unique_id=1040580684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -43)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D7" unique_id=576640796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -31)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D7" unique_id=532002666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 32)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Maze" unique_id=1449907243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D8" unique_id=2104543936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 38)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D8" unique_id=1797908095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -44)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D8" unique_id=1604460080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -27)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D8" unique_id=1466786828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -10)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D8" unique_id=1532278554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 16)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Maze" unique_id=440225067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1.5, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 13
+size = Vector3(1, 4, 101)
+material = SubResource("StandardMaterial3D_q0lwt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Maze/CSGBox3D9" unique_id=1799739808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.172719e-08, 0.5, 3)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Maze/CSGBox3D9" unique_id=1074693152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -15)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Maze/CSGBox3D9" unique_id=1180643629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 24)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Maze/CSGBox3D9" unique_id=1768583992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 47)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Maze/CSGBox3D9" unique_id=1449444069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -41)
+operation = 2
+size = Vector3(5, 3, 5)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Maze/CSGBox3D9" unique_id=1115956896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -26)
+operation = 2
+size = Vector3(5, 3, 5)
