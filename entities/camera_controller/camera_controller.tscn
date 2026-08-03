@@ -10,7 +10,7 @@ shape = SubResource("SphereShape3D_7mrbv")
 script = ExtResource("1_7mrbv")
 mouse_sensitivity = 0.002
 joystick_sensitivity = 2.0
-smoothing = 2.0
+smoothing = 1.0
 
 [node name="CameraTarget" type="Node3D" parent="." unique_id=405279693]
 
