@@ -7,3 +7,6 @@ signal coins_spawned
 
 ## Stamina
 signal stamina_updated(amount: float)
+
+## Detection Area
+signal detected(body: Node3D)
