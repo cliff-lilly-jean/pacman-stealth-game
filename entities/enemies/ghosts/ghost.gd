@@ -10,13 +10,6 @@ class_name Ghost extends CharacterBody3D
 var start_patrol_locaton: Vector3
 var end_patrol_location: Vector3
 
-## Patrol
-## Set the target position
-## Get the Next Path Posiion, random point on map
-## Move to ward the next path position
-## If at the next path posiion
-## Repeat
-
 ## Investigate
 ## If Player is in Detection Area forward angle
 ## Change the Look Direction's Target Position
@@ -46,5 +39,16 @@ func set_navigation_target_position() -> void:
 	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x, patrol_distance_length), 0, randf_range(start_patrol_locaton.z, patrol_distance_length))
 	
 	navigation_agent.target_position = start_patrol_locaton
-	print("Nav start location: ", navigation_agent.target_position)
-	
+	print("Nav start location: ", navigation_agent.target_position) 
+
+## Patrol
+func patrol() -> void: 
+	pass
+	## Set the target position
+	## if at the start location move towrad the end position else move toward the start position
+	if navigation_agent.is_target_reached():
+		navigation_agent.get_next_path_position()
+	## Get the Next Path Posiion, random point on map
+	## Move to ward the next path position
+	## If at the next path posiion
+	## Repeat

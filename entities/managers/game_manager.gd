@@ -40,6 +40,7 @@ func on_coin_collected(number: int) -> void:
 	if coin_manager.total_coins.is_empty():
 		next_coin.next_coin_number = 0
 		next_coin.text = "All coins collected!"
+		## Go to the next Level/End Gamewwwwww
 		return
 	
 	## Find the highest number still left in the array.
