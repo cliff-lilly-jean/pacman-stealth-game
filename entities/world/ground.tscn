@@ -8,6 +8,9 @@ size = Vector3(100, 1, 100)
 [sub_resource type="BoxMesh" id="BoxMesh_mpx6x"]
 size = Vector3(100, 1, 100)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7capw"]
+albedo_color = Color(0.025941331, 0.12625834, 0.31465003, 1)
+
 [node name="Ground" type="StaticBody3D" unique_id=1364028782]
 collision_layer = 6
 script = ExtResource("1_mpx6x")
@@ -17,3 +20,4 @@ shape = SubResource("BoxShape3D_54lgi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1651715968]
 mesh = SubResource("BoxMesh_mpx6x")
+surface_material_override/0 = SubResource("StandardMaterial3D_7capw")

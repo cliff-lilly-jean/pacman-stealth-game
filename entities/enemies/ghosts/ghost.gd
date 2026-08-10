@@ -1,5 +1,6 @@
 class_name Ghost extends CharacterBody3D
 
+@export var speed: float
 @export var patrol_distance_length: float
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
@@ -9,6 +10,7 @@ class_name Ghost extends CharacterBody3D
 
 var start_patrol_locaton: Vector3
 var end_patrol_location: Vector3
+var next_position: Vector3
 
 ## Investigate
 ## If Player is in Detection Area forward angle
@@ -25,30 +27,37 @@ var end_patrol_location: Vector3
 ## Move toward he next position
 
 func _ready() -> void:
-	set_navigation_target_position()
-	
+	set_navigation_route()
+
 
 func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	pass
+	patrol()
+	
+	
+	look_at(next_position, Vector3.UP, true)
+	move_and_slide()
 
-func set_navigation_target_position() -> void:
+func set_navigation_route() -> void:
 	start_patrol_locaton = Vector3(global_position.x, 0, global_position.z)
 	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x, patrol_distance_length), 0, randf_range(start_patrol_locaton.z, patrol_distance_length))
-	
-	navigation_agent.target_position = start_patrol_locaton
-	print("Nav start location: ", navigation_agent.target_position) 
 
 ## Patrol
 func patrol() -> void: 
 	pass
 	## Set the target position
+	navigation_agent.target_position = end_patrol_location
+	next_position = navigation_agent.get_next_path_position()
+	
+	velocity = global_position.direction_to(next_position) * speed
+	move_and_slide()
 	## if at the start location move towrad the end position else move toward the start position
-	if navigation_agent.is_target_reached():
-		navigation_agent.get_next_path_position()
+	#if navigation_agent.is_target_reached():
+		#navigation_agent.get_next_path_position()
 	## Get the Next Path Posiion, random point on map
 	## Move to ward the next path position
 	## If at the next path posiion
 	## Repeat
+	
