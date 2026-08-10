@@ -36,8 +36,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	patrol()
 	
-	
-	look_at(next_position, Vector3.UP, true)
+	await look_at(next_position, Vector3.UP, true)
 	move_and_slide()
 
 func set_navigation_route() -> void:
