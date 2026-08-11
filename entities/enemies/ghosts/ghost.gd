@@ -2,6 +2,7 @@ class_name Ghost extends CharacterBody3D
 
 @export var speed: float
 @export var patrol_distance_length: float
+@export var look_rotation_speed: float
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var deection_area: DetectionArea = $DeectionArea
@@ -11,6 +12,7 @@ class_name Ghost extends CharacterBody3D
 var start_patrol_locaton: Vector3
 var end_patrol_location: Vector3
 var next_position: Vector3
+var moving_to_end:bool = true
 
 ## Investigate
 ## If Player is in Detection Area forward angle
@@ -28,35 +30,44 @@ var next_position: Vector3
 
 func _ready() -> void:
 	set_navigation_route()
-
-
-func _process(delta: float) -> void:
-	pass
-
+	
 func _physics_process(delta: float) -> void:
 	patrol()
 	
-	await look_at(next_position, Vector3.UP, true)
+	
+	look_rotation(delta)
 	move_and_slide()
 
 func set_navigation_route() -> void:
-	start_patrol_locaton = Vector3(global_position.x, 0, global_position.z)
-	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x, patrol_distance_length), 0, randf_range(start_patrol_locaton.z, patrol_distance_length))
+	start_patrol_locaton = global_position
+	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x - patrol_distance_length, start_patrol_locaton.x + patrol_distance_length), global_position.y, randf_range(start_patrol_locaton.z - patrol_distance_length, start_patrol_locaton.z + patrol_distance_length))
+	
+	navigation_agent.target_position = end_patrol_location
 
 ## Patrol
 func patrol() -> void: 
-	pass
-	## Set the target position
-	navigation_agent.target_position = end_patrol_location
 	next_position = navigation_agent.get_next_path_position()
 	
-	velocity = global_position.direction_to(next_position) * speed
-	move_and_slide()
-	## if at the start location move towrad the end position else move toward the start position
-	#if navigation_agent.is_target_reached():
-		#navigation_agent.get_next_path_position()
-	## Get the Next Path Posiion, random point on map
-	## Move to ward the next path position
-	## If at the next path posiion
-	## Repeat
+	var direction: Vector3 = global_position.direction_to(next_position)
 	
+	velocity.x = direction.x * speed
+	velocity.z = direction.z * speed
+	
+	if navigation_agent.is_navigation_finished():
+		if moving_to_end:
+			navigation_agent.target_position = start_patrol_locaton
+			next_position = navigation_agent.get_next_path_position()
+			moving_to_end = false
+		else:
+			navigation_agent.target_position = end_patrol_location
+			moving_to_end = true
+			
+func look_rotation(delta: float) -> void:
+	rotation.y = lerp_angle(
+		rotation.y,
+		atan2(
+			next_position.x - global_position.x,
+			next_position.z - global_position.z
+		),
+		look_rotation_speed * delta
+	)
