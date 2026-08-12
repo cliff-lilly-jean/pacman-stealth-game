@@ -157,11 +157,11 @@ size = Vector3(0.15332031, 0.7108154, 1.2425845)
 material = SubResource("StandardMaterial3D_5uh88")
 
 [node name="CSGBox3D39" type="CSGBox3D" parent="Walls" index="16" unique_id=1265301586]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 4.124975, 0.39918673, -1.4508445)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 4.124975, 0.3991868, -1.1966952)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
-size = Vector3(0.15332031, 0.7108154, 8.630784)
+size = Vector3(0.15332031, 0.7108154, 8.4162245)
 material = SubResource("StandardMaterial3D_5uh88")
 
 [node name="CSGBox3D41" type="CSGBox3D" parent="Walls" index="17" unique_id=405636439]
@@ -413,27 +413,27 @@ size = Vector3(0.15332031, 0.7758484, 0.2990801)
 material = SubResource("StandardMaterial3D_5uh88")
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Walls" index="48" unique_id=805420239]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.2073607, 0.39918673, -1.0640906)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.2073607, 0.3991868, -1.1672243)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
-size = Vector3(0.15332031, 0.7108154, 8.182192)
+size = Vector3(0.15332031, 0.7108154, 8.388459)
 material = SubResource("StandardMaterial3D_5uh88")
 
 [node name="CSGBox3D27" type="CSGBox3D" parent="Walls" index="49" unique_id=313939824]
-transform = Transform3D(-2.1855696e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855696e-07, 1.5507168, 0.39918673, 2.8123338)
+transform = Transform3D(-2.1855696e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855696e-07, -0.039111774, 0.3991868, 2.951918)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
-size = Vector3(0.15332031, 0.7108154, 12)
+size = Vector3(0.15332031, 0.7108154, 8.498322)
 material = SubResource("StandardMaterial3D_5uh88")
 
 [node name="CSGBox3D30" type="CSGBox3D" parent="Walls" index="50" unique_id=2093604494]
-transform = Transform3D(-2.1855696e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855696e-07, -0.2904663, 0.39918673, -5.1598206)
+transform = Transform3D(-2.1855696e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855696e-07, -0.06202793, 0.3991868, -5.3328953)
 use_collision = true
 collision_layer = 2
 collision_mask = 15
-size = Vector3(0.15332031, 0.7108154, 8.912045)
+size = Vector3(0.15332031, 0.7108154, 8.455168)
 material = SubResource("StandardMaterial3D_5uh88")
 
 [node name="Doors" parent="." index="2" unique_id=279044080]
