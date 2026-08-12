@@ -1,7 +1,7 @@
 extends Node
 
 @onready var player = %Player
-@onready var ground: Ground = %Ground
+#@onready var ground: Ground = %Ground
 @onready var coin_manager: CoinManager = %CoinManager
 @onready var next_coin: NextCoinLabel = %NextCoinLabel
 @onready var game_time: GameTime = %GameTimeLabel

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqe6kbo1ud1hp"]
 
 [ext_resource type="Script" uid="uid://ddj43j3utgjcm" path="res://entities/enemies/ghosts/ghost.gd" id="1_e0x04"]
-[ext_resource type="PackedScene" uid="uid://doaiuijn0ntwa" path="res://components/detection_area/deection_area.tscn" id="2_723dw"]
+[ext_resource type="PackedScene" uid="uid://doaiuijn0ntwa" path="res://components/detection_area/detection_area.tscn" id="2_723dw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_eboi6"]
 
@@ -15,7 +15,8 @@ albedo_color = Color(1, 0, 0, 1)
 
 [node name="Ghost" type="CharacterBody3D" unique_id=2008997342]
 script = ExtResource("1_e0x04")
-speed = 2.0
+speed = 3.0
+view_distance = 5.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1047362907]
 avoidance_enabled = true
@@ -34,11 +35,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_723dw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_eboi6")
 
-[node name="DeectionArea" parent="." unique_id=527819160 instance=ExtResource("2_723dw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
 [node name="LookDirection" type="RayCast3D" parent="." unique_id=788180718]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 target_position = Vector3(0, 0, 5)
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
+
+[node name="DetectionArea" parent="." unique_id=527819160 instance=ExtResource("2_723dw")]

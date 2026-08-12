@@ -3,11 +3,12 @@ class_name Ghost extends CharacterBody3D
 @export var speed: float
 @export var patrol_distance_length: float
 @export var look_rotation_speed: float
+@export var view_distance: float
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var deection_area: DetectionArea = $DeectionArea
 @onready var look_direction: RayCast3D = $LookDirection
 @onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var detection_area: DetectionArea = $DetectionArea
 
 var start_patrol_locaton: Vector3
 var end_patrol_location: Vector3
@@ -29,6 +30,10 @@ var moving_to_end:bool = true
 ## Move toward he next position
 
 func _ready() -> void:
+	
+	look_direction.target_position.z = view_distance
+	detection_area.collider.shape.radius = view_distance
+	
 	set_navigation_route()
 	
 func _physics_process(delta: float) -> void:
