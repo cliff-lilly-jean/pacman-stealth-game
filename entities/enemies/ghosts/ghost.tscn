@@ -42,3 +42,10 @@ debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
 
 [node name="DetectionArea" parent="." unique_id=527819160 instance=ExtResource("2_723dw")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=178478716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1)
+light_energy = 1.889
+shadow_enabled = true
+omni_range = 3.402
+omni_attenuation = 2.111

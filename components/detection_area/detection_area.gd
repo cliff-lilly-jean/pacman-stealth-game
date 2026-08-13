@@ -13,6 +13,13 @@ func _ready():
 	collider.shape.height = shape_height
 	body_entered.connect(_on_body_entered)
 	
+	var mesh = ImmediateMesh.new()
+	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)
+	mesh.surface_add_vertex(Vector3.LEFT)
+	mesh.surface_add_vertex(Vector3.FORWARD)
+	mesh.surface_add_vertex(Vector3.ZERO)
+	mesh.surface_end()
+	
 	
 func _on_body_entered(body: Node3D) -> void:
 	if body is Player:
