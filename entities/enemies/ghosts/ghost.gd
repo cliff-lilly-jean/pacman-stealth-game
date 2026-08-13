@@ -25,6 +25,8 @@ func _ready() -> void:
 	look_direction.target_position.z = view_distance
 	detection_area.collider.shape.radius = view_distance
 	
+	detection_area.body_entered.connect(_on_body_entered)
+	
 	set_navigation_route()
 	
 func _physics_process(delta: float) -> void:
@@ -45,11 +47,10 @@ func patrol() -> void:
 	next_position = navigation_agent.get_next_path_position()
 	
 	var direction: Vector3 = global_position.direction_to(next_position)
-	
-	velocity.x = direction.x * speed
-	velocity.z = direction.z * speed
+	velocity = direction * speed
 	
 	if navigation_agent.is_navigation_finished():
+		## Determine if the ghost has finished the patrol to the edn point, if so change the route to the starting point  and travel to that
 		if moving_to_end:
 			navigation_agent.target_position = start_patrol_locaton
 			next_position = navigation_agent.get_next_path_position()
@@ -62,6 +63,8 @@ func patrol() -> void:
 func investigate() -> void:
 	pass
 	## The player enters the detection area, inside the fov
+	if detection_area.body_entered:
+		print("Hey")
 	## If the player is visible and not obstructed by an obstacle, change the navigation target position to the player's last known position and travel to it
 	## If the player is visible and obstructed, continue on with the regular navigation route
 			
@@ -74,3 +77,17 @@ func look_rotation(delta: float) -> void:
 		),
 		look_rotation_speed * delta
 	)
+
+func _on_body_entered(body: Node3D) -> void:
+	if body is Player:
+		## Gets the position of the player
+		var direction = global_position.direction_to(body.global_position)
+		
+		## Determies if the player is infront of or behind the ghost
+		var facing = global_transform.basis.tdotz(direction)
+		var fov = cos(rad_to_deg(detection_area.fov_width / 2)) ## divide by 2 to represent the two sides of the viewing angle on the z axes, left and right
+		
+		if facing < fov:
+			print("coming from behind, I cant see you")
+		else: 
+			print("Coming from the front, I see you!")
