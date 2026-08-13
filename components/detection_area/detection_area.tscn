@@ -8,6 +8,7 @@ radius = 5.0
 
 [node name="DetectionArea" type="Area3D" unique_id=527819160]
 script = ExtResource("1_5d6nw")
+fov_width = 180.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=124149414]
 shape = SubResource("CylinderShape3D_bdkmc")

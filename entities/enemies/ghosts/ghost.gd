@@ -15,15 +15,6 @@ var end_patrol_location: Vector3
 var next_position: Vector3
 var moving_to_end:bool = true
 
-## Investigate
-## If Player is in Detection Area forward angle
-## Change the Look Direction's Target Position
-## Set the Target Position to the Look Directions's Target Position
-## Get the Next Path Position
-## Move toward The Next Path Position
-## Reset Look Directions Target Position to Forward
-## Scan the area. Rotate
-
 ## CHASE
 ## Set the target position, the Player
 ## Get the next path position
@@ -66,6 +57,13 @@ func patrol() -> void:
 		else:
 			navigation_agent.target_position = end_patrol_location
 			moving_to_end = true
+
+## Investigate
+func investigate() -> void:
+	pass
+	## The player enters the detection area, inside the fov
+	## If the player is visible and not obstructed by an obstacle, change the navigation target position to the player's last known position and travel to it
+	## If the player is visible and obstructed, continue on with the regular navigation route
 			
 func look_rotation(delta: float) -> void:
 	rotation.y = lerp_angle(
