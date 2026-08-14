@@ -3,8 +3,14 @@
 [ext_resource type="Script" uid="uid://j5cat2c586kc" path="res://components/detection_area/detection_area.gd" id="1_5d6nw"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_bdkmc"]
-height = 1.0
-radius = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d6nw"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 0.26666668)
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_s3nn2"]
 
 [node name="DetectionArea" type="Area3D" unique_id=527819160]
 script = ExtResource("1_5d6nw")
@@ -12,3 +18,13 @@ fov_width = 180.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=124149414]
 shape = SubResource("CylinderShape3D_bdkmc")
+
+[node name="VisionCone" type="MeshInstance3D" parent="." unique_id=1661679607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_5d6nw")
+mesh = SubResource("ImmediateMesh_s3nn2")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1347617513]
+target_position = Vector3(0, 0, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

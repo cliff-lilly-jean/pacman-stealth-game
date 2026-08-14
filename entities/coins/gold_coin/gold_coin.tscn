@@ -7,6 +7,7 @@
 viewport_path = NodePath("SubViewport")
 
 [node name="GoldCoin" unique_id=1459063820 node_paths=PackedStringArray("mesh") instance=ExtResource("1_endsn")]
+collision_mask = 27
 mesh = NodePath("MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1217363676]

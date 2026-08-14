@@ -13,18 +13,13 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eboi6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1oodk"]
-transparency = 1
-cull_mode = 2
-shading_mode = 0
-albedo_color = Color(1, 0, 0, 0.26666668)
-
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_723dw"]
-
 [node name="Ghost" type="CharacterBody3D" unique_id=2008997342]
+collision_layer = 32
+collision_mask = 31
 script = ExtResource("1_e0x04")
 speed = 3.0
-view_distance = 20.0
+patrol_distance_length = 10.0
+look_rotation_speed = 40.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1047362907]
 avoidance_enabled = true
@@ -42,16 +37,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_723dw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_eboi6")
 
-[node name="LookDirection" type="RayCast3D" parent="." unique_id=788180718]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-target_position = Vector3(0, 0, 5)
-debug_shape_custom_color = Color(1, 0, 0, 1)
-debug_shape_thickness = 5
-
 [node name="DetectionArea" parent="." unique_id=527819160 instance=ExtResource("2_723dw")]
-fov_width = 90.0
+fov_width = 60.0
+view_distance = 15.0
 
-[node name="VisionCone" type="MeshInstance3D" parent="." unique_id=1998482982]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-material_override = SubResource("StandardMaterial3D_1oodk")
-mesh = SubResource("ImmediateMesh_723dw")
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

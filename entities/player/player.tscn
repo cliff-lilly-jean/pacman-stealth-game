@@ -20,7 +20,7 @@ size = Vector3(0.5, 0.2, 0.5)
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=573448500 node_paths=PackedStringArray("mesh")]
-collision_mask = 6
+collision_mask = 30
 script = ExtResource("1_8afob")
 move_speed = 10.0
 acceleration = 35.0
@@ -55,7 +55,8 @@ metadata/_custom_type_script = "uid://c7kj5fndyb6dx"
 
 [node name="CameraController" parent="." unique_id=1568162990 node_paths=PackedStringArray("entity") instance=ExtResource("2_5gtgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-length = 8.0
+length = 15.0
+smoothing = 8.0
 entity = NodePath("..")
 
 [node name="SFX" type="Node" parent="." unique_id=1088043327]

@@ -61,8 +61,7 @@ func is_spawn_position_clear(spawn_position: Vector3) -> bool:
 	query.collide_with_areas = true
 	
 	## Check layers 1,2,3.
-	## Ignore on layers 4.
-	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2) 
+	query.collision_mask = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 4)
 	
 	var collisions: Array[Dictionary] = space_state.intersect_shape(query, 1)
 	
