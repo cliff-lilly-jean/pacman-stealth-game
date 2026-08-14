@@ -7,13 +7,16 @@ class_name Ghost extends CharacterBody3D
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var look_direction: RayCast3D = $LookDirection
-@onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var detection_area: DetectionArea = $DetectionArea
+@onready var body: MeshInstance3D = $Body
+@onready var vision_cone: MeshInstance3D = $VisionCone
 
+## Patrol Variables
 var start_patrol_locaton: Vector3
 var end_patrol_location: Vector3
 var next_position: Vector3
 var moving_to_end:bool = true
+
 
 ## CHASE
 ## Set the target position, the Player
@@ -24,8 +27,11 @@ func _ready() -> void:
 	
 	look_direction.target_position.z = view_distance
 	detection_area.collider.shape.radius = view_distance
-	
 	detection_area.body_entered.connect(_on_body_entered)
+	
+	## Generate the vision cone
+	generate_vision_cone()
+	
 	
 	set_navigation_route()
 	
@@ -91,3 +97,46 @@ func _on_body_entered(body: Node3D) -> void:
 			print("coming from behind, I cant see you")
 		else: 
 			print("Coming from the front, I see you!")
+			
+func generate_vision_cone() -> void:
+	var cone_mesh = vision_cone.mesh as ImmediateMesh
+	
+	cone_mesh.clear_surfaces()
+	
+	var half_fov = deg_to_rad(detection_area.fov_width / 2)
+	var segments = 24
+	
+	cone_mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)
+	
+	for i in range(segments):
+		var angle_one = lerp(
+			-half_fov,
+			half_fov,
+			float(i) / segments
+		)
+		
+		var angle_two = lerp(
+			-half_fov,
+			half_fov,
+			float(i + 1) / segments
+		)
+		
+		cone_mesh.surface_add_vertex(Vector3.ZERO)
+		
+		cone_mesh.surface_add_vertex(
+			Vector3(
+				sin(angle_one) * view_distance,
+				0,
+				cos(angle_one) * view_distance
+			)
+		)
+		
+		cone_mesh.surface_add_vertex(
+			Vector3(
+				sin(angle_two) * view_distance,
+				0,
+				cos(angle_two) * view_distance
+			)
+		)
+		
+	cone_mesh.surface_end()

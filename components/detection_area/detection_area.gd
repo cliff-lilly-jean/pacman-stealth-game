@@ -12,11 +12,4 @@ func _ready():
 	collider.shape.radius = shape_radius
 	collider.shape.height = shape_height
 	
-	var mesh = ImmediateMesh.new()
-	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)
-	mesh.surface_add_vertex(Vector3.LEFT)
-	mesh.surface_add_vertex(Vector3.FORWARD)
-	mesh.surface_add_vertex(Vector3.ZERO)
-	mesh.surface_end()
-	
 		
