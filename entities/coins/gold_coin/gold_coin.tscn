@@ -11,8 +11,11 @@ collision_mask = 27
 mesh = NodePath("MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1217363676]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.5, 0)
 mesh = ExtResource("1_2l7s7")
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=1389986050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Sprite3D" parent="." index="5" unique_id=1284821196]
 texture = SubResource("ViewportTexture_unkcu")

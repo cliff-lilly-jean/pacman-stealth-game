@@ -1,11 +1,26 @@
 [gd_scene format=3 uid="uid://dqbqarefstmrn"]
 
-[node name="Level" type="Node3D" unique_id=1616793269]
+[ext_resource type="Texture2D" uid="uid://bacwiwf72em3t" path="res://entities/Levels/level_layouts/pacman_stealth_level_200x200.png" id="1_kaljb"]
 
-[node name="LevelLayout" type="Sprite3D" parent="." unique_id=573986835]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkyeo"]
+albedo_texture = ExtResource("1_kaljb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ure54"]
+albedo_texture = ExtResource("1_kaljb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wrbln"]
+material = SubResource("StandardMaterial3D_ure54")
+size = Vector2(200, 200)
+
+[node name="Level" type="Node3D" unique_id=1616793269]
 
 [node name="Walls" type="Node3D" parent="." unique_id=532406073]
 
 [node name="Doors" type="Node3D" parent="." unique_id=279044080]
 
 [node name="Obstacles" type="Node3D" parent="." unique_id=966553278]
+
+[node name="Blockout" type="MeshInstance3D" parent="." unique_id=1354389776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_wkyeo")
+mesh = SubResource("PlaneMesh_wrbln")

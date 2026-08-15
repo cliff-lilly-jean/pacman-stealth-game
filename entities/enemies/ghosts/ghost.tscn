@@ -18,8 +18,8 @@ collision_layer = 32
 collision_mask = 31
 script = ExtResource("1_e0x04")
 speed = 3.0
-patrol_distance_length = 10.0
-look_rotation_speed = 40.0
+patrol_distance_length = 40.0
+look_rotation_speed = 6.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1047362907]
 avoidance_enabled = true
