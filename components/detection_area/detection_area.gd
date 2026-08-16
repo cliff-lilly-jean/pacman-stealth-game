@@ -82,3 +82,4 @@ func _on_body_entered(body: Node3D) -> void:
 				
 				if hit is Player:
 					target_found.emit(body.global_position)
+					

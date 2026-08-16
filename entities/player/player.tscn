@@ -4,6 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://5dv2dht0iynn" path="res://entities/camera_controller/camera_controller.tscn" id="2_5gtgg"]
 [ext_resource type="Script" uid="uid://c7kj5fndyb6dx" path="res://components/stamina/stamina_component.gd" id="3_5sj0x"]
 [ext_resource type="AudioStream" uid="uid://dkg0tw4denyfs" path="res://assets/audio/sfx/jumping.mp3" id="4_nh4ur"]
+[ext_resource type="Script" uid="uid://qxf0qcbgu22s" path="res://globals/state_machine/state_machine.gd" id="5_fkugw"]
+[ext_resource type="Script" uid="uid://dh6switaklx1f" path="res://entities/player/states/player_move.gd" id="6_8fjmc"]
+[ext_resource type="Script" uid="uid://54rte24utaje" path="res://entities/player/states/player_sprint.gd" id="7_qiwj3"]
+[ext_resource type="Script" uid="uid://da8tlbreg5xrv" path="res://entities/player/states/player_dash.gd" id="8_26q78"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.5
@@ -22,15 +26,17 @@ albedo_color = Color(0, 0, 0, 1)
 [node name="Player" type="CharacterBody3D" unique_id=573448500 node_paths=PackedStringArray("mesh")]
 collision_mask = 30
 script = ExtResource("1_8afob")
-move_speed = 10.0
+move_speed = 15.0
 acceleration = 35.0
-deceleration = 40.0
+deceleration = 70.0
 sprint_speed = 35.0
-sprint_acceleration = 65.0
-sprint_deceleration = 800.0
-dash_speed = 125.0
-dash_acceleration = 900.0
+sprint_acceleration = 500.0
+sprint_deceleration = 10.0
+dash_speed = 50.0
+dash_acceleration = 600.0
+dash_deceleration = 20.0
 gravity = 100.0
+facing_rotation_speed = 15.0
 mesh = NodePath("MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1748136380]
@@ -64,3 +70,23 @@ entity = NodePath("..")
 [node name="JumpSFX" type="AudioStreamPlayer" parent="SFX" unique_id=822254158]
 stream = ExtResource("4_nh4ur")
 volume_db = -15.509
+
+[node name="StateMachine" type="Node" parent="." unique_id=1765915421 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("5_fkugw")
+initial_state = NodePath("PlayerMove")
+metadata/_custom_type_script = "uid://qxf0qcbgu22s"
+
+[node name="PlayerMove" type="Node" parent="StateMachine" unique_id=543147224 node_paths=PackedStringArray("player")]
+script = ExtResource("6_8fjmc")
+player = NodePath("../..")
+metadata/_custom_type_script = "uid://dh6switaklx1f"
+
+[node name="PlayerSprint" type="Node" parent="StateMachine" unique_id=388236363 node_paths=PackedStringArray("player")]
+script = ExtResource("7_qiwj3")
+player = NodePath("../..")
+metadata/_custom_type_script = "uid://54rte24utaje"
+
+[node name="PlayerDash" type="Node" parent="StateMachine" unique_id=13972831 node_paths=PackedStringArray("player")]
+script = ExtResource("8_26q78")
+player = NodePath("../..")
+metadata/_custom_type_script = "uid://da8tlbreg5xrv"

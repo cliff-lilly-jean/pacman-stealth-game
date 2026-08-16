@@ -71,21 +71,3 @@ func look_rotation(delta: float) -> void:
 		),
 		look_rotation_speed * delta
 	)
-
-func _on_look_direction_target_found(target_position: Vector3) -> void:
-	print("Found the target ", target_position)
-
-
-func _on_detection_area_body_entered(body: Node3D) -> void:
-	if body is Player:
-		## Gets the position of the player
-		var direction = global_position.direction_to(body.global_position)
-		
-		## Determies if the player is infront of or behind the ghost
-		var facing = global_transform.basis.tdotz(direction)
-		var fov = cos(rad_to_deg(detection_area.fov_width / 2)) ## divide by 2 to represent the two sides of the viewing angle on the z axes, left and right
-		
-		if facing < fov:
-			print("coming from behind, I cant see you")
-		else: 
-			print("Coming from the front, I see you!")
