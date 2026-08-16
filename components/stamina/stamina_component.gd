@@ -20,10 +20,8 @@ func drain(amount: float) -> void:
 	
 	stamina -= amount
 	stamina = clamp(stamina, 0.0, max_stamina)
-	print("Drained some stamina: ", stamina)
 	
 	Events.stamina_updated.emit(stamina)
-
 	
 
 func recover(delta: float) -> void:
@@ -32,5 +30,5 @@ func recover(delta: float) -> void:
 	
 	stamina += recovery_amount * delta
 	stamina = clamp(stamina, 0.0, max_stamina)
+	
 	Events.stamina_updated.emit(stamina)	
-	print(stamina)

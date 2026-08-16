@@ -55,7 +55,7 @@ func patrol() -> void:
 			navigation_agent.target_position = end_patrol_location
 			moving_to_end = true
 
-## Investigate
+
 func investigate() -> void:
 	pass
 	## The player enters the detection area, inside the fov

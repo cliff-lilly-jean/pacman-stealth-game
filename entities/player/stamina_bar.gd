@@ -2,9 +2,11 @@ extends TextureProgressBar
 
 @onready var stamina_component: StaminaComponent = %StaminaComponent
 
-func ready() -> void:
+func _ready() -> void:
 	value = max_value
 	max_value = stamina_component.max_stamina
+	
+	print("This is the stamina: ", value)
 	
 	Events.stamina_updated.connect(update_stamina_bar)
 

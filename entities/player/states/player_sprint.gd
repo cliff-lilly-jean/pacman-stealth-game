@@ -13,7 +13,7 @@ func physics_update(delta: float) -> void:
 		player.velocity.x = move_toward(player.velocity.x, sprint_velocity.x,  player.sprint_acceleration)
 		player.velocity.z = move_toward(player.velocity.z, sprint_velocity.z , player.sprint_acceleration)
 		
-		
+	
 		player.stamina_component.drain(stamina_cost * delta)
 	else:
 		change_state.emit(self, 'playermove')
