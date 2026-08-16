@@ -21,7 +21,7 @@ buses/default_bus_layout="uid://ci6peu22pfj32"
 
 [autoload]
 
-EventBus="*uid://bm8nukgx35b13"
+Events="*uid://bm8nukgx35b13"
 
 [display]
 

@@ -9,7 +9,7 @@ signal stamina_changed(amount: float)
 
 func _ready() -> void:
 	stamina = max_stamina
-	stamina_changed.emit(stamina)
+	Events.stamina_updated.emit(stamina)
 
 func _process(delta: float) -> void:
 	recover(delta)
@@ -20,7 +20,11 @@ func drain(amount: float) -> void:
 	
 	stamina -= amount
 	stamina = clamp(stamina, 0.0, max_stamina)
-	stamina_changed.emit(stamina)
+	print("Drained some stamina: ", stamina)
+	
+	Events.stamina_updated.emit(stamina)
+
+	
 
 func recover(delta: float) -> void:
 	if stamina >= max_stamina:
@@ -28,4 +32,5 @@ func recover(delta: float) -> void:
 	
 	stamina += recovery_amount * delta
 	stamina = clamp(stamina, 0.0, max_stamina)
-	stamina_changed.emit(stamina)	
+	Events.stamina_updated.emit(stamina)	
+	print(stamina)

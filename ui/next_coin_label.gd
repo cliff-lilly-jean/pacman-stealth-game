@@ -4,7 +4,7 @@ var next_coin_number: int
 
 
 func _ready() -> void:
-	EventBus.next_coin_collected.connect(on_next_coin_collected)
+	Events.next_coin_collected.connect(on_next_coin_collected)
 
 
 func on_next_coin_collected(next_number: int) -> void:

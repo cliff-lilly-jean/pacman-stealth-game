@@ -9,14 +9,14 @@ extends Node
 func _ready() -> void:
 	
 	## Wait until the coins are spawned
-	await EventBus.coins_spawned
+	await Events.coins_spawned
 	
 	next_coin.next_coin_number = (
 		coin_manager.get_highest_coin_number()
 	)
 	next_coin.text = str("Find Coin: ", next_coin.next_coin_number)
 
-	EventBus.coin_collected.connect(on_coin_collected)
+	Events.coin_collected.connect(on_coin_collected)
 	
 
 func on_coin_collected(number: int) -> void:
@@ -47,7 +47,7 @@ func on_coin_collected(number: int) -> void:
 		coin_manager.get_highest_coin_number()
 	)
 	
-	EventBus.next_coin_collected.emit(new_next_number)
+	Events.next_coin_collected.emit(new_next_number)
 		
 
 	

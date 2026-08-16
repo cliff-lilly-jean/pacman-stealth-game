@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func on_body_entered(body: Node3D) -> void:
 	if body is Player:
 		audio_stream.play()
-		EventBus.coin_collected.emit(number)
+		Events.coin_collected.emit(number)
 		destroy_wait_timer.start()
 		
 		## hide the collision shappe and the mesh
