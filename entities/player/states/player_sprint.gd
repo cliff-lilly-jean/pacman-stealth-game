@@ -1,5 +1,5 @@
 extends State
-class_name PlayerSprint
+class_name Sprint
 
 @export var player: Player
 @export var stamina_cost: float
@@ -16,7 +16,7 @@ func physics_update(delta: float) -> void:
 	
 		player.stamina_component.drain(stamina_cost * delta)
 	else:
-		change_state.emit(self, 'playermove')
+		change_state.emit(self, 'move')
 	
 func exit() -> void:
 		player.velocity.x = move_toward(player.velocity.x, 0, player.sprint_deceleration)
@@ -24,5 +24,5 @@ func exit() -> void:
 
 func handle_input(event: InputEvent) -> void:
 	if Input.is_action_pressed("dash"):
-		change_state.emit(self, 'playerdash')
+		change_state.emit(self, 'dash')
 	

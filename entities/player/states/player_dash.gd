@@ -1,5 +1,5 @@
 extends State
-class_name PlayerDash
+class_name Dash
 
 @export var player: Player
 @export var stamina_cost: float
@@ -16,7 +16,7 @@ func enter() -> void:
 	
 
 func physics_update(delta: float) -> void:
-	change_state.emit(self, 'playermove')
+	change_state.emit(self, 'move')
 		
 	
 func exit() -> void:

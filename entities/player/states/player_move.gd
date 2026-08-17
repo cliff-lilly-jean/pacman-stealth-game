@@ -1,5 +1,5 @@
 extends State
-class_name PlayerMove
+class_name Move
 
 @export var player: Player
 
@@ -16,6 +16,6 @@ func physics_update(delta: float) -> void:
 
 func handle_input(event: InputEvent) -> void:
 	if Input.is_action_pressed("sprint"):
-		change_state.emit(self, 'playersprint')
+		change_state.emit(self, 'sprint')
 	if Input.is_action_just_pressed("dash"):
-		change_state.emit(self, 'playerdash')
+		change_state.emit(self, 'dash')

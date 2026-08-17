@@ -81,21 +81,21 @@ volume_db = -15.509
 
 [node name="StateMachine" type="Node" parent="." unique_id=1765915421 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("5_fkugw")
-initial_state = NodePath("PlayerMove")
+initial_state = NodePath("Move")
 metadata/_custom_type_script = "uid://qxf0qcbgu22s"
 
-[node name="PlayerMove" type="Node" parent="StateMachine" unique_id=543147224 node_paths=PackedStringArray("player")]
+[node name="Move" type="Node" parent="StateMachine" unique_id=543147224 node_paths=PackedStringArray("player")]
 script = ExtResource("6_8fjmc")
 player = NodePath("../..")
 metadata/_custom_type_script = "uid://dh6switaklx1f"
 
-[node name="PlayerSprint" type="Node" parent="StateMachine" unique_id=388236363 node_paths=PackedStringArray("player")]
+[node name="Sprint" type="Node" parent="StateMachine" unique_id=388236363 node_paths=PackedStringArray("player")]
 script = ExtResource("7_qiwj3")
 player = NodePath("../..")
 stamina_cost = 2.5
 metadata/_custom_type_script = "uid://54rte24utaje"
 
-[node name="PlayerDash" type="Node" parent="StateMachine" unique_id=13972831 node_paths=PackedStringArray("player")]
+[node name="Dash" type="Node" parent="StateMachine" unique_id=13972831 node_paths=PackedStringArray("player")]
 script = ExtResource("8_26q78")
 player = NodePath("../..")
 stamina_cost = 1.0
