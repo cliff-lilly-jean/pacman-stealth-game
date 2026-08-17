@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ddj43j3utgjcm" path="res://entities/enemies/ghosts/ghost.gd" id="1_e0x04"]
 [ext_resource type="PackedScene" uid="uid://doaiuijn0ntwa" path="res://components/detection_area/detection_area.tscn" id="2_723dw"]
+[ext_resource type="Script" uid="uid://qxf0qcbgu22s" path="res://globals/state_machine/state_machine.gd" id="3_1oodk"]
+[ext_resource type="Script" uid="uid://wwm7s2pt4426" path="res://entities/enemies/ghosts/states/patrol_ai.gd" id="4_obe3h"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_eboi6"]
 
@@ -13,13 +15,14 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eboi6"]
 
-[node name="Ghost" type="CharacterBody3D" unique_id=2008997342]
+[node name="Ghost" type="CharacterBody3D" unique_id=2008997342 node_paths=PackedStringArray("nav_agent")]
 collision_layer = 32
 collision_mask = 31
 script = ExtResource("1_e0x04")
 speed = 3.0
 patrol_distance_length = 40.0
 look_rotation_speed = 6.0
+nav_agent = NodePath("NavigationAgent3D")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1047362907]
 avoidance_enabled = true
@@ -40,5 +43,15 @@ shape = SubResource("CapsuleShape3D_eboi6")
 [node name="DetectionArea" parent="." unique_id=527819160 instance=ExtResource("2_723dw")]
 fov_width = 60.0
 view_distance = 15.0
+
+[node name="StateMachine" type="Node" parent="." unique_id=1660670136 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_1oodk")
+initial_state = NodePath("PatrolAI")
+metadata/_custom_type_script = "uid://qxf0qcbgu22s"
+
+[node name="PatrolAI" type="Node" parent="StateMachine" unique_id=2066393190 node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_obe3h")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://wwm7s2pt4426"
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
