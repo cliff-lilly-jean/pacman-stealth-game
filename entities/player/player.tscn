@@ -8,10 +8,10 @@
 [ext_resource type="Script" uid="uid://dh6switaklx1f" path="res://entities/player/states/player_move.gd" id="6_8fjmc"]
 [ext_resource type="Script" uid="uid://54rte24utaje" path="res://entities/player/states/player_sprint.gd" id="7_qiwj3"]
 [ext_resource type="Script" uid="uid://da8tlbreg5xrv" path="res://entities/player/states/player_dash.gd" id="8_26q78"]
-[ext_resource type="Texture2D" uid="uid://dm274g0jdsnpf" path="res://assets/progress_bar_under edited.png" id="9_a1qjk"]
+[ext_resource type="Texture2D" uid="uid://8ebsic3gqrbj" path="res://assets/progress_bar_under-200.png" id="9_a1qjk"]
 [ext_resource type="Script" uid="uid://sxlkkk1t773a" path="res://entities/player/stamina_bar.gd" id="9_bectd"]
-[ext_resource type="Texture2D" uid="uid://c5jnwhk5sbaqg" path="res://assets/progress_bar_over edited.png" id="10_j3ovn"]
-[ext_resource type="Texture2D" uid="uid://d0hcoaoh52uj1" path="res://assets/progress_bar_fill edited.png" id="11_afbqv"]
+[ext_resource type="Texture2D" uid="uid://3aajc0ngls86" path="res://assets/progress_bar_over-200.png" id="10_j3ovn"]
+[ext_resource type="Texture2D" uid="uid://byrarsr6ccnay" path="res://assets/progress_bar_fill-200.png" id="11_afbqv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7p2l"]
 margin = 0.5
@@ -28,7 +28,7 @@ size = Vector3(0.5, 0.2, 0.5)
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7capw"]
-viewport_path = NodePath("Sprite3D/SubViewport")
+viewport_path = NodePath("StaminaBar/SubViewport")
 
 [node name="Player" type="CharacterBody3D" unique_id=573448500 node_paths=PackedStringArray("mesh")]
 collision_mask = 30
@@ -101,17 +101,17 @@ player = NodePath("../..")
 stamina_cost = 1.0
 metadata/_custom_type_script = "uid://da8tlbreg5xrv"
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1883340200]
+[node name="StaminaBar" type="Sprite3D" parent="." unique_id=1883340200]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1357853, 0)
 billboard = 1
 no_depth_test = true
 texture = SubResource("ViewportTexture_7capw")
 
-[node name="SubViewport" type="SubViewport" parent="Sprite3D" unique_id=89350928]
+[node name="SubViewport" type="SubViewport" parent="StaminaBar" unique_id=89350928]
 transparent_bg = true
-size = Vector2i(300, 75)
+size = Vector2i(200, 50)
 
-[node name="StaminaBar" type="TextureProgressBar" parent="Sprite3D/SubViewport" unique_id=1786471562]
+[node name="StaminaBar" type="TextureProgressBar" parent="StaminaBar/SubViewport" unique_id=1786471562]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
