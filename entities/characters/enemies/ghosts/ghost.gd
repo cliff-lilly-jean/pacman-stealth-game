@@ -1,10 +1,6 @@
 class_name Ghost extends Enemy
 
-@export var speed: float = 3.0
-@export var patrol_distance_length: float = 40.0
-@export var patrol_distance_modifier: float = 6.0 # Used to make sure the patrol routes arent too short
-@export var look_rotation_speed: float = 6.0
-
+@export var stats: GhostStats
 
 @onready var body: MeshInstance3D = $Body
 @onready var detection_area: DetectionArea = $DetectionArea
@@ -25,8 +21,9 @@ func _physics_process(delta: float) -> void:
 
 func set_navigation_route() -> void:
 	start_patrol_locaton = global_position
-	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x - patrol_distance_length, start_patrol_locaton.x + patrol_distance_length), global_position.y, randf_range((start_patrol_locaton.z - patrol_distance_modifier) - patrol_distance_length, (start_patrol_locaton.z + patrol_distance_modifier) + patrol_distance_length))
+	end_patrol_location = Vector3(randf_range((start_patrol_locaton.x - stats.patrol_distance_modifier) - stats.patrol_distance_length, (start_patrol_locaton.x + stats.patrol_distance_modifier) + stats.patrol_distance_length), global_position.y, randf_range((start_patrol_locaton.z - stats.patrol_distance_modifier) - stats.patrol_distance_length, (start_patrol_locaton.z + stats.patrol_distance_modifier) + stats.patrol_distance_length))
 	
+	# Make the end patrol position the initial target position
 	nav_agent.target_position = end_patrol_location
 
 			
@@ -37,5 +34,5 @@ func look_rotation(delta: float) -> void:
 			next_position.x - global_position.x,
 			next_position.z - global_position.z
 		),
-		look_rotation_speed * delta
+		stats.look_rotation_speed * delta
 	)

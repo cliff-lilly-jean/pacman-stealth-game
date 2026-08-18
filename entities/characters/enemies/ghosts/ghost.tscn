@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqe6kbo1ud1hp"]
 
 [ext_resource type="Script" uid="uid://ddj43j3utgjcm" path="res://entities/characters/enemies/ghosts/ghost.gd" id="1_e0x04"]
+[ext_resource type="Resource" uid="uid://c7rk1qxdmogwn" path="res://entities/characters/enemies/ghosts/resources/base_ghost_stats.tres" id="2_0sxnr"]
 [ext_resource type="PackedScene" uid="uid://doaiuijn0ntwa" path="res://components/detection_area/detection_area.tscn" id="2_723dw"]
 [ext_resource type="Script" uid="uid://qxf0qcbgu22s" path="res://globals/state_machine/state_machine.gd" id="3_1oodk"]
 [ext_resource type="Script" uid="uid://wwm7s2pt4426" path="res://entities/characters/enemies/ghosts/states/patrol_ai.gd" id="4_obe3h"]
@@ -22,6 +23,7 @@ albedo_color = Color(1, 0, 0, 1)
 collision_layer = 32
 collision_mask = 31
 script = ExtResource("1_e0x04")
+stats = ExtResource("2_0sxnr")
 nav_agent = NodePath("NavigationAgent3D")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1047362907]

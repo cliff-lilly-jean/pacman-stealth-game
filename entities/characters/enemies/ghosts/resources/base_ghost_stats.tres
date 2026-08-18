@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GhostStats" format=3 uid="uid://c7rk1qxdmogwn"]
+
+[ext_resource type="Script" uid="uid://prky7wfkobsk" path="res://entities/characters/enemies/ghosts/resources/ghost_stats.gd" id="1_61xn4"]
+
+[resource]
+script = ExtResource("1_61xn4")
+speed = 3.0
+patrol_distance_length = 40.0
+patrol_distance_modifier = 6.0
+look_rotation_speed = 6.0
+metadata/_custom_type_script = "uid://prky7wfkobsk"
