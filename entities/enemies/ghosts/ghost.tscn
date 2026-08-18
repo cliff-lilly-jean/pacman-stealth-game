@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://doaiuijn0ntwa" path="res://components/detection_area/detection_area.tscn" id="2_723dw"]
 [ext_resource type="Script" uid="uid://qxf0qcbgu22s" path="res://globals/state_machine/state_machine.gd" id="3_1oodk"]
 [ext_resource type="Script" uid="uid://wwm7s2pt4426" path="res://entities/enemies/ghosts/states/patrol_ai.gd" id="4_obe3h"]
+[ext_resource type="Script" uid="uid://dch6b737a66xb" path="res://entities/enemies/ghosts/states/investigate_ai.gd" id="5_mm1xh"]
+[ext_resource type="Script" uid="uid://4m5g0wvp132u" path="res://entities/enemies/ghosts/states/chase_ai.gd" id="6_ydex4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_eboi6"]
 
@@ -53,5 +55,13 @@ metadata/_custom_type_script = "uid://qxf0qcbgu22s"
 script = ExtResource("4_obe3h")
 enemy = NodePath("../..")
 metadata/_custom_type_script = "uid://wwm7s2pt4426"
+
+[node name="InvestigateAI" type="Node" parent="StateMachine" unique_id=484567311]
+script = ExtResource("5_mm1xh")
+metadata/_custom_type_script = "uid://dch6b737a66xb"
+
+[node name="ChaseAI" type="Node" parent="StateMachine" unique_id=490961024]
+script = ExtResource("6_ydex4")
+metadata/_custom_type_script = "uid://4m5g0wvp132u"
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

@@ -3,27 +3,21 @@ class_name Ghost extends Enemy
 @export var speed: float
 @export var patrol_distance_length: float
 @export var look_rotation_speed: float
-@onready var body: MeshInstance3D = $Body
 
+
+@onready var body: MeshInstance3D = $Body
 @onready var detection_area: DetectionArea = $DetectionArea
 
 ## Patrol Variables
-@onready var start_patrol_locaton: Vector3 = global_position
-@onready var end_patrol_location: Vector3 = Vector3(randf_range(start_patrol_locaton.x - patrol_distance_length, start_patrol_locaton.x + patrol_distance_length), global_position.y, randf_range(start_patrol_locaton.z - patrol_distance_length, start_patrol_locaton.z + patrol_distance_length))
+var start_patrol_locaton: Vector3
+var end_patrol_location: Vector3
 var next_position: Vector3
 
 
-## CHASE
-## Set the target position, the Player
-## Get the next path position
-## Move toward he next position
-
 func _ready() -> void:
-	
 	set_navigation_route()
 	
 func _physics_process(delta: float) -> void:
-	
 	
 	look_rotation(delta)
 	move_and_slide()
@@ -34,12 +28,6 @@ func set_navigation_route() -> void:
 	
 	nav_agent.target_position = end_patrol_location
 
-
-func investigate() -> void:
-	pass
-	## The player enters the detection area, inside the fov
-	## If the player is visible and not obstructed by an obstacle, change the navigation target position to the player's last known position and travel to it
-	## If the player is visible and obstructed, continue on with the regular navigation route
 			
 func look_rotation(delta: float) -> void:
 	rotation.y = lerp_angle(
