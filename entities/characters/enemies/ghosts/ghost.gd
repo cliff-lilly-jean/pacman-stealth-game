@@ -1,9 +1,9 @@
 class_name Ghost extends Enemy
 
-@export var speed: float
-@export var patrol_distance_length: float
-@export var patrol_distance_modifier: float # Used to make sure the patrol routes arent too short
-@export var look_rotation_speed: float
+@export var speed: float = 3.0
+@export var patrol_distance_length: float = 40.0
+@export var patrol_distance_modifier: float = 6.0 # Used to make sure the patrol routes arent too short
+@export var look_rotation_speed: float = 6.0
 
 
 @onready var body: MeshInstance3D = $Body

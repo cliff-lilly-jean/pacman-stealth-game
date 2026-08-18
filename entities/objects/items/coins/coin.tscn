@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3vqp4oc0egcq"]
 
-[ext_resource type="Script" uid="uid://deqrnsy3lb2i0" path="res://entities/coins/coin.gd" id="1_vmixq"]
+[ext_resource type="Script" uid="uid://deqrnsy3lb2i0" path="res://entities/objects/items/coins/coin.gd" id="1_vmixq"]
 [ext_resource type="AudioStream" uid="uid://2116phqpat24" path="res://assets/audio/sfx/coin-collect.mp3" id="3_3phs1"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7capw"]

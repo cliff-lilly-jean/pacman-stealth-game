@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5dv2dht0iynn"]
 
-[ext_resource type="Script" uid="uid://cul7xgqd0d0ey" path="res://entities/camera_controller/camera_controller.gd" id="1_7mrbv"]
+[ext_resource type="Script" uid="uid://cul7xgqd0d0ey" path="res://controllers/camera_controller/camera_controller.gd" id="1_7mrbv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7mrbv"]
 

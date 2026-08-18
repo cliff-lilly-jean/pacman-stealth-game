@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqbqarefstmrn"]
 
-[ext_resource type="Texture2D" uid="uid://bacwiwf72em3t" path="res://entities/Levels/level_layouts/pacman_stealth_level_200x200.png" id="1_kaljb"]
+[ext_resource type="Texture2D" uid="uid://bacwiwf72em3t" path="res://entities/world/levels/level_layouts/pacman_stealth_level_200x200.png" id="1_kaljb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkyeo"]
 albedo_texture = ExtResource("1_kaljb")

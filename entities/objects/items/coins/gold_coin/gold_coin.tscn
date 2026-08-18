@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8wxyb66rltn4"]
 
-[ext_resource type="ArrayMesh" uid="uid://d1ri7khqsvsfp" path="res://entities/coins/gold_coin/gold_coin_mesh.tres" id="1_2l7s7"]
-[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://entities/coins/coin.tscn" id="1_endsn"]
+[ext_resource type="ArrayMesh" uid="uid://d1ri7khqsvsfp" path="res://entities/objects/items/coins/gold_coin/gold_coin_mesh.tres" id="1_2l7s7"]
+[ext_resource type="PackedScene" uid="uid://d3vqp4oc0egcq" path="res://entities/objects/items/coins/coin.tscn" id="1_endsn"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_unkcu"]
 viewport_path = NodePath("SubViewport")
