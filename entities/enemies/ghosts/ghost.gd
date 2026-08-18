@@ -2,6 +2,7 @@ class_name Ghost extends Enemy
 
 @export var speed: float
 @export var patrol_distance_length: float
+@export var patrol_distance_modifier: float # Used to make sure the patrol routes arent too short
 @export var look_rotation_speed: float
 
 
@@ -24,7 +25,7 @@ func _physics_process(delta: float) -> void:
 
 func set_navigation_route() -> void:
 	start_patrol_locaton = global_position
-	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x - patrol_distance_length, start_patrol_locaton.x + patrol_distance_length), global_position.y, randf_range(start_patrol_locaton.z - patrol_distance_length, start_patrol_locaton.z + patrol_distance_length))
+	end_patrol_location = Vector3(randf_range(start_patrol_locaton.x - patrol_distance_length, start_patrol_locaton.x + patrol_distance_length), global_position.y, randf_range((start_patrol_locaton.z - patrol_distance_modifier) - patrol_distance_length, (start_patrol_locaton.z + patrol_distance_modifier) + patrol_distance_length))
 	
 	nav_agent.target_position = end_patrol_location
 

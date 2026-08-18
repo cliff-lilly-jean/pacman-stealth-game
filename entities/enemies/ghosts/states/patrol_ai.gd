@@ -16,7 +16,6 @@ func physics_update(delta: float) -> void:
 		## Determine if the ghost has finished the patrol to the edn point, if so change the route to the starting point  and travel to that
 		if moving_to_end:
 			enemy.nav_agent.target_position = enemy.start_patrol_locaton
-			enemy.next_position = enemy.nav_agent.get_next_path_position()
 			moving_to_end = false
 		else:
 			enemy.nav_agent.target_position = enemy.end_patrol_location

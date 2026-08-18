@@ -1,7 +1,4 @@
 extends State
 class_name ChaseAI
 
-
-## Set the target position, the Player
-## Get the next path position
-## Move toward he next position
+## Find the PLAYER's position, and travel to it. If the PLAYER exits the FOV transition into the Alert State
