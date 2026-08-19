@@ -1,6 +1,7 @@
 class_name Ghost extends Enemy
 
 @export var stats: GhostStats
+@export var target: Node3D
 
 @onready var body: MeshInstance3D = $Body
 @onready var detection_area: DetectionArea = $DetectionArea
@@ -23,7 +24,7 @@ func set_navigation_route() -> void:
 	start_patrol_locaton = global_position
 	end_patrol_location = Vector3(randf_range((start_patrol_locaton.x - stats.patrol_distance_modifier) - stats.patrol_distance_length, (start_patrol_locaton.x + stats.patrol_distance_modifier) + stats.patrol_distance_length), global_position.y, randf_range((start_patrol_locaton.z - stats.patrol_distance_modifier) - stats.patrol_distance_length, (start_patrol_locaton.z + stats.patrol_distance_modifier) + stats.patrol_distance_length))
 	
-	# Make the end patrol position the initial target position
+	# Make the end patrol position the initial position being traveled to
 	nav_agent.target_position = end_patrol_location
 
 			

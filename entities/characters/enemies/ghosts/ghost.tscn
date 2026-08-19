@@ -42,9 +42,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_723dw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_eboi6")
 
-[node name="DetectionArea" parent="." unique_id=527819160 instance=ExtResource("2_723dw")]
+[node name="DetectionArea" parent="." unique_id=527819160 node_paths=PackedStringArray("entity") instance=ExtResource("2_723dw")]
 fov_width = 60.0
 view_distance = 15.0
+entity = NodePath("..")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1660670136 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_1oodk")
@@ -64,4 +65,4 @@ script = ExtResource("6_ydex4")
 [node name="AlertAI" type="Node" parent="StateMachine" unique_id=658654378]
 script = ExtResource("7_hbtrn")
 
-[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="DetectionArea" method="_on_body_exited"]
