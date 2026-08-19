@@ -20,6 +20,7 @@ func _ready():
 	collider.shape.height = shape_height
 	ray_cast.target_position.z = view_distance
 	
+	
 	generate_vision_cone()
 
 
@@ -78,13 +79,11 @@ func check_fov(direction: Vector3, target: Node3D) -> void:
 	var fov = cos(deg_to_rad(fov_width / 2))
 	
 	if facing > fov:
-			print("FOV: ", fov, " facing: ", facing)
 			ray_cast.target_position = ray_cast.to_local(target.global_position)
 			ray_cast.force_raycast_update()
 
 			if ray_cast.is_colliding():
 				var hit = ray_cast.get_collider()
-				print("LookDirection hit: ", hit)
 				
 				if hit is Player:
 					target_found.emit(target.global_position)

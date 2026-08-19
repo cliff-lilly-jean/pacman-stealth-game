@@ -5,6 +5,9 @@ class_name PatrolAI
 
 var moving_to_end:bool = true
 
+func enter() -> void:
+	if enemy is Ghost:
+		enemy.detection_area.target_found.connect(on_target_found)
 
 func physics_update(delta: float) -> void:
 	enemy.next_position = enemy.nav_agent.get_next_path_position()
@@ -20,3 +23,8 @@ func physics_update(delta: float) -> void:
 		else:
 			enemy.nav_agent.target_position = enemy.end_patrol_location
 			moving_to_end = true
+	
+
+func on_target_found(target_position: Vector3) -> void:
+	print( "From Patrol: ", target_position)
+	

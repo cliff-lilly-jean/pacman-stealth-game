@@ -45,6 +45,7 @@ shape = SubResource("CapsuleShape3D_eboi6")
 [node name="DetectionArea" parent="." unique_id=527819160 node_paths=PackedStringArray("entity") instance=ExtResource("2_723dw")]
 fov_width = 60.0
 view_distance = 15.0
+shape_height = 0.5
 entity = NodePath("..")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1660670136 node_paths=PackedStringArray("initial_state")]
