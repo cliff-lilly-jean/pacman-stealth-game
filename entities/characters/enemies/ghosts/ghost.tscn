@@ -57,8 +57,11 @@ metadata/_custom_type_script = "uid://qxf0qcbgu22s"
 script = ExtResource("4_obe3h")
 enemy = NodePath("../..")
 
-[node name="InvestigateAI" type="Node" parent="StateMachine" unique_id=484567311]
+[node name="InvestigateAI" type="Node" parent="StateMachine" unique_id=484567311 node_paths=PackedStringArray("enemy")]
 script = ExtResource("5_mm1xh")
+enemy = NodePath("../..")
+investigation_view_distance_multipler = 60.0
+timer = 3.0
 
 [node name="ChaseAI" type="Node" parent="StateMachine" unique_id=490961024]
 script = ExtResource("6_ydex4")

@@ -26,5 +26,6 @@ func physics_update(delta: float) -> void:
 	
 
 func on_target_found(target_position: Vector3) -> void:
-	print( "From Patrol: ", target_position)
+	#print( "From Patrol: ", target_position)
+	change_state.emit(self, "investigateai")
 	

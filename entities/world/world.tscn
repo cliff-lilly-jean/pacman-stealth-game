@@ -100,29 +100,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.99999994, 2)
 target = NodePath("../../Player")
 
 [node name="Ghost2" parent="Ghosts" unique_id=1383249437 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.99999994, 44)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.99999994, 91)
 target = NodePath("../../Player")
 
 [node name="Ghost3" parent="Ghosts" unique_id=1493906947 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37, 2, 44)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -53, 2, -81)
 target = NodePath("../../Player")
 
 [node name="Ghost4" parent="Ghosts" unique_id=1061240303 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 32, 0.99999994, -20)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 82, 0.99999994, -58)
 target = NodePath("../../Player")
 
 [node name="Ghost5" parent="Ghosts" unique_id=1476873466 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 32, 0.99999994, 20)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 73, 0.99999994, 82)
 target = NodePath("../../Player")
 
 [node name="Ghost6" parent="Ghosts" unique_id=162826906 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0.99999994, -42)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0.99999994, 3)
 target = NodePath("../../Player")
 
 [node name="Ghost7" parent="Ghosts" unique_id=2064379119 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -39, 0.99999994, -42)
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -77, 0.99999994, 54)
 target = NodePath("../../Player")
 
 [node name="Ghost8" parent="Ghosts" unique_id=1750336853 node_paths=PackedStringArray("target") instance=ExtResource("10_e7bg0")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -39, 0.99999994, 4)
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 17, 0.99999994, -62)
 target = NodePath("../../Player")
